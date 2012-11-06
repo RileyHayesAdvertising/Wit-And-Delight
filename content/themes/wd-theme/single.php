@@ -1,9 +1,9 @@
 <?php
 /**
- * Nerdery Theme
+ * W&D Theme
  *
- * @category Nerdery_Skeleton_Theme
- * @package Nerdery_Skeleton_Theme
+ * @category WD_Theme
+ * @package WD_Theme
  * @subpackage Single
  * @author
  * @version $Id$

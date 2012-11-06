@@ -3,6 +3,6 @@
 /**
  * @package
  * @subpackage
- * @author Jess Green <jgreen@nerdery.com>
+ * @author
  * @version $Id$
  */

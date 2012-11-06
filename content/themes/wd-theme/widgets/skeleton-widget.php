@@ -2,19 +2,19 @@
 /**
  * WordPress Theme Widgets
  *
- * @category Nerdery_Skeleton_Theme
- * @package Nerdery_Skeleton_Theme
- * @author Jess Green <jgreen@nerdery.com>
+ * @category WD_Theme
+ * @package WD_Theme
+ * @author
  * @version $Id$
  */
 
 /**
  * Class skeleton
  *
- * @category Nerdery_Skeleton_Theme_Widgets
- * @package Nerdery_Skeleton_Theme
- * @subpackage Nerdery_Skeleton_Widget
- * @author Jess Green <jgreen@nerdery.com>
+ * @category WD_Skeleton_Theme_Widgets
+ * @package WD_Skeleton_Theme
+ * @subpackage WD_Skeleton_Widget
+ * @author
  */
 class Nerdery_Skeleton_Widget extends WP_Widget
 {
