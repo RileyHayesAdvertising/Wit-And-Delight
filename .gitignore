@@ -1,0 +1,19 @@
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# WordPres Config Files #
+#########################
+wp-config.php
+.htaccess
