@@ -2,29 +2,29 @@
 Global JavaScript & jQuery
 
 Target Browsers: All
-Authors: Jess Green
+Authors: Anthony Ticknor
 
 JS Devs beware! WordPress loads jQuery in noConflict mode.
 ------------------------------------------------------------------------ */
 jQuery(function($) {
 
     // Initialize!
-    NERDThemeJS($);
+    KAJavaScript($);
 
 });
 
-var NERDThemeJS = function($){
+var KAJavaScript = function($){
 
-    var NERD = NERD || {};
+    var APP = APP || {};
 
     /* ---------------------------------------------------------------------
     ExternalLinks
-    Author: Nerdery Boilerplate
+    Author: Anthony Ticknor
 
     Launches links with a rel="external" in a new window
     ------------------------------------------------------------------------ */
 
-    NERD.ExternalLinks = {
+    APP.ExternalLinks = {
         init: function() {
             $('a[rel=external]').attr('target', '_blank');
         }
@@ -32,7 +32,7 @@ var NERDThemeJS = function($){
 
     /* ---------------------------------------------------------------------
     AutoReplace
-    Author: Nerdery Boilerplate
+    Author: Anthony Ticknor
 
     Mimics HTML5 placeholder behavior
 
@@ -43,7 +43,7 @@ var NERDThemeJS = function($){
     submitted if the default text remains in input field - which we may
     or may not want to leave in place, depending on usage in site
     ------------------------------------------------------------------------ */
-    NERD.AutoReplace = {
+    APP.AutoReplace = {
         $fields: undefined,
 
         init: function() {
@@ -94,7 +94,7 @@ var NERDThemeJS = function($){
     };
 
 
-    NERD.ExternalLinks.init();
-    NERD.AutoReplace.init();
+    APP.ExternalLinks.init();
+    APP.AutoReplace.init();
 
-} // end NERDThemeJS
+} // end 
