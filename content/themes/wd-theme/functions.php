@@ -1,16 +1,14 @@
 <?php
 /**
- * Nerdery Theme
+ * W&D Theme
  *
- * @category   Nerdery_Skeleton_Theme
- * @package    Nerdery_Skeleton_Theme
+ * @category   WD_Theme
+ * @package    WD_Theme
  * @subpackage Functions
- * @author     Jess Green <jgreen@nerdery.com>
- * @author     Alison Barrett <abarrett@nerdery.com>
+ * @author     
+ * @author     
  * @version    $Id$
  */
-
-// TODO: Move the following to a custom theme class
 
 /**
  * Theme Supports
