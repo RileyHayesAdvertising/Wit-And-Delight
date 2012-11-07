@@ -2,7 +2,7 @@
 Global JavaScript & jQuery
 
 Target Browsers: All
-Authors: Anthony Ticknor
+Authors: Anthony Ticknor & Dan Piscitiello
 
 JS Devs beware! WordPress loads jQuery in noConflict mode.
 ------------------------------------------------------------------------ */
