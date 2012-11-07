@@ -16,6 +16,9 @@ RedirectMatch 404 /.*\.(sql|log|dist|bak)$
 RewriteCond %{HTTP_HOST} ^www.katearends.com$ [NC]
 RewriteRule ^(.*)$ http://katearends.com/$1 [R=301,L]
 
+# Redirect old links with /blog/ in them
+RewriteRule ^blog(/.*)? $1 [L,R=301]
+
 # Version Control file structure
 RewriteCond %{HTTP_HOST} ^(www.)?katearends.com$
 RewriteCond %{REQUEST_URI} !^core/
