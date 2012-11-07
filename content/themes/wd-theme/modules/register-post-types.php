@@ -9,8 +9,8 @@
  * @version $Id$
  */
 
-add_action('init', 'nerdery_register_post_types');
-function nerdery_register_post_types()
+add_action('init', 'wd_register_post_types');
+function wd_register_post_types()
 {
     // register your post-types here
     /*
@@ -18,7 +18,7 @@ function nerdery_register_post_types()
      *
      */
     register_post_type(
-        'nerdery_carousel', // prefix your post-type
+        'wd_carousel', // prefix your post-type
         array(
             'labels' => array(
                 'name'          => 'Carousels', // plural name

@@ -9,8 +9,8 @@
  * @version $Id$
  */
 
-add_action('init', 'nerdery_register_taxonomies');
-function nerdery_register_taxonomies()
+add_action('init', 'wd_register_taxonomies');
+function wd_register_taxonomies()
 {
     // register your taxonomies
 }
