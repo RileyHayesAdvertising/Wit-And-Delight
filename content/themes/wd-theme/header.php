@@ -13,7 +13,7 @@
 <html lang="en">
 <head>
 
-    <title><?php wp_title(''); ?></title>
+    <title><?php wp_title(''); ?> | <?php bloginfo('name'); ?> </title>
 
     <!-- META DATA -->
     <meta charset="utf-8" />
@@ -25,8 +25,7 @@
     <link rel="pingback" href="<?php bloginfo('pingback_url') ?>" />
 
     <!-- ICONS -->
-    <link rel="shortcut icon" type="image/ico" href="<?php echo WD_THEME_PATH_URL; ?>assets/images/favicon.ico" />
-    <link rel="apple-touch-icon" href="<?php echo WD_THEME_PATH_URL; ?>assets/images/apple-touch-icon.png" />
+    <link rel="shortcut icon" type="image/ico" href="favicon.ico" />
 
     <?php wp_head(); // Always have wp_head() just before the closing </head> ?>
 </head>
