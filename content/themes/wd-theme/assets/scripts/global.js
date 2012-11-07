@@ -9,11 +9,11 @@ JS Devs beware! WordPress loads jQuery in noConflict mode.
 jQuery(function($) {
 
     // Initialize!
-    KAJavaScript($);
+    WD($);
 
 });
 
-var KAJavaScript = function($){
+var WD = function($){
 
     var APP = APP || {};
 
@@ -26,7 +26,10 @@ var KAJavaScript = function($){
 
     APP.ExternalLinks = {
         init: function() {
-            $('a[rel=external]').attr('target', '_blank');
+            $(document).on('click', 'a[rel=external]', function(e) {
+                window.open($(this).attr('href'));
+                e.preventDefault();
+            });
         }
     };
 
@@ -45,46 +48,52 @@ var KAJavaScript = function($){
     ------------------------------------------------------------------------ */
     APP.AutoReplace = {
         $fields: undefined,
-
+    
         init: function() {
-            var $fields = $('[placeholder]');
-
-            if ($fields.length !== 0) {
-                var self = this;
-                self.$fields = $fields.addClass('placeholder-text');
-                self.bind();
+            // Only run the script if 'placeholder' is not natively supported
+            if ('placeholder' in document.createElement('input')) {
+                return;
             }
+    
+            this.$fields = $('[placeholder]');
+            this.bind();
         },
-
+    
         bind: function() {
-            var self = this;
-
-            self.$fields.each(
+            this.$fields.each(
                 function() {
-                    var me = $(this);
-                    var defaultText = me.attr('placeholder');
-                    me.attr('placeholder', '').val(defaultText);
-
-                    me.focus(
+                    var $this = $(this);
+                    var defaultText = $this.attr('placeholder');
+    
+                    if ($this.val() === '' || $this.val() === defaultText) {
+                        $this.addClass('placeholder-text').val(defaultText);
+                    }
+    
+                    $this.off('.autoreplace');
+    
+                    $this.on(
+                        'focus.autoreplace',
                         function() {
-                            if (me.val() === defaultText) {
-                                me.val('').removeClass('placeholder-text');
+                            if ($this.val() === defaultText) {
+                                $this.val('').removeClass('placeholder-text');
                             }
                         }
                     );
-
-                    me.blur(
+    
+                    $this.on(
+                        'blur.autoreplace',
                         function() {
-                            if (me.val() === '') {
-                                me.val(defaultText).addClass('placeholder-text');
+                            if ($this.val() === '' || $this.val() === defaultText) {
+                                $this.val(defaultText).addClass('placeholder-text');
                             }
                         }
                     );
-
-                    me.parents('form').submit(
+    
+                    $this.parents('form').off('submit.autoreplace').on(
+                        'submit.autoreplace',
                         function() {
-                            if (me.is('.required') && (me.val() === defaultText || me.val() === "")) {
-                                return false;
+                            if ($this.val() == defaultText) {
+                                $this.val('');
                             }
                         }
                     );
