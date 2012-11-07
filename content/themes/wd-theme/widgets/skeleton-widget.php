@@ -16,7 +16,7 @@
  * @subpackage WD_Skeleton_Widget
  * @author
  */
-class Nerdery_Skeleton_Widget extends WP_Widget
+class Skeleton_Widget extends WP_Widget
 {
     /**
      * PHP5 Constructor
@@ -27,7 +27,7 @@ class Nerdery_Skeleton_Widget extends WP_Widget
             __CLASS__,
             'Skeleton Widget',
             array(
-                'description' => 'Nerdery skeleton widget. Use as a skeleton to '
+                'description' => 'Skeleton widget. Use as a skeleton to '
                                  . 'build other widgets.'
             )
         );
@@ -92,8 +92,8 @@ class Nerdery_Skeleton_Widget extends WP_Widget
     }
 }
 
-add_action('widgets_init', 'nerdery_skeleton_widget_init');
+add_action('widgets_init', 'wd_skeleton_widget_init');
 
-function nerdery_skeleton_widget_init() {
-     return register_widget('Nerdery_Skeleton_Widget');
+function wd_skeleton_widget_init() {
+     return register_widget('Skeleton_Widget');
 };
