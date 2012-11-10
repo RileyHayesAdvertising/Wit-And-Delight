@@ -155,40 +155,35 @@ a:focus {
 
 .gridRow-col {
     float: left;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    -o-box-sizing: border-box;
-    box-sizing: border-box;
 }
 
 .gridRow-col + .gridRow-col {
-    padding-left: 14px;
+    margin-left: 1.443299%;
 }
 
-.gridRow-col_size1of4 { width: 25%; }
-.gridRow-col_size2of4 { width: 50%; }
-.gridRow-col_size3of4 { width: 75%; }
+.gridRow-col_size1of4 { width: 23.917526%; }
+.gridRow-col_size2of4 { width: 49.278351%; }
+.gridRow-col_size3of4 { width: 74.63975%; }
 .gridRow-col_size4of4 { width: 100%; }
 
-.gridRow-col_prefix1of4 { margin-left: 25%; }
-.gridRow-col_prefix2of4 { margin-left: 50%; }
-.gridRow-col_prefix3of4 { margin-left: 75%; }
+.gridRow-col_prefix1of4 { margin-left: 23.917526%; }
+.gridRow-col_prefix2of4 { margin-left: 49.278351%; }
+.gridRow-col_prefix3of4 { margin-left: 74.63975%; }
 .gridRow-col_prefix4of4 { margin-left: 100%; }
 
-.gridRow-col_suffix1of4 { margin-right: 25%; }
-.gridRow-col_suffix2of4 { margin-right: 50%; }
-.gridRow-col_suffix3of4 { margin-right: 75%; }
+.gridRow-col_suffix1of4 { margin-right: 23.917526%; }
+.gridRow-col_suffix2of4 { margin-right: 49.278351%; }
+.gridRow-col_suffix3of4 { margin-right: 74.63975%; }
 .gridRow-col_suffix4of4 { margin-right: 100%; }
 
-.gridRow-col_push1of4 { left: 25%; }
-.gridRow-col_push2of4 { left: 50%; }
-.gridRow-col_push3of4 { left: 75%; }
+.gridRow-col_push1of4 { left: 23.917526%; }
+.gridRow-col_push2of4 { left: 49.278351%; }
+.gridRow-col_push3of4 { left: 74.63975%; }
 .gridRow-col_push4of4 { left: 100%; }
 
-.gridRow-col_pull1of4 { left: -25%; }
-.gridRow-col_pull2of4 { left: -50%; }
-.gridRow-col_pull3of4 { left: -75%; }
+.gridRow-col_pull1of4 { left: -23.917526%; }
+.gridRow-col_pull2of4 { left: -49.278351%; }
+.gridRow-col_pull3of4 { left: -74.63975%; }
 .gridRow-col_pull4of4 { left: -100%; }
 
 /* ---------------------------------------------------------------------
@@ -196,4 +191,5 @@ a:focus {
 ------------------------------------------------------------------------ */
 .panel {
     border-top: 1px solid #000000;
+    padding: 24px 0;
 }

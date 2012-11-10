@@ -9,7 +9,6 @@
  * @version $Id$
  */
 ?>
-        <div class="page-footer"></div>
     </div><!-- // wrapper -->
 <?php wp_footer(); ?>
 </body>
