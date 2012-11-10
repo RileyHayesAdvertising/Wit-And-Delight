@@ -30,5 +30,5 @@
     <?php wp_head(); // Always have wp_head() just before the closing </head> ?>
 </head>
 <body>
-    <div class="page-wrapper">
+    <div class="wrapper">
         <div class="page-header"></div>
