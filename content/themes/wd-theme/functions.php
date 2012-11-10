@@ -136,3 +136,19 @@ function enqueueStyles()
     wp_enqueue_style('wd-ie8');
     wp_enqueue_style('wd-ie7');
 }
+
+/**
+ * Find the first image in a post.
+ *
+ * @return image URL
+ */
+function the_first_image() {
+    global $post, $posts;
+    $first_img = '';
+    ob_start();
+    ob_end_clean();
+    $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
+    $first_img = $matches [1] [0];
+
+    return $first_img;
+}
