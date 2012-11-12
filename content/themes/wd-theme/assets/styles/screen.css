@@ -109,15 +109,10 @@ textarea {
 }
 
 /* ---------------------------------------------------------------------
- Fonts
------------------------------------------------------------------------- */
-/* TODO embed proxima, nova */
-
-/* ---------------------------------------------------------------------
  Base Styles
 ------------------------------------------------------------------------ */
 body {
-    font: normal 11px/1.45 "Proxima Nova", Helvetica, Arial, sans-serif;
+    font: normal 11px/1.45 "proxima-nova", Helvetica, Arial, sans-serif;
     color: #000000;
     background: #ffffff;
 }

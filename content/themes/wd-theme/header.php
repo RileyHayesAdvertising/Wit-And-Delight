@@ -26,7 +26,11 @@
 
     <!-- ICONS -->
     <link rel="shortcut icon" type="image/ico" href="favicon.ico" />
-
+    
+    <!-- FONTS -->
+    <script type="text/javascript" src="//use.typekit.net/ytk1rdh.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    
     <?php wp_head(); // Always have wp_head() just before the closing </head> ?>
 </head>
 <body>
