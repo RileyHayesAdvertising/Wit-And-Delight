@@ -141,8 +141,8 @@ a:focus {
 }
 
 .wrapper-page {
-    margin-top: 12px;
-    margin-bottom: 12px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 /* ---------------------------------------------------------------------
@@ -191,5 +191,5 @@ a:focus {
 ------------------------------------------------------------------------ */
 .panel {
     border-top: 1px solid #000000;
-    padding: 24px 0;
+    padding: 25px 0;
 }
