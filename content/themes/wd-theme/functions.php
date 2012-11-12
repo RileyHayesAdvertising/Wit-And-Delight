@@ -138,6 +138,18 @@ function enqueueStyles()
 }
 
 /**
+ * Make sure the default link url for media is none.
+ *
+ */
+function rkv_imagelink_setup() {
+    $image_set = get_option( 'image_default_link_type' );
+        if ($image_set !== 'none') {
+            update_option('image_default_link_type', 'none');
+        }
+}
+add_action('admin_init', 'rkv_imagelink_setup', 10);
+
+/**
  * Find the first image in a post.
  *
  * @return image URL
