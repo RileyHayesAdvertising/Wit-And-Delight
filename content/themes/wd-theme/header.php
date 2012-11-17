@@ -74,7 +74,7 @@
                             <fieldset>
                                 <label for="inputSearch" class="isHidden">Search</label>
                                 <input type="search" class="input" id="inputSearch" placeholder="SEARCH" />
-                                <button type="submit" style="display: none;">Submit</button>
+                                <button type="submit" class="isHidden">Submit</button>
                             </fieldset>
                         </form>
                         <ul class="hList hList_social">
