@@ -225,9 +225,43 @@ a:focus {
 .gridRow-col_pull4of4 { left: -100%; }
 
 /* ---------------------------------------------------------------------
+ Horizontal Lists
+------------------------------------------------------------------------ */
+.hList {
+    overflow: hidden;
+}
+
+.hList > * {
+    float: left;
+}
+
+.hList_social > * + * {
+    margin-left: 18px;
+}
+
+/* ---------------------------------------------------------------------
  Panel
 ------------------------------------------------------------------------ */
 .panel {
     border-top: 1px solid #000000;
     padding: 25px 0;
 }
+
+/* ---------------------------------------------------------------------
+ Icons
+------------------------------------------------------------------------ */
+.icn {
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    background-image: url(../images/icon-sprite.png);
+    text-indent: -9999px;
+    font-size: 0;
+    line-height: 0;
+}
+
+.icn_email { background-position: 0 0 ;}
+.icn_facebook { background-position: -27px 0;}
+.icn_twitter { background-position: -54px 0 ;}
+.icn_instagram { background-position: -81px 0 ;}
+.icn_8tracks { background-position: -108px 0 ;}

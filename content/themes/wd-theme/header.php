@@ -53,9 +53,9 @@
                             <li><a href="#">Studio</a></li> <!-- TODO Add Link -->
                             <li><a href="#">Daily Reads</a></li> <!-- TODO Add Link -->
                             <li><a href="#">Work</a></li> <!-- TODO Add Link -->
-                            <li><a href="http://pinterest.com/katea/">Pinterest</a></li>
+                            <li><a href="http://pinterest.com/katea/" rel="external">Pinterest</a></li>
                             <li><a href="#">Shop</a></li> <!-- TODO Add Link -->
-                            <li><a href="http://witanddelight.tumblr.com/">Tumblr</a></li>
+                            <li><a href="http://witanddelight.tumblr.com/" rel="external">Tumblr</a></li>
                         </ul>
                     </div>
                 </div>
@@ -77,10 +77,10 @@
                         </form>
                         <ul class="hList hList_social">
                             <li><a href="mailto:witanddelight@gmail.com"><i class="icn icn_email">E-mail</i></a></li>
-                            <li><a href="http://www.facebook.com/witanddelight"><i class="icn icn_facebook">Facebook</i></a></li>
-                            <li><a href="http://twitter.com/katearends"><i class="icn icn_twitter">Twitter</i></a></li>
-                            <li><a href="http://followgram.me/katearends/"><i class="icn icn_thing">Instagram</i></a></li>
-                            <li><a href="http://8tracks.com/witanddelight"><i class="icn icn_other">8tracks</i></a></li>
+                            <li><a href="http://www.facebook.com/witanddelight" rel="external"><i class="icn icn_facebook">Facebook</i></a></li>
+                            <li><a href="http://twitter.com/katearends" rel="external"><i class="icn icn_twitter">Twitter</i></a></li>
+                            <li><a href="http://followgram.me/katearends/" rel="external"><i class="icn icn_instagram">Instagram</i></a></li>
+                            <li><a href="http://8tracks.com/witanddelight" rel="external"><i class="icn icn_8tracks">8tracks</i></a></li>
                         </ul>
                     </div>
                 </div>
