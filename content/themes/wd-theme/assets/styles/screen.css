@@ -205,6 +205,7 @@ a:focus {
 
 .gridRow-col {
     float: left;
+    position: relative;
 }
 
 .gridRow-col + .gridRow-col {
