@@ -39,28 +39,32 @@
             <div class="gridRow">
                 <div class="gridRow-col gridRow-col_size1of4">
                     <div class="panel">
-                        <h1 class="logo"><a href="#"><img src="<?php bloginfo('template_directory'); ?>/assets/images/logo.gif" alt="Wit &amp; Delight" /></a></h1> <!-- TODO Add Logo inline & Link -->
+                        <h1 class="logo">
+                            <a href="<?php echo site_url(); ?>">
+                                <img src="<?php bloginfo('template_directory'); ?>/assets/images/logo.gif" alt="Wit &amp; Delight" />
+                            </a>
+                        </h1>
                     </div>
                 </div>
                 <div class="gridRow-col gridRow-col_size1of4">
                     <div class="panel">
-                        <ul class="nav" role="navigation"> <!-- TODO Add links -->
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Daily Reads</a></li>
-                            <li><a href="#">Pinterest</a></li>
-                            <li><a href="#">Tumblr</a></li>
-                            <li><a href="#">Studio</a></li>
-                            <li><a href="#">Work</a></li>
-                            <li><a href="#">Shop</a></li>
+                        <ul class="nav nav_split" role="navigation">
+                            <li><a href="#">About</a></li> <!-- TODO Add Link -->
+                            <li><a href="#">Studio</a></li> <!-- TODO Add Link -->
+                            <li><a href="#">Daily Reads</a></li> <!-- TODO Add Link -->
+                            <li><a href="#">Work</a></li> <!-- TODO Add Link -->
+                            <li><a href="http://pinterest.com/katea/">Pinterest</a></li>
+                            <li><a href="#">Shop</a></li> <!-- TODO Add Link -->
+                            <li><a href="http://witanddelight.tumblr.com/">Tumblr</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="gridRow-col gridRow-col_size1of4">
                     <div class="panel">
                         <ul class="nav">
-                            <li><a href="#">Copyright &amp; Disclosure</a></li> <!-- TODO Add links -->
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Subscribe</a></li>
+                            <li><a href="#">Copyright &amp; Disclosure</a></li> <!-- TODO Add Link -->
+                            <li><a href="mailto:witanddelight@gmail.com">Contact</a></li>
+                            <li><a href="http://feeds2.feedburner.com/katearends/DcwI">Subscribe</a></li> <!-- TODO Verify RSS Works with new feed -->
                         </ul>
                     </div>
                 </div>
@@ -72,11 +76,11 @@
                             <button type="submit">Submit</button>
                         </form>
                         <ul class="hList hList_social">
-                            <li><i class="icn icn_email">e-mail</i>
-                            <li><i class="icn icn_facebook">facebook</i>
-                            <li><i class="icn icn_twitter">twitter</i>
-                            <li><i class="icn icn_thing">thing</i> <!-- TODO Figure out what this icon acually is -->
-                            <li><i class="icn icn_other">other</i> <!-- TODO Figure out what this icon acually is -->
+                            <li><a href="mailto:witanddelight@gmail.com"><i class="icn icn_email">E-mail</i></a></li>
+                            <li><a href="http://www.facebook.com/witanddelight"><i class="icn icn_facebook">Facebook</i></a></li>
+                            <li><a href="http://twitter.com/katearends"><i class="icn icn_twitter">Twitter</i></a></li>
+                            <li><a href="http://followgram.me/katearends/"><i class="icn icn_thing">Instagram</i></a></li>
+                            <li><a href="http://8tracks.com/witanddelight"><i class="icn icn_other">8tracks</i></a></li>
                         </ul>
                     </div>
                 </div>
