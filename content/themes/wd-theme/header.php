@@ -71,7 +71,7 @@
                 <div class="gridRow-col gridRow-col_size1of4">
                     <div class="panel">
                         <form action="#" role="search"> <!-- TODO Wire up legitamate search -->
-                            <label for="inputSearch">Search</label>
+                            <label for="inputSearch" class="isHidden">Search</label>
                             <input type="search" id="inputSearch" />
                             <button type="submit">Submit</button>
                         </form>
