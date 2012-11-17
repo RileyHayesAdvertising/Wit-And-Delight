@@ -40,7 +40,7 @@
                 <div class="gridRow-col gridRow-col_size1of4">
                     <div class="panel">
                         <h1 class="logo">
-                            <a href="<?php echo site_url(); ?>">
+                            <a href="<?php echo home_url(); ?>">
                                 <img src="<?php bloginfo('template_directory'); ?>/assets/images/logo.gif" alt="Wit &amp; Delight" />
                             </a>
                         </h1>
