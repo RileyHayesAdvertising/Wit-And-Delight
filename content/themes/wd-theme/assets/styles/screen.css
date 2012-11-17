@@ -118,13 +118,23 @@ body {
 }
 
 a {
-    color: #aaaaaa;
-    text-decoration: underline;
+    color: #c0c0c0;
+    text-decoration: none;
 }
 
 a:hover,
 a:focus {
-    
+    color: #e15119;
+}
+
+/* ---------------------------------------------------------------------
+ Masthead
+------------------------------------------------------------------------ */
+.logo a {
+    display: block;
+    width: 130px;
+    height: 66px;
+    padding: 0 10px;
 }
 
 /* ---------------------------------------------------------------------
