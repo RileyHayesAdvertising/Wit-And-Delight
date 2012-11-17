@@ -48,7 +48,7 @@
                 </div>
                 <div class="gridRow-col gridRow-col_size1of4">
                     <div class="panel">
-                        <ul class="nav nav_split" role="navigation">
+                        <ul class="nav nav_split" role="navigation"> <!-- TODO Add is-active state to navigation -->
                             <li><a href="#">About</a></li> <!-- TODO Add Link -->
                             <li><a href="#">Studio</a></li> <!-- TODO Add Link -->
                             <li><a href="#">Daily Reads</a></li> <!-- TODO Add Link -->
