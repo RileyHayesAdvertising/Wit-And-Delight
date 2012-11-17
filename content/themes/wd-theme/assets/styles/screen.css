@@ -120,6 +120,11 @@ body {
 a {
     color: #000000;
     text-decoration: none;
+    -webkit-transition: color .12s linear;
+    -moz-transition:    color .12s linear;
+    -ms-transition:     color .12s linear;
+    -o-transition:      color .12s linear;
+    transition:         color .12s linear;
 }
 
 a:hover,
@@ -151,7 +156,7 @@ a:focus {
 
 .nav_split > li {
     float: left;
-    width: 50%; /* equal split for legacy browsers */
+    width: 50%; /* equal split columns for legacy browsers */
 }
 
 /* unequal split for browsers capable of nth-child expressions */
