@@ -34,7 +34,7 @@
     <?php wp_head(); // Always have wp_head() just before the closing </head> ?>
 </head>
 <body>
-    <div class="wrapper wrapper-page">
+    <div class="wrapper wrapper_page">
         <div class="masthead" role="banner">
             <div class="gridRow">
                 <div class="gridRow-col gridRow-col_size1of4">
@@ -61,7 +61,7 @@
                 </div>
                 <div class="gridRow-col gridRow-col_size1of4">
                     <div class="panel">
-                        <ul class="nav">
+                        <ul class="nav"> <!-- TODO Add is-active state to navigation -->
                             <li><a href="#">Copyright &amp; Disclosure</a></li> <!-- TODO Add Link -->
                             <li><a href="mailto:witanddelight@gmail.com">Contact</a></li>
                             <li><a href="http://feeds2.feedburner.com/katearends/DcwI">Subscribe</a></li> <!-- TODO Verify RSS Works with new feed -->
