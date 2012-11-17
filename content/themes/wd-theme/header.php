@@ -70,17 +70,19 @@
                 </div>
                 <div class="gridRow-col gridRow-col_size1of4">
                     <div class="panel">
-                        <form action="#" role="search"> <!-- TODO Wire up legitamate search -->
-                            <label for="inputSearch" class="isHidden">Search</label>
-                            <input type="search" id="inputSearch" />
-                            <button type="submit">Submit</button>
+                        <form action="#" role="search" class="quickSearch"> <!-- TODO Wire up legitamate search -->
+                            <fieldset>
+                                <label for="inputSearch" class="isHidden">Search</label>
+                                <input type="search" class="input" id="inputSearch" placeholder="SEARCH" />
+                                <button type="submit" style="display: none;">Submit</button>
+                            </fieldset>
                         </form>
                         <ul class="hList hList_social">
-                            <li><a href="mailto:witanddelight@gmail.com"><i class="icn icn_email">E-mail</i></a></li>
-                            <li><a href="http://www.facebook.com/witanddelight" rel="external"><i class="icn icn_facebook">Facebook</i></a></li>
-                            <li><a href="http://twitter.com/katearends" rel="external"><i class="icn icn_twitter">Twitter</i></a></li>
-                            <li><a href="http://followgram.me/katearends/" rel="external"><i class="icn icn_instagram">Instagram</i></a></li>
-                            <li><a href="http://8tracks.com/witanddelight" rel="external"><i class="icn icn_8tracks">8tracks</i></a></li>
+                            <li><a href="mailto:witanddelight@gmail.com"><i class="icn icn_email"></i>E-mail</a></li>
+                            <li><a href="http://www.facebook.com/witanddelight" rel="external"><i class="icn icn_facebook"></i>Facebook</a></li>
+                            <li><a href="http://twitter.com/katearends" rel="external"><i class="icn icn_twitter"></i>Twitter</a></li>
+                            <li><a href="http://followgram.me/katearends/" rel="external"><i class="icn icn_instagram"></i>Instagram</a></li>
+                            <li><a href="http://8tracks.com/witanddelight" rel="external"><i class="icn icn_8tracks"></i>8tracks</a></li>
                         </ul>
                     </div>
                 </div>
