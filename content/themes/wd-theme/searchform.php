@@ -1,0 +1,7 @@
+<form method="get" action="<?php echo home_url( '/' ); ?>" role="search" class="quickSearch"> <!-- TODO Wire up legitamate search -->
+    <fieldset>
+        <label for="s" class="isHidden">Search</label>
+        <input type="search" class="input" id="s" name="s" placeholder="SEARCH" />
+        <button type="submit" class="isHidden">Submit</button>
+    </fieldset>
+</form>

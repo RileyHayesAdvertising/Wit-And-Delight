@@ -70,13 +70,7 @@
                 </div>
                 <div class="gridRow-col gridRow-col_size1of4">
                     <div class="panel">
-                        <form action="#" role="search" class="quickSearch"> <!-- TODO Wire up legitamate search -->
-                            <fieldset>
-                                <label for="inputSearch" class="isHidden">Search</label>
-                                <input type="search" class="input" id="inputSearch" placeholder="SEARCH" />
-                                <button type="submit" class="isHidden">Submit</button>
-                            </fieldset>
-                        </form>
+                        <?php get_search_form(); ?>
                         <ul class="hList hList_social">
                             <li><a href="mailto:witanddelight@gmail.com"><i class="icn icn_email"></i>E-mail</a></li>
                             <li><a href="http://www.facebook.com/witanddelight" rel="external"><i class="icn icn_facebook"></i>Facebook</a></li>
