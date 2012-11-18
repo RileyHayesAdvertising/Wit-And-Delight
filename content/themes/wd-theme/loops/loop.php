@@ -18,7 +18,7 @@
                                 <div class="date"><?php the_date(); ?></div>
                             </div>
                             <div class="feature-bd">
-                                <div class="user-content"><?php the_excerpt(); ?></div>
+                                <div class="user-content"><?php the_excerpt(); ?></div> <!-- TODO text the_excerpt / the_content -->
                             </div>
                         </div>
                         <?php endwhile; else: ?>
