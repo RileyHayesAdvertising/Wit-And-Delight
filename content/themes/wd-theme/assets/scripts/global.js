@@ -18,6 +18,19 @@ var WD = function($){
     var APP = APP || {};
 
     /* ---------------------------------------------------------------------
+    HasJS
+    Author: Anthony Ticknor
+
+    Adds JS class to HTML element if JS is present
+    ------------------------------------------------------------------------ */
+
+    APP.HasJS = {
+        init: function() {
+            $('html').addClass('js');
+        }
+    };
+
+    /* ---------------------------------------------------------------------
     ExternalLinks
     Author: Anthony Ticknor
 
@@ -105,5 +118,6 @@ var WD = function($){
 
     APP.ExternalLinks.init();
     APP.AutoReplace.init();
+    APP.HasJS.init();
 
 } // end 
