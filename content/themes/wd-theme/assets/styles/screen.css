@@ -306,3 +306,23 @@ a:focus {
 :-moz-placeholder {  
    color: rgba(0,0,0,.3);  
 }
+
+/* ---------------------------------------------------------------------
+ Headings
+------------------------------------------------------------------------ */
+.hdg {
+    
+}
+
+.hdg_bold {
+    font-weight: 800;
+}
+
+.hdg_cap {
+    text-transform: uppercase;
+}
+
+.hdg_1 { font-size: 24px; }
+.hdg_2 { font-size: 20px; }
+.hdg_3 { font-size: 16px; }
+.hdg_4 { font-size: 12px; }
