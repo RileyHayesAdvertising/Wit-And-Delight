@@ -378,6 +378,10 @@ img {
     text-transform: uppercase;
 }
 
+.hdg_center {
+    text-align: center; 
+}
+
 .hdg-split {
     display: block;
 }

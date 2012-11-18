@@ -21,7 +21,13 @@
                                 <div class="user-content"><?php the_excerpt(); ?></div>
                             </div>
                         </div>
-                        <?php endwhile; endif; ?>
+                        <?php endwhile; else: ?>
+                        <div class="feature">
+                            <div class="feature-hd">
+                                <h3 class="hdg hdg_2 hdg_center">Sorry no posts matched your criteria.</h3>
+                            </div>
+                        </div>
+                        <?php endif; ?>
 
                     </div>
                 </div>
