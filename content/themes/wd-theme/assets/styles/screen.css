@@ -330,3 +330,23 @@ img {
 .hdg_2 { font-size: 20px; }
 .hdg_3 { font-size: 16px; }
 .hdg_4 { font-size: 12px; }
+
+/* ---------------------------------------------------------------------
+ Media Object
+------------------------------------------------------------------------ */
+.media {
+    overflow: hidden;
+}
+
+.media-element {
+    float: left;
+    margin-right: 16px;
+}
+
+.media-element img {
+    display: block;
+}
+
+.media-bd {
+    overflow: hidden;
+}
