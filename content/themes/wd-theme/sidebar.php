@@ -13,16 +13,7 @@
 <div class="panel">
     <h2 class="hdg hdg_4">See Categories</h2> <!-- TODO Make categories expandible / collapsible -->
     <ul>
-        <li><a href="#">Category Name</a></li> <!-- TODO Display Top Ten Categories with links -->
-        <li><a href="#">Category Name</a></li>
-        <li><a href="#">Category Name</a></li>
-        <li><a href="#">Category Name</a></li>
-        <li><a href="#">Category Name</a></li>
-        <li><a href="#">Category Name</a></li>
-        <li><a href="#">Category Name</a></li>
-        <li><a href="#">Category Name</a></li>
-        <li><a href="#">Category Name</a></li>
-        <li><a href="#">Category Name</a></li>
+        <?php wp_list_categories('orderby=count&order=desc&style=list&number=10&title_li='); ?>
     </ul>
     <h2 class="hdg hdg_4">See Tags</h2> <!-- TODO Make tags expandible / collapsible -->
     <ul>
