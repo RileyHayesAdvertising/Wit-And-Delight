@@ -1,7 +1,6 @@
         <div class="content">
-
             <div class="gridRow">
-                <div class="gridRow-col gridRow-col_size3of4" role="main">
+                <div class="gridRow-col gridRow-col_size3of4 gridRow-col_push1of4" role="main">
                     <div class="panel">
                         <h2 class="isHidden">Articles</h2>
 
@@ -26,9 +25,8 @@
 
                     </div>
                 </div>
-                <div class="gridRow-col gridRow-col_size1of4" role="complementary">
+                <div class="gridRow-col gridRow-col_size1of4 gridRow-col_pull3of4" role="complementary">
                     <?php get_sidebar(); ?>
                 </div>
             </div>
-        
         </div>

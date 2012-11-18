@@ -231,14 +231,14 @@ img {
 .gridRow-col_suffix3of4 { margin-right: 74.63975%; }
 .gridRow-col_suffix4of4 { margin-right: 100%; }
 
-.gridRow-col_push1of4 { left: 23.917526%; }
-.gridRow-col_push2of4 { left: 49.278351%; }
-.gridRow-col_push3of4 { left: 74.63975%; }
+.gridRow-col_push1of4 { left: 25.360825%; }
+.gridRow-col_push2of4 { left: 50.72165%; }
+.gridRow-col_push3of4 { left: 76.083049%; }
 .gridRow-col_push4of4 { left: 100%; }
 
-.gridRow-col_pull1of4 { left: -23.917526%; }
-.gridRow-col_pull2of4 { left: -49.278351%; }
-.gridRow-col_pull3of4 { left: -74.63975%; }
+.gridRow-col_pull1of4 { left: -25.360825%; }
+.gridRow-col_pull2of4 { left: -50.72165%; }
+.gridRow-col_pull3of4 { left: -76.083049%; }
 .gridRow-col_pull4of4 { left: -100%; }
 
 /* ---------------------------------------------------------------------
