@@ -26,6 +26,8 @@
 
     <!-- ICONS -->
     <link rel="shortcut icon" type="image/ico" href="favicon.ico" />
+    <!-- TODO Add Apple touch icon -->
+    <!-- TODO Add facebook opengraph meta data -->
     
     <!-- FONTS -->
     <script type="text/javascript" src="//use.typekit.net/ytk1rdh.js"></script>
