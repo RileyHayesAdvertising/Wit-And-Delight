@@ -64,7 +64,7 @@
                         <ul class="nav"> <!-- TODO Add is-active state to navigation -->
                             <li><a href="#">Copyright &amp; Disclosure</a></li> <!-- TODO Add Link -->
                             <li><a href="mailto:witanddelight@gmail.com">Contact</a></li>
-                            <li><a href="http://feeds2.feedburner.com/katearends/DcwI">Subscribe</a></li> <!-- TODO Verify RSS Works with new feed -->
+                            <li><a href="http://feeds2.feedburner.com/katearends/DcwI" rel="external">Subscribe</a></li> <!-- TODO Verify RSS Works with new feed -->
                         </ul>
                     </div>
                 </div>
