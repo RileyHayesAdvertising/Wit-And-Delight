@@ -10,7 +10,7 @@
             <ul class="vList vList_push vList_navFeatured">
                 <li><a href="/?cat=14">Fashion</a></li>
                 <li><a href="/?cat=18">Design</a></li>
-                <li><a href="#">Products</a></li> <!-- TODO Category Add Link (cat doesn't exist) -->
+                <li><a href="/?cat=76">Products</a></li>
                 <li><a href="/?cat=5">&amp; Oddities</a></li>
             </ul>
         </div>
