@@ -17,19 +17,7 @@
     </ul>
     <h2 class="hdg hdg_4">See Tags</h2> <!-- TODO Make tags expandible / collapsible -->
     <ul>
-        <li><a href="#">Tag Name</a></li> <!-- TODO Display All Tags with links -->
-        <li><a href="#">Tag Name</a></li>
-        <li><a href="#">Tag Name</a></li>
-        <li><a href="#">Tag Name</a></li>
-        <li><a href="#">Tag Name</a></li>
-        <li><a href="#">Tag Name</a></li>
-        <li><a href="#">Tag Name</a></li>
-        <li><a href="#">Tag Name</a></li>
-        <li><a href="#">Tag Name</a></li>
-        <li><a href="#">Tag Name</a></li>
-        <li><a href="#">Tag Name</a></li>
-        <li><a href="#">Tag Name</a></li>
-        <li><a href="#">Tag Name</a></li>
+        <?php tag_list(); ?>
     </ul>
 </div>
 <div class="panel">

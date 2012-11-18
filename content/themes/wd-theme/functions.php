@@ -164,3 +164,18 @@ function the_first_image() {
 
     return $first_img;
 }
+
+/**
+ * Returns a list of tags
+ *
+ * @return html list of all tags
+ */
+ function tag_list() {
+    $tags = get_tags();
+    foreach ($tags as $tag){
+        $tag_link = get_tag_link($tag->term_id);
+        $html .= "<li><a href='{$tag_link}'>";
+        $html .= "{$tag->name}</a></li>";
+    }
+    echo $html;
+}
