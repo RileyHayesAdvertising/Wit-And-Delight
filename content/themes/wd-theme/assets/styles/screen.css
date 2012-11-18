@@ -312,8 +312,13 @@ img {
 }
 
 .panel_inverse {
-    border-top: 0;
+    border-top: none;
     border-bottom: 1px solid #000000;
+}
+
+.panel_bare {
+    border-top: none;
+    border-bottom: none;
 }
 
 /* ---------------------------------------------------------------------

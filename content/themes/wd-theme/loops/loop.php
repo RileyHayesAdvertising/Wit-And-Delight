@@ -28,9 +28,11 @@
                             </div>
                         </div>
                         <?php endwhile; else: ?>
-                        <div class="feature">
-                            <div class="feature-hd">
-                                <h3 class="hdg hdg_2 hdg_center">Sorry no posts matched your criteria.</h3>
+                        <div class="panel panel_bare">
+                            <div class="feature">
+                                <div class="feature-hd">
+                                    <h3 class="hdg hdg_2 hdg_center">Sorry no posts matched your criteria.</h3>
+                                </div>
                             </div>
                         </div>
                         <?php endif; ?>
