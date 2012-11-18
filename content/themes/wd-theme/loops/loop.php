@@ -5,20 +5,26 @@
                         <h2 class="isHidden">Articles</h2>
 
                         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-                        <div class="feature">
-                            <?php if (the_first_image() != '') { ?>
-                            <div class="feature-img">
-                                <img src="<?php echo the_first_image() ?>" alt="" />
-                            </div>
-                            <?php } ?>
-                            <div class="feature-hd">
-                                <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                            </div>
-                            <div class="feature-meta">
-                                <div class="date"><?php the_date(); ?></div>
-                            </div>
-                            <div class="feature-bd">
-                                <div class="user-content"><?php the_excerpt(); ?></div> <!-- TODO text the_excerpt / the_content -->
+                        <div class="panel panel_inverse">
+                            <div class="feature">
+                                <?php if (the_first_image() != '') { ?>
+                                <div class="feature-img">
+                                    <a href="<?php the_permalink(); ?>">
+                                        <img src="<?php echo the_first_image() ?>" alt="" />
+                                    </a>
+                                </div>
+                                <?php } ?>
+                                <div class="feature-hd">
+                                    <h3 class="hdg hdg_1">
+                                        <a href="<?php the_permalink(); ?>"><?php the_date('M.d.Y','',' | '); ?><?php the_title(); ?></a>
+                                    </h3>
+                                </div>
+                                <div class="feature-meta">
+                                    <div class="date"></div>
+                                </div>
+                                <div class="feature-bd">
+                                    <div class="user-content"><?php the_excerpt(); ?></div> <!-- TODO text the_excerpt / the_content -->
+                                </div>
                             </div>
                         </div>
                         <?php endwhile; else: ?>
