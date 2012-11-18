@@ -179,3 +179,29 @@ function the_first_image() {
     }
     echo $html;
 }
+
+/**
+ * Strips title attributes from category links
+ *
+ * @return html
+ */
+function wp_list_categories_remove_title_attributes($output) {
+    $output = preg_replace('` title="(.+)"`', '', $output);
+    return $output;
+}
+add_filter('wp_list_categories', 'wp_list_categories_remove_title_attributes');
+
+/**
+ * Strips cat classes from category list
+ *
+ * @return html
+ */
+function remove_cat_item($wp_list_categories) {
+    $patterns = array(); $replacements = array();
+    $patterns[0] = '/class=\"(cat-item cat-item-[0-9]+) current-cat\"/';
+    $replacements[0] = 'class="current-cat" ';
+    $patterns[1] = '/ class="cat-item cat-item-(.*?)\"/';
+    $replacements[1] = '';
+    return preg_replace($patterns, $replacements, $wp_list_categories);
+}
+add_filter('wp_list_categories','remove_cat_item');
