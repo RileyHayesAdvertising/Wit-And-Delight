@@ -315,15 +315,13 @@ img {
  Headings
 ------------------------------------------------------------------------ */
 .hdg {
-    
-}
-
-.hdg_bold {
+    letter-spacing: 2px;
     font-weight: 800;
+    text-transform: uppercase;
 }
 
-.hdg_cap {
-    text-transform: uppercase;
+.hdg-split {
+    display: block;
 }
 
 .hdg_1 { font-size: 24px; }
