@@ -26,7 +26,10 @@
 
     <!-- ICONS -->
     <link rel="shortcut icon" type="image/ico" href="favicon.ico" />
-    <!-- TODO Add Apple touch icon -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-lg.png/">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-md.png/">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon-sm.png">
+    <!-- TODO create apple touch icon graphics -->
     <!-- TODO Add facebook opengraph meta data -->
     
     <!-- FONTS -->
