@@ -342,8 +342,13 @@ img {
 }
 
 .feature-bd {
-    
+    margin-bottom: 40px;
 }
+
+.feature-bd_condensed {
+    margin-bottom: 0;
+}
+
 
 /* ---------------------------------------------------------------------
  Icons
@@ -434,6 +439,52 @@ a:hover .icn { opacity: .2;}
 .media-bd {
     overflow: hidden;
 }
+
+/* ---------------------------------------------------------------------
+ Button
+------------------------------------------------------------------------ */
+.btn {
+    display: block;
+    padding: 15px 15px;
+    background: #221f1f;
+    color: #ffffff;
+    font-size: 12px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-align: center;
+    -webkit-transition: opacity .12s linear;
+    -moz-transition:    opacity .12s linear;
+    -ms-transition:     opacity .12s linear;
+    -o-transition:      opacity .12s linear;
+    transition:         opacity .12s linear;
+}
+
+.btn:hover {
+    color: #ffffff;
+    opacity: .3;
+}
+
+/* ---------------------------------------------------------------------
+ Blocks
+------------------------------------------------------------------------ */
+.blocks {
+    overflow: hidden;
+}
+
+.blocks > * {
+    float: left;
+}
+
+.blocks > * + * {
+    margin-left: 1%;
+}
+
+.blocks_2up > * { width: 49.5%; }
+.blocks_3up > * { width: 32.666666%; }
+.blocks_4up > * { width: 24.25%; }
+.blocks_5up > * { width: 19.2%; }
 
 /* ---------------------------------------------------------------------
  User Contnet

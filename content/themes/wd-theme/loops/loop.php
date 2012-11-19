@@ -5,7 +5,7 @@
                         <h2 class="isHidden">Articles</h2>
                         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?><!-- TODO create javascript toggle between views -->
                         <div class="panel panel_inverse">
-                            <div class="feature">
+                            <div class="feature feature_condensed">
                                 <div class="feature-hd">
                                     <h3 class="hdg hdg_1">
                                         <a href="<?php the_permalink(); ?>"><?php the_date('M.d.Y','',' | '); ?><?php the_title(); ?></a>
@@ -13,7 +13,7 @@
                                 </div>
                                 <?php if (the_first_image() != '') { ?>
                                 <div class="feature-img">
-                                    <a href="<?php the_permalink(); ?>">
+                                    <a href="http://pinterest.com/pin/create/button/?url=<?php the_permalink(); ?>&media=<?php echo the_first_image() ?>">
                                         <img src="<?php echo the_first_image() ?>" alt="" />
                                     </a>
                                 </div>
@@ -22,6 +22,13 @@
                                     <div class="user-content">
                                         <?php the_excerpt(); ?> <!-- TODO text the_excerpt / the_content -->
                                     </div>
+                                </div>
+                                <div class="feature-meta">
+                                    <ul class="blocks blocks_3up">
+                                        <li><a href="http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>" class="btn" rel="external">Share on Facebook</a></li>
+                                        <li><a href="http://twitter.com/share?url=<?php the_permalink(); ?>" class="btn" rel="external">Tweet It</a></li>
+                                        <li><a href="http://pinterest.com/pin/create/bookmarklet/?media=<?php echo urlencode(the_first_image()); ?>&url=<?php echo urlencode(get_permalink()); ?>" class="btn">Pin it</a></li> <!-- TODO verify pinterest button works on production server -->
+                                    </ul>
                                 </div>
                             </div>
                         </div>

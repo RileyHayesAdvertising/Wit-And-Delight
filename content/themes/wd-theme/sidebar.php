@@ -6,7 +6,7 @@
                 <span class="hdg-split">Wit and Delight</span>
             </h2>
         </div>
-        <div class="feature-bd">
+        <div class="feature-bd feature-bd_condensed">
             <ul class="vList vList_push vList_navFeatured">
                 <li><a href="/?cat=14">Fashion</a></li>
                 <li><a href="/?cat=18">Design</a></li>
@@ -21,7 +21,7 @@
         <div class="feature-hd">
             <h2 class="hdg hdg_4">See Categories</h2> <!-- TODO Make categories expandible / collapsible -->
         </div>
-        <div class="feature-bd">
+        <div class="feature-bd feature-bd_condensed">
             <ul class="vList vList_push vList_nav">
                 <?php wp_list_categories('orderby=count&order=desc&style=list&number=10&title_li='); ?>
             </ul>
@@ -31,7 +31,7 @@
         <div class="feature-hd">
             <h2 class="hdg hdg_4">See Tags</h2> <!-- TODO Make tags expandible / collapsible -->
         </div>
-        <div class="feature-bd">
+        <div class="feature-bd feature-bd_condensed">
             <ul class="vList vList_push vList_nav">
                 <?php tag_list(); ?>
             </ul>
@@ -43,7 +43,7 @@
         <div class="feature-hd">
             <h2 class="hdg hdg_4">Favorite Things</h2> <!-- TODO Wire up favorite thing plugin -->
         </div>
-        <div class="feature-bd">
+        <div class="feature-bd feature-bd_condensed">
             <img src="//placehold.it/232x120" alt="" /> <!-- TODO Remove placeholder -->
         </div>
     </div>
