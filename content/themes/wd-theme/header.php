@@ -82,6 +82,7 @@
                             <li><a href="http://twitter.com/katearends" rel="external"><i class="icn icn_twitter"></i>Twitter</a></li>
                             <li><a href="http://followgram.me/katearends/" rel="external"><i class="icn icn_instagram"></i>Instagram</a></li>
                             <li><a href="http://8tracks.com/witanddelight" rel="external"><i class="icn icn_8tracks"></i>8tracks</a></li>
+                            <li><a href="http://feeds2.feedburner.com/katearends/DcwI" rel="external"><i class="icn icn_rss"></i>RSS Feed</a></li>
                         </ul>
                     </div>
                 </div>

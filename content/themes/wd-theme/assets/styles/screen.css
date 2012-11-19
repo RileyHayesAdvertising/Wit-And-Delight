@@ -253,7 +253,7 @@ img {
 }
 
 .hList_social > * + * {
-    margin-left: 16px;
+    margin-left: 18px;
 }
 
 .hList_social a {
@@ -357,6 +357,11 @@ img {
     width: 23px;
     height: 23px;
     background-image: url(../images/icon-sprite.png);
+    -webkit-transition: opacity .12s linear;
+    -moz-transition:    opacity .12s linear;
+    -ms-transition:     opacity .12s linear;
+    -o-transition:      opacity .12s linear;
+    transition:         opacity .12s linear;
 }
 
 .icn_email { background-position: 0 0 ;}
@@ -364,6 +369,9 @@ img {
 .icn_twitter { background-position: -54px 0 ;}
 .icn_instagram { background-position: -81px 0 ;}
 .icn_8tracks { background-position: -108px 0 ;}
+.icn_rss { background-position: -131px 0 ;}
+
+a:hover .icn { opacity: .2;}
 
 /* ---------------------------------------------------------------------
  Form Styles
