@@ -6,6 +6,11 @@
                         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?><!-- TODO create javascript toggle between views -->
                         <div class="panel panel_inverse">
                             <div class="feature">
+                                <div class="feature-hd">
+                                    <h3 class="hdg hdg_1">
+                                        <a href="<?php the_permalink(); ?>"><?php the_date('M.d.Y','',' | '); ?><?php the_title(); ?></a>
+                                    </h3>
+                                </div>
                                 <?php if (the_first_image() != '') { ?>
                                 <div class="feature-img">
                                     <a href="<?php the_permalink(); ?>">
@@ -13,13 +18,10 @@
                                     </a>
                                 </div>
                                 <?php } ?>
-                                <div class="feature-hd">
-                                    <h3 class="hdg hdg_1">
-                                        <a href="<?php the_permalink(); ?>"><?php the_date('M.d.Y','',' | '); ?><?php the_title(); ?></a>
-                                    </h3>
-                                </div>
                                 <div class="feature-bd">
-                                    <div class="user-content"><?php the_excerpt(); ?></div> <!-- TODO text the_excerpt / the_content -->
+                                    <div class="user-content">
+                                        <?php the_excerpt(); ?> <!-- TODO text the_excerpt / the_content -->
+                                    </div>
                                 </div>
                             </div>
                         </div>
