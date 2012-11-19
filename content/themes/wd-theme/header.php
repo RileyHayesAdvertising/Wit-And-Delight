@@ -29,12 +29,14 @@
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-lg.png/">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-md.png/">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon-sm.png">
-    <!-- TODO create apple touch icon graphics -->
     <!-- TODO Add facebook opengraph meta data -->
     
     <!-- FONTS -->
     <script type="text/javascript" src="//use.typekit.net/ytk1rdh.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    
+    <!-- TODO Add responsive -->
+    <!-- TODO Add print styles? -->
     
     <?php wp_head(); // Always have wp_head() just before the closing </head> ?>
 </head>
