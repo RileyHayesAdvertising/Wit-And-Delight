@@ -20,7 +20,7 @@
                                 <?php } ?>
                                 <div class="feature-bd">
                                     <div class="user-content">
-                                        <?php the_excerpt(); ?> <!-- TODO text the_excerpt / the_content -->
+                                        <?php the_excerpt(); ?> <!-- TODO the_content (with images removed) instead of the_excerpt -->
                                     </div>
                                 </div>
                                 <div class="feature-meta">
