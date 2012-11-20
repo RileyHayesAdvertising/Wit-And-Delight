@@ -1,7 +1,7 @@
         <div class="content">
             <div class="gridRow">
                 <div class="gridRow-col gridRow-col_size3of4 gridRow-col_push1of4" role="main">
-                    <div class="panel">
+                    <div class="panel panel_condensed">
                         <h2 class="isHidden">Articles</h2>
                         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?><!-- TODO create javascript toggle between views -->
                         <div class="panel panel_inverse">

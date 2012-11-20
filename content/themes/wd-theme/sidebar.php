@@ -1,6 +1,6 @@
 <div class="panel">
     <div class="feature feature_condensed">
-        <div class="feature-hd">
+        <div class="feature-hd feature-hd_push">
             <h2 class="hdg hdg_4">
                 <span class="hdg-split">Discovering the</span>
                 <span class="hdg-split">Wit and Delight</span>
@@ -35,6 +35,16 @@
             <ul class="vList vList_push vList_nav">
                 <?php tag_list(); ?>
             </ul>
+        </div>
+    </div>
+</div>
+<div class="panel">
+    <div class="feature feature_condensed">
+        <div class="feature-hd">
+            <h2 class="hdg hdg_4">Daily Reads</h2> 
+        </div>
+        <div class="feature-bd feature-bd_condensed">
+            <!-- TODO Hook up Daily Reads List -->
         </div>
     </div>
 </div>

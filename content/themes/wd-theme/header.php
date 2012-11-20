@@ -10,7 +10,7 @@
  */
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"><!-- TODO move entire site to witanddelight.com -->
 <head>
 
     <title><?php wp_title('|',1,'right'); ?><?php bloginfo('name'); ?></title>
@@ -58,7 +58,6 @@
                         <ul class="nav nav_split" role="navigation"> <!-- TODO Add is-active state to navigation -->
                             <li><a href="#">About</a></li> <!-- TODO Add Link -->
                             <li><a href="#">Studio</a></li> <!-- TODO Add Link -->
-                            <li><a href="#">Daily Reads</a></li> <!-- TODO Add Link -->
                             <li><a href="#">Work</a></li> <!-- TODO Add Link -->
                             <li><a href="http://pinterest.com/katea/" rel="external">Pinterest</a></li>
                             <li><a href="#">Shop</a></li> <!-- TODO Add Link -->
@@ -77,7 +76,7 @@
                 </div>
                 <div class="gridRow-col gridRow-col_size1of4">
                     <div class="panel">
-                        <?php get_search_form(); ?>
+                        <?php get_search_form(); ?><!-- TODO Swap Search & Icons -->
                         <ul class="hList hList_social">
                             <li><a href="mailto:witanddelight@gmail.com"><i class="icn icn_email"></i>E-mail</a></li>
                             <li><a href="http://www.facebook.com/witanddelight" rel="external"><i class="icn icn_facebook"></i>Facebook</a></li>
