@@ -41,6 +41,12 @@
                             </div>
                         </div>
                         <?php endif; ?>
+                        <div class="panel panel_bare">
+                            <ul>
+                                <li><?php next_posts_link('Older Posts');  ?></li> <!-- TODO Add arrow icon -->
+                                <li><?php previous_posts_link('Newer Posts');  ?></li> <!-- TODO Add arrow icon -->
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div class="gridRow-col gridRow-col_size1of4 gridRow-col_pull3of4" role="complementary">
