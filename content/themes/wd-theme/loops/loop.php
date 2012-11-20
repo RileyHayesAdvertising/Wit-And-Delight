@@ -13,7 +13,7 @@
                                 </div>
                                 <?php if (the_first_image() != '') { ?>
                                 <div class="feature-img">
-                                    <a href="http://pinterest.com/pin/create/button/?url=<?php the_permalink(); ?>&media=<?php echo the_first_image() ?>">
+                                    <a href="<?php the_permalink(); ?>">
                                         <img src="<?php echo the_first_image() ?>" alt="" />
                                     </a>
                                 </div>
