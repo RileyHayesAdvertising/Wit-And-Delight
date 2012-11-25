@@ -20,7 +20,15 @@
                                 <?php } ?>
                                 <div class="feature-bd">
                                     <div class="user-content">
-                                        <?php the_excerpt(); ?> <!-- TODO the_content (with images removed) instead of the_excerpt -->
+                                        <?php
+                                            // strip the <img> elements from the post but leave all other html intact
+                                            $content = get_the_content('');
+                                            $content = apply_filters('the_content', $content);
+                                            $pattern = '/(<img.+?>)/';
+                                            $replacements='';
+                                            $postOutput = preg_replace($pattern, $replacements, $content);
+                                            echo $postOutput;
+                                        ?>
                                     </div>
                                 </div>
                                 <div class="feature-meta">
