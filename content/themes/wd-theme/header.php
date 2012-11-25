@@ -29,7 +29,6 @@
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-lg.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-md.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon-sm.png">
-    <!-- TODO Add facebook opengraph meta data -->
     
     <!-- FONTS -->
     <script type="text/javascript" src="//use.typekit.net/ytk1rdh.js"></script>
@@ -84,7 +83,7 @@
                             <li><a href="http://8tracks.com/witanddelight" rel="external"><i class="icn icn_8tracks"></i>8tracks</a></li>
                             <li><a href="http://feeds2.feedburner.com/katearends/DcwI" rel="external"><i class="icn icn_rss"></i>RSS Feed</a></li>
                         </ul>
-                        <?php get_search_form(); ?><!-- TODO Swap Search & Icons -->
+                        <?php get_search_form(); ?>
                     </div>
                 </div>
             </div>
