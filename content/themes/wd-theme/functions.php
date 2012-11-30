@@ -205,3 +205,15 @@ function remove_cat_item($wp_list_categories) {
     return preg_replace($patterns, $replacements, $wp_list_categories);
 }
 add_filter('wp_list_categories','remove_cat_item');
+
+/**
+ * Removes width and height from images
+ */
+add_filter( 'post_thumbnail_html', 'remove_dimensions', 10 );
+add_filter( 'image_send_to_editor', 'remove_dimensions', 10 );
+add_filter( 'the_content', 'remove_dimensions', 10 );
+
+function remove_dimensions( $html ) {
+   $html = preg_replace( '/(width|height)="\d*"\s/', "", $html );
+   return $html;
+}

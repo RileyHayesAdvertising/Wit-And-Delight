@@ -10,7 +10,9 @@
                                 </div>
                                 <div class="feature-bd">
                                     <div class="user-content">
-                                        <?php the_content(); ?>
+                                        <?php
+                                            the_content(); 
+                                        ?>
                                     </div>
                                 </div>
                                 <div class="feature-meta">
