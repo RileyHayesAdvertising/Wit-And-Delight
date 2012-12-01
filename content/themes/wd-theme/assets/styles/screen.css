@@ -216,8 +216,8 @@ img {
     float: left;
 }
 
-.hList_social > * + * {
-    margin-left: 18px;
+.hList_social > * {
+    width: 16.6666%
 }
 
 .hList_social a {
