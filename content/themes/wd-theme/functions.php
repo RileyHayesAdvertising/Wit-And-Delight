@@ -43,98 +43,27 @@ register_sidebar(
     )
 );
 
+/* add enqueue scripts */
 add_action('wp_enqueue_scripts', 'enqueueScripts');
 add_action('wp_enqueue_scripts', 'enqueueStyles');
 
-/**
- * Register & enqueue all Javascript files for the theme.
- *
- * @return void
- */
-function enqueueScripts()
-{
-    // Global script
-    wp_register_script(
-        'wd-global',
-        WD_THEME_PATH_URL . 'assets/scripts/global.js',
-        array('jquery'),
-        '1.0',
-        true
-    );
-
-    wp_enqueue_script('wd-global');
-
-    // Comment reply script for threaded comments (registered in WP core)
-    if (is_singular() && get_option('thread_comments')) {
-        wp_enqueue_script('comment-reply');
-    }
+/* remove defaults from wp_head */
+remove_action( 'wp_head', 'feed_links' );
+remove_action( 'wp_head', 'rsd_link');
+remove_action( 'wp_head', 'wlwmanifest_link');
+remove_action( 'wp_head', 'index_rel_link');
+remove_action( 'wp_head', 'parent_post_rel_link');
+remove_action( 'wp_head', 'start_post_rel_link');
+remove_action( 'wp_head', 'adjacent_posts_rel_link');
+remove_action( 'wp_head', 'wp_generator');
+function remove_comments_rss( $for_comments ) {
+    return;
 }
-
-/**
- * Register & enqueue all stylesheets for the theme. /style.css is not used.
- *
- * @return void
- */
-function enqueueStyles()
-{
-    global $wp_styles;
-
-    // Primary Screen Stylesheet
-    wp_register_style(
-        'wd-screen',
-        WD_THEME_PATH_URL . 'assets/styles/screen.css',
-        false,
-        '1.0',
-        'screen'
-    );
-
-    // Print Stylesheet
-    wp_register_style(
-        'wd-print',
-        WD_THEME_PATH_URL . 'assets/styles/print.css',
-        false,
-        '1.0',
-        'print'
-    );
-
-    // IE 9 Stylesheet
-    wp_register_style(
-        'wd-ie9',
-        WD_THEME_PATH_URL . 'assets/styles/ie9.css',
-        false,
-        '1.0',
-        'screen'
-    );
-
-    // IE 8 Stylesheet
-    wp_register_style(
-        'wd-ie8',
-        WD_THEME_PATH_URL . 'assets/styles/ie8.css',
-        false,
-        '1.0',
-        'screen'
-    );
-
-    // IE 7 Stylesheet
-    wp_register_style(
-        'wd-ie7',
-        WD_THEME_PATH_URL . 'assets/styles/ie7.css',
-        false,
-        '1.0',
-        'screen'
-    );
-
-    // Conditional statements for IE stylesheets
-    $wp_styles->add_data('wd-ie9', 'conditional', 'lte IE 9');
-    $wp_styles->add_data('wd-ie8', 'conditional', 'lte IE 8');
-    $wp_styles->add_data('wd-ie7', 'conditional', 'lte IE 7');
-
-    // enqueue!
-    wp_enqueue_style('wd-screen');
-    wp_enqueue_style('wd-print');
-    wp_enqueue_style('wd-ie9');
-    wp_enqueue_style('wd-ie8');
-    wp_enqueue_style('wd-ie7');
+add_filter('post_comments_feed_link','remove_comments_rss');
+add_action('widgets_init', 'my_remove_recent_comments_style');
+function my_remove_recent_comments_style() {
+    global $wp_widget_factory;
+    remove_action('wp_head', array($wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style'));
 }
 
 /**
@@ -148,6 +77,18 @@ function rkv_imagelink_setup() {
         }
 }
 add_action('admin_init', 'rkv_imagelink_setup', 10);
+
+/**
+ * Make sure the default image alignment for media is none.
+ *
+ */
+function rkv_imagealign_setup() {
+    $image_set_align = get_option( 'image_default_align' );
+        if ($image_set_align !== 'none') {
+            update_option('image_default_align', 'none');
+        }
+}
+add_action('admin_init', 'rkv_imagealign_setup', 10);
 
 /**
  * Find the first image in a post.

@@ -25,18 +25,44 @@
     <link rel="pingback" href="<?php bloginfo('pingback_url') ?>" />
 
     <!-- ICONS -->
-    <link rel="shortcut icon" type="image/ico" href="favicon.ico?v=2" />
+    <link rel="shortcut icon" type="image/ico" href="/favicon.ico?v=2013" />
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-lg.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-md.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon-sm.png">
+    
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/assets/styles/screen.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/assets/styles/screen-sm.css" media="screen and (min-width: 24em)"/>
+    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/assets/styles/screen-md.css" media="screen and (min-width: 36em)"/>
+    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/assets/styles/screen-lg.css" media="screen and (min-width: 48em)"/>
+
+    <!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/assets/styles/ie9.css" media="screen"/>
+    <![endif]-->
+    
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/assets/styles/screen-sm.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/assets/styles/screen-md.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/assets/styles/screen-lg.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/assets/styles/ie8.css" media="screen"/>
+    <![endif]-->
+    
+    <!--[if lte IE 7]>
+    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/assets/styles/ie7.css" media="screen"/>
+    <![endif]-->
+    
+    <!-- JQUERY -->
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+
+    <!-- JAVASCRIPT -->
+    <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/assets/scripts/global.js"></script>
+
     
     <!-- FONTS -->
     <script type="text/javascript" src="//use.typekit.net/ytk1rdh.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     
-    <!-- TODO Add responsive -->
-    <!-- TODO Add print styles? -->
-    
+    <!-- WP HEAD -->
     <?php wp_head(); // Always have wp_head() just before the closing </head> ?>
 </head>
 <body>
