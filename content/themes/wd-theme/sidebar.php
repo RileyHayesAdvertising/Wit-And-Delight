@@ -1,4 +1,4 @@
-<div class="panel">
+<div class="panel isLargeView">
     <div class="feature feature_condensed">
         <div class="feature-hd feature-hd_push">
             <h2 class="hdg hdg_4">
@@ -16,7 +16,7 @@
         </div>
     </div>
 </div>
-<div class="panel">
+<div class="panel isLargeView">
     <div class="feature">
         <div class="feature-hd">
             <h2 class="hdg hdg_4">See Categories</h2> <!-- TODO Make categories expandible / collapsible -->
@@ -38,7 +38,7 @@
         </div>
     </div>
 </div>
-<div class="panel">
+<div class="panel isLargeView">
     <div class="feature feature_condensed">
         <div class="feature-hd">
             <h2 class="hdg hdg_4">Daily Reads</h2> 
@@ -48,7 +48,7 @@
         </div>
     </div>
 </div>
-<div class="panel">
+<div class="panel isLargeView">
     <div class="feature feature_condensed">
         <div class="feature-hd">
             <h2 class="hdg hdg_4">Favorite Things</h2> <!-- TODO Wire up favorite thing plugin -->

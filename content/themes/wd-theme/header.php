@@ -32,9 +32,9 @@
     
     <!-- STYLESHEETS -->
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/assets/styles/screen.css" media="screen"/>
-    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/assets/styles/screen-sm.css" media="screen and (min-width: 24em)"/>
-    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/assets/styles/screen-md.css" media="screen and (min-width: 36em)"/>
-    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/assets/styles/screen-lg.css" media="screen and (min-width: 48em)"/>
+    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/assets/styles/screen-sm.css" media="screen and (min-width: 30em)"/>
+    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/assets/styles/screen-md.css" media="screen and (min-width: 40em)"/>
+    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/assets/styles/screen-lg.css" media="screen and (min-width: 52em)"/>
 
     <!--[if lte IE 9]>
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/assets/styles/ie9.css" media="screen"/>
@@ -78,7 +78,7 @@
                         </h1>
                     </div>
                 </div>
-                <div class="gridRow-col gridRow-col_size1of4">
+                <div class="gridRow-col gridRow-col_size1of4 isLargeView">
                     <div class="panel">
                         <ul class="nav nav_split" role="navigation"> <!-- TODO Add is-active state to navigation -->
                             <li><a href="#">About</a></li> <!-- TODO Add Link -->
@@ -90,7 +90,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="gridRow-col gridRow-col_size1of4">
+                <div class="gridRow-col gridRow-col_size1of4 isLargeView">
                     <div class="panel">
                         <ul class="nav"> <!-- TODO Add is-active state to navigation -->
                             <li><a href="#">Copyright &amp; Disclosure</a></li> <!-- TODO Add Link -->
@@ -99,7 +99,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="gridRow-col gridRow-col_size1of4">
+                <div class="gridRow-col gridRow-col_size1of4 isLargeView">
                     <div class="panel">
                         <ul class="hList hList_social">
                             <li><a href="mailto:witanddelight@gmail.com"><i class="icn icn_email"></i>E-mail</a></li>

@@ -6,3 +6,24 @@ Target Browsers: IE8, IE9, Safari 6, Chrome 22, Firefox 15
 Media Type: Screen
 Width: 36em and up
 ------------------------------------------------------------------------ */
+
+/* ---------------------------------------------------------------------
+ Blocks
+------------------------------------------------------------------------ */
+.blocks {
+    overflow: hidden;
+}
+
+.blocks > * {
+    float: left;
+    margin-bottom: 0;
+}
+
+.blocks > * + * {
+    margin-left: 1%;
+}
+
+.blocks_2up > * { width: 49.5%; }
+.blocks_3up > * { width: 32.666666%; }
+.blocks_4up > * { width: 24.25%; }
+.blocks_5up > * { width: 19.2%; }
