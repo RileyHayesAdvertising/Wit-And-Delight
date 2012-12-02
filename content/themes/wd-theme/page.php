@@ -1,0 +1,9 @@
+<?php
+/*
+Template Name: Default Page View
+*/
+?>
+
+<?php get_header(); ?>
+<?php get_template_part( 'loops/loop-page' ); ?>
+<?php get_footer(); ?>

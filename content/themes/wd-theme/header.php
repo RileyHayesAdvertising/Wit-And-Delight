@@ -81,9 +81,9 @@
                 <div class="gridRow-col gridRow-col_size1of4 isLargeView">
                     <div class="panel">
                         <ul class="nav nav_split" role="navigation"> <!-- TODO Add is-active state to navigation -->
-                            <li><a href="#">About</a></li> <!-- TODO Add Link -->
+                            <li><a href="/about/">About</a></li>
                             <li><a href="#">Studio</a></li> <!-- TODO Add Link -->
-                            <li><a href="#">Work</a></li> <!-- TODO Add Link -->
+                            <li><a href="/press/">Press</a></li>
                             <li><a href="http://pinterest.com/katea/" rel="external">Pinterest</a></li>
                             <li><a href="#">Shop</a></li> <!-- TODO Add Link -->
                             <li><a href="http://witanddelight.tumblr.com/" rel="external">Tumblr</a></li>
@@ -93,8 +93,8 @@
                 <div class="gridRow-col gridRow-col_size1of4 isLargeView">
                     <div class="panel">
                         <ul class="nav"> <!-- TODO Add is-active state to navigation -->
-                            <li><a href="#">Copyright &amp; Disclosure</a></li> <!-- TODO Add Link -->
-                            <li><a href="mailto:witanddelight@gmail.com">Contact</a></li>
+                            <li><a href="/copyright-disclosure/">Copyright &amp; Disclosure</a></li>
+                            <li><a href="/contact/">Contact</a></li>
                             <li><a href="http://feeds2.feedburner.com/katearends/DcwI" rel="external">Subscribe</a></li> <!-- TODO Verify RSS Works with new feed -->
                         </ul>
                     </div>
@@ -102,7 +102,7 @@
                 <div class="gridRow-col gridRow-col_size1of4 isLargeView">
                     <div class="panel">
                         <ul class="hList hList_social">
-                            <li><a href="mailto:witanddelight@gmail.com"><i class="icn icn_email"></i>E-mail</a></li>
+                            <li><a href="/contact/"><i class="icn icn_email"></i>E-mail</a></li>
                             <li><a href="http://www.facebook.com/witanddelight" rel="external"><i class="icn icn_facebook"></i>Facebook</a></li>
                             <li><a href="http://twitter.com/katearends" rel="external"><i class="icn icn_twitter"></i>Twitter</a></li>
                             <li><a href="http://followgram.me/katearends/" rel="external"><i class="icn icn_instagram"></i>Instagram</a></li>
