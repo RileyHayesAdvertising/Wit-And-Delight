@@ -35,7 +35,7 @@
                                     <ul class="blocks blocks_3up">
                                         <li><a href="http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>" class="btn" rel="external">Share on Facebook</a></li>
                                         <li><a href="http://twitter.com/share?url=<?php the_permalink(); ?>" class="btn" rel="external">Tweet It</a></li>
-                                        <li><a href="http://pinterest.com/pin/create/bookmarklet/?media=<?php echo urlencode(the_first_image()); ?>&url=<?php echo urlencode(get_permalink()); ?>" class="btn">Pin it</a></li> <!-- TODO verify pinterest button works on production server -->
+                                        <li><a href="http://pinterest.com/pin/create/button/?media=<?php echo urlencode(the_first_image()); ?>&url=<?php echo urlencode(get_permalink()); ?>" class="btn">Pin it</a></li> <!-- TODO verify pinterest button works on production server -->
                                     </ul>
                                 </div>
                             </div>
