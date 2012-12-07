@@ -50,10 +50,10 @@
                         </div>
                         <?php endif; ?>
                         <div class="panel panel_bare">
-                            <ul>
-                                <li><?php next_posts_link('Older Posts');  ?></li> <!-- TODO Add arrow icon -->
-                                <li><?php previous_posts_link('Newer Posts');  ?></li> <!-- TODO Add arrow icon -->
-                            </ul>
+                            <ol class="pagination">
+                                <li class="pagination-prev"><?php next_posts_link('<i class="icn icn_prev"></i>Older Posts');  ?></li> <!-- TODO Add arrow icon -->
+                                <li class="pagination-next"><?php previous_posts_link('Newer Posts<i class="icn icn_next"></i>');  ?></li> <!-- TODO Add arrow icon -->
+                            </ol>
                         </div>
                     </div>
                 </div>

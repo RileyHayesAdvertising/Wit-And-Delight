@@ -157,7 +157,7 @@ img {
 }
 
 .quickSearch {
-    margin-top: 12px;
+    margin-top: 16px;
 }
 
 /* ---------------------------------------------------------------------
@@ -325,7 +325,6 @@ img {
     margin-bottom: 0;
 }
 
-
 /* ---------------------------------------------------------------------
  Icons
 ------------------------------------------------------------------------ */
@@ -333,6 +332,7 @@ img {
     display: inline-block;
     width: 23px;
     height: 23px;
+    vertical-align: bottom;
     background-image: url(../images/icon-sprite.png);
     -webkit-transition: opacity .12s linear;
     -moz-transition:    opacity .12s linear;
@@ -341,14 +341,16 @@ img {
     transition:         opacity .12s linear;
 }
 
-.icn_email { background-position: 0 0 ;}
-.icn_facebook { background-position: -27px 0;}
-.icn_twitter { background-position: -54px 0 ;}
-.icn_instagram { background-position: -81px 0 ;}
-.icn_8tracks { background-position: -108px 0 ;}
-.icn_rss { background-position: -131px 0 ;}
+.icn_email { background-position: 0 0 ; }
+.icn_facebook { background-position: -27px 0; }
+.icn_twitter { background-position: -54px 0 ; }
+.icn_instagram { background-position: -81px 0 ; }
+.icn_8tracks { background-position: -108px 0 ; }
+.icn_rss { background-position: -131px 0 ; }
+.icn_prev { background-position: -154px 0 ; }
+.icn_next { background-position: -177px 0 ; }
 
-a:hover .icn { opacity: .2;}
+a:hover .icn { opacity: .2; }
 
 /* ---------------------------------------------------------------------
  Form Styles
@@ -440,6 +442,28 @@ a:hover .icn { opacity: .2;}
 .btn:hover {
     color: #ffffff;
     opacity: .3;
+}
+
+/* ---------------------------------------------------------------------
+ Pagination
+------------------------------------------------------------------------ */
+.pagination {
+    overflow: hidden;
+}
+
+.pagination-prev {
+    float: left;
+}
+
+.pagination-next {
+    float: right;
+}
+
+.pagination a {
+    display: block;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 /* ---------------------------------------------------------------------
