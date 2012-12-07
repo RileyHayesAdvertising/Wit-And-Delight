@@ -51,8 +51,8 @@
                         <?php endif; ?>
                         <div class="panel panel_bare">
                             <ol class="pagination">
-                                <li class="pagination-prev"><?php next_posts_link('<i class="icn icn_prev"></i>Older Posts');  ?></li> <!-- TODO Add arrow icon -->
-                                <li class="pagination-next"><?php previous_posts_link('Newer Posts<i class="icn icn_next"></i>');  ?></li> <!-- TODO Add arrow icon -->
+                                <li class="pagination-prev"><?php next_posts_link('<i class="icn icn_prev"></i>Older Posts');  ?></li>
+                                <li class="pagination-next"><?php previous_posts_link('Newer Posts<i class="icn icn_next"></i>');  ?></li>
                             </ol>
                         </div>
                     </div>
