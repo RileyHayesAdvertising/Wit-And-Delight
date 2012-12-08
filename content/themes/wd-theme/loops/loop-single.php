@@ -23,7 +23,7 @@
                                     </ul>
                                 </div>
                             </div>
-                            <div class="panel panel_bare">
+                            <div class="panel panel_bare panel_clip">
                                 <ol class="pagination">
                                     <li class="pagination-prev"><?php next_post_link('%link','<i class="icn icn_prev"></i>Previous Post');  ?></li>
                                     <li class="pagination-next"><?php previous_post_link('%link','Next Post<i class="icn icn_next"></i>');  ?></li>
