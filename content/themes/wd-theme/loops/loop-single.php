@@ -30,8 +30,7 @@
                                 </ol>
                             </div>
                         </div>
-                        <!-- TODO Add Next Post / Prev Post Links -->
-                        <div class="comments"><!-- TODO Style Comments -->
+                        <div class="comments">
                             <?php comments_template(); ?>
                         </div>
                     <?php endwhile; endif; ?>
