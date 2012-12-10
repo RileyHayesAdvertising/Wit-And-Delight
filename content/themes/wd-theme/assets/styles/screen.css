@@ -293,6 +293,10 @@ img {
     border-right: 30px solid transparent;
 }
 
+.comment-bd a {
+    color: #ffffff;
+}
+
 .comment-meta {
     letter-spacing: 2px;
     text-transform: uppercase;
