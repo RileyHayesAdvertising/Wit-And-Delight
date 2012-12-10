@@ -38,7 +38,7 @@
             <ol>
                 <?php
                     wp_list_comments();
-                    // Customize comment output: http://codex.wordpress.org/Function_Reference/wp_list_comments
+                    // TODO Customize comment output: http://codex.wordpress.org/Function_Reference/wp_list_comments
                 ?>
             </ol>
         </div>
