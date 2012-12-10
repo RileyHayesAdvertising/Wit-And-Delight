@@ -158,3 +158,31 @@ function remove_dimensions( $html ) {
    $html = preg_replace( '/(width|height)="\d*"\s/', "", $html );
    return $html;
 }
+
+/**
+ * Outputs Comments Markup
+ *
+ * @return html
+ */
+function mytheme_comment($comment, $args, $depth) { 
+    $GLOBALS['comment'] = $comment;
+?>
+    <li>
+        <div class="comment">
+            <div class="comment-bd">
+                <?php comment_text(); ?>
+            </div>
+            <div class="comment-meta">
+                <div class="media">
+                    <div class="media-element">
+                        <?php if ($args['avatar_size'] != 0) echo get_avatar( $comment, $args['avatar_size'] ); ?>
+                    </div>
+                    <div class="media-bd">
+                        <?php printf( __('%s'), get_comment_date('M d Y')); ?> | <?php printf(__('%s'), get_comment_author()); ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+<?php
+}

@@ -35,10 +35,9 @@
             <h1 class="hdg hdg_1">Comments (<?php comments_number('0','1','%'); ?>)</h3>
         </div>
         <div class="feature-bd">
-            <ol>
+            <ol class="vList vList_comments">
                 <?php
-                    wp_list_comments();
-                    // TODO Customize comment output: http://codex.wordpress.org/Function_Reference/wp_list_comments
+                    wp_list_comments('type=comment&callback=mytheme_comment&avatar_size=60');
                 ?>
             </ol>
         </div>

@@ -268,6 +268,40 @@ img {
 }
 
 /* ---------------------------------------------------------------------
+ Comment List
+------------------------------------------------------------------------ */
+.comment {
+    border-bottom: 1px dotted #221f1f;
+    margin-bottom: 30px;
+}
+
+.comment-bd {
+    background: #221f1f;
+    color: #ffffff;
+    text-transform: uppercase;
+    padding: 20px;
+    position: relative;
+    margin-bottom: 60px; /* margin-bottom 30px + the size of the border that draw's the comment arrow */
+}
+
+.comment-bd:after {
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    border-top: 30px solid #221f1f; /* match the color of the comment-bd to draw the arrow */
+    border-right: 30px solid transparent;
+}
+
+.comment-meta {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-bottom: 30px;
+    line-height: 60px; /* match the height of the avatar to create vertical alignment */
+}
+
+/* ---------------------------------------------------------------------
  Panel
 ------------------------------------------------------------------------ */
 .panel {
