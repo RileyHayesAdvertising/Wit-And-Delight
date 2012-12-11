@@ -183,6 +183,19 @@ function mytheme_comment($comment, $args, $depth) {
                 </div>
             </div>
         </div>
-    </li>
 <?php
 }
+
+/**
+ * Outputs Textarea first in the comment form markup
+ *
+ * @return html
+ */
+add_action( 'comment_form_top', 'add_textarea' );
+
+function add_textarea() {
+    echo '<label for="comment-copy" class="isHidden">' . _x( 'Comment', 'noun' ) . '</label><textarea class="input input_alt" id="comment-copy" name="comment" cols="45" rows="8" aria-required="true" placeholder="Enter message here:"></textarea>';
+}
+
+
+

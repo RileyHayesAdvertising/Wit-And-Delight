@@ -32,7 +32,7 @@
 <?php if ( have_comments() ) : ?>
     <div class="feature">
         <div class="feature-hd">
-            <h1 class="hdg hdg_1">Comments (<?php comments_number('0','1','%'); ?>)</h3>
+            <h1 class="hdg hdg_1">Comments (<?php comments_number('0','1','%'); ?>)</h1>
         </div>
         <div class="feature-bd">
             <ol class="vList vList_comments">
@@ -43,8 +43,30 @@
         </div>
     </div>
 
+    <div class="form-comment">
+        <div class="form-comment-inner">
 <?php endif; // end have_comments() ?>
 
-<?php comment_form(); ?>
+<?php
+$comments_args = array(
+    'id_form' => 'comment-form',
+    'id_submit' => 'comment-submit',
+    'title_reply' => __( '' ),
+    'title_reply_to' => __( '' ),
+    'cancel_reply_link' => __( '' ),
+    'label_submit' => __( 'Submit Comment' ),
+    'comment_field' => '',
+    'must_log_in' => '',
+    'logged_in_as' => '',
+    'comment_notes_before' => '',
+    'comment_notes_after' => '',
+    'fields' => apply_filters( 'comment_form_default_fields', array(
+        'author' => '<label for="comment-author" class="isHidden">' . __( 'Name', 'domainreference' ) . ( $req ? '<span class="required">*</span>' : '' ) . '</label> ' . '<input class="input input_alt" id="comment-author" name="author" type="text" placeholder="Name *" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' />',
+        'url' => '<label for="comment-url" class="isHidden">' . __( 'Website', 'domainreference' ) . '</label>' . '<input class="input input_alt" id="comment-url" name="url" type="text" placeholder="URL" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" />',
+        'email' => '<label for="comment-email" class="isHidden">' . __( 'Email', 'domainreference' ) . ( $req ? '<span class="required">*</span>' : '' ) . '</label> ' . '<input class="input input_alt" id="comment-email" name="email" type="text" placeholder="Email *" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' />' ) ) );
 
+comment_form($comments_args);
+?>
+        </div>
+    </div><!-- // end comments form -->
 </div><!-- // end comments panel -->

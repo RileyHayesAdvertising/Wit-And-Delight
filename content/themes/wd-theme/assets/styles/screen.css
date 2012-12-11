@@ -100,7 +100,7 @@ input[type=search] {
 textarea {
     overflow: auto;
     vertical-align: top;
-    resize: vertical;
+    resize: none;
 }
 
 ::-moz-focus-inner {
@@ -306,6 +306,17 @@ img {
 }
 
 /* ---------------------------------------------------------------------
+ Comment Form
+------------------------------------------------------------------------ */
+.form-comment {
+    background: #e6e7e8;
+}
+
+.form-comment-inner {
+    padding: 20px;
+}
+
+/* ---------------------------------------------------------------------
  Panel
 ------------------------------------------------------------------------ */
 .panel {
@@ -409,12 +420,25 @@ a:hover .icn { opacity: .2; }
     width: 100%;
 }
 
+.input_alt {
+    background: #ffffff;
+    width: auto;
+}
+
 ::-webkit-input-placeholder {
    color: rgba(0,0,0,.3);
 }
 
 :-moz-placeholder {  
    color: rgba(0,0,0,.3);  
+}
+
+.input_alt::-webkit-input-placeholder {
+   color: rgba(0,0,0,.6);
+}
+
+.input_alt:-moz-placeholder {  
+   color: rgba(0,0,0,.6);  
 }
 
 /* ---------------------------------------------------------------------
