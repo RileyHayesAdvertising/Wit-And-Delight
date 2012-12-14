@@ -422,15 +422,17 @@ a:hover .icn { opacity: .2; }
 
 .input_alt {
     background: #ffffff;
-    width: auto;
+    width: 96%;
+    padding: 2%;
+    margin-bottom: 12px;
 }
 
 .input_textarea {
-    width: 96%;
-    padding: 2%;
     line-height: 1.8;
+    margin-bottom: 0;
 }
 
+/* styles for the comment form textarea */
 .pointer {
     position: relative;
     margin-bottom: 50px; /* margin-bottom 20px + the size of the border that draw's the comment arrow */
@@ -530,6 +532,20 @@ a:hover .icn { opacity: .2; }
     opacity: .3;
 }
 
+/* wordpress doesn't allow adding classes to this button
+in the comment form so I used the provided ID */
+#comment-submit {
+    width: 115px;
+    height: 27px;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    text-indent: -9999px;
+    cursor: pointer;
+    background: url(../images/btn-lets-hear-it.png) no-repeat 0 0;
+}
+
+
 /* ---------------------------------------------------------------------
  Pagination
 ------------------------------------------------------------------------ */
@@ -553,7 +569,7 @@ a:hover .icn { opacity: .2; }
 }
 
 /* ---------------------------------------------------------------------
- User Contnet
+ User Contnet - TODO (make more robust)
 ------------------------------------------------------------------------ */
 .user-content a {
     text-decoration: underline;

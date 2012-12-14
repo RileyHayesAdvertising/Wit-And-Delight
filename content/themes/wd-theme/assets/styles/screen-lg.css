@@ -70,3 +70,32 @@ Width: 48em and up
 .gridRow-col_pull2of4 { left: -50.72165%; }
 .gridRow-col_pull3of4 { left: -76.083049%; }
 .gridRow-col_pull4of4 { left: -100%; }
+
+/* ---------------------------------------------------------------------
+ Comment Form
+------------------------------------------------------------------------ */
+/* styles for the comment form input layout */
+.input_name {
+    float: left;
+    width: 34%;
+    padding: 2%;
+}
+
+.input_url {
+    float: right;
+    width: 54%;
+    padding: 2%;
+}
+
+.input_email {
+    float: left;
+    width: 56%;
+    padding: 2%;
+    margin-right: 12px;
+}
+
+@media (min-width: 61em) {
+    .input_email {
+        width: 63%;
+    }
+}

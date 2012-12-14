@@ -61,12 +61,13 @@ $comments_args = array(
     'comment_notes_before' => '',
     'comment_notes_after' => '',
     'fields' => apply_filters( 'comment_form_default_fields', array(
-        'author' => '<label for="comment-author" class="isHidden">' . __( 'Name', 'domainreference' ) . ( $req ? '<span class="required">*</span>' : '' ) . '</label> ' . '<input class="input input_alt" id="comment-author" name="author" type="text" placeholder="Name *" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' />',
-        'url' => '<label for="comment-url" class="isHidden">' . __( 'Website', 'domainreference' ) . '</label>' . '<input class="input input_alt" id="comment-url" name="url" type="text" placeholder="URL" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" />',
-        'email' => '<label for="comment-email" class="isHidden">' . __( 'Email', 'domainreference' ) . ( $req ? '<span class="required">*</span>' : '' ) . '</label> ' . '<input class="input input_alt" id="comment-email" name="email" type="text" placeholder="Email *" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' />' ) ) );
+        'author' => '<label for="comment-author" class="isHidden">' . __( 'Name', 'domainreference' ) . ( $req ? '<span class="required">*</span>' : '' ) . '</label> ' . '<input class="input input_alt input_name" id="comment-author" name="author" type="text" placeholder="Name *" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' />',
+        'url' => '<label for="comment-url" class="isHidden">' . __( 'Website', 'domainreference' ) . '</label>' . '<input class="input input_alt input_url" id="comment-url" name="url" type="text" placeholder="URL" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" />',
+        'email' => '<label for="comment-email" class="isHidden">' . __( 'Email', 'domainreference' ) . ( $req ? '<span class="required">*</span>' : '' ) . '</label> ' . '<input class="input input_alt input_email" id="comment-email" name="email" type="text" placeholder="Email *" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' />' ) ) );
 
 comment_form($comments_args);
 ?>
+            
         </div>
     </div><!-- // end comments form -->
 </div><!-- // end comments panel -->
