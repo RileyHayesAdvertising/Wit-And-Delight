@@ -425,6 +425,26 @@ a:hover .icn { opacity: .2; }
     width: auto;
 }
 
+.input_textarea {
+    width: 96%;
+    padding: 2%;
+    line-height: 1.8;
+}
+
+.pointer {
+    position: relative;
+    margin-bottom: 50px; /* margin-bottom 20px + the size of the border that draw's the comment arrow */
+}
+
+.pointer:after {
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    border-top: 30px solid #ffffff; /* match the color of the comment-bd to draw the arrow */
+    border-right: 30px solid transparent;
+}
+
 ::-webkit-input-placeholder {
    color: rgba(0,0,0,.3);
 }
