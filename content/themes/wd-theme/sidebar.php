@@ -44,7 +44,9 @@
             <h2 class="hdg hdg_4">Daily Reads</h2> 
         </div>
         <div class="feature-bd feature-bd_condensed">
-            <!-- TODO Hook up Daily Reads List -->
+            <ul class="vList vList_push vList_nav">
+                <?php wp_list_bookmarks('categorize=0&category=3&category_orderby=slug&title_li=0&show_private=0&orderby=name&show_images=0&show_description=0&show_name=1&show_rating=0&show_updated=0'); ?>
+            </ul>
         </div>
     </div>
 </div>
