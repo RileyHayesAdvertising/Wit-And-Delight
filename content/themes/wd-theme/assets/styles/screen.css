@@ -128,7 +128,8 @@ a {
 }
 
 a:hover,
-a:focus {
+a:focus,
+.isActive > a {
     color: #e15119;
 }
 

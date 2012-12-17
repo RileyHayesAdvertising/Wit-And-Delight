@@ -10,7 +10,7 @@
  */
 ?>
 <!DOCTYPE html>
-<html lang="en"><!-- TODO move entire site to witanddelight.com -->
+<html lang="en">
 <head>
 
     <title><?php wp_title('|',1,'right'); ?><?php bloginfo('name'); ?></title>
@@ -80,22 +80,22 @@
                 </div>
                 <div class="gridRow-col gridRow-col_size1of4 isLargeView">
                     <div class="panel">
-                        <ul class="nav nav_split" role="navigation"> <!-- TODO Add is-active state to navigation -->
-                            <li><a href="/about/">About</a></li>
-                            <li><a href="#">Studio</a></li> <!-- TODO Add Link -->
-                            <li><a href="/press/">Press</a></li>
+                        <ul class="nav nav_split" role="navigation">
+                            <li<?php if (is_page(10654)) {?> class="isActive"<?php } ?>><a href="/about/">About</a></li>
+                            <li<?php if (is_page(12395)) {?> class="isActive"<?php } ?>><a href="/studio/">Studio</a></li>
+                            <li<?php if (is_page(11540)) {?> class="isActive"<?php } ?>><a href="/press/">Press</a></li>
                             <li><a href="http://pinterest.com/katea/" rel="external">Pinterest</a></li>
-                            <li><a href="#">Shop</a></li> <!-- TODO Add Link -->
+                            <li><a href="#">Shop</a></li> <!-- TODO Add Link / isActive -->
                             <li><a href="http://witanddelight.tumblr.com/" rel="external">Tumblr</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="gridRow-col gridRow-col_size1of4 isLargeView">
                     <div class="panel">
-                        <ul class="nav"> <!-- TODO Add is-active state to navigation -->
-                            <li><a href="/copyright-disclosure/">Copyright &amp; Disclosure</a></li>
-                            <li><a href="/contact/">Contact</a></li>
-                            <li><a href="http://feeds2.feedburner.com/katearends/DcwI" rel="external">Subscribe</a></li> <!-- TODO Verify RSS Works with new feed -->
+                        <ul class="nav">
+                            <li<?php if (is_page(11541)) {?> class="isActive"<?php } ?>><a href="/copyright-disclosure/">Copyright &amp; Disclosure</a></li>
+                            <li<?php if (is_page(11560)) {?> class="isActive"<?php } ?>><a href="/contact/">Contact</a></li>
+                            <li><a href="http://feeds2.feedburner.com/katearends/DcwI" rel="external">Subscribe</a></li>
                         </ul>
                     </div>
                 </div>
