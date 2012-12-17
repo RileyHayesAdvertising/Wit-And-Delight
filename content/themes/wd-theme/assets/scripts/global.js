@@ -48,7 +48,7 @@ var WD = function($){
 
     /* ---------------------------------------------------------------------
     AutoReplace
-    Author: Anthony Ticknor
+    Author: Dan Piscitiello
 
     Mimics HTML5 placeholder behavior
 
@@ -115,7 +115,7 @@ var WD = function($){
         }
     };
 
-
+    /* Initialiaze! */
     APP.ExternalLinks.init();
     APP.AutoReplace.init();
     APP.HasJS.init();
