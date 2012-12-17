@@ -44,7 +44,7 @@ var WD = WD || {}; // Global Namespace object
             }
 
             this.$controls = $controls;
-            this.
+            this.loadTemplates();
             this.bind();
         },
 

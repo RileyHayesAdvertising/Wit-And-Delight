@@ -127,8 +127,12 @@ a {
     transition:         color .12s linear, background .12s linear;
 }
 
+/* styles for hover of global anchor & wordpress assigned classes
+for "active states" */
 a:hover,
-a:focus {
+a:focus,
+.isActive > a,
+.current-cat > a {
     color: #e15119;
 }
 
