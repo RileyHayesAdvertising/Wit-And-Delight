@@ -55,6 +55,26 @@ var WD = WD || {}; // Global Namespace object
                 e.preventDefault();
                 self.toggleView();
             });
+        },
+
+        loadTemplates: function() {
+            var self = this;
+            var scrollTemplateUrl = APP.THEMEURL + 'assets/scripts/views/scroll.handlebars';
+            var gridTemplateUrl = APP.THEMEURL + 'assets/scripts/views/grid.handlebars';
+
+            APP.Template.get({
+                url: scrollTemplateUrl,
+                success: function (data) {
+                    self._templateScroll = data;
+                }
+            });
+
+            APP.Template.get({
+                url: gridTemplateUrl,
+                success: function (data) {
+                    self._templateGrid = data;
+                }
+            });
         }
     };
 
