@@ -82,11 +82,10 @@
                     <div class="panel">
                         <ul class="nav nav_split" role="navigation">
                             <li<?php if (is_page(10654)) {?> class="isActive"<?php } ?>><a href="/about/">About</a></li>
-                            <li<?php if (is_page(12395)) {?> class="isActive"<?php } ?>><a href="/studio/">Studio</a></li>
-                            <li<?php if (is_page(11540)) {?> class="isActive"<?php } ?>><a href="/press/">Press</a></li>
                             <li><a href="http://pinterest.com/katea/" rel="external">Pinterest</a></li>
-                            <li><a href="#">Shop</a></li> <!-- TODO Add Link / isActive -->
+                            <li<?php if (is_page(11540)) {?> class="isActive"<?php } ?>><a href="/press/">Press</a></li>
                             <li><a href="http://witanddelight.tumblr.com/" rel="external">Tumblr</a></li>
+                            <li><a href="#">Shop</a></li> <!-- TODO Add Link / isActive -->
                         </ul>
                     </div>
                 </div>
