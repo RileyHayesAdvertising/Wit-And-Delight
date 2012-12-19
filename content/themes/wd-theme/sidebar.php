@@ -65,7 +65,7 @@
     <ul class="vList vList_navFeatured">
         <li><a href="mailto:witanddelight@gmail.com">witanddelight@gmail.com</a></li>
         <li class="vList-item_push"><a href="tel:6128456858">612 845 6858</a></li>
-        <li><a href="http://www.linkedin.com/profile/view?id=12377656" rel="external">Linked In</a></li>
+        <li><a href="http://www.linkedin.com/profile/view?id=12377656" rel="external">LinkedIn</a></li>
         <li><a href="http://www.behance.net/katearends" rel="external">Behance</a></li>
     </ul>
 </div>
