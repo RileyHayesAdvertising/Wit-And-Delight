@@ -1,9 +1,9 @@
 <div class="panel isLargeView">
     <div class="feature feature_condensed">
-        <div class="feature-hd feature-hd_push">
+        <div class="feature-hd feature-hd_alt">
             <h2 class="hdg hdg_4">
                 <span class="hdg-split">Discovering the</span>
-                <span class="hdg-split">Wit and Delight</span>
+                <span class="hdg-split">Wit &amp; Delight in</span>
             </h2>
         </div>
         <div class="feature-bd feature-bd_condensed">
