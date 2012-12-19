@@ -10,13 +10,12 @@
  */
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js"><!-- TODO move entire site to witanddelight.com -->
 <head>
-
+    <meta charset="utf-8" />
     <title><?php wp_title('|',1,'right'); ?><?php bloginfo('name'); ?></title>
 
     <!-- META DATA -->
-    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="MSSmartTagsPreventParsing" content="true" />
     <meta http-equiv="imagetoolbar" content="no" />
@@ -29,7 +28,7 @@
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-lg.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-md.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon-sm.png">
-    
+
     <!-- STYLESHEETS -->
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/assets/styles/screen.css" media="screen"/>
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/assets/styles/screen-sm.css" media="screen and (min-width: 30em)"/>
@@ -39,29 +38,32 @@
     <!--[if lte IE 9]>
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/assets/styles/ie9.css" media="screen"/>
     <![endif]-->
-    
+
     <!--[if lte IE 8]>
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/assets/styles/screen-sm.css" media="screen"/>
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/assets/styles/screen-md.css" media="screen"/>
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/assets/styles/screen-lg.css" media="screen"/>
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/assets/styles/ie8.css" media="screen"/>
     <![endif]-->
-    
+
     <!--[if lte IE 7]>
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/assets/styles/ie7.css" media="screen"/>
     <![endif]-->
-    
-    <!-- JQUERY -->
-    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
 
-    <!-- JAVASCRIPT -->
+    <!-- SCRIPTS -->
+    <script>
+        var WD = WD || {};
+        WD.THEMEURL = "<?php bloginfo('template_directory'); ?>/";
+    </script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+    <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/assets/scripts/handlebars.js"></script>
     <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/assets/scripts/global.js"></script>
 
-    
+
     <!-- FONTS -->
     <script type="text/javascript" src="//use.typekit.net/ytk1rdh.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-    
+
     <!-- WP HEAD -->
     <?php wp_head(); // Always have wp_head() just before the closing </head> ?>
 </head>
@@ -109,6 +111,9 @@
                             <li><a href="http://feeds2.feedburner.com/katearends/DcwI" rel="external"><i class="icn icn_rss"></i>RSS Feed</a></li>
                         </ul>
                         <?php get_search_form(); ?>
+                        <div class="js-view-toggle">
+                            <a href="#">Scroll</a> or <a href="#">Grid</a>
+                        </div>
                     </div>
                 </div>
             </div>
