@@ -50,16 +50,6 @@
         </div>
     </div>
 </div>
-<div class="panel isLargeView">
-    <div class="feature feature_condensed">
-        <div class="feature-hd">
-            <h2 class="hdg hdg_4">Favorite Things</h2> <!-- TODO Wire up favorite thing plugin -->
-        </div>
-        <div class="feature-bd feature-bd_condensed">
-            <img src="//placehold.it/232x120" alt="" /> <!-- TODO Remove placeholder -->
-        </div>
-    </div>
-</div>
 <div class="panel">
     <h2 class="isHidden">Contact Info</h2>
     <ul class="vList vList_navFeatured">
