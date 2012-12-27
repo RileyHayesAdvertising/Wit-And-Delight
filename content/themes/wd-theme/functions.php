@@ -111,8 +111,8 @@ function the_first_image() {
  *
  * @return html list of all tags
  */
- function tag_list() {
- 
+function tag_list() {
+
     // figure out the url segments
     $_SERVER['REQUEST_URI_PATH'] = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
     $segments = explode('/', $_SERVER['REQUEST_URI_PATH']);
