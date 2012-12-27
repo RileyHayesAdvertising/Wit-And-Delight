@@ -112,11 +112,23 @@ function the_first_image() {
  * @return html list of all tags
  */
  function tag_list() {
+ 
+    // figure out the url segments
+    $_SERVER['REQUEST_URI_PATH'] = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+    $segments = explode('/', $_SERVER['REQUEST_URI_PATH']);
+    
     $tags = get_tags();
     foreach ($tags as $tag){
         $tag_link = get_tag_link($tag->term_id);
-        $html .= "<li><a href='{$tag_link}'>";
-        $html .= "{$tag->name}</a></li>";
+        if (($segments[1] == 'tag') && ($segments[2] == "{$tag->slug}")) {
+            $html .= '<li class="current-cat">';
+        } else {
+            $html .= "<li>";
+        }
+        $html .= "<a href='{$tag_link}'>";
+        $html .= "{$tag->name}";
+        $html .= "</a>";
+        $html .= "</li>";
     }
     echo $html;
 }
