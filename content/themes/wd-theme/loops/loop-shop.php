@@ -35,7 +35,7 @@
                                     // display shop grid items
                                     $rows = get_field('shop_grid');
                                     if($rows) {
-                                        echo '<ul class="blocks blocks_3up">';
+                                        echo '<ul class="blocks blocks_splitMobile blocks_3up">';
                                         foreach($rows as $row) {
                                             echo '<li>';
                                                 echo '<a href="'.$row['product_link'].'" rel="external">';
