@@ -10,7 +10,7 @@
  */
 ?>
 <!DOCTYPE html>
-<html lang="en" class="no-js"><!-- TODO move entire site to witanddelight.com -->
+<html lang="en" class="no-js">
 <head>
     <meta charset="utf-8" />
     <title><?php wp_title('|',1,'right'); ?><?php bloginfo('name'); ?></title>
@@ -87,7 +87,7 @@
                             <li><a href="http://pinterest.com/katea/" rel="external">Pinterest</a></li>
                             <li<?php if (is_page(11540)) {?> class="isActive"<?php } ?>><a href="/press/">Press</a></li>
                             <li><a href="http://witanddelight.tumblr.com/" rel="external">Tumblr</a></li>
-                            <li><a href="#">Shop</a></li> <!-- TODO Add Link / isActive -->
+                            <li<?php if (is_page(12408)) {?> class="isActive"<?php } ?>><a href="/shop/">Shop</a></li>
                         </ul>
                     </div>
                 </div>
