@@ -17,18 +17,5 @@ function wd_register_post_types()
      * @see register_post_type() http://codex.wordpress.org/Function_Reference/register_post_type
      *
      */
-    register_post_type(
-        'wd_carousel', // prefix your post-type
-        array(
-            'labels' => array(
-                'name'          => 'Carousels', // plural name
-                'singular_name' => 'Carousel'
-            ),
-            'public' => true,
-            'supports' => array(
-                'title',
-                'thumbnail',
-            )
-        )
-    );
+
 }
