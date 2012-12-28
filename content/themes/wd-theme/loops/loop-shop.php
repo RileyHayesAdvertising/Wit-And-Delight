@@ -14,6 +14,40 @@
                                             the_content(); 
                                         ?>
                                     </div>
+                                    <div class="js-carousel">
+                                        <?php 
+                                        // display carousel slides
+                                        $rows = get_field('shop_carousel');
+                                        if($rows) {
+                                            echo '<ul>';
+                                            foreach($rows as $row) {
+                                                echo '<li>';
+                                                    echo '<a href="'.$row['slide_link'].'" rel="external">';
+                                                        echo '<img src="'.$row['slide_image'].'" alt="'.$row['slide_title'].'" />';
+                                                    echo '</a>';
+                                                echo '</li>';
+                                            }
+                                            echo '</ul>';
+                                        }
+                                        ?>
+                                    </div>
+                                    <?php 
+                                    // display shop grid items
+                                    $rows = get_field('shop_grid');
+                                    if($rows) {
+                                        echo '<ul class="blocks blocks_3up">';
+                                        foreach($rows as $row) {
+                                            echo '<li>';
+                                                echo '<a href="'.$row['product_link'].'" rel="external">';
+                                                    echo '<img src="'.$row['product_image'].'" alt="'.$row['product_title'].'" />';
+                                                    echo '<h3>'.$row['product_title'].'</h3>';
+                                                    echo '<h4>'.$row['product_price'].'</h4>';
+                                                echo '</a>';
+                                            echo '</li>';
+                                        }
+                                        echo '</ul>';
+                                    }
+                                    ?>
                                 </div>
                             </div>
                         </div>
