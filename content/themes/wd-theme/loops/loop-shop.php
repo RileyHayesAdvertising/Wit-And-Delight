@@ -32,7 +32,7 @@
                                         }
                                         ?>
                                     </div>
-                                    <h3>Currently Coveted</h3>
+                                    <h3 class="hdg hdg_1">Currently Coveted</h3>
                                     <?php 
                                     // display shop grid items
                                     $rows = get_field('shop_grid');
