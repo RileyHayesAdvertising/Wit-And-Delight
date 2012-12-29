@@ -23,6 +23,7 @@
                                             echo '<ul class="carousel">';
                                             foreach($rows as $row) {
                                                 echo '<li class="carousel-item">';
+                                                    echo '<h4 class="isHidden">'.$row['slide_title'].'</h4>';
                                                     echo '<a href="'.$row['slide_link'].'" rel="external">';
                                                         echo '<img src="'.$row['slide_image'].'" alt="'.$row['slide_title'].'" />';
                                                     echo '</a>';
@@ -43,7 +44,7 @@
                                                 echo '<a href="'.$row['product_link'].'" rel="external">';
                                                     echo '<img src="'.$row['product_image'].'" alt="'.$row['product_title'].'" />';
                                                     echo '<h4>'.$row['product_title'].'</h3>';
-                                                    echo '<h5>'.$row['product_price'].'</h4>';
+                                                    echo '<div>'.$row['product_price'].'</div>';
                                                 echo '</a>';
                                             echo '</li>';
                                         }
