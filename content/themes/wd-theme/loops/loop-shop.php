@@ -14,14 +14,14 @@
                                             the_content(); 
                                         ?>
                                     </div>
-                                    <div class="js-carousel">
+                                    <div id="js-carousel">
                                         <?php 
                                         // display carousel slides
                                         $rows = get_field('shop_carousel');
                                         if($rows) {
-                                            echo '<ul>';
+                                            echo '<ul class="carousel">';
                                             foreach($rows as $row) {
-                                                echo '<li>';
+                                                echo '<li class="carousel-item">';
                                                     echo '<a href="'.$row['slide_link'].'" rel="external">';
                                                         echo '<img src="'.$row['slide_image'].'" alt="'.$row['slide_title'].'" />';
                                                     echo '</a>';
