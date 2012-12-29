@@ -14,7 +14,7 @@
                                             the_content(); 
                                         ?>
                                     </div>
-                                    <div id="js-carousel">
+                                    <div class="panel panel_bare" id="js-carousel">
                                         <h3 class="isHidden">Featured Items</h3>
                                         <?php 
                                         // display carousel slides
@@ -33,24 +33,26 @@
                                         }
                                         ?>
                                     </div>
-                                    <h3 class="hdg hdg_1">Currently Coveted</h3>
-                                    <?php 
-                                    // display shop grid items
-                                    $rows = get_field('shop_grid');
-                                    if($rows) {
-                                        echo '<ul class="blocks blocks_splitMobile blocks_3up">';
-                                        foreach($rows as $row) {
-                                            echo '<li>';
-                                                echo '<a href="'.$row['product_link'].'" rel="external">';
-                                                    echo '<img src="'.$row['product_image'].'" alt="'.$row['product_title'].'" />';
-                                                    echo '<h4>'.$row['product_title'].'</h3>';
-                                                    echo '<div>'.$row['product_price'].'</div>';
-                                                echo '</a>';
-                                            echo '</li>';
+                                    <div class="panel panel_bare">
+                                        <h3 class="hdg hdg_1">Currently Coveted</h3>
+                                        <?php 
+                                        // display shop grid items
+                                        $rows = get_field('shop_grid');
+                                        if($rows) {
+                                            echo '<ul class="blocks blocks_splitMobile blocks_3up">';
+                                            foreach($rows as $row) {
+                                                echo '<li>';
+                                                    echo '<a href="'.$row['product_link'].'" rel="external">';
+                                                        echo '<img src="'.$row['product_image'].'" alt="'.$row['product_title'].'" />';
+                                                        echo '<h4>'.$row['product_title'].'</h3>';
+                                                        echo '<div>'.$row['product_price'].'</div>';
+                                                    echo '</a>';
+                                                echo '</li>';
+                                            }
+                                            echo '</ul>';
                                         }
-                                        echo '</ul>';
-                                    }
-                                    ?>
+                                        ?>
+                                    </div>
                                 </div>
                             </div>
                         </div>
