@@ -47,9 +47,17 @@
                                                     foreach($rows as $row) {
                                                         echo '<li>';
                                                             echo '<a class="linkBlock" href="'.$row['product_link'].'" rel="external">';
-                                                                echo '<img src="'.$row['product_image'].'" alt="'.$row['product_title'].'" />';
-                                                                echo '<h4 class="hdg hdg_4">'.$row['product_title'].'</h4>';
-                                                                echo '<div>'.$row['product_price'].'</div>';
+                                                                echo '<div class="teaser">';
+                                                                    echo '<div class="teaser-img">';
+                                                                        echo '<img src="'.$row['product_image'].'" alt="'.$row['product_title'].'" />';
+                                                                    echo '</div>';
+                                                                    echo '<div class="teaser-hd">';
+                                                                        echo '<h4 class="hdg hdg_4">'.$row['product_title'].'</h4>';
+                                                                    echo '</div>';
+                                                                    echo '<div class="teaser-meta">';
+                                                                        echo $row['product_price'];
+                                                                    echo '</div>';
+                                                                echo '</div>';
                                                             echo '</a>';
                                                         echo '</li>';
                                                     }
