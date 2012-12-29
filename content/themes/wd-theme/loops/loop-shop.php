@@ -24,7 +24,7 @@
                                             foreach($rows as $row) {
                                                 echo '<li class="carousel-item">';
                                                     echo '<h4 class="isHidden">'.$row['slide_title'].'</h4>';
-                                                    echo '<a href="'.$row['slide_link'].'" rel="external">';
+                                                    echo '<a class="linkBlock" href="'.$row['slide_link'].'" rel="external">';
                                                         echo '<img src="'.$row['slide_image'].'" alt="'.$row['slide_title'].'" />';
                                                     echo '</a>';
                                                 echo '</li>';
@@ -46,11 +46,11 @@
                                                     echo '<ul class="blocks blocks_splitMobile blocks_3up">';
                                                     foreach($rows as $row) {
                                                         echo '<li>';
-                                                                    echo '<a href="'.$row['product_link'].'" rel="external">';
-                                                                        echo '<img src="'.$row['product_image'].'" alt="'.$row['product_title'].'" />';
-                                                                        echo '<h4 class="hdg hdg_4">'.$row['product_title'].'</h4>';
-                                                                        echo '<div>'.$row['product_price'].'</div>';
-                                                                    echo '</a>';
+                                                            echo '<a class="linkBlock" href="'.$row['product_link'].'" rel="external">';
+                                                                echo '<img src="'.$row['product_image'].'" alt="'.$row['product_title'].'" />';
+                                                                echo '<h4 class="hdg hdg_4">'.$row['product_title'].'</h4>';
+                                                                echo '<div>'.$row['product_price'].'</div>';
+                                                            echo '</a>';
                                                         echo '</li>';
                                                     }
                                                     echo '</ul>';
