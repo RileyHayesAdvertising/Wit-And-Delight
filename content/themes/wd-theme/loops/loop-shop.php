@@ -15,6 +15,7 @@
                                         ?>
                                     </div>
                                     <div id="js-carousel">
+                                        <h3 class="isHidden">Featured Items</h3>
                                         <?php 
                                         // display carousel slides
                                         $rows = get_field('shop_carousel');
@@ -31,6 +32,7 @@
                                         }
                                         ?>
                                     </div>
+                                    <h3>Currently Coveted</h3>
                                     <?php 
                                     // display shop grid items
                                     $rows = get_field('shop_grid');
@@ -40,8 +42,8 @@
                                             echo '<li>';
                                                 echo '<a href="'.$row['product_link'].'" rel="external">';
                                                     echo '<img src="'.$row['product_image'].'" alt="'.$row['product_title'].'" />';
-                                                    echo '<h3>'.$row['product_title'].'</h3>';
-                                                    echo '<h4>'.$row['product_price'].'</h4>';
+                                                    echo '<h4>'.$row['product_title'].'</h3>';
+                                                    echo '<h5>'.$row['product_price'].'</h4>';
                                                 echo '</a>';
                                             echo '</li>';
                                         }
