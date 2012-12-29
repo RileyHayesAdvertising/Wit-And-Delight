@@ -170,15 +170,19 @@ img {
 .nav {
     overflow: hidden;
     position: relative;
-}
-
-.nav > li {
-    margin-bottom: 8px;
+    text-align: center;
 }
 
 .nav_split > li {
-    float: left;
-    width: 50%;
+    display: inline-block;
+}
+
+.nav_split > li.isLargeView {
+    display: none;
+}
+
+.nav_split > li + li {
+    margin-left: 12%;
 }
 
 .nav > li > a {

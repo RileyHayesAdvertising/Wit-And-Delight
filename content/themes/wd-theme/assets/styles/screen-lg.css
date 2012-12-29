@@ -82,6 +82,27 @@ Width: 48em and up
 .gridRow-col_pull4of4 { left: -100%; }
 
 /* ---------------------------------------------------------------------
+ Main Navigation
+------------------------------------------------------------------------ */
+.nav {
+    text-align: left;
+}
+
+.nav > li {
+    margin-bottom: 8px;
+}
+
+.nav_split > li {
+    width: 50%;
+    float: left;
+    display: block;
+}
+
+.nav_split > li + li {
+    margin-left: 0;
+}
+
+/* ---------------------------------------------------------------------
  Comment Form
 ------------------------------------------------------------------------ */
 /* styles for the comment form input layout */
