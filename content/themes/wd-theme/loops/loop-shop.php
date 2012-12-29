@@ -44,7 +44,7 @@
                                                 echo '<li>';
                                                     echo '<a href="'.$row['product_link'].'" rel="external">';
                                                         echo '<img src="'.$row['product_image'].'" alt="'.$row['product_title'].'" />';
-                                                        echo '<h4>'.$row['product_title'].'</h3>';
+                                                        echo '<h4 class="hdg hdg_4">'.$row['product_title'].'</h4>';
                                                         echo '<div>'.$row['product_price'].'</div>';
                                                     echo '</a>';
                                                 echo '</li>';
