@@ -3,7 +3,7 @@
                 <div class="gridRow-col gridRow-col_size3of4 gridRow-col_push1of4" role="main">
                     <div class="panel panel_condensed">
                     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-                        <div class="panel panel_inverse">
+                        <div class="panel panel_bare">
                             <div class="feature feature_condensed">
                                 <div class="feature-hd">
                                     <h2 class="hdg hdg_1"><?php the_title(); ?></h2>
