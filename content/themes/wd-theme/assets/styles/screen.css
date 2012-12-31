@@ -431,6 +431,18 @@ img {
     letter-spacing: 2px;
 }
 
+.teaser-img img {
+    -webkit-transition: opacity .12s linear;
+    -moz-transition:    opacity .12s linear;
+    -ms-transition:     opacity .12s linear;
+    -o-transition:      opacity .12s linear;
+    transition:         opacity .12s linear;
+}
+
+a:hover .teaser-img img {
+    opacity: .7;
+}
+
 /* ---------------------------------------------------------------------
  Icons
 ------------------------------------------------------------------------ */
