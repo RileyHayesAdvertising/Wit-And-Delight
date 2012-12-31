@@ -68,14 +68,13 @@ var WD = WD || {}; // Global Namespace object
             var $el = $(e.target);
             var cookie = $.cookie('viewprefs');
 
-            this.$controls.find('.isActive').removeClass('isActive');
-
             if ($el.hasClass('js-view-scroll')) {
                 if (cookie && cookie == 'scroll') {
                     return;
                 }
 
                 this.$contentArea.html(this._templateScroll(APP.POSTS));
+                this.$controls.find('.isActive').removeClass('isActive');
                 $el.addClass('isActive');
 
                 $.cookie('viewprefs', 'scroll', {expires: 365});
@@ -87,6 +86,7 @@ var WD = WD || {}; // Global Namespace object
                 }
 
                 this.$contentArea.html(this._templateGrid(this.parseGridArray(APP.POSTS)));
+                this.$controls.find('.isActive').removeClass('isActive');
                 $el.addClass('isActive');
 
                 $.cookie('viewprefs', 'grid', {expires: 365});
