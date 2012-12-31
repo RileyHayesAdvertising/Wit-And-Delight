@@ -18,7 +18,7 @@
 </div>
 <div class="panel isLargeView">
     <div class="feature js-toggle">
-        <div class="feature-hd js-toggle-link">
+        <div class="feature-hd js-toggle-link" data-cookie="js-toggle-categories">
             <h2 class="hdg hdg_4">See Categories</h2>
         </div>
         <div class="feature-bd feature-bd_condensed js-toggle-target">
@@ -28,7 +28,7 @@
         </div>
     </div>
     <div class="feature feature_condensed js-toggle">
-        <div class="feature-hd js-toggle-link">
+        <div class="feature-hd js-toggle-link" data-cookie="js-toggle-tags">
             <h2 class="hdg hdg_4">See Tags</h2>
         </div>
         <div class="feature-bd feature-bd_condensed js-toggle-target">
@@ -40,7 +40,7 @@
 </div>
 <div class="panel isLargeView">
     <div class="feature feature_condensed js-toggle">
-        <div class="feature-hd js-toggle-link">
+        <div class="feature-hd js-toggle-link" data-cookie="js-toggle-daily">
             <h2 class="hdg hdg_4">Daily Reads</h2> 
         </div>
         <div class="feature-bd feature-bd_condensed js-toggle-target">

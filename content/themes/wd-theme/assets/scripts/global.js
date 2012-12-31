@@ -265,12 +265,23 @@ var WD = WD || {}; // Global Namespace object
            
            this.$toggleSections = $toggleSections;
            
-           this.setupIcons();
+           this.setup();
            this.bind();
         },
         
-        setupIcons: function() {
-            $('.js-toggle-link').append('<span class="js-toggle-icn"><i class="icn icn_next"></i></span>');
+        setup: function() {
+            $('.js-toggle-link').each(function() {
+                var $this = $(this);
+                var cookieName = $this.attr('data-cookie');
+                
+                if ($.cookie(cookieName) === 'true') {
+                    $this.append('<span class="js-toggle-icn"><i class="icn icn_down"></i></span>');
+                    $this.siblings('.js-toggle-target').addClass('isExpanded');
+                } else {
+                    $this.append('<span class="js-toggle-icn"><i class="icn icn_next"></i></span>');
+                }
+
+            });
         },
         
         bind: function() {
@@ -280,19 +291,28 @@ var WD = WD || {}; // Global Namespace object
                 var $this = $(this);
                 var $currentLink = $this;
                 var $currentTarget = $this.siblings('.js-toggle-target');
-                self.toggleTarget($currentLink,$currentTarget);
+                var cookieName = $this.attr('data-cookie');
+                self.toggleTarget($currentLink,$currentTarget,cookieName);
             });
         },
         
-        toggleTarget: function($link,$target) {
+        toggleTarget: function($link,$target,cookieName) {
             $currentIcon = $link.find('.js-toggle-icn .icn');
-            console.log($currentIcon);
+            
             if ($currentIcon.hasClass('icn_next')) {
                 $currentIcon.removeClass('icn_next').addClass('icn_down');
             } else if ($currentIcon.hasClass('icn_down')) {
                 $currentIcon.removeClass('icn_down').addClass('icn_next');
             }
+            
             $target.toggleClass('isExpanded');
+            
+            if ($target.hasClass('isExpanded')) {
+                $.cookie(cookieName, 'true', { expires: 7, path: '/' });
+            } else {
+                $.cookie(cookieName, 'false', { expires: 7, path: '/' });
+            }
+        
         }
     };
 

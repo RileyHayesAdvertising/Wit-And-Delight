@@ -56,9 +56,9 @@
         WD.THEMEURL = "<?php bloginfo('template_directory'); ?>/";
     </script>
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+    <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/assets/scripts/jquery.cookie.js"></script>
     <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/assets/scripts/handlebars.js"></script>
     <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/assets/scripts/global.js"></script>
-
 
     <!-- FONTS -->
     <script type="text/javascript" src="//use.typekit.net/ytk1rdh.js"></script>
