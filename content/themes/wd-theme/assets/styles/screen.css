@@ -169,6 +169,18 @@ img {
     margin-top: 16px;
 }
 
+.viewToggle {
+    padding-top: 55px;
+}
+
+.viewToggle p {
+    font-size: 10px;
+    line-height: 33px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
 /* ---------------------------------------------------------------------
  Main Navigation
 ------------------------------------------------------------------------ */
@@ -235,6 +247,20 @@ img {
 }
 
 /* ---------------------------------------------------------------------
+ Yin and Yang
+------------------------------------------------------------------------ */
+.yinAndYang {
+    overflow: hidden;
+}
+
+.yinAndYang-yin {
+    float: left;
+}
+
+.yinAndYang-yang {
+    float: right;
+}
+/* ---------------------------------------------------------------------
  Horizontal Lists
 ------------------------------------------------------------------------ */
 .hList {
@@ -255,6 +281,10 @@ img {
     text-shadow: none;
     color: transparent;
     background: none;
+}
+
+.hList_spread > * + *{
+    margin-left: 10px;
 }
 
 /* ---------------------------------------------------------------------
@@ -487,6 +517,30 @@ a:hover .teaser-img img {
 .icn_pin { background-position: -227px 0; }
 
 a:hover .icn { opacity: .2; }
+
+/* ---------------------------------------------------------------------
+ Switcher Icons
+------------------------------------------------------------------------ */
+.switcher {
+    display: block;
+    height: 27px;
+    text-indent: -9999px;
+    background: transparent url(../images/icons-viewchanger.png) no-repeat 0 0;
+    opacity: 0.5;
+}
+
+.switcher.isActive {
+    opacity: 1;
+}
+
+.switcher_grid {
+    width: 28px;
+}
+
+.switcher_scroll {
+    width: 41px;
+    background-position: -39px 0;
+}
 
 /* ---------------------------------------------------------------------
  Form Styles

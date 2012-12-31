@@ -112,14 +112,25 @@
                         </ul>
                         <?php get_search_form(); ?>
 
-                        <div class="js-view-toggle">
-                        <?php if (!isset($_COOKIE["viewprefs"])) : ?>
-                            <a href="#" class="js-view-scroll">Scroll</a> or <a href="#" class="js-view-grid">Grid</a>
-                        <?php elseif ($_COOKIE["viewprefs"] == "scroll"): ?>
-                            <a href="#" class="js-view-scroll isActive">Scroll</a> or <a href="#" class="js-view-grid">Grid</a>
-                        <?php elseif ($_COOKIE["viewprefs"] == "grid"): ?>
-                            <a href="#" class="js-view-scroll">Scroll</a> or <a href="#" class="js-view-grid isActive">Grid</a>
-                        <?php endif; ?>
+                        <div class="js-view-toggle viewToggle">
+                            <div class="yinAndYang">
+                                <div class="yinAndYang-yin">
+                                    <p>Grid or Scroll</p>
+                                </div>
+                                <div class="yinAndYang-yang">
+                                    <?php if (!isset($_COOKIE["viewprefs"]) || $_COOKIE["viewprefs"] == "scroll") : ?>
+                                        <ul class="hList hList_spread">
+                                            <li><a href="#" class="js-view-grid switcher switcher_grid">Grid</a></li>
+                                            <li><a href="#" class="js-view-scroll switcher switcher_scroll isActive">Scroll</a> </li>
+                                        </ul>
+                                    <?php elseif ($_COOKIE["viewprefs"] == "grid"): ?>
+                                        <ul class="hList hList_spread">
+                                            <li><a href="#" class="js-view-grid switcher switcher_grid isActive">Grid</a></li>
+                                            <li><a href="#" class="js-view-scroll switcher switcher_scroll">Scroll</a> </li>
+                                        </ul>
+                                    <?php endif; ?>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
