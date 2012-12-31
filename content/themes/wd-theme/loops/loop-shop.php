@@ -5,7 +5,7 @@
                     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                         <div class="panel panel_bare">
                             <div class="feature feature_condensed">
-                                <div class="feature-hd">
+                                <div class="feature-hd isHidden">
                                     <h2 class="hdg hdg_1"><?php the_title(); ?></h2>
                                 </div>
                                 <div class="feature-bd">

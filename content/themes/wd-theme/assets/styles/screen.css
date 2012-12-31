@@ -120,6 +120,7 @@ body {
 a {
     color: #000000;
     text-decoration: none;
+    cursor: pointer;
     -webkit-transition: color .12s linear, background .12s linear;
     -moz-transition:    color .12s linear, background .12s linear;
     -ms-transition:     color .12s linear, background .12s linear;
@@ -617,6 +618,21 @@ in the comment form so I used the provided ID */
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 2px;
+}
+
+/* ---------------------------------------------------------------------
+ Carousel
+------------------------------------------------------------------------ */
+.js .carousel {
+    position: relative;
+}
+
+.js .carousel-item {
+    display: none;
+}
+
+.js .carousel-item:first-child {
+    display: block;
 }
 
 /* ---------------------------------------------------------------------

@@ -25,6 +25,7 @@ var WD = WD || {}; // Global Namespace object
         APP.AutoReplace.init();
         APP.HasJS.init();
         APP.ViewSwitcher.init();
+        APP.Carousel.init();
     });
 
     /* ---------------------------------------------------------------------
@@ -127,9 +128,112 @@ var WD = WD || {}; // Global Namespace object
     };
 
     /* ---------------------------------------------------------------------
+    Carousel
+    Author: Anthony Ticknor
+
+    Create a carousel and rotate it. Rotation pauses on hover
+    of each slide.
+    ------------------------------------------------------------------------ */
+    APP.Carousel = {
+        $carousel: undefined,
+        $slides: undefined,
+        numSlides: undefined,
+        numSlidesFromZero: undefined, // needed for 0 based counting
+        currentSlide: 0,
+        currentlyStopped: false,
+        _rotationSpeed: 3000,
+        
+        init: function() {
+            var $carousel = $('#js-carousel');
+            
+            if (!$carousel.length) {
+                return;
+            }
+            
+            this.$carousel = $carousel;
+            this.$slides = this.$carousel.find('.carousel-item');
+            this.numSlides = this.$slides.length;
+            this.numSlidesFromZero = this.numSlides - 1;
+            
+            if (this.numSlides == 0) {
+                return;
+            }
+            
+            this.setupControls();
+            this.bind();
+            this.play();
+        },
+        
+        setupControls: function() {
+            this.$carousel.append('<ol class="pagination"><li class="pagination-prev"><a class="js-prev-slide"><i class="icn icn_prev"></i><span class="isHidden">Previous Slide</span></a></li><li class="pagination-next"><a class="js-next-slide"><span class="isHidden">Next Slide</span><i class="icn icn_next"></i></a></li></ol>');
+        },
+        
+        bind: function() {
+            var self = this;
+            
+            this.$carousel.on('click','.js-next-slide', function(e) {
+                e.preventDefault();
+                self.currentlyStopped = true;
+                self.pause();
+                self.nextSlide();
+            });
+            
+            this.$carousel.on('click','.js-prev-slide', function(e) {
+                e.preventDefault();
+                self.currentlyStopped = true;
+                self.pause();
+                self.prevSlide();
+            });
+            
+            this.$carousel.on('mouseenter','.carousel-item', function() {
+                self.pause();
+            });
+            
+            this.$carousel.on('mouseleave','.carousel-item', function() {
+                if (self.currentlyStopped == false) {
+                    self.play();
+                }
+            });
+        },
+
+        play: function() {
+            var self = this;
+            
+            this.rotate = window.setInterval(function() {
+                self.nextSlide();
+            }, self._rotationSpeed);
+        },
+        
+        pause: function() {
+            var self = this;
+            clearInterval(self.rotate);
+        },
+        
+        nextSlide: function() {
+            this.$slides.hide();
+            if (this.currentSlide == this.numSlidesFromZero) {
+                this.currentSlide = 0;
+            } else {
+                this.currentSlide = this.currentSlide + 1;
+            }
+            this.$slides.eq(this.currentSlide).show();
+        },
+        
+        prevSlide: function() {
+            this.$slides.hide();
+            if (this.currentSlide == 0) {
+                this.currentSlide = this.numSlidesFromZero;
+            } else {
+                this.currentSlide = this.currentSlide - 1;
+            }
+            this.$slides.eq(this.currentSlide).show();
+        }
+    };
+
+    /* ---------------------------------------------------------------------
     HasJS
     Author: Anthony Ticknor
-    Modigied: Dan Piscitiello
+    Modified: Dan Piscitiello
 
     Adds JS class to HTML element if JS is present
     Removes no-js class from html element if JS present
