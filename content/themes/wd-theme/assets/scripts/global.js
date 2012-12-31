@@ -216,7 +216,7 @@ var WD = WD || {}; // Global Namespace object
             } else {
                 this.currentSlide = this.currentSlide + 1;
             }
-            this.$slides.eq(this.currentSlide).show();
+            this.$slides.eq(this.currentSlide).fadeIn(200);
         },
         
         prevSlide: function() {
@@ -226,7 +226,7 @@ var WD = WD || {}; // Global Namespace object
             } else {
                 this.currentSlide = this.currentSlide - 1;
             }
-            this.$slides.eq(this.currentSlide).show();
+            this.$slides.eq(this.currentSlide).fadeIn(200);
         }
     };
 
