@@ -467,6 +467,7 @@ a:hover .teaser-img img {
 .icn_rss { background-position: -131px 0 ; }
 .icn_prev { background-position: -154px 0 ; }
 .icn_next { background-position: -177px 0 ; }
+.icn_down { background-position: -200px 0 ; }
 
 a:hover .icn { opacity: .2; }
 
@@ -633,7 +634,7 @@ in the comment form so I used the provided ID */
 }
 
 /* ---------------------------------------------------------------------
- Carousel
+ Carousel - JS Styles
 ------------------------------------------------------------------------ */
 .js .carousel {
     position: relative;
@@ -644,6 +645,41 @@ in the comment form so I used the provided ID */
 }
 
 .js .carousel-item:first-child {
+    display: block;
+}
+
+/* ---------------------------------------------------------------------
+ Toggle - JS Styles
+------------------------------------------------------------------------ */
+.js .js-toggle-link {
+    position: relative;
+    cursor: pointer;
+    -webkit-transition: color .12s linear;
+    -moz-transition:    color .12s linear;
+    -ms-transition:     color .12s linear;
+    -o-transition:      color .12s linear;
+    transition:         color .12s linear;
+}
+
+.js .js-toggle-icn {
+    position: absolute;
+    bottom: -20px;
+    left: -4px;
+}
+
+.js .js-toggle-link:hover {
+    color: #e15119;
+}
+
+.js .js-toggle-link:hover .icn {
+    opacity: .2;
+}
+
+.js .js-toggle-target {
+    display: none;
+}
+
+.js .js-toggle-target.isExpanded {
     display: block;
 }
 

@@ -26,6 +26,7 @@ var WD = WD || {}; // Global Namespace object
         APP.HasJS.init();
         APP.ViewSwitcher.init();
         APP.Carousel.init();
+        APP.Toggle.init();
     });
 
     /* ---------------------------------------------------------------------
@@ -243,6 +244,55 @@ var WD = WD || {}; // Global Namespace object
             APP.$html
                 .addClass('js')
                 .removeClass('no-js');
+        }
+    };
+
+    /* ---------------------------------------------------------------------
+    Toggle
+    Author: Anthony Ticknor
+
+    Create show / hide toggle lists - built for use in the sidebar nav
+    ------------------------------------------------------------------------ */
+    APP.Toggle = {
+        $toggleSection: undefined,
+
+        init: function() {
+           $toggleSections = $('.js-toggle');
+           
+           if (!$toggleSections.length) {
+               return;
+           }
+           
+           this.$toggleSections = $toggleSections;
+           
+           this.setupIcons();
+           this.bind();
+        },
+        
+        setupIcons: function() {
+            $('.js-toggle-link').append('<span class="js-toggle-icn"><i class="icn icn_next"></i></span>');
+        },
+        
+        bind: function() {
+            var self = this;
+            
+            $('.js-toggle-link').on('click', function() {
+                var $this = $(this);
+                var $currentLink = $this;
+                var $currentTarget = $this.siblings('.js-toggle-target');
+                self.toggleTarget($currentLink,$currentTarget);
+            });
+        },
+        
+        toggleTarget: function($link,$target) {
+            $currentIcon = $link.find('.js-toggle-icn .icn');
+            console.log($currentIcon);
+            if ($currentIcon.hasClass('icn_next')) {
+                $currentIcon.removeClass('icn_next').addClass('icn_down');
+            } else if ($currentIcon.hasClass('icn_down')) {
+                $currentIcon.removeClass('icn_down').addClass('icn_next');
+            }
+            $target.toggleClass('isExpanded');
         }
     };
 

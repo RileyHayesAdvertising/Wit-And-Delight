@@ -17,21 +17,21 @@
     </div>
 </div>
 <div class="panel isLargeView">
-    <div class="feature">
-        <div class="feature-hd">
-            <h2 class="hdg hdg_4">See Categories</h2> <!-- TODO Make categories expandible / collapsible -->
+    <div class="feature js-toggle">
+        <div class="feature-hd js-toggle-link">
+            <h2 class="hdg hdg_4">See Categories</h2>
         </div>
-        <div class="feature-bd feature-bd_condensed">
+        <div class="feature-bd feature-bd_condensed js-toggle-target">
             <ul class="vList vList_push vList_nav">
                 <?php wp_list_categories('orderby=count&order=desc&style=list&number=10&title_li='); ?>
             </ul>
         </div>
     </div>
-    <div class="feature feature_condensed">
-        <div class="feature-hd">
-            <h2 class="hdg hdg_4">See Tags</h2> <!-- TODO Make tags expandible / collapsible -->
+    <div class="feature feature_condensed js-toggle">
+        <div class="feature-hd js-toggle-link">
+            <h2 class="hdg hdg_4">See Tags</h2>
         </div>
-        <div class="feature-bd feature-bd_condensed">
+        <div class="feature-bd feature-bd_condensed js-toggle-target">
             <ul class="vList vList_push vList_nav">
                 <?php tag_list(); ?>
             </ul>
@@ -39,11 +39,11 @@
     </div>
 </div>
 <div class="panel isLargeView">
-    <div class="feature feature_condensed">
-        <div class="feature-hd">
+    <div class="feature feature_condensed js-toggle">
+        <div class="feature-hd js-toggle-link">
             <h2 class="hdg hdg_4">Daily Reads</h2> 
         </div>
-        <div class="feature-bd feature-bd_condensed">
+        <div class="feature-bd feature-bd_condensed js-toggle-target">
             <ul class="vList vList_push vList_nav">
                 <?php wp_list_bookmarks('categorize=0&category=3&category_orderby=slug&title_li=0&show_private=0&orderby=name&show_images=0&show_description=0&show_name=1&show_rating=0&show_updated=0'); ?>
             </ul>
