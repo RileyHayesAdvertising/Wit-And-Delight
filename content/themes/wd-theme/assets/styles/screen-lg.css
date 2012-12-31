@@ -134,7 +134,7 @@ Width: 48em and up
 /* ---------------------------------------------------------------------
  Feature
 ------------------------------------------------------------------------ */
-.feature-meta .btn {
+.feature-meta_grid .btn {
     background: transparent;
     padding: 0;
     line-height: 0;
@@ -142,7 +142,7 @@ Width: 48em and up
     text-align: -9999px;
 }
 
-.feature-meta .icn {
+.feature-meta_grid .icn {
     display: block;
     margin: 0 auto;
     vertical-align: top

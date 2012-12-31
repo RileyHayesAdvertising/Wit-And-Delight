@@ -61,7 +61,7 @@
                                         {{{the_content}}}
                                     </div>
                                 </div>
-                                <div class="feature-meta">
+                                <div class="feature-meta feature-meta_grid">
                                     <ul class="blocks blocks_3up">
                                         <li><a href="http://www.facebook.com/sharer.php?u={{the_permalink}}" class="btn" rel="external">Share on Facebook<i class="icn icn_facebook"></i></a></li>
                                         <li><a href="http://twitter.com/share?url={{the_permalink}}" class="btn" rel="external">Tweet it<i class="icn icn_twitter"></i></a></li>
