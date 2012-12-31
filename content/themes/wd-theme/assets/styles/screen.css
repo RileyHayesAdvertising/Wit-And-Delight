@@ -525,16 +525,16 @@ a:hover .icn { opacity: .2; }
    color: rgba(0,0,0,.3);
 }
 
-:-moz-placeholder {  
-   color: rgba(0,0,0,.3);  
+:-moz-placeholder {
+   color: rgba(0,0,0,.3);
 }
 
 .input_alt::-webkit-input-placeholder {
    color: rgba(0,0,0,.6);
 }
 
-.input_alt:-moz-placeholder {  
-   color: rgba(0,0,0,.6);  
+.input_alt:-moz-placeholder {
+   color: rgba(0,0,0,.6);
 }
 
 /* ---------------------------------------------------------------------
@@ -547,7 +547,7 @@ a:hover .icn { opacity: .2; }
 }
 
 .hdg_center {
-    text-align: center; 
+    text-align: center;
 }
 
 .hdg-split {
@@ -689,6 +689,13 @@ in the comment form so I used the provided ID */
 
 .js .js-toggle-target.isExpanded {
     display: block;
+}
+
+/* ---------------------------------------------------------------------
+ View Switcher
+------------------------------------------------------------------------ */
+.no-js .js-view-toggle {
+    display: none;
 }
 
 /* ---------------------------------------------------------------------
@@ -853,7 +860,7 @@ in the comment form so I used the provided ID */
 .user-content q:lang(en) {
     quotes: "\201C" "\201D" "\2018" "\2019";
 }
- 
+
 .user-content samp,
 .user-content tt,
 .user-content code,
@@ -934,7 +941,7 @@ in the comment form so I used the provided ID */
 
 /* 3 deep (or more) unordered lists use a square */
 .user-content ol ol ul,
-.user-content ol ul ul, 
+.user-content ol ul ul,
 .user-content ul ol ul,
 .user-content ul ul ul {
     list-style-type: square;
@@ -977,7 +984,7 @@ in the comment form so I used the provided ID */
 
 .user-content th {
     vertical-align: inherit;
-    text-align: inherit; 
+    text-align: inherit;
     font-weight: bold;
     padding: 2px 4px;
     background-color: #666;

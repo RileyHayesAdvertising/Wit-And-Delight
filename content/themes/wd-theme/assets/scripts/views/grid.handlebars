@@ -1,14 +1,38 @@
-{{#each this}}
-<div class="carousel-slide">
-    <ul class="photoGrid">
+<div class="gridRow">
+    {{#each this}}
+    <div class="gridRow gridRow-col gridRow-col_size1of3">
         {{#each this}}
-        <li>
-            <a href="#" class="polaroid polaroid_med js-close-friend" data-facebook-id="{{FacebookId}}">
-                <img src="{{ImageUrl}}?width=59&height=61" width="59" height="61" alt=""/>
-                <span class="polaroid-caption">{{ShortenedName}}</span>
-            </a>
-        </li>
+        <div class="jsToggleItem">
+            <div class="panel panel_inverse">
+                <div class="feature feature_condensed">
+                    <div class="feature-hd">
+                        <h3 class="hdg hdg_1">
+                            <a href="{{the_permalink}}">{{the_month}}.{{the_day}}.{{the_year}} {{the_title}}</a>
+                        </h3>
+                    </div>
+                    {{#if the_first_image}}
+                    <div class="feature-img">
+                        <a href="{{the_permalink}}">
+                            <img src="{{the_first_image}}" alt="" />
+                        </a>
+                    </div>
+                    {{/if}}
+                    <div class="feature-bd">
+                        <div class="user-content">
+                            {{{the_content}}}
+                        </div>
+                    </div>
+                    <div class="feature-meta">
+                        <ul class="blocks blocks_3up">
+                            <li><a href="http://www.facebook.com/sharer.php?u={{the_permalink}}" class="btn" rel="external">Share on Facebook</a></li>
+                            <li><a href="http://twitter.com/share?url={{the_permalink}}" class="btn" rel="external">Tweet It</a></li>
+                            <li><a href="http://pinterest.com/pin/create/button/?media={{the_first_image}}&amp;url={{the_permalink}}" class="btn">Pin it</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
         {{/each}}
-    </ul>
+    </div>
+    {{/each}}
 </div>
-{{/each}}

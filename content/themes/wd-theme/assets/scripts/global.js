@@ -14,13 +14,13 @@ var WD = WD || {}; // Global Namespace object
     // APP Events
     APP.Events = APP.Events || $({});
 
-    // Common jQuery elements
-    APP.$html   = $('html');
-    APP.$body   = $('body');
-    APP.$window = $(window);
-
     // DOM Ready
     $(function() {
+        // Common jQuery elements
+        APP.$html   = $('html');
+        APP.$body   = $('body');
+        APP.$window = $(window);
+
         APP.ExternalLinks.init();
         APP.AutoReplace.init();
         APP.HasJS.init();
@@ -37,17 +37,22 @@ var WD = WD || {}; // Global Namespace object
         $controls:          undefined,
         _templateScroll:    undefined,
         _templateGrid:      undefined,
+        $contentArea:       undefined,
 
         init: function() {
-            var $controls = $('div.js-view-toggle');
+            var $controls    = $('div.js-view-toggle');
+            var $contentArea = $(document.getElementById('jsToggleWrapper'));
 
-            if (!$controls.length) {
+            if (!$controls.length || !$contentArea.length) {
                 return false;
             }
 
-            this.$controls = $controls;
-            this.loadTemplates();
-            this.bind();
+            this.$controls    = $controls;
+            this.$contentArea = $contentArea;
+
+            this
+                .loadTemplates()
+                .bind();
         },
 
         bind: function() {
@@ -55,8 +60,59 @@ var WD = WD || {}; // Global Namespace object
 
             this.$controls.on('click', function(e){
                 e.preventDefault();
-                self.toggleView();
+                self.toggleView(e);
             });
+        },
+
+        toggleView: function(e) {
+            var $el = $(e.target);
+            var cookie = $.cookie('viewprefs');
+
+            this.$controls.find('.isActive').removeClass('isActive');
+
+            if ($el.hasClass('js-view-scroll')) {
+                if (cookie && cookie == 'scroll') {
+                    return;
+                }
+
+                this.$contentArea.html(this._templateScroll(APP.POSTS));
+                $el.addClass('isActive');
+
+                $.cookie('viewprefs', 'scroll', {expires: 365});
+            }
+
+            if ($el.hasClass('js-view-grid')) {
+                if (cookie && cookie == 'grid') {
+                    return;
+                }
+
+                this.$contentArea.html(this._templateGrid(this.parseGridArray(APP.POSTS)));
+                $el.addClass('isActive');
+
+                $.cookie('viewprefs', 'grid', {expires: 365});
+            }
+        },
+
+        parseGridArray: function(data) {
+            var grid   = [[],[],[]];
+            var length = data.length;
+
+            for (var i = 0; i < length; i++) {
+                if (i === 0 || i % 3 === 0) {
+                    grid[0].push(data[i]);
+                    continue;
+                }
+                if (i === 1 || i % 4 === 0) {
+                    grid[1].push(data[i]);
+                    continue;
+                }
+                if (i === 2 || i % 5 === 0) {
+                    grid[2].push(data[i]);
+                    continue;
+                }
+            }
+
+            return grid;
         },
 
         loadTemplates: function() {
@@ -77,6 +133,8 @@ var WD = WD || {}; // Global Namespace object
                     self._templateGrid = data;
                 }
             });
+
+            return this;
         }
     };
 
@@ -143,53 +201,53 @@ var WD = WD || {}; // Global Namespace object
         currentSlide: 0,
         currentlyStopped: false,
         _rotationSpeed: 3000,
-        
+
         init: function() {
             var $carousel = $('#js-carousel');
-            
+
             if (!$carousel.length) {
                 return;
             }
-            
+
             this.$carousel = $carousel;
             this.$slides = this.$carousel.find('.carousel-item');
             this.numSlides = this.$slides.length;
             this.numSlidesFromZero = this.numSlides - 1;
-            
+
             if (this.numSlides == 0) {
                 return;
             }
-            
+
             this.setupControls();
             this.bind();
             this.play();
         },
-        
+
         setupControls: function() {
             this.$carousel.append('<ol class="pagination"><li class="pagination-prev"><a class="js-prev-slide"><i class="icn icn_prev"></i><span class="isHidden">Previous Slide</span></a></li><li class="pagination-next"><a class="js-next-slide"><span class="isHidden">Next Slide</span><i class="icn icn_next"></i></a></li></ol>');
         },
-        
+
         bind: function() {
             var self = this;
-            
+
             this.$carousel.on('click','.js-next-slide', function(e) {
                 e.preventDefault();
                 self.currentlyStopped = true;
                 self.pause();
                 self.nextSlide();
             });
-            
+
             this.$carousel.on('click','.js-prev-slide', function(e) {
                 e.preventDefault();
                 self.currentlyStopped = true;
                 self.pause();
                 self.prevSlide();
             });
-            
+
             this.$carousel.on('mouseenter','.carousel-item', function() {
                 self.pause();
             });
-            
+
             this.$carousel.on('mouseleave','.carousel-item', function() {
                 if (self.currentlyStopped == false) {
                     self.play();
@@ -199,17 +257,17 @@ var WD = WD || {}; // Global Namespace object
 
         play: function() {
             var self = this;
-            
+
             this.rotate = window.setInterval(function() {
                 self.nextSlide();
             }, self._rotationSpeed);
         },
-        
+
         pause: function() {
             var self = this;
             clearInterval(self.rotate);
         },
-        
+
         nextSlide: function() {
             this.$slides.hide();
             if (this.currentSlide == this.numSlidesFromZero) {
@@ -219,7 +277,7 @@ var WD = WD || {}; // Global Namespace object
             }
             this.$slides.eq(this.currentSlide).fadeIn(200);
         },
-        
+
         prevSlide: function() {
             this.$slides.hide();
             if (this.currentSlide == 0) {
@@ -258,22 +316,22 @@ var WD = WD || {}; // Global Namespace object
 
         init: function() {
            $toggleSections = $('.js-toggle');
-           
+
            if (!$toggleSections.length) {
                return;
            }
-           
+
            this.$toggleSections = $toggleSections;
-           
+
            this.setup();
            this.bind();
         },
-        
+
         setup: function() {
             $('.js-toggle-link').each(function() {
                 var $this = $(this);
                 var cookieName = $this.attr('data-cookie');
-                
+
                 if ($.cookie(cookieName) === 'true') {
                     $this.append('<span class="js-toggle-icn"><i class="icn icn_down"></i></span>');
                     $this.siblings('.js-toggle-target').addClass('isExpanded');
@@ -283,10 +341,10 @@ var WD = WD || {}; // Global Namespace object
 
             });
         },
-        
+
         bind: function() {
             var self = this;
-            
+
             $('.js-toggle-link').on('click', function() {
                 var $this = $(this);
                 var $currentLink = $this;
@@ -295,24 +353,24 @@ var WD = WD || {}; // Global Namespace object
                 self.toggleTarget($currentLink,$currentTarget,cookieName);
             });
         },
-        
+
         toggleTarget: function($link,$target,cookieName) {
             $currentIcon = $link.find('.js-toggle-icn .icn');
-            
+
             if ($currentIcon.hasClass('icn_next')) {
                 $currentIcon.removeClass('icn_next').addClass('icn_down');
             } else if ($currentIcon.hasClass('icn_down')) {
                 $currentIcon.removeClass('icn_down').addClass('icn_next');
             }
-            
+
             $target.toggleClass('isExpanded');
-            
+
             if ($target.hasClass('isExpanded')) {
                 $.cookie(cookieName, 'true', { expires: 7, path: '/' });
             } else {
                 $.cookie(cookieName, 'false', { expires: 7, path: '/' });
             }
-        
+
         }
     };
 

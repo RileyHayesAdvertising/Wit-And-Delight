@@ -111,8 +111,15 @@
                             <li><a href="http://feeds2.feedburner.com/katearends/DcwI" rel="external"><i class="icn icn_rss"></i>RSS Feed</a></li>
                         </ul>
                         <?php get_search_form(); ?>
+
                         <div class="js-view-toggle">
-                            <a href="#">Scroll</a> or <a href="#">Grid</a>
+                        <?php if (!isset($_COOKIE["viewprefs"])) : ?>
+                            <a href="#" class="js-view-scroll">Scroll</a> or <a href="#" class="js-view-grid">Grid</a>
+                        <?php elseif ($_COOKIE["viewprefs"] == "scroll"): ?>
+                            <a href="#" class="js-view-scroll isActive">Scroll</a> or <a href="#" class="js-view-grid">Grid</a>
+                        <?php elseif ($_COOKIE["viewprefs"] == "grid"): ?>
+                            <a href="#" class="js-view-scroll">Scroll</a> or <a href="#" class="js-view-grid isActive">Grid</a>
+                        <?php endif; ?>
                         </div>
                     </div>
                 </div>
