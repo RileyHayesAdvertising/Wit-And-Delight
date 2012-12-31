@@ -436,6 +436,19 @@ img {
 .feature-img {
     text-align: center;
     margin-bottom: 20px;
+
+}
+
+.feature_grid > .feature-img {
+    -webkit-transition: opacity .12s linear;
+    -moz-transition:    opacity .12s linear;
+    -ms-transition:     opacity .12s linear;
+    -o-transition:      opacity .12s linear;
+    transition:         opacity .12s linear;
+}
+
+.feature_grid:hover > .feature-img {
+    opacity: 0.7;
 }
 
 .feature-img_alt {
@@ -530,8 +543,7 @@ a:hover .icn { opacity: .2; }
 }
 
 .switcher.isActive {
-    opacity: 1;
-}
+    opacity: 1}
 
 .switcher_grid {
     width: 28px;

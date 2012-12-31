@@ -43,7 +43,7 @@
                     {{#each this}}
                     <div class="jsToggleItem">
                         <div class="panel panel_inverse">
-                            <div class="feature feature_condensed">
+                            <div class="feature feature_condensed feature_grid">
                                 {{#if the_first_image}}
                                 <div class="feature-img feature-img_alt">
                                     <a href="{{the_permalink}}">
