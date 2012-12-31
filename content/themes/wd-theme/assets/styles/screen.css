@@ -760,36 +760,36 @@ in the comment form so I used the provided ID */
 
 .user-content abbr,
 .user-content acronym {
-	border-bottom: dotted 1px;
+    border-bottom: dotted 1px;
 }
 
 .user-content sub {
-	vertical-align: sub;
-	font-size: smaller;
+    vertical-align: sub;
+    font-size: smaller;
 }
 
 .user-content sup {
-	vertical-align: super;
-	font-size: smaller;
+    vertical-align: super;
+    font-size: smaller;
 }
 
 .user-content u,
 .user-content ins {
-	text-decoration: underline;
+    text-decoration: underline;
 }
 
 .user-content s,
 .user-content strike,
 .user-content del {
-	text-decoration: line-through;
+    text-decoration: line-through;
 }
 
 .user-content big {
-	font-size: larger;
+    font-size: larger;
 }
 
 .user-content small {
-	font-size: smaller;
+    font-size: smaller;
 }
 
 .user-content q {
@@ -843,17 +843,17 @@ in the comment form so I used the provided ID */
 .user-content ul,
 .user-content ol,
 .user-content dl {
-	margin-top: 0;
-	margin-bottom: 12px;
+    margin-top: 0;
+    margin-bottom: 12px;
 }
 
 .user-content ul {
-	list-style-type: disc;
+    list-style-type: disc;
     margin: 0 0 12px 0;
 }
 
 .user-content ol {
-	list-style-type: decimal;
+    list-style-type: decimal;
     margin: 0 0 12px 0;
 }
 
@@ -876,14 +876,14 @@ in the comment form so I used the provided ID */
 .user-content dl ul,
 .user-content dl ol,
 .user-content dl dl {
-	margin-top: 0;
-	margin-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 /* 2 deep unordered lists use a circle */
 .user-content ol ul,
 .user-content ul ul {
-	list-style-type: circle;
+    list-style-type: circle;
 }
 
 /* 3 deep (or more) unordered lists use a square */
@@ -891,7 +891,7 @@ in the comment form so I used the provided ID */
 .user-content ol ul ul, 
 .user-content ul ol ul,
 .user-content ul ul ul {
-	list-style-type: square;
+    list-style-type: square;
 }
 
 /* Table Styles -------------------------------------------------------- */
@@ -899,8 +899,8 @@ in the comment form so I used the provided ID */
 .user-content table {
     margin: 0 0 20px 0;
     width: 100% !important;
-	border-spacing: 2px;
-	border-collapse: separate;
+    border-spacing: 2px;
+    border-collapse: separate;
 }
 
 .user-content caption {
@@ -908,32 +908,32 @@ in the comment form so I used the provided ID */
 }
 
 .user-content tr {
-	vertical-align: middle;
+    vertical-align: middle;
 }
 
 .user-content tbody {
-	vertical-align: middle;
+    vertical-align: middle;
 }
 
 .user-content thead {
-	vertical-align: middle;
+    vertical-align: middle;
 }
 
 .user-content tfoot {
-	vertical-align: middle;
+    vertical-align: middle;
 }
 
 .user-content td {
-	vertical-align: inherit;
-	text-align: inherit;
-	padding: 2px 4px;
+    vertical-align: inherit;
+    text-align: inherit;
+    padding: 2px 4px;
 }
 
 .user-content th {
-	vertical-align: inherit;
-	text-align: inherit; 
-	font-weight: bold;
-	padding: 2px 4px;
+    vertical-align: inherit;
+    text-align: inherit; 
+    font-weight: bold;
+    padding: 2px 4px;
     background-color: #666;
     color: #fff;
 }
