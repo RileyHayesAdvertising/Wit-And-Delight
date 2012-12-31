@@ -447,7 +447,7 @@ img {
     transition:         opacity .12s linear;
 }
 
-.feature_grid:hover > .feature-img {
+.feature_grid > .feature-img:hover {
     opacity: 0.7;
 }
 
