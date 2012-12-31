@@ -408,12 +408,20 @@ img {
     margin-bottom: 20px;
 }
 
+.feature-img_alt {
+    margin-bottom: 15px;
+}
+
 .feature-bd {
-    margin-bottom: 40px;
+    margin-bottom: 40px;;
 }
 
 .feature-bd_condensed {
     margin-bottom: 0;
+}
+
+.feature-meta .icn {
+    display: none;
 }
 
 /* ---------------------------------------------------------------------
@@ -476,6 +484,7 @@ a:hover .teaser-img img {
 .icn_prev { background-position: -154px 0 ; }
 .icn_next { background-position: -177px 0 ; }
 .icn_down { background-position: -200px 0 ; }
+.icn_pin { background-position: -227px 0; }
 
 a:hover .icn { opacity: .2; }
 

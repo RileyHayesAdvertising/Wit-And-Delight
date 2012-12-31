@@ -5,18 +5,18 @@
         <div class="jsToggleItem">
             <div class="panel panel_inverse">
                 <div class="feature feature_condensed">
-                    <div class="feature-hd">
-                        <h3 class="hdg hdg_1">
-                            <a href="{{the_permalink}}">{{the_month}}.{{the_day}}.{{the_year}} {{the_title}}</a>
-                        </h3>
-                    </div>
                     {{#if the_first_image}}
-                    <div class="feature-img">
+                    <div class="feature-img feature-img_alt">
                         <a href="{{the_permalink}}">
                             <img src="{{the_first_image}}" alt="" />
                         </a>
                     </div>
                     {{/if}}
+                    <div class="feature-hd">
+                        <h3 class="hdg hdg_4">
+                            <a href="{{the_permalink}}">{{the_month}}.{{the_day}}.{{the_year}} {{the_title}}</a>
+                        </h3>
+                    </div>
                     <div class="feature-bd">
                         <div class="user-content">
                             {{{the_content}}}
@@ -24,9 +24,9 @@
                     </div>
                     <div class="feature-meta">
                         <ul class="blocks blocks_3up">
-                            <li><a href="http://www.facebook.com/sharer.php?u={{the_permalink}}" class="btn" rel="external">Share on Facebook</a></li>
-                            <li><a href="http://twitter.com/share?url={{the_permalink}}" class="btn" rel="external">Tweet It</a></li>
-                            <li><a href="http://pinterest.com/pin/create/button/?media={{the_first_image}}&amp;url={{the_permalink}}" class="btn">Pin it</a></li>
+                            <li><a href="http://www.facebook.com/sharer.php?u={{the_permalink}}" rel="external">Share on Facebook</a></li>
+                            <li><a href="http://twitter.com/share?url={{the_permalink}}" rel="external">Tweet It</a></li>
+                            <li><a href="http://pinterest.com/pin/create/button/?media={{the_first_image}}&amp;url={{the_permalink}}">Pin it</a></li>
                         </ul>
                     </div>
                 </div>

@@ -130,3 +130,22 @@ Width: 48em and up
         width: 63%;
     }
 }
+
+/* ---------------------------------------------------------------------
+ Feature
+------------------------------------------------------------------------ */
+.feature-meta .btn {
+    background: transparent;
+    padding: 0;
+    line-height: 0;
+    font-size: 0;
+    text-align: -9999px;
+}
+
+.feature-meta .icn {
+    display: block;
+    margin: 0 auto;
+    vertical-align: top
+}
+
+

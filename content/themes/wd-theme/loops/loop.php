@@ -44,18 +44,18 @@
                     <div class="jsToggleItem">
                         <div class="panel panel_inverse">
                             <div class="feature feature_condensed">
-                                <div class="feature-hd">
-                                    <h3 class="hdg hdg_1">
-                                        <a href="{{the_permalink}}">{{the_month}}.{{the_day}}.{{the_year}} {{the_title}}</a>
-                                    </h3>
-                                </div>
                                 {{#if the_first_image}}
-                                <div class="feature-img">
+                                <div class="feature-img feature-img_alt">
                                     <a href="{{the_permalink}}">
                                         <img src="{{the_first_image}}" alt="" />
                                     </a>
                                 </div>
                                 {{/if}}
+                                <div class="feature-hd">
+                                    <h3 class="hdg hdg_4">
+                                        <a href="{{the_permalink}}">{{the_month}}.{{the_day}}.{{the_year}} {{the_title}}</a>
+                                    </h3>
+                                </div>
                                 <div class="feature-bd">
                                     <div class="user-content">
                                         {{{the_content}}}
@@ -63,9 +63,9 @@
                                 </div>
                                 <div class="feature-meta">
                                     <ul class="blocks blocks_3up">
-                                        <li><a href="http://www.facebook.com/sharer.php?u={{the_permalink}}" class="btn" rel="external">Share on Facebook</a></li>
-                                        <li><a href="http://twitter.com/share?url={{the_permalink}}" class="btn" rel="external">Tweet It</a></li>
-                                        <li><a href="http://pinterest.com/pin/create/button/?media={{the_first_image}}&amp;url={{the_permalink}}" class="btn">Pin it</a></li>
+                                        <li><a href="http://www.facebook.com/sharer.php?u={{the_permalink}}" class="btn" rel="external">Share on Facebook<i class="icn icn_facebook"></i></a></li>
+                                        <li><a href="http://twitter.com/share?url={{the_permalink}}" class="btn" rel="external">Tweet it<i class="icn icn_twitter"></i></a></li>
+                                        <li><a href="http://pinterest.com/pin/create/button/?media={{the_first_image}}&amp;url={{the_permalink}}" class="btn">Pin it<i class="icn icn_pin"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -83,6 +83,14 @@
                         <h2 class="isHidden">Articles</h2>
                         <div id="jsToggleWrapper">
                             <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+                                <?php
+                                    // strip the <img> elements from the post but leave all other html intact
+                                    $content = get_the_content('');
+                                    $content = apply_filters('the_content', $content);
+                                    $pattern = '/(<img.+?>)/';
+                                    $replacements='';
+                                    $postOutput = preg_replace($pattern, $replacements, $content);
+                                ?>
 
                                 <script>
                                     WD.POSTS.push({
@@ -97,7 +105,6 @@
                                 </script>
 
                                 <?php if (!isset($_COOKIE["viewprefs"]) || $_COOKIE["viewprefs"] == "scroll") : ?>
-
                                     <div class="jsToggleItem">
                                         <div class="panel panel_inverse">
                                             <div class="feature feature_condensed">
@@ -115,15 +122,7 @@
                                                 <?php } ?>
                                                 <div class="feature-bd">
                                                     <div class="user-content">
-                                                        <?php
-                                                            // strip the <img> elements from the post but leave all other html intact
-                                                            $content = get_the_content('');
-                                                            $content = apply_filters('the_content', $content);
-                                                            $pattern = '/(<img.+?>)/';
-                                                            $replacements='';
-                                                            $postOutput = preg_replace($pattern, $replacements, $content);
-                                                            echo $postOutput;
-                                                        ?>
+                                                        <?php echo $postOutput; ?>
                                                     </div>
                                                 </div>
                                                 <div class="feature-meta">
