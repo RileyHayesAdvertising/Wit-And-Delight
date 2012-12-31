@@ -110,7 +110,7 @@
                                             <div class="feature feature_condensed">
                                                 <div class="feature-hd">
                                                     <h3 class="hdg hdg_1">
-                                                        <a href="<?php the_permalink(); ?>"><?php the_date('M.d.Y','',' | '); ?><?php the_title(); ?></a>
+                                                        <a href="<?php the_permalink(); ?>"><?php the_time('M.d.Y | '); ?><?php the_title(); ?></a>
                                                     </h3>
                                                 </div>
                                                 <?php if (the_first_image() != '') { ?>
