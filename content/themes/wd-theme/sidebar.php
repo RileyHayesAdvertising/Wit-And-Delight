@@ -44,9 +44,66 @@
             <h2 class="hdg hdg_4">Daily Reads</h2> 
         </div>
         <div class="feature-bd feature-bd_condensed js-toggle-target">
-            <ul class="vList vList_push vList_nav">
-                <?php wp_list_bookmarks('categorize=0&category=3&category_orderby=slug&title_li=0&show_private=0&orderby=name&show_images=0&show_description=0&show_name=1&show_rating=0&show_updated=0'); ?>
-            </ul>
+            <div class="feature feature_reasonable">
+                <div class="feature-hd feature-hd_alt feature-hd_push isHidden">
+                    <h3 class="hdg hdg_5">Featured</h3>
+                </div>
+                <div class="feature-bd feature-bd_condensed">
+                    <ul class="vList vList_push vList_nav">
+                        <?php wp_list_bookmarks('categorize=0&category=3&category_orderby=slug&title_li=0&show_private=0&orderby=name&show_images=0&show_description=0&show_name=1&show_rating=0&show_updated=0'); ?>
+                    </ul>
+                </div>
+            </div>
+            <div class="feature feature_reasonable">
+                <div class="feature-hd feature-hd_alt feature-hd_push">
+                    <h3 class="hdg hdg_5">Lifestyle</h3>
+                </div>
+                <div class="feature-bd feature-bd_condensed">
+                    <ul class="vList vList_push vList_nav">
+                        <?php wp_list_bookmarks('categorize=0&category=124&category_orderby=slug&title_li=0&show_private=0&orderby=name&show_images=0&show_description=0&show_name=1&show_rating=0&show_updated=0'); ?>
+                    </ul>
+                </div>
+            </div>
+            <div class="feature feature_reasonable">
+                <div class="feature-hd feature-hd_alt feature-hd_push">
+                    <h3 class="hdg hdg_5">Stylish People</h3>
+                </div>
+                <div class="feature-bd feature-bd_condensed">
+                    <ul class="vList vList_push vList_nav">
+                        <?php wp_list_bookmarks('categorize=0&category=125&category_orderby=slug&title_li=0&show_private=0&orderby=name&show_images=0&show_description=0&show_name=1&show_rating=0&show_updated=0'); ?>
+                    </ul>
+                </div>
+            </div>
+            <div class="feature feature_reasonable">
+                <div class="feature-hd feature-hd_alt feature-hd_push">
+                    <h3 class="hdg hdg_5">Kitchen Inspiration</h3>
+                </div>
+                <div class="feature-bd feature-bd_condensed">
+                    <ul class="vList vList_push vList_nav">
+                        <?php wp_list_bookmarks('categorize=0&category=127&category_orderby=slug&title_li=0&show_private=0&orderby=name&show_images=0&show_description=0&show_name=1&show_rating=0&show_updated=0'); ?>
+                    </ul>
+                </div>
+            </div>
+            <div class="feature feature_reasonable">
+                <div class="feature-hd feature-hd_alt feature-hd_push">
+                    <h3 class="hdg hdg_5">Tumblr</h3>
+                </div>
+                <div class="feature-bd feature-bd_condensed">
+                    <ul class="vList vList_push vList_nav">
+                        <?php wp_list_bookmarks('categorize=0&category=106&category_orderby=slug&title_li=0&show_private=0&orderby=name&show_images=0&show_description=0&show_name=1&show_rating=0&show_updated=0'); ?>
+                    </ul>
+                </div>
+            </div>
+            <div class="feature feature_reasonable">
+                <div class="feature-hd feature-hd_alt feature-hd_push">
+                    <h3 class="hdg hdg_5">Friends</h3>
+                </div>
+                <div class="feature-bd feature-bd_condensed">
+                    <ul class="vList vList_push vList_nav">
+                        <?php wp_list_bookmarks('categorize=0&category=128&category_orderby=slug&title_li=0&show_private=0&orderby=name&show_images=0&show_description=0&show_name=1&show_rating=0&show_updated=0'); ?>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 </div>

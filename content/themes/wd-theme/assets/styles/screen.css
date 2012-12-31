@@ -378,12 +378,20 @@ img {
     margin-bottom: 40px;
 }
 
+.feature_reasonable {
+    margin-bottom: 20px;
+}
+
 .feature_condensed {
     margin-bottom: 0;
 }
 
 .feature-hd {
     margin-bottom: 20px;
+}
+
+.feature-hd_push {
+    margin-left: 80px;
 }
 
 .feature-hd_alt {
