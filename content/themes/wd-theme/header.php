@@ -75,7 +75,7 @@
                     <div class="panel">
                         <h1 class="logo">
                             <a href="<?php echo home_url(); ?>">
-                                <img src="<?php bloginfo('template_directory'); ?>/assets/images/logo.gif" alt="Wit &amp; Delight" />
+                                <img src="<?php bloginfo('template_directory'); ?>/assets/images/logo.png" alt="Wit &amp; Delight" />
                             </a>
                         </h1>
                     </div>
