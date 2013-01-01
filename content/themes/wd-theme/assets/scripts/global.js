@@ -7,6 +7,7 @@ Authors: Anthony Ticknor & Dan Piscitiello
 GLOBAL CONSTANTS:
 WD.THEMEURL         - base url to this WP theme's directory
 WD.Events           - Custom Events object and definitions
+WD.POSTS            - Contains posts data array on listing pages
 ------------------------------------------------------------------------ */
 var WD = WD || {}; // Global Namespace object
 
@@ -77,7 +78,7 @@ var WD = WD || {}; // Global Namespace object
                 this.$controls.find('.isActive').removeClass('isActive');
                 $el.addClass('isActive');
 
-                $.cookie('viewprefs', 'scroll', {expires: 365});
+                $.cookie('viewprefs', 'scroll', {expires: 365, path: '/'});
             }
 
             if ($el.hasClass('js-view-grid')) {
@@ -89,7 +90,7 @@ var WD = WD || {}; // Global Namespace object
                 this.$controls.find('.isActive').removeClass('isActive');
                 $el.addClass('isActive');
 
-                $.cookie('viewprefs', 'grid', {expires: 365});
+                $.cookie('viewprefs', 'grid', {expires: 365, path: '/'});
             }
         },
 
