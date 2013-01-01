@@ -53,7 +53,7 @@
                                 {{/if}}
                                 <div class="feature-hd">
                                     <h3 class="hdg hdg_4">
-                                        <a href="{{the_permalink}}">{{the_month}}.{{the_day}}.{{the_year}} {{{the_title}}}</a>
+                                        <a href="{{the_permalink}}">{{the_month_number}}/{{the_day}}/{{the_year}} {{{the_title}}}</a>
                                     </h3>
                                 </div>
                                 <div class="feature-bd">
@@ -95,6 +95,7 @@
                                 <script>
                                     WD.POSTS.push({
                                         the_month: "<?php the_time('M'); ?>",
+                                        the_month_number: "<?php the_time('m'); ?>",
                                         the_day: "<?php the_time('d'); ?>",
                                         the_year: "<?php the_time('Y'); ?>",
                                         the_title: "<?php echo the_title(); ?>",
