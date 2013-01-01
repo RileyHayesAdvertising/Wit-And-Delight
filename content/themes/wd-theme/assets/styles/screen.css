@@ -336,7 +336,7 @@ img {
  Comment List
 ------------------------------------------------------------------------ */
 .comment {
-    border-bottom: 1px dotted #221f1f;
+    border-bottom: 1px dotted #000000;
     margin-bottom: 30px;
 }
 
@@ -666,7 +666,7 @@ a:hover .icn { opacity: .2; }
 .btn {
     display: block;
     padding: 15px 15px;
-    background: #221f1f;
+    background: #000000;
     color: #ffffff;
     font-size: 12px;
     line-height: 1.2;
