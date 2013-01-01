@@ -341,7 +341,7 @@ img {
 }
 
 .comment-bd {
-    background: #221f1f;
+    background: #000000;
     color: #ffffff;
     text-transform: uppercase;
     padding: 20px;
@@ -354,7 +354,7 @@ img {
     position: absolute;
     bottom: -30px;
     left: 0;
-    border-top: 30px solid #221f1f; /* match the color of the comment-bd to draw the arrow */
+    border-top: 30px solid #000000; /* match the color of the comment-bd to draw the arrow */
     border-right: 30px solid transparent;
 }
 
