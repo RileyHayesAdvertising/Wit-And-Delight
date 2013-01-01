@@ -160,9 +160,11 @@ Width: 48em and up
  Ribbon
 ------------------------------------------------------------------------ */
 .ribbon {
+    display: block;
     padding-right: 10px;
     position: relative;
     margin-left: -25px;
+    margin-bottom: 14px;
 }
 
 .ribbon-inner {
