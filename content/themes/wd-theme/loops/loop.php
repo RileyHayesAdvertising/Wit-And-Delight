@@ -45,7 +45,8 @@
                     {{#each this}}
                     <div class="jsToggleItem">
                         <div class="panel panel_inverse">
-                            <div class="feature feature_condensed feature_grid">
+                            <div class="box box_slim">
+                                <div class="feature feature_condensed feature_grid">
                                 {{#if the_first_image}}
                                 <div class="feature-img feature-img_alt">
                                     <a href="{{the_permalink}}">
@@ -70,6 +71,7 @@
                                         <li><a href="http://pinterest.com/pin/create/button/?media={{the_first_image}}&amp;url={{the_permalink}}" class="btn">Pin it<i class="icn icn_pin"></i></a></li>
                                     </ul>
                                 </div>
+                            </div>
                             </div>
                         </div>
                     </div>
