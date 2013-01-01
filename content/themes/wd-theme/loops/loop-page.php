@@ -4,15 +4,17 @@
                     <div class="panel panel_condensed">
                     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                         <div class="panel panel_bare">
-                            <div class="feature feature_condensed">
-                                <div class="feature-hd">
-                                    <h2 class="hdg hdg_1 isHidden"><?php the_title(); ?></h2>
-                                </div>
-                                <div class="feature-bd">
-                                    <div class="user-content">
-                                        <?php
-                                            the_content(); 
-                                        ?>
+                            <div class="box">
+                                <div class="feature feature_condensed">
+                                    <div class="feature-hd">
+                                        <h2 class="hdg hdg_1 isHidden"><?php the_title(); ?></h2>
+                                    </div>
+                                    <div class="feature-bd">
+                                        <div class="user-content">
+                                            <?php
+                                                the_content(); 
+                                            ?>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
