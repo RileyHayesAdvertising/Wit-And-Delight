@@ -134,7 +134,7 @@ a:hover,
 a:focus,
 .isActive > a,
 .current-cat > a {
-    color: #e15119;
+    color: #ff7200;
 }
 
 img {
@@ -764,7 +764,7 @@ in the comment form so I used the provided ID */
 }
 
 .js .js-toggle-link:hover {
-    color: #e15119;
+    color: #ff7200;
 }
 
 .js .js-toggle-link:hover .icn {
