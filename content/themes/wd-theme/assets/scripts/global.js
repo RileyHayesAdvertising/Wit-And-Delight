@@ -58,7 +58,7 @@ var WD = WD || {}; // Global Namespace object
         bind: function() {
             var self = this;
 
-            this.$controls.on('click', function(e){
+            this.$controls.on('click', 'a', function(e){
                 e.preventDefault();
                 self.toggleView(e);
             });
