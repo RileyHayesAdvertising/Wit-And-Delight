@@ -102,6 +102,7 @@
                 </div>
                 <div class="gridRow-col gridRow-col_size1of4 isLargeView">
                     <div class="panel">
+                        <?php get_search_form(); ?>
                         <ul class="hList hList_social">
                             <li><a href="/contact/"><i class="icn icn_email"></i>E-mail</a></li>
                             <li><a href="http://www.facebook.com/witanddelight" rel="external"><i class="icn icn_facebook"></i>Facebook</a></li>
@@ -110,8 +111,6 @@
                             <li><a href="http://8tracks.com/witanddelight" rel="external"><i class="icn icn_8tracks"></i>8tracks</a></li>
                             <li><a href="http://feeds2.feedburner.com/katearends/DcwI" rel="external"><i class="icn icn_rss"></i>RSS Feed</a></li>
                         </ul>
-                        <?php get_search_form(); ?>
-
                         <div class="js-view-toggle viewToggle">
                             <div class="yinAndYang">
                                 <div class="yinAndYang-yin">
