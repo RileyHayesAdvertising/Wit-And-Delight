@@ -562,19 +562,35 @@ a:hover .icn { opacity: .2; }
     width: 27px;
     text-indent: -9999px;
     background: transparent url(../images/icons-viewchanger.png) no-repeat 0 0;
-    opacity: 0.5;
-}
-
-.switcher.isActive {
-    opacity: 1
+    -webkit-transition: none;
+    -moz-transition:    none;
+    -ms-transition:     none;
+    -o-transition:      none;
+    transition:         none;
 }
 
 .switcher_grid {
-    background-position: 0 0;
+    background-position: 0 -37px;
+}
+
+.switcher_grid.isActive {
+    background-position: -37px -37px;
+}
+
+.switcher_grid:hover {
+    background-position: -74px -37px;
 }
 
 .switcher_scroll {
-    background-position: -36px 0;
+    background-position: 0 0;
+}
+
+.switcher_scroll.isActive {
+    background-position: -37px 0;
+}
+
+.switcher_scroll:hover {
+    background-position: -74px 0;
 }
 
 /* ---------------------------------------------------------------------
