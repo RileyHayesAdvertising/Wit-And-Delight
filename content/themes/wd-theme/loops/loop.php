@@ -9,7 +9,7 @@
                     <div class="feature feature_condensed">
                         <div class="feature-hd">
                             <h3 class="hdg hdg_1">
-                                <a href="{{the_permalink}}">{{the_month}}.{{the_day}}.{{the_year}} | {{the_title}}</a>
+                                <a href="{{the_permalink}}">{{the_month}}.{{the_day}}.{{the_year}} | {{{the_title}}}</a>
                             </h3>
                         </div>
                         {{#if the_first_image}}
@@ -53,7 +53,7 @@
                                 {{/if}}
                                 <div class="feature-hd">
                                     <h3 class="hdg hdg_4">
-                                        <a href="{{the_permalink}}">{{the_month}}.{{the_day}}.{{the_year}} {{the_title}}</a>
+                                        <a href="{{the_permalink}}">{{the_month}}.{{the_day}}.{{the_year}} {{{the_title}}}</a>
                                     </h3>
                                 </div>
                                 <div class="feature-bd">
