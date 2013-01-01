@@ -43,10 +43,6 @@ register_sidebar(
     )
 );
 
-/* add enqueue scripts */
-add_action('wp_enqueue_scripts', 'enqueueScripts');
-add_action('wp_enqueue_scripts', 'enqueueStyles');
-
 /* remove defaults from wp_head */
 remove_action( 'wp_head', 'feed_links' );
 remove_action( 'wp_head', 'rsd_link');
