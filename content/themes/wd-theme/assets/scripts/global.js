@@ -47,7 +47,7 @@ var WD = WD || {}; // Global Namespace object
                 return false;
             }
 
-            this.$controls    = $controls;
+            this.$controls    = $controls.css('visibility', 'visible');
             this.$contentArea = $contentArea;
 
             this

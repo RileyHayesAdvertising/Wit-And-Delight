@@ -176,6 +176,7 @@ img {
 
 .viewToggle {
     padding-top: 55px;
+    visibility: hidden; /* we want this to take up space even when not visible. is shown via JS on the proper pages */
 }
 
 .viewToggle p {
@@ -768,13 +769,6 @@ in the comment form so I used the provided ID */
 
 .js .js-toggle-target.isExpanded {
     display: block;
-}
-
-/* ---------------------------------------------------------------------
- View Switcher
------------------------------------------------------------------------- */
-.no-js .js-view-toggle {
-    display: none;
 }
 
 /* ---------------------------------------------------------------------
