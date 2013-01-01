@@ -114,7 +114,7 @@ textarea {
 body {
     font: 500 12px/1.6 "proxima-nova", Helvetica, Arial, sans-serif;
     color: #000000;
-    background: #ffffff;
+    background: #efedea;
 }
 
 a {
@@ -558,7 +558,7 @@ a:hover .icn { opacity: .2; }
  Form Styles
 ------------------------------------------------------------------------ */
 .input {
-    background: #e6e7e8;
+    background: #ffffff;
     border: 0;
     margin: 0;
     padding: 6px 6px;
@@ -570,7 +570,6 @@ a:hover .icn { opacity: .2; }
 }
 
 .input_alt {
-    background: #ffffff;
     width: 96%;
     padding: 2%;
     margin-bottom: 12px;
