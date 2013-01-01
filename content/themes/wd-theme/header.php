@@ -105,8 +105,8 @@
                         <ul class="hList hList_social">
                             <li><a href="/contact/"><i class="icn icn_email"></i>E-mail</a></li>
                             <li><a href="http://www.facebook.com/witanddelight" rel="external"><i class="icn icn_facebook"></i>Facebook</a></li>
-                            <li><a href="http://twitter.com/katearends" rel="external"><i class="icn icn_twitter"></i>Twitter</a></li>
-                            <li><a href="http://followgram.me/katearends/" rel="external"><i class="icn icn_instagram"></i>Instagram</a></li>
+                            <li><a href="https://twitter.com/wit_and_delight" rel="external"><i class="icn icn_twitter"></i>Twitter</a></li>
+                            <li><a href="http://instagram.com/wit_and_delight" rel="external"><i class="icn icn_instagram"></i>Instagram</a></li>
                             <li><a href="http://8tracks.com/witanddelight" rel="external"><i class="icn icn_8tracks"></i>8tracks</a></li>
                             <li><a href="http://feeds2.feedburner.com/katearends/DcwI" rel="external"><i class="icn icn_rss"></i>RSS Feed</a></li>
                         </ul>
