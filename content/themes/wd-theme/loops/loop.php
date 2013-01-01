@@ -55,7 +55,7 @@
                                 {{/if}}
                                 <div class="feature-hd">
                                     <h3 class="hdg hdg_4">
-                                        <a href="{{the_permalink}}">{{the_month_number}}/{{the_day}}/{{the_year}} {{{the_title}}}</a>
+                                        <a href="{{the_permalink}}">{{the_month_number}}/{{the_day}}/{{the_short_year}} {{{the_title}}}</a>
                                     </h3>
                                 </div>
                                 <div class="feature-bd">
@@ -100,6 +100,7 @@
                                         the_month_number: "<?php the_time('m'); ?>",
                                         the_day: "<?php the_time('d'); ?>",
                                         the_year: "<?php the_time('Y'); ?>",
+                                        the_short_year: "<?php the_time('y'); ?>",
                                         the_title: "<?php echo the_title(); ?>",
                                         the_first_image: "<?php echo the_first_image(); ?>",
                                         the_permalink: "<?php echo the_permalink(); ?>",
