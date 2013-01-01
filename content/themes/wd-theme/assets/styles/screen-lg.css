@@ -32,8 +32,13 @@ Width: 48em and up
  Grid
 ------------------------------------------------------------------------ */
 .gridRow {
-    overflow: hidden;
     position: relative;
+}
+
+.gridRow:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 .gridRow-col {
@@ -151,4 +156,36 @@ Width: 48em and up
     vertical-align: top
 }
 
+/* ---------------------------------------------------------------------
+ Ribbon
+------------------------------------------------------------------------ */
+.ribbon {
+    padding-right: 10px;
+    position: relative;
+    margin-left: -25px;
+}
 
+.ribbon-inner {
+    position: relative;
+    display: inline-block;
+    width: 70px;
+    height: 26px;
+    line-height: 26px;
+    background: #000000;
+    color: #ffffff;
+    text-align: center;
+}
+
+.ribbon-inner:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    border-right: 10px #000000 solid;
+    border-bottom: 6px transparent solid;
+}
+
+.date {
+    font-weight: 500;
+    font-size: 9px;
+}
