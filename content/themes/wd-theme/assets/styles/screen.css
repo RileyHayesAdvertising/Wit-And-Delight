@@ -336,12 +336,12 @@ img {
  Comment List
 ------------------------------------------------------------------------ */
 .comment {
-    border-bottom: 1px dotted #221f1f;
+    border-bottom: 1px dotted #000000;
     margin-bottom: 30px;
 }
 
 .comment-bd {
-    background: #221f1f;
+    background: #000000;
     color: #ffffff;
     text-transform: uppercase;
     padding: 20px;
@@ -354,7 +354,7 @@ img {
     position: absolute;
     bottom: -30px;
     left: 0;
-    border-top: 30px solid #221f1f; /* match the color of the comment-bd to draw the arrow */
+    border-top: 30px solid #000000; /* match the color of the comment-bd to draw the arrow */
     border-right: 30px solid transparent;
 }
 
@@ -506,6 +506,14 @@ img {
 
 a:hover .teaser-img img {
     opacity: .7;
+}
+
+/* ---------------------------------------------------------------------
+Box
+------------------------------------------------------------------------ */
+.box {
+    background: #ffffff;
+    padding: 25px;
 }
 
 /* ---------------------------------------------------------------------
@@ -666,7 +674,7 @@ a:hover .icn { opacity: .2; }
 .btn {
     display: block;
     padding: 15px 15px;
-    background: #221f1f;
+    background: #000000;
     color: #ffffff;
     font-size: 12px;
     line-height: 1.2;

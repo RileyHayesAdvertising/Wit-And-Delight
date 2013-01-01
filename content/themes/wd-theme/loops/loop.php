@@ -6,30 +6,32 @@
             {{#each this}}
             <div class="jsToggleItem">
                 <div class="panel panel_inverse">
-                    <div class="feature feature_condensed">
-                        <div class="feature-hd">
-                            <h3 class="hdg hdg_1">
-                                <a href="{{the_permalink}}">{{the_month}}.{{the_day}}.{{the_year}} | {{{the_title}}}</a>
-                            </h3>
-                        </div>
-                        {{#if the_first_image}}
-                        <div class="feature-img">
-                            <a href="{{the_permalink}}">
-                                <img src="{{the_first_image}}" alt="" />
-                            </a>
-                        </div>
-                        {{/if}}
-                        <div class="feature-bd">
-                            <div class="user-content">
-                                {{{the_content}}}
+                    <div class="box">
+                        <div class="feature feature_condensed">
+                            <div class="feature-hd">
+                                <h3 class="hdg hdg_1">
+                                    <a href="{{the_permalink}}">{{the_month}}.{{the_day}}.{{the_year}} | {{{the_title}}}</a>
+                                </h3>
                             </div>
-                        </div>
-                        <div class="feature-meta">
-                            <ul class="blocks blocks_3up">
-                                <li><a href="http://www.facebook.com/sharer.php?u={{the_permalink}}" class="btn" rel="external">Share on Facebook</a></li>
-                                <li><a href="http://twitter.com/share?url={{the_permalink}}" class="btn" rel="external">Tweet It</a></li>
-                                <li><a href="http://pinterest.com/pin/create/button/?media={{the_first_image}}&amp;url={{the_permalink}}" class="btn">Pin it</a></li>
-                            </ul>
+                            {{#if the_first_image}}
+                            <div class="feature-img">
+                                <a href="{{the_permalink}}">
+                                    <img src="{{the_first_image}}" alt="" />
+                                </a>
+                            </div>
+                            {{/if}}
+                            <div class="feature-bd">
+                                <div class="user-content">
+                                    {{{the_content}}}
+                                </div>
+                            </div>
+                            <div class="feature-meta">
+                                <ul class="blocks blocks_3up">
+                                    <li><a href="http://www.facebook.com/sharer.php?u={{the_permalink}}" class="btn" rel="external">Share on Facebook</a></li>
+                                    <li><a href="http://twitter.com/share?url={{the_permalink}}" class="btn" rel="external">Tweet It</a></li>
+                                    <li><a href="http://pinterest.com/pin/create/button/?media={{the_first_image}}&amp;url={{the_permalink}}" class="btn">Pin it</a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -53,7 +55,7 @@
                                 {{/if}}
                                 <div class="feature-hd">
                                     <h3 class="hdg hdg_4">
-                                        <a href="{{the_permalink}}">{{the_month_number}}/{{the_day}}/{{the_year}} {{{the_title}}}</a>
+                                        <a href="{{the_permalink}}">{{the_month_number}}/{{the_day}}/{{the_short_year}} {{{the_title}}}</a>
                                     </h3>
                                 </div>
                                 <div class="feature-bd">
@@ -98,6 +100,7 @@
                                         the_month_number: "<?php the_time('m'); ?>",
                                         the_day: "<?php the_time('d'); ?>",
                                         the_year: "<?php the_time('Y'); ?>",
+                                        the_short_year: "<?php the_time('y'); ?>",
                                         the_title: "<?php echo the_title(); ?>",
                                         the_first_image: "<?php echo the_first_image(); ?>",
                                         the_permalink: "<?php echo the_permalink(); ?>",
@@ -108,30 +111,32 @@
                                 <?php if (!isset($_COOKIE["viewprefs"]) || $_COOKIE["viewprefs"] == "scroll") : ?>
                                     <div class="jsToggleItem">
                                         <div class="panel panel_inverse">
-                                            <div class="feature feature_condensed">
-                                                <div class="feature-hd">
-                                                    <h3 class="hdg hdg_1">
-                                                        <a href="<?php the_permalink(); ?>"><?php the_time('M.d.Y | '); ?><?php the_title(); ?></a>
-                                                    </h3>
-                                                </div>
-                                                <?php if (the_first_image() != '') { ?>
-                                                <div class="feature-img">
-                                                    <a href="<?php the_permalink(); ?>">
-                                                        <img src="<?php echo the_first_image() ?>" alt="" />
-                                                    </a>
-                                                </div>
-                                                <?php } ?>
-                                                <div class="feature-bd">
-                                                    <div class="user-content">
-                                                        <?php echo $postOutput; ?>
+                                            <div class="box">
+                                                <div class="feature feature_condensed">
+                                                    <div class="feature-hd">
+                                                        <h3 class="hdg hdg_1">
+                                                            <a href="<?php the_permalink(); ?>"><?php the_time('M.d.Y | '); ?><?php the_title(); ?></a>
+                                                        </h3>
                                                     </div>
-                                                </div>
-                                                <div class="feature-meta">
-                                                    <ul class="blocks blocks_3up">
-                                                        <li><a href="http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>" class="btn" rel="external">Share on Facebook</a></li>
-                                                        <li><a href="http://twitter.com/share?url=<?php the_permalink(); ?>" class="btn" rel="external">Tweet It</a></li>
-                                                        <li><a href="http://pinterest.com/pin/create/button/?media=<?php echo urlencode(the_first_image()); ?>&url=<?php echo urlencode(get_permalink()); ?>" class="btn">Pin it</a></li>
-                                                    </ul>
+                                                    <?php if (the_first_image() != '') { ?>
+                                                    <div class="feature-img">
+                                                        <a href="<?php the_permalink(); ?>">
+                                                            <img src="<?php echo the_first_image() ?>" alt="" />
+                                                        </a>
+                                                    </div>
+                                                    <?php } ?>
+                                                    <div class="feature-bd">
+                                                        <div class="user-content">
+                                                            <?php echo $postOutput; ?>
+                                                        </div>
+                                                    </div>
+                                                    <div class="feature-meta">
+                                                        <ul class="blocks blocks_3up">
+                                                            <li><a href="http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>" class="btn" rel="external">Share on Facebook</a></li>
+                                                            <li><a href="http://twitter.com/share?url=<?php the_permalink(); ?>" class="btn" rel="external">Tweet It</a></li>
+                                                            <li><a href="http://pinterest.com/pin/create/button/?media=<?php echo urlencode(the_first_image()); ?>&url=<?php echo urlencode(get_permalink()); ?>" class="btn">Pin it</a></li>
+                                                        </ul>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
