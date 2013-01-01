@@ -115,7 +115,7 @@
                         <div class="js-view-toggle viewToggle">
                             <div class="yinAndYang">
                                 <div class="yinAndYang-yin">
-                                    <p>Grid or Scroll</p>
+                                    <p>View as grid or scroll</p>
                                 </div>
                                 <div class="yinAndYang-yang">
                                     <?php if (!isset($_COOKIE["viewprefs"]) || $_COOKIE["viewprefs"] == "scroll") : ?>

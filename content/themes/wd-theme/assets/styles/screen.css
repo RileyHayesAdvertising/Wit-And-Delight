@@ -180,8 +180,8 @@ img {
 }
 
 .viewToggle p {
-    font-size: 10px;
-    line-height: 33px;
+    font-size: 9px;
+    line-height: 25px;
     font-weight: 800;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -559,21 +559,22 @@ a:hover .icn { opacity: .2; }
 .switcher {
     display: block;
     height: 27px;
+    width: 27px;
     text-indent: -9999px;
     background: transparent url(../images/icons-viewchanger.png) no-repeat 0 0;
     opacity: 0.5;
 }
 
 .switcher.isActive {
-    opacity: 1}
+    opacity: 1
+}
 
 .switcher_grid {
-    width: 28px;
+    background-position: 0 0;
 }
 
 .switcher_scroll {
-    width: 41px;
-    background-position: -39px 0;
+    background-position: -36px 0;
 }
 
 /* ---------------------------------------------------------------------
