@@ -54,9 +54,18 @@
                                     </a>
                                     </div>
                                     {{/if}}
-                                    <div class="feature-hd">
+                                    <div class="feature-hd feature-hd_condensed_sm">
                                         <h3 class="hdg hdg_4">
-                                            <a href="{{the_permalink}}">{{the_month_number}}/{{the_day}}/{{the_short_year}} {{{the_title}}}</a>
+                                            <a href="{{the_permalink}}">
+                                                <span class="ribbon">
+                                                    <span class="ribbon-inner">
+                                                        <span class="date">
+                                                            {{the_month_number}}/{{the_day}}/{{the_short_year}}
+                                                        </span>
+                                                    </span>
+                                                </span>
+                                            {{{the_title}}}
+                                            </a>
                                         </h3>
                                     </div>
                                     <div class="feature-bd">
