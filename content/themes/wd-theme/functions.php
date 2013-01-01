@@ -5,8 +5,8 @@
  * @category   WD_Theme
  * @package    WD_Theme
  * @subpackage Functions
- * @author     
- * @author     
+ * @author
+ * @author
  * @version    $Id$
  */
 
@@ -112,7 +112,7 @@ function tag_list() {
     // figure out the url segments
     $_SERVER['REQUEST_URI_PATH'] = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
     $segments = explode('/', $_SERVER['REQUEST_URI_PATH']);
-    
+
     $tags = get_tags();
     foreach ($tags as $tag){
         $tag_link = get_tag_link($tag->term_id);
@@ -172,7 +172,7 @@ function remove_dimensions( $html ) {
  *
  * @return html
  */
-function mytheme_comment($comment, $args, $depth) { 
+function mytheme_comment($comment, $args, $depth) {
     $GLOBALS['comment'] = $comment;
 ?>
     <li>
@@ -206,4 +206,14 @@ function add_textarea() {
 }
 
 
+/**
+ * Allows for custom default avatar
+ * http://buildinternet.com/2009/02/how-to-change-the-default-gravatar-in-wordpress/
+ */
+add_filter( 'avatar_defaults', 'newgravatar' );
 
+function newgravatar ($avatar_defaults) {
+    $myavatar = get_bloginfo('template_directory') . '/assets/images/comment-avatar.png';
+    $avatar_defaults[$myavatar] = "Kate's Custom Avatar";
+    return $avatar_defaults;
+}
