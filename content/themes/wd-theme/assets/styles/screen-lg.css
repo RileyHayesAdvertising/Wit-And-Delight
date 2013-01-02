@@ -213,3 +213,35 @@ Width: 48em and up
     font-weight: 500;
     font-size: 9px;
 }
+
+/* ---------------------------------------------------------------------
+ Social Footer Module
+------------------------------------------------------------------------ */
+.socialFooter {
+    padding: 13px 0 15px;
+    margin-left: 0;
+    border-top: 1px solid #000000;
+}
+
+.socialFooter-comments {
+    display: block;
+    float: left;
+    font-size: 10px;
+    line-height: 2.5;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.socialFooter-links {
+    float: right;
+}
+
+.socialFooter-links > * {
+    width: 23px;
+    margin: 0;
+}
+
+.socialFooter-links > * + * {
+    margin-left: 12px;
+}

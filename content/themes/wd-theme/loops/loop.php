@@ -92,11 +92,14 @@
                                         </div>
                                     </div>
                                     <div class="feature-meta feature-meta_grid">
-                                        <ul class="blocks blocks_3up">
-                                            <li><a href="http://www.facebook.com/sharer.php?u={{the_permalink}}" class="btn" rel="external">Share on Facebook<i class="icn icn_facebook"></i></a></li>
-                                            <li><a href="http://twitter.com/share?url={{the_permalink}}" class="btn" rel="external">Tweet it<i class="icn icn_twitter"></i></a></li>
-                                            <li><a href="http://pinterest.com/pin/create/button/?media={{the_first_image}}&amp;url={{the_permalink}}" class="btn">Pin it<i class="icn icn_pin"></i></a></li>
-                                        </ul>
+                                        <div class="socialFooter">
+                                            <p class="socialFooter-comments">Comments ({{num_comments}})</p>
+                                            <ul class="socialFooter-links">
+                                                <li><a href="http://www.facebook.com/sharer.php?u={{the_permalink}}" class="btn" rel="external">Share on Facebook<i class="icn icn_facebook"></i></a></li>
+                                                <li><a href="http://twitter.com/share?url={{the_permalink}}" class="btn" rel="external">Tweet it<i class="icn icn_twitter"></i></a></li>
+                                                <li><a href="http://pinterest.com/pin/create/button/?media={{the_first_image}}&amp;url={{the_permalink}}" class="btn">Pin it<i class="icn icn_pin"></i></a></li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -136,7 +139,9 @@
                                         the_first_image: "<?php echo the_first_image(); ?>",
                                         the_permalink: "<?php echo the_permalink(); ?>",
                                         the_excerpt: <?php echo json_encode($excerpt); ?>,
-                                        the_content: <?php echo json_encode($postOutput); ?>
+                                        the_content: <?php echo json_encode($postOutput); ?>,
+                                        num_comments: <?php echo comments_number('0','1','%'); ?>
+
                                     });
                                 </script>
 

@@ -43,3 +43,18 @@ Width: 36em and up
  Comment Form
 ------------------------------------------------------------------------ */
 .form-comment { width: 60%; }
+
+/* ---------------------------------------------------------------------
+ Social Footer Module
+------------------------------------------------------------------------ */
+.socialFooter {
+    overflow: hidden;
+    margin-left: -1%;
+}
+
+.socialFooter-links > * {
+    float: left;
+    margin-bottom: 0;
+    width: 32.333333%;
+    margin-left: 1%;
+}
