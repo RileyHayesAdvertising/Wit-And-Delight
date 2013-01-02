@@ -884,6 +884,7 @@ in the comment form so I used the provided ID */
     font-weight: bold;
     text-transform: uppercase;
     margin: 0 0 12px 0;
+    letter-spacing: 2px;
 }
 
 .user-content h2 {
@@ -891,6 +892,7 @@ in the comment form so I used the provided ID */
     font-weight: bold;
     text-transform: uppercase;
     margin: 0 0 12px 0;
+    letter-spacing: 2px;
 }
 
 .user-content h3 {
@@ -898,6 +900,7 @@ in the comment form so I used the provided ID */
     font-weight: bold;
     text-transform: uppercase;
     margin: 0 0 12px 0;
+    letter-spacing: 2px;
 }
 
 .user-content h4 {
@@ -905,6 +908,7 @@ in the comment form so I used the provided ID */
     font-weight: bold;
     text-transform: uppercase;
     margin: 0 0 12px 0;
+    letter-spacing: 2px;
 }
 
 .user-content h5 {
@@ -912,6 +916,7 @@ in the comment form so I used the provided ID */
     font-weight: bold;
     text-transform: uppercase;
     margin: 0 0 12px 0;
+    letter-spacing: 2px;
 }
 
 .user-content h6 {
@@ -919,6 +924,7 @@ in the comment form so I used the provided ID */
     font-weight: bold;
     text-transform: uppercase;
     margin: 0 0 12px 0;
+    letter-spacing: 2px;
 }
 
 .user-content p {
