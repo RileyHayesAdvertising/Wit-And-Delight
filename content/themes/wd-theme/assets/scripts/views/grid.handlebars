@@ -5,12 +5,13 @@
             {{#each this}}
             <div class="jsToggleItem">
                 <div class="box box_slim box_push">
-                    <div class="feature feature_condensed feature_grid">
+                    <div class="feature feature_condensed feature_post">
                         {{#if the_first_image}}
                         <div class="feature-img feature-img_alt">
-                        <a href="{{the_permalink}}">
-                            <img src="{{the_first_image}}" alt="" />
-                        </a>
+                            <a href="{{the_permalink}}">
+                                <img src="{{the_first_image}}" alt="" />
+                            </a>
+                            <a href="http://pinterest.com/pin/create/button/?media={{the_first_image}}&amp;url={{the_permalink}}" class="pinIt pinIt_feature" title="Pin this article on Pinterest">Pin this article on Pinterest</a>
                         </div>
                         {{/if}}
                         <div class="feature-hd feature-hd_condensed_sm">

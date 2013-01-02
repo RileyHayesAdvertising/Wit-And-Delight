@@ -449,7 +449,7 @@ img {
     position: relative;
 }
 
-.feature_grid > .feature-img {
+.feature_post > .feature-img img {
     -webkit-transition: opacity .12s linear;
     -moz-transition:    opacity .12s linear;
     -ms-transition:     opacity .12s linear;
@@ -457,7 +457,7 @@ img {
     transition:         opacity .12s linear;
 }
 
-.feature_grid > .feature-img:hover {
+.feature_post > .feature-img:hover img {
     opacity: 0.7;
 }
 
@@ -489,9 +489,15 @@ img {
 }
 
 .pinIt_feature {
+    display: none;
     position: absolute;
-    /*right: -10px;*/
-    bottom: 20px;
+    right: -25px;
+    bottom: 50px;
+    z-index: 500;
+}
+
+*:hover > .pinIt_feature {
+    display: block;
 }
 
 /* ---------------------------------------------------------------------

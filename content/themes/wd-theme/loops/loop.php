@@ -7,7 +7,7 @@
             <div class="jsToggleItem">
                 <div class="panel panel_inverse">
                     <div class="box">
-                        <div class="feature feature_condensed">
+                        <div class="feature feature_condensed feature_post">
                             <div class="feature-hd">
                                 <h3 class="hdg hdg_1">
                                     <a href="{{the_permalink}}">
@@ -31,6 +31,7 @@
                                 <a href="{{the_permalink}}">
                                     <img src="{{the_first_image}}" alt="" />
                                 </a>
+                                <a href="http://pinterest.com/pin/create/button/?media={{the_first_image}}&amp;url={{the_permalink}}" class="pinIt pinIt_feature" title="Pin this article on Pinterest">Pin this article on Pinterest</a>
                             </div>
                             {{/if}}
                             <div class="feature-bd">
@@ -59,12 +60,13 @@
                         {{#each this}}
                         <div class="jsToggleItem">
                             <div class="box box_slim box_push">
-                                <div class="feature feature_condensed feature_grid">
+                                <div class="feature feature_condensed feature_post">
                                     {{#if the_first_image}}
                                     <div class="feature-img feature-img_alt">
-                                    <a href="{{the_permalink}}">
-                                        <img src="{{the_first_image}}" alt="" />
-                                    </a>
+                                        <a href="{{the_permalink}}">
+                                            <img src="{{the_first_image}}" alt="" />
+                                        </a>
+                                        <a href="http://pinterest.com/pin/create/button/?media={{the_first_image}}&amp;url={{the_permalink}}" class="pinIt pinIt_feature" title="Pin this article on Pinterest">Pin this article on Pinterest</a>
                                     </div>
                                     {{/if}}
                                     <div class="feature-hd feature-hd_condensed_sm">
@@ -140,23 +142,10 @@
                                     <div class="jsToggleItem">
                                         <div class="panel panel_inverse">
                                             <div class="box">
-                                                <div class="feature feature_condensed">
+                                                <div class="feature feature_condensed feature_post">
                                                     <div class="feature-hd">
                                                         <h3 class="hdg hdg_1">
-                                                            <a href="<?php the_permalink(); ?>">
-                                                                <span class="ribbon">
-                                                                    <span class="ribbon-bd">
-                                                                        <span class="ribbon-bd-inner">
-                                                                            <span class="date">
-                                                                                <?php the_time('m/d/y'); ?>
-                                                                            </span>
-                                                                        </span>
-                                                                    </span>
-                                                                    <span class="ribbon-buddy">
-                                                                        <?php the_title(); ?>
-                                                                    </span>
-                                                                </span>
-                                                            </a>
+                                                            <a href="<?php the_permalink(); ?>"><?php the_time('M.d.Y | '); ?><?php the_title(); ?></a>
                                                         </h3>
                                                     </div>
                                                     <?php if (the_first_image() != '') { ?>
@@ -164,7 +153,7 @@
                                                         <a href="<?php the_permalink(); ?>">
                                                             <img src="<?php echo the_first_image() ?>" alt="" />
                                                         </a>
-                                                        <a haref="#" class="pinIt pinIt_feature" title="Pin this article on Pinterest">Pin this article on Pinterest</a>
+                                                        <a href="http://pinterest.com/pin/create/button/?media=<?php echo urlencode(the_first_image()); ?>&url=<?php echo urlencode(get_permalink()); ?>" class="pinIt pinIt_feature" title="Pin this article on Pinterest">Pin this article on Pinterest</a>
                                                     </div>
                                                     <?php } ?>
                                                     <div class="feature-bd">
