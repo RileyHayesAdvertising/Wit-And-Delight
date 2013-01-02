@@ -89,7 +89,7 @@
                                     </div>
                                     <div class="feature-bd">
                                         <div class="user-content">
-                                            {{{the_content}}}
+                                            {{{the_excerpt}}}
                                         </div>
                                     </div>
                                     <div class="feature-meta feature-meta_grid">
@@ -116,12 +116,14 @@
                         <div id="jsToggleWrapper">
                             <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                                 <?php
-                                    // strip the <img> elements from the post but leave all other html intact
+                                    // strip the uneeded elements from the post but leave all other html intact
                                     $content = get_the_content('');
                                     $content = apply_filters('the_content', $content);
-                                    $pattern = '/(<img.+?>)/';
-                                    $replacements='';
-                                    $postOutput = preg_replace($pattern, $replacements, $content);
+                                    $postOutput = preg_replace('/(<img.+?>)/', '', $content); // remove img tags
+                                    $postOutput = preg_replace('~<p>\s*<\/p>~i', '', $postOutput); // remove empty p tags
+
+                                    // determine the excerpt
+                                    $excerpt = substr($postOutput,0, strpos($postOutput, "</p>")+4);
                                 ?>
 
                                 <script>
@@ -134,6 +136,7 @@
                                         the_title: "<?php echo the_title(); ?>",
                                         the_first_image: "<?php echo the_first_image(); ?>",
                                         the_permalink: "<?php echo the_permalink(); ?>",
+                                        the_excerpt: <?php echo json_encode($excerpt); ?>,
                                         the_content: <?php echo json_encode($postOutput); ?>
                                     });
                                 </script>
