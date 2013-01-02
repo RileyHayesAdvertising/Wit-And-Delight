@@ -134,6 +134,7 @@
                                                         <a href="<?php the_permalink(); ?>">
                                                             <img src="<?php echo the_first_image() ?>" alt="" />
                                                         </a>
+                                                        <a haref="#" class="pinIt pinIt_feature" title="Pin this article on Pinterest">Pin this article on Pinterest</a>
                                                     </div>
                                                     <?php } ?>
                                                     <div class="feature-bd">
