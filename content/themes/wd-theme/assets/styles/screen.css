@@ -629,6 +629,10 @@ a:hover .icn { opacity: .2; }
     width: 100%;
 }
 
+.input_small {
+    width: 94%;
+}
+
 .input_alt {
     width: 96%;
     padding: 2%;
