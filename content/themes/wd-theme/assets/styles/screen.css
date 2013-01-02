@@ -167,7 +167,7 @@ img {
 
 .logo a {
     display: inline-block;
-    width: 220px;
+    width: 180px;
 }
 
 .quickSearch {
@@ -800,6 +800,18 @@ in the comment form so I used the provided ID */
 /* ---------------------------------------------------------------------
  Carousel - JS Styles
 ------------------------------------------------------------------------ */
+.carousel-item img {
+    -webkit-transition: opacity .12s linear;
+    -moz-transition:    opacity .12s linear;
+    -ms-transition:     opacity .12s linear;
+    -o-transition:      opacity .12s linear;
+    transition:         opacity .12s linear;
+}
+
+.carousel-item a:hover img {
+    opacity: .7;
+}
+
 .js .carousel {
     position: relative;
 }

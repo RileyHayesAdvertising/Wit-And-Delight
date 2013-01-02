@@ -15,7 +15,7 @@
                                                 the_content(); 
                                             ?>
                                         </div>
-                                        <div class="panel panel_bare" id="js-carousel">
+                                        <div class="panel panel_bare panel_condensed" id="js-carousel">
                                             <h3 class="isHidden">Featured Items</h3>
                                             <?php 
                                             // display carousel slides

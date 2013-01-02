@@ -152,7 +152,20 @@
                                                 <div class="feature feature_condensed feature_post">
                                                     <div class="feature-hd">
                                                         <h3 class="hdg hdg_1">
-                                                            <a href="<?php the_permalink(); ?>"><?php the_time('M.d.Y | '); ?><?php the_title(); ?></a>
+                                                            <a href="<?php the_permalink(); ?>">
+                                                                <span class="ribbon">
+                                                                    <span class="ribbon-bd">
+                                                                        <span class="ribbon-bd-inner">
+                                                                            <span class="date">
+                                                                                <?php the_time('m/d/y'); ?>
+                                                                            </span>
+                                                                        </span>
+                                                                    </span>
+                                                                    <span class="ribbon-buddy">
+                                                                        <?php the_title(); ?>
+                                                                    </span>
+                                                                </span>
+                                                            </a>
                                                         </h3>
                                                     </div>
                                                     <?php if (the_first_image() != '') { ?>
