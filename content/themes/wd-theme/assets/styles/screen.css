@@ -916,7 +916,7 @@ in the comment form so I used the provided ID */
 }
 
 .user-content em,
-.user-content i, {
+.user-content i {
     font-style: italic;
 }
 
