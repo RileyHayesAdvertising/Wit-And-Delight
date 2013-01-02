@@ -96,19 +96,24 @@ var WD = WD || {}; // Global Namespace object
 
         parseGridArray: function(data) {
             var grid   = [[],[],[]];
+            var data   = data.slice(0);
             var length = data.length;
 
-            for (var i = 0; i < length; i++) {
-                if (i === 0 || i % 3 === 0) {
-                    grid[0].push(data[i]);
+            for (var i = 1, j = 1; i <= length; i++) {
+                if (j % 3 === 0) {
+                    grid[2].push(data[2]);
+                    data.splice(0, 3);
+                    j++;
                     continue;
                 }
-                if (i === 1 || i % 4 === 0) {
-                    grid[1].push(data[i]);
+                if (j % 2 === 0) {
+                    grid[1].push(data[1]);
+                    j++;
                     continue;
                 }
-                if (i === 2 || i % 5 === 0) {
-                    grid[2].push(data[i]);
+                if (j % 1 === 0) {
+                    grid[0].push(data[0]);
+                    j++;
                     continue;
                 }
             }
