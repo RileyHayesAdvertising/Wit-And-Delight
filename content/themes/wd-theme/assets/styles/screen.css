@@ -491,7 +491,7 @@ img {
 .pinIt_feature {
     display: none;
     position: absolute;
-    right: -25px;
+    right: -35px;
     bottom: 50px;
     z-index: 500;
 }
