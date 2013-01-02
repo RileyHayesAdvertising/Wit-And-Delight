@@ -199,7 +199,10 @@ Width: 48em and up
 }
 
 .ribbon-bd_alt {
+    float: none;
+    display: inline-block;
     margin-left: -25px;
+    margin-bottom: 14px;
 }
 
 .ribbon-bd_alt .ribbon-bd-inner {

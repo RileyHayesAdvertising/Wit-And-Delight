@@ -374,7 +374,7 @@ img {
  Comment Form
 ------------------------------------------------------------------------ */
 .form-comment {
-    background: #e6e7e8;
+    background: #000000;
 }
 
 .form-comment-inner {
@@ -877,14 +877,14 @@ in the comment form so I used the provided ID */
 }
 
 .user-content h4 {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: bold;
     text-transform: uppercase;
     margin: 0 0 12px 0;
 }
 
 .user-content h5 {
-    font-size: 10px;
+    font-size: 12px;
     font-weight: bold;
     text-transform: uppercase;
     margin: 0 0 12px 0;
@@ -939,7 +939,7 @@ in the comment form so I used the provided ID */
 }
 
 .user-content em,
-.user-content i, {
+.user-content i {
     font-style: italic;
 }
 

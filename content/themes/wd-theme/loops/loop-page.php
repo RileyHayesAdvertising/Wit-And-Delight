@@ -6,8 +6,8 @@
                         <div class="panel panel_bare">
                             <div class="box">
                                 <div class="feature feature_condensed">
-                                    <div class="feature-hd">
-                                        <h2 class="hdg hdg_1 isHidden"><?php the_title(); ?></h2>
+                                    <div class="feature-hd isHidden">
+                                        <h2 class="hdg hdg_1"><?php the_title(); ?></h2>
                                     </div>
                                     <div class="feature-bd">
                                         <div class="user-content">
