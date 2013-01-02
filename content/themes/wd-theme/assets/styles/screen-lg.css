@@ -159,32 +159,51 @@ Width: 48em and up
 /* ---------------------------------------------------------------------
  Ribbon
 ------------------------------------------------------------------------ */
-.ribbon {
-    display: block;
-    padding-right: 10px;
-    position: relative;
-    margin-left: -25px;
-    margin-bottom: 14px;
+.ribbon:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
-.ribbon-inner {
+.ribbon-bd {
+    float: left;
+    display: block;
+    padding-right: 14px;
+    position: relative;
+    margin: -4px 0 0 -35px;
+}
+
+.ribbon-bd-inner {
     position: relative;
     display: inline-block;
     width: 70px;
     height: 26px;
-    line-height: 26px;
+    line-height: 1;
     background: #000000;
     color: #ffffff;
     text-align: center;
 }
 
-.ribbon-inner:after {
+.ribbon-bd-inner:after {
     content: '';
     position: absolute;
     left: 0;
     bottom: -6px;
     border-right: 10px #000000 solid;
     border-bottom: 6px transparent solid;
+}
+
+.ribbon-buddy {
+    display: block;
+    overflow: hidden;
+}
+
+.ribbon-bd_alt {
+    margin-left: -25px;
+}
+
+.ribbon-bd_alt .ribbon-bd-inner {
+    line-height: 26px;
 }
 
 .date {

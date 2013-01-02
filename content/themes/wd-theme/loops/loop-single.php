@@ -7,7 +7,20 @@
                             <div class="box">
                                 <div class="feature feature_condensed">
                                     <div class="feature-hd">
-                                        <h2 class="hdg hdg_1"><?php the_date('M.d.Y','',' | '); ?><?php the_title(); ?></h2>
+                                        <h2 class="hdg hdg_1">
+                                            <span class="ribbon">
+                                                <span class="ribbon-bd">
+                                                    <span class="ribbon-bd-inner">
+                                                        <span class="date">
+                                                            <?php the_time('m/d/y'); ?>
+                                                        </span>
+                                                    </span>
+                                                </span>
+                                                <span class="ribbon-buddy">
+                                                    <?php the_title(); ?>
+                                                </span>
+                                            </span>
+                                        </h2>
                                     </div>
                                     <div class="feature-bd">
                                         <div class="user-content">
