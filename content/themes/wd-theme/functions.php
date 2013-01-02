@@ -217,3 +217,11 @@ function newgravatar ($avatar_defaults) {
     $avatar_defaults[$myavatar] = "Kate's Custom Avatar";
     return $avatar_defaults;
 }
+
+/**
+ * Custom excerpt length
+ */
+function my_excerpt_length($length) {
+    return 100; // whatever you want the length to be.
+}
+add_filter('excerpt_length', 'my_excerpt_length');
