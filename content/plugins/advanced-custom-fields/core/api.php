@@ -465,26 +465,23 @@ add_filter('acf_register_field_group', 'acf_register_field_group');
 * 
 *-------------------------------------------------------------------------------------*/
 
-$GLOBALS['acf_register_options_page'] = array();
+$GLOBALS['acf_options_pages'] = array();
 
-function register_options_page($title = "")
+function register_options_page( $title = "" )
 {
-	$GLOBALS['acf_register_options_page'][] = $title;
+	$GLOBALS['acf_options_pages'][] = $title;
 }
 
-function acf_register_options_page($array)
-{
-	if( empty($GLOBALS['acf_register_options_page']) )
-	{
-		return $array;
-	}
-	
-	$array = array_merge($array, $GLOBALS['acf_register_options_page']);
-	
-	return $array;
-}
-add_filter('acf_register_options_page', 'acf_register_options_page');
 
+function acf_settings_options_pages( $options )
+{
+	// merge in options pages
+	$options['options_page']['pages'] = array_merge( $options['options_page']['pages'], $GLOBALS['acf_options_pages'] );
+	
+
+	return $options;
+}
+add_filter('acf_settings', 'acf_settings_options_pages');
 
 
 /*--------------------------------------------------------------------------------------
@@ -614,7 +611,7 @@ function acf_form_wp_head()
 
 	// Javascript
 	echo '<script type="text/javascript" src="'.$acf->dir.'/js/input-actions.js?ver=' . $acf->version . '" ></script>';
-	echo '<script type="text/javascript">acf.post_id = ' . $post->ID . ';</script>';
+	
 	
 	
 	// add user js + css
@@ -675,6 +672,11 @@ function acf_form($options = null)
 		echo '<div id="message" class="updated"><p>' . $options['updated_message'] . '</p></div>';
 	}
 	
+	
+	// Javascript
+	echo '<script type="text/javascript">acf.post_id = ' . $options['post_id'] . '; acf.nonce = "' . wp_create_nonce( 'acf_nonce' ) . '";</script>';
+	
+	
 	// display form
 	?>
 	<form action="" id="post" method="post" <?php if($options['form_attributes']){foreach($options['form_attributes'] as $k => $v){echo $k . '="' . $v .'" '; }} ?>>
@@ -712,7 +714,7 @@ function acf_form($options = null)
 				echo '<div id="acf_' . $field_group['id'] . '" class="postbox acf_postbox">';
 				echo '<h3 class="hndle"><span>' . $field_group['title'] . '</span></h3>';
 				echo '<div class="inside">';
-					echo '<div class="options" data-layout="' . $field_group['options']['layout'] . '" data-show="true"></div>';
+					echo '<div class="options" data-layout="' . $field_group['options']['layout'] . '" data-show="1"></div>';
 					$acf->render_fields_for_input($field_group['fields'], $options['post_id']);
 				echo '</div></div>';
 			}
@@ -790,14 +792,33 @@ function update_field($field_key, $value, $post_id = false)
 	// backup if no field was found, save as a text field
 	if( !$field )
 	{
-		return false;
+		$field = array(
+			'type' => 'none',
+			'name' => $field_key
+		);
 	}
 	
-
-	// sub fields? They need formatted data
-	$value = acf_convert_field_names_to_keys( $value, $field );
 	
+	// sub fields? They need formatted data
+	if( $field['type'] == 'repeater' )
+	{
+		$value = acf_convert_field_names_to_keys( $value, $field );
+	}
+	elseif( $field['type'] == 'flexible_content' )
+	{
+		if( $field['layouts'] )
+		{
+			foreach( $field['layouts'] as $layout )
+			{
+				$value = acf_convert_field_names_to_keys( $value, $layout );
+			}
+		}
+	}
+	
+	
+	// save
 	$acf->update_value($post_id, $field, $value);
+	
 	
 	return true;
 	

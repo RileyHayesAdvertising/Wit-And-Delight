@@ -123,7 +123,14 @@ class acf_input
 		// validate page
 		if( ! $this->validate_page() ) return;
 		
+		
 		do_action('acf_print_scripts-input');
+		
+		
+		// only "edit post" input pages need the ajax
+		wp_enqueue_script(array(
+			'acf-input-ajax',	
+		));
 	}
 	
 	
@@ -185,15 +192,11 @@ class acf_input
 		
 
 		// Style
-		echo '<link rel="stylesheet" type="text/css" href="' . $this->parent->dir . '/css/global.css?ver=' . $this->parent->version . '" />';
-		echo '<link rel="stylesheet" type="text/css" href="' . $this->parent->dir . '/css/input.css?ver=' . $this->parent->version . '" />';
 		echo '<style type="text/css">.acf_postbox, .postbox[id*="acf_"] { display: none; }</style>';
 		
 		
 		// Javascript
-		echo '<script type="text/javascript" src="' . $this->parent->dir . '/js/input-actions.js?ver=' . $this->parent->version . '" ></script>';
-		echo '<script type="text/javascript" src="' . $this->parent->dir . '/js/input-ajax.js?ver=' . $this->parent->version . '" ></script>';
-		echo '<script type="text/javascript">acf.post_id = ' . $post_id . ';</script>';
+		echo '<script type="text/javascript">acf.post_id = ' . $post_id . '; acf.nonce = "' . wp_create_nonce( 'acf_nonce' ) . '";</script>';
 		
 		
 		// add user js + css
@@ -208,12 +211,13 @@ class acf_input
 			foreach($acfs as $acf)
 			{
 				// hide / show
-				$show = in_array($acf['id'], $metabox_ids) ? "true" : "false";
+				$show = in_array($acf['id'], $metabox_ids) ? 1 : 0;
 				$priority = 'high';
 				if( $acf['options']['position'] == 'side' )
 				{
 					$priority = 'core';
 				}
+				
 				
 				// add meta box
 				add_meta_box(
@@ -352,34 +356,32 @@ class acf_input
 	function meta_box_input($post, $args)
 	{
 		// vars
-		$fields = isset($args['args']['fields']) ? $args['args']['fields'] : false ;	
-		$options = isset($args['args']['options']) ? $args['args']['options'] : false;
-		$show = isset($args['args']['show']) ? $args['args']['show'] : "false";
-		$post_id = isset($args['args']['post_id']) ? $args['args']['post_id'] : false;
-		
-
-		// defaults
-		if(!$options)
-		{
-			$options = array(
+		$options = array(
+			'fields' => array(),
+			'options' => array(
 				'layout'	=>	'default'
-			);
-		}
+			),
+			'show' => 0,
+			'post_id' => 0,
+		);
+		$options = array_merge( $options, $args['args'] );
 		
-		if($fields)
+		
+		// needs fields
+		if( $options['fields'] )
 		{
 			echo '<input type="hidden" name="save_input" value="true" />';
-			echo '<div class="options" data-layout="' . $options['layout'] . '" data-show="' . $show . '" style="display:none"></div>';
+			echo '<div class="options" data-layout="' . $options['options']['layout'] . '" data-show="' . $options['show'] . '" style="display:none"></div>';
 			
-			if($show == "false")
+			if( $options['show'] )
 			{
-				// don't create fields
-				echo '<div class="acf-replace-with-fields"><div class="acf-loading"></div></div>';
+				$this->parent->render_fields_for_input( $options['fields'], $options['post_id'] );
 			}
 			else
 			{
-				$this->parent->render_fields_for_input($fields, $post_id);
+				echo '<div class="acf-replace-with-fields"><div class="acf-loading"></div></div>';
 			}
+			
 		}
 	}
 	
@@ -569,9 +571,6 @@ acf.text.gallery_tb_title_edit = "<?php _e("Edit Image",'acf'); ?>";
 	
 	function acf_print_scripts_input()
 	{
-		
-		wp_register_script('acf-datepicker', $this->parent->dir . '/core/fields/date_picker/jquery.ui.datepicker.js', false, $this->parent->version);
-    
 		wp_enqueue_script(array(
 			'jquery',
 			'jquery-ui-core',
@@ -580,6 +579,7 @@ acf.text.gallery_tb_title_edit = "<?php _e("Edit Image",'acf'); ?>";
 			'farbtastic',
 			'thickbox',
 			'media-upload',
+			'acf-input-actions',
 			'acf-datepicker',	
 		));
 
@@ -602,11 +602,11 @@ acf.text.gallery_tb_title_edit = "<?php _e("Edit Image",'acf'); ?>";
 	
 	function acf_print_styles_input()
 	{
-		wp_register_style('acf-datepicker', $this->parent->dir . '/core/fields/date_picker/style.date_picker.css', false, $this->parent->version);
-		
 		wp_enqueue_style(array(
 			'thickbox',
 			'farbtastic',
+			'acf-global',
+			'acf-input',
 			'acf-datepicker',	
 		));
 		
