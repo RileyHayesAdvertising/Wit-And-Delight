@@ -186,7 +186,7 @@ function mytheme_comment($comment, $args, $depth) {
                         <a href="<?php comment_author_url(); ?>" rel="external"><?php if ($args['avatar_size'] != 0) echo get_avatar( $comment, $args['avatar_size'] ); ?></a>
                     </div>
                     <div class="media-bd">
-                        <?php printf( __('%s'), get_comment_date('M d Y')); ?> | <a href="<?php comment_author_url(); ?>" rel="external"><?php printf(__('%s'), get_comment_author()); ?></a>
+                        <?php printf( __('%s'), get_comment_date('M d Y')); ?> | <?php if($comment->comment_author_url != "") { ?><a href="<?php comment_author_url(); ?>" rel="external"><?php } ?><?php printf(__('%s'), get_comment_author()); ?><?php if($comment->comment_author_url != "") { ?></a><?php } ?>
                     </div>
                 </div>
             </div>
