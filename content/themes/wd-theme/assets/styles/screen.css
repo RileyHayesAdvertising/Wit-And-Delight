@@ -344,7 +344,6 @@ img {
 .comment-bd {
     background: #000000;
     color: #ffffff;
-    text-transform: uppercase;
     padding: 20px;
     position: relative;
     margin-bottom: 60px; /* margin-bottom 30px + the size of the border that draw's the comment arrow */
@@ -359,8 +358,13 @@ img {
     border-right: 30px solid transparent;
 }
 
+/* comment user-content styles */
 .comment-bd a {
     color: #ffffff;
+}
+
+.comment-bd > * + * {
+    margin-top: 12px;
 }
 
 .comment-meta {
@@ -655,11 +659,13 @@ a:hover .icn { opacity: .2; }
     width: 96%;
     padding: 2%;
     margin-bottom: 12px;
+    text-transform: none;
 }
 
 .input_textarea {
     line-height: 1.8;
     margin-bottom: 0;
+    text-transform: none;
 }
 
 /* styles for the comment form textarea */

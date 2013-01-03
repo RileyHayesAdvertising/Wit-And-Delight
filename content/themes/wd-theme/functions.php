@@ -183,7 +183,7 @@ function mytheme_comment($comment, $args, $depth) {
             <div class="comment-meta">
                 <div class="media">
                     <div class="media-element">
-                        <a href="<?php comment_author_url(); ?>" rel="external"><?php if ($args['avatar_size'] != 0) echo get_avatar( $comment, $args['avatar_size'] ); ?></a>
+                        <?php if($comment->comment_author_url != "") { ?><a href="<?php comment_author_url(); ?>" rel="external"><?php } ?><?php if ($args['avatar_size'] != 0) echo get_avatar( $comment, $args['avatar_size'] ); ?><?php if($comment->comment_author_url != "") { ?></a><?php } ?>
                     </div>
                     <div class="media-bd">
                         <?php printf( __('%s'), get_comment_date('M d Y')); ?> | <?php if($comment->comment_author_url != "") { ?><a href="<?php comment_author_url(); ?>" rel="external"><?php } ?><?php printf(__('%s'), get_comment_author()); ?><?php if($comment->comment_author_url != "") { ?></a><?php } ?>
@@ -202,7 +202,7 @@ function mytheme_comment($comment, $args, $depth) {
 add_action( 'comment_form_top', 'add_textarea' );
 
 function add_textarea() {
-    echo '<label for="comment-copy" class="isHidden">' . _x( 'Comment', 'noun' ) . '</label><div class="pointer"><textarea class="input input_alt input_textarea" id="comment-copy" name="comment" cols="45" rows="8" aria-required="true" placeholder="Enter message here:"></textarea></div>';
+    echo '<label for="comment-copy" class="isHidden">' . _x( 'Comment', 'noun' ) . '</label><div class="pointer"><textarea class="input input_alt input_textarea" id="comment-copy" name="comment" cols="45" rows="8" aria-required="true" placeholder="ENTER MESSAGE HERE:"></textarea></div>';
 }
 
 
