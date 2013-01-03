@@ -368,7 +368,7 @@ img {
     text-transform: uppercase;
     font-weight: 800;
     margin-bottom: 30px;
-    line-height: 60px; /* match the height of the avatar to create vertical alignment */
+    line-height: 24px; /* match the height of the avatar to create vertical alignment */
 }
 
 /* ---------------------------------------------------------------------
