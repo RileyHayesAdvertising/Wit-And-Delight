@@ -55,7 +55,7 @@ $akismet_nonce = 'akismet-update-key';
 
 function akismet_plugin_action_links( $links, $file ) {
 	if ( $file == plugin_basename( dirname(__FILE__).'/akismet.php' ) ) {
-		$links[] = '<a href="admin.php?page=akismet-key-config">'.__('Settings').'</a>';
+		$links[] = '<a href="' . admin_url( 'admin.php?page=akismet-key-config' ) . '">'.__( 'Settings' ).'</a>';
 	}
 
 	return $links;
@@ -311,7 +311,7 @@ function akismet_admin_warnings() {
 		function akismet_warning() {
 			global $wpdb;
 				akismet_fix_scheduled_recheck();
-				$waiting = $wpdb->get_var( $wpdb->prepare( "SELECT COUNT(*) FROM $wpdb->commentmeta WHERE meta_key = 'akismet_error'" ) );
+				$waiting = $wpdb->get_var( "SELECT COUNT(*) FROM $wpdb->commentmeta WHERE meta_key = 'akismet_error'" );
 				$next_check = wp_next_scheduled('akismet_schedule_cron_recheck');
 				if ( $waiting > 0 && $next_check > time() )
 					echo "
@@ -723,7 +723,8 @@ function akismet_recheck_queue() {
 
 		delete_comment_meta( $c['comment_ID'], 'akismet_rechecking' );
 	}
-	wp_safe_redirect( $_SERVER['HTTP_REFERER'] );
+	$redirect_to = isset( $_SERVER['HTTP_REFERER'] ) ? $_SERVER['HTTP_REFERER'] : admin_url( 'edit-comments.php' );
+	wp_safe_redirect( $redirect_to );
 	exit;
 }
 
