@@ -146,58 +146,69 @@
                                     });
                                 </script>
 
-                                <?php if (!isset($_COOKIE["viewprefs"]) || $_COOKIE["viewprefs"] == "scroll") : ?>
-                                    <div class="jsToggleItem">
-                                        <div class="panel panel_inverse">
-                                            <div class="box">
-                                                <div class="feature feature_condensed feature_post">
-                                                    <div class="feature-hd">
-                                                        <h3 class="hdg hdg_1">
-                                                            <a href="<?php the_permalink(); ?>">
-                                                                <span class="ribbon">
-                                                                    <span class="ribbon-bd">
-                                                                        <span class="ribbon-bd-inner">
-                                                                            <span class="date">
-                                                                                <?php the_time('m/d/y'); ?>
+                                <?php if (!isset($_COOKIE["viewprefs"]) || $_COOKIE["viewprefs"] == "grid") : ?>
+
+                                    <noscript>
+                                        <div class="jsToggleItem">
+                                            <div class="panel panel_inverse">
+                                                <div class="box">
+                                                    <div class="feature feature_condensed feature_post">
+                                                        <div class="feature-hd">
+                                                            <h3 class="hdg hdg_1">
+                                                                <a href="<?php the_permalink(); ?>">
+                                                                    <span class="ribbon">
+                                                                        <span class="ribbon-bd">
+                                                                            <span class="ribbon-bd-inner">
+                                                                                <span class="date">
+                                                                                    <?php the_time('m/d/y'); ?>
+                                                                                </span>
                                                                             </span>
                                                                         </span>
+                                                                        <span class="ribbon-buddy">
+                                                                            <?php the_title(); ?>
+                                                                        </span>
                                                                     </span>
-                                                                    <span class="ribbon-buddy">
-                                                                        <?php the_title(); ?>
-                                                                    </span>
-                                                                </span>
-                                                            </a>
-                                                        </h3>
-                                                    </div>
-                                                    <?php if (the_first_image() != '') { ?>
-                                                    <div class="feature-img">
-                                                        <a href="<?php the_permalink(); ?>">
-                                                            <img src="<?php echo the_first_image() ?>" alt="" />
-                                                        </a>
-                                                        <a href="http://pinterest.com/pin/create/button/?media=<?php echo urlencode(the_first_image()); ?>&url=<?php echo urlencode(get_permalink()); ?>" class="pinIt pinIt_feature" title="Pin this article on Pinterest">Pin this article on Pinterest</a>
-                                                    </div>
-                                                    <?php } ?>
-                                                    <div class="feature-bd">
-                                                        <div class="user-content">
-                                                            <?php echo $postOutput; ?>
+                                                                </a>
+                                                            </h3>
                                                         </div>
-                                                    </div>
-                                                    <div class="feature-meta">
-                                                        <ul class="blocks blocks_3up">
-                                                            <li><a href="http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>" class="btn" rel="external">Share on Facebook</a></li>
-                                                            <li><a href="http://twitter.com/share?url=<?php the_permalink(); ?>" class="btn" rel="external">Tweet It</a></li>
-                                                            <li><a href="http://pinterest.com/pin/create/button/?media=<?php echo urlencode(the_first_image()); ?>&url=<?php echo urlencode(get_permalink()); ?>" class="btn">Pin it</a></li>
-                                                        </ul>
+                                                        <?php if (the_first_image() != '') { ?>
+                                                        <div class="feature-img">
+                                                            <a href="<?php the_permalink(); ?>">
+                                                                <img src="<?php echo the_first_image() ?>" alt="" />
+                                                            </a>
+                                                            <a href="http://pinterest.com/pin/create/button/?media=<?php echo urlencode(the_first_image()); ?>&url=<?php echo urlencode(get_permalink()); ?>" class="pinIt pinIt_feature" title="Pin this article on Pinterest">Pin this article on Pinterest</a>
+                                                        </div>
+                                                        <?php } ?>
+                                                        <div class="feature-bd">
+                                                            <div class="user-content">
+                                                                <?php echo $postOutput; ?>
+                                                            </div>
+                                                        </div>
+                                                        <div class="feature-meta">
+                                                            <ul class="blocks blocks_3up">
+                                                                <li><a href="http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>" class="btn" rel="external">Share on Facebook</a></li>
+                                                                <li><a href="http://twitter.com/share?url=<?php the_permalink(); ?>" class="btn" rel="external">Tweet It</a></li>
+                                                                <li><a href="http://pinterest.com/pin/create/button/?media=<?php echo urlencode(the_first_image()); ?>&url=<?php echo urlencode(get_permalink()); ?>" class="btn">Pin it</a></li>
+                                                            </ul>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </noscript>
 
                                 <?php endif; ?>
 
                             <?php endwhile; ?>
-                                <?php if ($_COOKIE["viewprefs"] == "grid") : ?>
+                                <?php if ($_COOKIE["viewprefs"] == "scroll") : ?>
+                                    <script>
+                                        (function($){
+                                            var source   = $(document.getElementById('template-scrollview')).html();
+                                            var template = Handlebars.compile(source);
+                                            $(document.getElementById('jsToggleWrapper')).html(template(WD.POSTS));
+                                        }(jQuery));
+                                    </script>
+                                <?php elseif (!isset($_COOKIE["viewprefs"]) || $_COOKIE["viewprefs"] == "grid"): ?>
                                     <script>
                                         (function($){
                                             var source   = $(document.getElementById('template-gridview')).html();
