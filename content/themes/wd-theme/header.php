@@ -118,12 +118,12 @@
                                     <p>View as grid or scroll</p>
                                 </div>
                                 <div class="yinAndYang-yang">
-                                    <?php if (!isset($_COOKIE["viewprefs"]) || $_COOKIE["viewprefs"] == "scroll") : ?>
+                                    <?php if ($_COOKIE["viewprefs"] == "scroll") : ?>
                                         <ul class="hList hList_spread">
                                             <li><a href="#" class="js-view-grid switcher switcher_grid">Grid</a></li>
                                             <li><a href="#" class="js-view-scroll switcher switcher_scroll isActive">Scroll</a> </li>
                                         </ul>
-                                    <?php elseif ($_COOKIE["viewprefs"] == "grid"): ?>
+                                    <?php elseif (!isset($_COOKIE["viewprefs"]) || $_COOKIE["viewprefs"] == "grid"): ?>
                                         <ul class="hList hList_spread">
                                             <li><a href="#" class="js-view-grid switcher switcher_grid isActive">Grid</a></li>
                                             <li><a href="#" class="js-view-scroll switcher switcher_scroll">Scroll</a> </li>
