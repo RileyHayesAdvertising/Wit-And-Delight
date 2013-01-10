@@ -37,7 +37,7 @@
                                         <div class="panel panel_bare panel_clip">
                                             <div class="feature">
                                                 <div class="feature-hd">
-                                                    <h3 class="hdg hdg_1">Currently Coveted</h3>
+                                                    <h3 class="hdg hdg_1 isHidden">Currently Coveted</h3>
                                                 </div>
                                                 <div class="feature-bd">
                                                     <?php 
