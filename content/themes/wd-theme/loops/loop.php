@@ -94,7 +94,7 @@
                                     </div>
                                     <div class="feature-meta feature-meta_grid">
                                         <div class="socialFooter">
-                                            <p class="socialFooter-comments">Comments ({{num_comments}})</p>
+                                            <p class="socialFooter-comments"><a href="{{the_permalink}}">Comments ({{num_comments}})</a></p>
                                             <ul class="socialFooter-links">
                                                 <li><a href="http://www.facebook.com/sharer.php?u={{the_permalink}}" class="btn" rel="external">Share on Facebook<i class="icn icn_facebook"></i></a></li>
                                                 <li><a href="http://twitter.com/share?url={{the_permalink}}" class="btn" rel="external">Tweet it<i class="icn icn_twitter"></i></a></li>
