@@ -652,6 +652,8 @@ a:hover .icn { opacity: .2; }
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
     border-radius: 0;
 }
 
