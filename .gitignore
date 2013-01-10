@@ -17,3 +17,7 @@ Thumbs.db
 #########################
 wp-config.php
 .htaccess
+
+# Dev files #
+#############
+_todo.txt
