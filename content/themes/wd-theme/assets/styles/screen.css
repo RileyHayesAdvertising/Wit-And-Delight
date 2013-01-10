@@ -782,6 +782,9 @@ in the comment form so I used the provided ID */
     padding: 0;
     margin: 0;
     border: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
     text-indent: -9999px;
     cursor: pointer;
     background: url(../images/btn-lets-hear-it.png) no-repeat 0 0;
