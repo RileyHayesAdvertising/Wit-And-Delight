@@ -161,6 +161,13 @@ var acf = {
 			div.data('validation', true);
 			
 
+			// if is hidden by conditional logic, ignore
+			if( div.hasClass('acf-conditional_logic-hide') )
+			{
+				return;
+			}
+			
+			
 			// text / textarea
 			if( div.find('input[type="text"], input[type="number"], input[type="hidden"], textarea').val() == "" )
 			{
@@ -1190,11 +1197,14 @@ var acf = {
 		if( row_count >= max_rows )
 		{
 			repeater.addClass('disabled');
+			repeater.find('> .repeater-footer .acf-button').addClass('disabled');
 		}
 		else
 		{
 			repeater.removeClass('disabled');
+			repeater.find('> .repeater-footer .acf-button').removeClass('disabled');
 		}
+		
 	}
 	
 	
@@ -1314,7 +1324,7 @@ var acf = {
 	
 	
 	// add row - before
-	$('.repeater .add-row-before').live('click', function(){
+	$('.repeater td.remove .add-row-before').live('click', function(){
 		
 		var repeater = $(this).closest('.repeater'),
 			before = $(this).closest('tr');
@@ -1369,7 +1379,7 @@ var acf = {
 	
 	
 	// remove field
-	$('.repeater .acf-button-remove').live('click', function(){
+	$('.repeater td.remove .acf-button-remove').live('click', function(){
 		var tr = $(this).closest('tr');
 		repeater_remove_row( tr );
 		return false;
@@ -2037,8 +2047,7 @@ var acf = {
 		var a = $(this),
 			id = a.attr('data-id'),
 			ul = a.closest('ul'),
-			inside = ul.closest('.acf_postbox').children('.inside'),
-			field = inside.children('.field-' + id);
+			inside = ul.closest('.acf_postbox').children('.inside');
 		
 		
 		// classes
@@ -2051,7 +2060,7 @@ var acf = {
 			
 			var tab = $(this);
 			
-			if( tab.attr('id') == field.attr('id') )
+			if( tab.hasClass('field-' + id) )
 			{
 				tab.nextUntil('.field-tab').removeClass('acf-tab_group-hide').addClass('acf-tab_group-show');
 			}

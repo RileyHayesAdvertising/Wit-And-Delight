@@ -90,6 +90,23 @@ http://support.advancedcustomfields.com/
 
 == Changelog ==
 
+= 3.5.7.2 =
+* [Fixed] Fix fields not showing on attachment edit page in WP 3.5 - http://support.advancedcustomfields.com/discussion/4261/after-upgrading-to-3-5-acf-fields-assigned-to-show-on-attachments-media-edit-are-not-showing
+* [Fixed] Fix sub repeater css bug - http://support.advancedcustomfields.com/discussion/4361/repeater-add-button-inappropriately-disabled
+* [Fixed] Fix issue where acf_form includes scripts twice - http://support.advancedcustomfields.com/discussion/4372/afc-repeater-on-front-end
+* [Fixed] Fix location rule bug with new shopp product - http://support.advancedcustomfields.com/discussion/4406/shopp-idnew-product-page-doesn039t-have-acf-fields
+* [Fixed] Fix location rule bug with taxonomy / post_taxonomy - http://support.advancedcustomfields.com/discussion/4407/taxonomy-rules-ignored-until-toggling-the-taxonomy
+
+= 3.5.7.1 =
+* [Fixed] Fix issues with location rules wrongly matching
+
+= 3.5.7 =
+* [Fixed] Fix sub field default value - http://support.advancedcustomfields.com/discussion/3706/select-field-default-value-not-working
+* [Added] Add filters for custom location rules - http://support.advancedcustomfields.com/discussion/4285/how-to-retrieve-a-custom-field-within-the-function-php
+* [Fixed] Fix XML import to create unique field ID's - http://support.advancedcustomfields.com/discussion/4328/check-acf_next_field_id-to-avoid-data-corruption
+* [Fixed] Fix conditional logic with validation - http://support.advancedcustomfields.com/discussion/4295/issue-with-conditional-logic-and-obrigatory-fields
+* [Fixed] Fix repeater + relationship bug - http://support.advancedcustomfields.com/discussion/4296/relationship-field-bug
+
 = 3.5.6.3 =
 * [Fixed] Fix bug with 3.5.6 not showing front end form
 
