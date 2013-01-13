@@ -26,3 +26,12 @@ favicon.gif
 # User Content Uploads #
 ########################
 content/uploads/
+
+# Static Cache #
+################
+content/cache/
+content/wp-cache-config.php
+
+
+
+
