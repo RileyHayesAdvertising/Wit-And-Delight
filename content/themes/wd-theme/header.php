@@ -86,9 +86,9 @@
                             <li<?php if (is_page(10654)) {?> class="isActive"<?php } ?>><a href="/about/">About</a></li>
                             <li><a href="http://katearends.com/" rel="external">Studio</a></li>
                             <li<?php if (is_page(11540)) {?> class="isActive"<?php } ?>><a href="/press/">Press</a></li>
-                            <li class="isLargeView"><a href="http://pinterest.com/katea/" rel="external">Pinterest</a></li>
+                            <li class="isLargeView"><a href="<?php the_field('pinterest_link', 'options'); ?>" rel="external">Pinterest</a></li>
                             <li<?php if (is_page(12408)) {?> class="isActive"<?php } ?>><a href="/shop/">Shop</a></li>
-                            <li class="isLargeView"><a href="http://witanddelight.tumblr.com/" rel="external">Tumblr</a></li>
+                            <li class="isLargeView"><a href="<?php the_field('tumblr_link', 'options'); ?>" rel="external">Tumblr</a></li>
                         </ul>
                     </div>
                 </div>
@@ -97,7 +97,7 @@
                         <ul class="nav">
                             <li<?php if (is_page(11541)) {?> class="isActive"<?php } ?>><a href="/copyright-disclosure/">Copyright &amp; Disclosure</a></li>
                             <li<?php if (is_page(11560)) {?> class="isActive"<?php } ?>><a href="/contact/">Contact</a></li>
-                            <li><a href="http://feeds2.feedburner.com/katearends/DcwI" rel="external">Subscribe</a></li>
+                            <li><a href="<?php the_field('rss_link', 'options'); ?>" rel="external">Subscribe</a></li>
                         </ul>
                     </div>
                 </div>
@@ -106,11 +106,11 @@
                         <?php get_search_form(); ?>
                         <ul class="hList hList_social">
                             <li><a href="/contact/"><i class="icn icn_email"></i>E-mail</a></li>
-                            <li><a href="http://www.facebook.com/witanddelight" rel="external"><i class="icn icn_facebook"></i>Facebook</a></li>
-                            <li><a href="https://twitter.com/wit_and_delight" rel="external"><i class="icn icn_twitter"></i>Twitter</a></li>
-                            <li><a href="http://instagram.com/wit_and_delight" rel="external"><i class="icn icn_instagram"></i>Instagram</a></li>
-                            <li><a href="http://8tracks.com/witanddelight" rel="external"><i class="icn icn_8tracks"></i>8tracks</a></li>
-                            <li><a href="http://feeds2.feedburner.com/katearends/DcwI" rel="external"><i class="icn icn_rss"></i>RSS Feed</a></li>
+                            <li><a href="<?php the_field('facebook_link', 'options'); ?>" rel="external"><i class="icn icn_facebook"></i>Facebook</a></li>
+                            <li><a href="<?php the_field('twitter_link', 'options'); ?>" rel="external"><i class="icn icn_twitter"></i>Twitter</a></li>
+                            <li><a href="<?php the_field('instagram_link', 'options'); ?>" rel="external"><i class="icn icn_instagram"></i>Instagram</a></li>
+                            <li><a href="<?php the_field('8tracks_link', 'options'); ?>" rel="external"><i class="icn icn_8tracks"></i>8tracks</a></li>
+                            <li><a href="<?php the_field('rss_link', 'options'); ?>" rel="external"><i class="icn icn_rss"></i>RSS Feed</a></li>
                         </ul>
                         <div class="js-view-toggle viewToggle">
                             <div class="yinAndYang">
