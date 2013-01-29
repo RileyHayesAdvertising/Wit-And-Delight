@@ -127,6 +127,8 @@
 
                                     // determine the excerpt
                                     $excerpt = substr($postOutput,0, strpos($postOutput, "</p>")+4);
+                                    $excerpt = strip_tags($excerpt);
+                                    $excerpt = '<p>'.$excerpt.'</p>';
                                 ?>
 
                                 <script>
