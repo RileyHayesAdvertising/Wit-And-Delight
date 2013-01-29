@@ -26,7 +26,10 @@
                                                     echo '<li class="carousel-item">';
                                                         echo '<h4 class="isHidden">'.$row['slide_title'].'</h4>';
                                                         echo '<a class="linkBlock" href="'.$row['slide_link'].'" rel="external">';
-                                                            echo '<img src="'.$row['slide_image'].'" alt="'.$row['slide_title'].'" />';
+                                                        // handle WAY too big of carousel images
+                                                        $img = $row['slide_image'];
+                                                        $img = aq_resize($img,'800');
+                                                            echo '<img src="'.$img.'" alt="'.$row['slide_title'].'" />';
                                                         echo '</a>';
                                                     echo '</li>';
                                                 }
