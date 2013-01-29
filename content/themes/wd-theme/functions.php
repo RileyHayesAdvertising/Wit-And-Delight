@@ -19,6 +19,7 @@ add_theme_support('post-thumbnails');
  */
 include_once 'modules/register-post-types.php';
 include_once 'modules/register-taxonomies.php';
+include_once('aq_resizer.php');
 
 /**
  * Widget Includes
