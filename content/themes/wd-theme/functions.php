@@ -226,3 +226,16 @@ function my_excerpt_length($length) {
     return 100; // whatever you want the length to be.
 }
 add_filter('excerpt_length', 'my_excerpt_length');
+
+
+
+/**
+ * DISABLE NOTIFICATION OF UPDATES FOR ACF
+ * http://wordpress.stackexchange.com/questions/20580/disable-update-notification-for-individual-plugins
+ */
+
+function filter_plugin_updates( $value ) {
+    unset( $value->response['advanced-custom-fields/acf.php'] );
+    return $value;
+}
+add_filter( 'site_transient_update_plugins', 'filter_plugin_updates' );
