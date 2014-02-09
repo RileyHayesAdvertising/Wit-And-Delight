@@ -2,8 +2,8 @@
 Contributors: alexrabe
 Donate link: http://alexrabe.boelinger.com/donation/
 Tags: memory, admin, nextgen-gallery, php, memory-limit
-Requires at least: 2.7
-Tested up to: 3.2
+Requires at least: 3.8
+Tested up to: 3.8
 Stable tag: trunk
 
 Show up the PHP version, memory limit and current memory usage in the dashboard and admin footer
@@ -15,7 +15,7 @@ Show up the PHP version, memory limit and current memory usage in the dashboard 
 
 == Credits ==
 
-Copyright 2009-2011 by Alex Rabe
+Copyright 2009-2013 by Alex Rabe
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by

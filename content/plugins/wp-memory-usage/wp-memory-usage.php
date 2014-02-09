@@ -4,11 +4,11 @@ Plugin Name: WP-Memory-Usage
 Plugin URI: http://alexrabe.boelinger.com/
 Description: Show up the memory limit and current memory usage in the dashboard and admin footer
 Author: Alex Rabe
-Version: 1.2.1
+Version: 1.2.2
 
 Author URI: http://alexrabe.boelinger.com/
 
-Copyright 2009-2011 by Alex Rabe 
+Copyright 2009-2013 by Alex Rabe 
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -54,9 +54,13 @@ if ( is_admin() ) {
 			
 			if ( !empty($this->memory['usage']) && !empty($this->memory['limit']) ) {
 				$this->memory['percent'] = round ($this->memory['usage'] / $this->memory['limit'] * 100, 0);
-				$this->memory['color'] = '#21759B';
-				if ($this->memory['percent'] > 80) $this->memory['color'] = '#E66F00';
-				if ($this->memory['percent'] > 95) $this->memory['color'] = 'red';
+				//If the bar is tp small we move the text outside
+                $this->memory['percent_pos'] = '';
+                //In case we are in our limits take the admin color 
+                $this->memory['color'] = '';
+				if ($this->memory['percent'] > 80) $this->memory['color'] = 'background: #E66F00;';
+				if ($this->memory['percent'] > 95) $this->memory['color'] = 'background: red;';
+                if ($this->memory['percent'] < 10) $this->memory['percent_pos'] = 'margin-right: -30px; color: #444;';
 			}		
 		}
 		
@@ -64,8 +68,8 @@ if ( is_admin() ) {
 			
 			$this->check_memory_usage();
 			
-			$this->memory['limit'] = empty($this->memory['limit']) ? __('N/A') : $this->memory['limit'] . __(' MByte');
-			$this->memory['usage'] = empty($this->memory['usage']) ? __('N/A') : $this->memory['usage'] . __(' MByte');
+			$this->memory['limit'] = empty($this->memory['limit']) ? __('N/A') : $this->memory['limit'] . __(' MB');
+			$this->memory['usage'] = empty($this->memory['usage']) ? __('N/A') : $this->memory['usage'] . __(' MB');
 			
 			?>
 				<ul>	
@@ -75,8 +79,10 @@ if ( is_admin() ) {
 				</ul>
 				<?php if (!empty($this->memory['percent'])) : ?>
 				<div class="progressbar">
-					<div class="widget" style="height:2em; border:1px solid #DDDDDD; background-color:#F9F9F9;">
-						<div class="widget" style="width: <?php echo $this->memory['percent']; ?>%;height:99%;background:<?php echo $this->memory['color']; ?> ;border-width:0px;text-shadow:0 1px 0 #000000;color:#FFFFFF;text-align:right;font-weight:bold;"><div style="padding:6px"><?php echo $this->memory['percent']; ?>%</div></div>
+					<div style="border:1px solid #DDDDDD; background-color:#F9F9F9;	border-color: rgb(223, 223, 223); box-shadow: 0px 1px 0px rgb(255, 255, 255) inset; border-radius: 3px;">
+                        <div class="button-primary" style="width: <?php echo $this->memory['percent']; ?>%;<?php echo $this->memory['color'];?>padding: 0px;border-width:0px; color:#FFFFFF;text-align:right; border-color: rgb(223, 223, 223); box-shadow: 0px 1px 0px rgb(255, 255, 255) inset; border-radius: 3px; margin-top: -1px;">
+							<div style="padding:2px;<?php echo $this->memory['percent_pos']; ?>"><?php echo $this->memory['percent']; ?>%</div>
+						</div>
 					</div>
 				</div>
 				<?php endif; ?>
@@ -90,8 +96,8 @@ if ( is_admin() ) {
 		function add_footer($content) {
 			
 			$this->check_memory_usage();
-			
-			$content .= ' | Memory : ' . $this->memory['usage'] . ' of ' . $this->memory['limit'] . ' MByte';
+	
+			$content .= ' | Memory : ' . $this->memory['usage'] . ' of ' . $this->memory['limit'];
 			
 			return $content;
 		}
