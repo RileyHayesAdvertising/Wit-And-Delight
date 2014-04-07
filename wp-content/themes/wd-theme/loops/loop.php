@@ -139,7 +139,7 @@
                                         the_year: "<?php the_time('Y'); ?>",
                                         the_short_year: "<?php the_time('y'); ?>",
                                         the_title: "<?php echo the_title(); ?>",
-                                        the_first_image: "<?php echo the_first_image(); ?>",
+                                        the_first_image: "<?php echo aq_resize(the_first_image(), '800'); ?>",
                                         the_permalink: "<?php echo the_permalink(); ?>",
                                         the_excerpt: <?php echo json_encode($excerpt); ?>,
                                         the_content: <?php echo json_encode($postOutput); ?>,
@@ -176,7 +176,7 @@
                                                         <?php if (the_first_image() != '') { ?>
                                                         <div class="feature-img">
                                                             <a href="<?php the_permalink(); ?>">
-                                                                <img src="<?php echo the_first_image() ?>" alt="" />
+                                                                <img src="<?php echo aq_resize(the_first_image(), '800'); ?>" alt="" />
                                                             </a>
                                                             <a href="http://pinterest.com/pin/create/button/?media=<?php echo urlencode(the_first_image()); ?>&url=<?php echo urlencode(get_permalink()); ?>" class="pinIt pinIt_feature" title="Pin this article on Pinterest">Pin this article on Pinterest</a>
                                                         </div>

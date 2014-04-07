@@ -100,9 +100,12 @@ function the_first_image() {
     $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
     $first_img = $matches [1] [0];
 
-    $first_img_id = fjarrett_get_attachment_id_by_url($first_img);
-    $first_img = wp_get_attachment_image_src( $first_img_id, 'large' );
-    return $first_img[0];
+    // attempt at getting a smaller image by identifying the ID
+    //$first_img_id = fjarrett_get_attachment_id_by_url($first_img);
+    //$first_img = wp_get_attachment_image_src( $first_img_id, 'large' );
+    //return $first_img[0];
+
+    return $first_img;
 }
 
 /**
