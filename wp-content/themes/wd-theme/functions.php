@@ -219,7 +219,7 @@ function add_textarea() {
 add_filter( 'avatar_defaults', 'newgravatar' );
 
 function newgravatar ($avatar_defaults) {
-    $myavatar = get_bloginfo('template_directory') . '/assets/images/comment-avatar.png';
+    $myavatar = 'http://witanddelight.com/wp-content/themes/wd-theme/assets/images/comment-avatar.png';
     $avatar_defaults[$myavatar] = "Kate's Custom Avatar";
     return $avatar_defaults;
 }
