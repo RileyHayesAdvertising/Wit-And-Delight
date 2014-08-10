@@ -202,24 +202,24 @@
                                 <?php endif; ?>
 
                             <?php endwhile; ?>
-                                <?php if ($_COOKIE["viewprefs"] == "scroll") : ?>
                                     <script>
-                                        (function($){
-                                            var source   = $(document.getElementById('template-scrollview')).html();
-                                            var template = Handlebars.compile(source);
-                                            $(document.getElementById('jsToggleWrapper')).html(template(WD.POSTS));
-                                        }(jQuery));
-                                    </script>
-                                <?php elseif (!isset($_COOKIE["viewprefs"]) || $_COOKIE["viewprefs"] == "grid"): ?>
-                                    <script>
-                                        (function($){
-                                            var source   = $(document.getElementById('template-gridview')).html();
-                                            var template = Handlebars.compile(source);
-                                            $(document.getElementById('jsToggleWrapper')).html(template(WD.ViewSwitcher.parseGridArray(WD.POSTS)));
-                                        }(jQuery));
-                                    </script>
-                                <?php endif; ?>
+                                        var viewprefs = $.cookie('viewprefs');
+                                        var minWidthForGrid = 840; // should match media query where grid view becomes available
 
+                                        if (viewprefs === 'scroll' || $(window).width() < minWidthForGrid) {
+                                            (function($){
+                                                var source   = $(document.getElementById('template-scrollview')).html();
+                                                var template = Handlebars.compile(source);
+                                                $(document.getElementById('jsToggleWrapper')).html(template(WD.POSTS));
+                                            }(jQuery));
+                                        } else {
+                                            (function($){
+                                                var source   = $(document.getElementById('template-gridview')).html();
+                                                var template = Handlebars.compile(source);
+                                                $(document.getElementById('jsToggleWrapper')).html(template(WD.ViewSwitcher.parseGridArray(WD.POSTS)));
+                                            }(jQuery));
+                                        }
+                                    </script>
                             <?php else: ?>
                             <div class="jsToggleItem">
                                 <div class="panel panel_bare">
