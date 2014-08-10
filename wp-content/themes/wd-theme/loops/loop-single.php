@@ -24,8 +24,9 @@
                                     </div>
                                     <div class="feature-bd">
                                         <div class="user-content">
+                                            <p><?php echo the_author_meta('description'); ?></p>
                                             <?php
-                                                the_content(); 
+                                                the_content();
                                             ?>
                                         </div>
                                     </div>
