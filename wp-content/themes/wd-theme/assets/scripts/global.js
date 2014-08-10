@@ -44,16 +44,24 @@ var WD = WD || {}; // Global Namespace object
             var $controls    = $('div.js-view-toggle');
             var $contentArea = $(document.getElementById('jsToggleWrapper'));
 
+            // bail early
             if (!$controls.length || !$contentArea.length) {
                 return false;
             }
 
             this.$controls    = $controls.css('visibility', 'visible');
+
+            // set active on nav
+            if ($.cookie('viewprefs') == 'scroll') {
+                this.$controls.find('.js-view-scroll').addClass('isActive');
+            } else {
+                this.$controls.find('.js-view-grid').addClass('isActive');
+            }
+
             this.$contentArea = $contentArea;
 
-            this
-                .loadTemplates()
-                .bind();
+            this.bind();
+            $('.switcher.isActive').trigger( "click" ); // fire the first click on page load to show the view
         },
 
         bind: function() {
@@ -70,11 +78,10 @@ var WD = WD || {}; // Global Namespace object
             var cookie = $.cookie('viewprefs');
 
             if ($el.hasClass('js-view-scroll')) {
-                if (cookie && cookie == 'scroll') {
-                    return;
-                }
+                var source   = $(document.getElementById('template-scrollview')).html();
+                var template = Handlebars.compile(source);
+                this.$contentArea.html(template(APP.POSTS));
 
-                this.$contentArea.html(this._templateScroll(APP.POSTS));
                 this.$controls.find('.isActive').removeClass('isActive');
                 $el.addClass('isActive');
 
@@ -82,11 +89,10 @@ var WD = WD || {}; // Global Namespace object
             }
 
             if ($el.hasClass('js-view-grid')) {
-                if (cookie && cookie == 'grid') {
-                    return;
-                }
+                var source   = $(document.getElementById('template-gridview')).html();
+                var template = Handlebars.compile(source);
+                this.$contentArea.html(template(this.parseGridArray(APP.POSTS)));
 
-                this.$contentArea.html(this._templateGrid(this.parseGridArray(APP.POSTS)));
                 this.$controls.find('.isActive').removeClass('isActive');
                 $el.addClass('isActive');
 
@@ -99,97 +105,40 @@ var WD = WD || {}; // Global Namespace object
             var data   = data.slice(0);
             var length = data.length;
 
-            for (var i = 1, j = 1; i <= length; i++) {
-                if (j % 3 === 0) {
-                    grid[2].push(data[2]);
-                    data.splice(0, 3);
-                    j++;
-                    continue;
+            if (APP.$window.width() < 840) {
+                // keep the order intact for small screen width that shows only scroll view
+                // 840 matches CSS mediaqueries
+                for (var i = 0, k = -1; i < data.length; i++) {
+                    if (i % 4 === 0) {
+                        k++;
+                        grid[k] = [];
+                    }
+
+                    grid[k].push(data[i]);
                 }
-                if (j % 2 === 0) {
-                    grid[1].push(data[1]);
-                    j++;
-                    continue;
-                }
-                if (j % 1 === 0) {
-                    grid[0].push(data[0]);
-                    j++;
-                    continue;
+            } else {
+                for (var i = 1, j = 1; i <= length; i++) {
+                    if (j % 3 === 0) {
+                        grid[2].push(data[2]);
+                        data.splice(0, 3);
+                        j++;
+                        continue;
+                    }
+                    if (j % 2 === 0) {
+                        grid[1].push(data[1]);
+                        j++;
+                        continue;
+                    }
+                    if (j % 1 === 0) {
+                        grid[0].push(data[0]);
+                        j++;
+                        continue;
+                    }
                 }
             }
-
             return grid;
-        },
-
-        loadTemplates: function() {
-            var self = this;
-            var scrollTemplateUrl = APP.THEMEURL + 'assets/scripts/views/scroll.handlebars';
-            var gridTemplateUrl = APP.THEMEURL + 'assets/scripts/views/grid.handlebars';
-
-            APP.Template.get({
-                url: scrollTemplateUrl,
-                success: function (data) {
-                    self._templateScroll = data;
-                }
-            });
-
-            APP.Template.get({
-                url: gridTemplateUrl,
-                success: function (data) {
-                    self._templateGrid = data;
-                }
-            });
-
-            return this;
         }
-    };
 
-    /* ---------------------------------------------------------------------
-    Template
-    Author: Dan Piscitiello
-
-    Handlebars helper, loads templates
-
-    Example Use:
-    APP.Friends = {
-        friendsTemplate: null,
-
-        init: function () {
-            this.loadTemplates();
-            this.populateFriends();
-        },
-
-        populateFriends: function () {
-            var self = this;
-            $.ajax({
-                url: '/api/user/friends?scope=subscribed',
-                success: function (data) {
-                    self.selectedFriends = data;
-                    $(selector).html(this.friendsTemplate(data));
-                }
-            });
-        },
-
-        loadTemplates: function () {
-            var self = this;
-            APP.Template.get({
-                url: '/Scripts/views/selectedFriend.handlebars',
-                success: function (d) {
-                    self.friendsTemplate = d;
-                }
-            });
-        }
-    };
-    ------------------------------------------------------------------------ */
-    APP.Template = {
-        get: function (options) {
-            var args = $.extend({}, options, {
-                success: function (data) {
-                    options.success(Handlebars.compile(data));
-                }
-            });
-            $.ajax(args);
-        }
     };
 
     /* ---------------------------------------------------------------------
