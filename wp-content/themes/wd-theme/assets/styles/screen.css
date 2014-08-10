@@ -754,6 +754,7 @@ a:hover .icn { opacity: .2; }
 .btn {
     display: block;
     padding: 15px 15px;
+    border: none;
     background: #000000;
     color: #ffffff;
     font-size: 12px;
@@ -772,6 +773,10 @@ a:hover .icn { opacity: .2; }
 .btn:hover {
     color: #ffffff;
     opacity: .3;
+}
+
+.btn_sm {
+    padding: 5px;
 }
 
 /* wordpress doesn't allow adding classes to this button

@@ -17,14 +17,38 @@
     </div>
 </div>
 <div class="panel isLargeView">
-    <div class="feature js-toggle">
-        <div class="feature-hd js-toggle-link" data-cookie="js-toggle-categories">
+    <div class="feature">
+        <div class="feature-hd">
             <h2 class="hdg hdg_4">See Categories</h2>
         </div>
-        <div class="feature-bd feature-bd_condensed js-toggle-target">
-            <ul class="vList vList_push vList_nav">
-                <?php wp_list_categories('orderby=count&order=desc&style=list&number=10&title_li='); ?>
-            </ul>
+        <div class="feature-bd feature-bd_condensed">
+            <form action="<?php bloginfo('url'); ?>" method="get">
+                <?php $catArgs = array(
+                    'show_option_all'    => '',
+                    'show_option_none'   => '-- Select a Category --',
+                    'orderby'            => 'NAME',
+                    'order'              => 'ASC',
+                    'show_count'         => 0,
+                    'hide_empty'         => 1,
+                    'child_of'           => 0,
+                    'exclude'            => '',
+                    'echo'               => 0,
+                    'selected'           => 0,
+                    'hierarchical'       => 0,
+                    'name'               => 'cat',
+                    'id'                 => '',
+                    'class'              => 'postform',
+                    'depth'              => 0,
+                    'tab_index'          => 0,
+                    'taxonomy'           => 'category',
+                    'hide_if_empty'      => false,
+                );
+                    $select = wp_dropdown_categories($catArgs);
+                    $select = preg_replace("#<select([^>]*)>#", "<select$1 onchange='return this.form.submit()'>", $select);
+                    echo $select;
+                ?>
+                <button type="submit" class="isHidden">Submit</button>
+            </form>
         </div>
     </div>
     <div class="feature feature_condensed js-toggle">
@@ -41,7 +65,7 @@
 <div class="panel isLargeView">
     <div class="feature feature_condensed js-toggle">
         <div class="feature-hd js-toggle-link" data-cookie="js-toggle-daily">
-            <h2 class="hdg hdg_4">Daily Reads</h2> 
+            <h2 class="hdg hdg_4">Daily Reads</h2>
         </div>
         <div class="feature-bd feature-bd_condensed js-toggle-target">
             <div class="feature feature_reasonable">
