@@ -23,8 +23,7 @@
                                         </h2>
                                     </div>
                                     <div class="feature-bd">
-                                        <div class="user-content">
-                                            <p><?php echo the_author_meta('description'); ?></p>
+                                        <div class="user-content" data-author-intro="Post by <?php echo get_the_author_meta('first_name'); ?> <? echo get_the_author_meta('last_name') ?>">
                                             <?php
                                                 the_content();
                                             ?>
