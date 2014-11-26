@@ -20,7 +20,7 @@
         <div class="feature-bd">
             <ol class="vList vList_comments">
                 <?php
-                    wp_list_comments('type=comment&callback=mytheme_comment&avatar_size=60');
+                    wp_list_comments('type=comment&callback=mytheme_comment&avatar_size=60&per_page=99999');
                 ?>
             </ol>
         </div>
@@ -47,10 +47,10 @@
                 'author' => '<label for="comment-author" class="isHidden">' . __( 'Name', 'domainreference' ) . ( $req ? '<span class="required">*</span>' : '' ) . '</label> ' . '<input class="input input_alt input_name" id="comment-author" name="author" type="text" placeholder="NAME *" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' />',
                 'url' => '<label for="comment-url" class="isHidden">' . __( 'Website', 'domainreference' ) . '</label>' . '<input class="input input_alt input_url" id="comment-url" name="url" type="text" placeholder="URL" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" />',
                 'email' => '<label for="comment-email" class="isHidden">' . __( 'Email', 'domainreference' ) . ( $req ? '<span class="required">*</span>' : '' ) . '</label> ' . '<input class="input input_alt input_email" id="comment-email" name="email" type="text" placeholder="EMAIL *" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' />' ) ) );
-        
+
         comment_form($comments_args);
         ?>
-            
+
         </div>
     </div><!-- // end comments form -->
 </div><!-- // end comments panel -->
