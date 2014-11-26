@@ -21,6 +21,8 @@
     <meta http-equiv="imagetoolbar" content="no" />
     <!--[if IE]><meta http-equiv="cleartype" content="on" /><![endif]-->
 
+    <meta name="p:domain_verify" content="e740b63c6f2564ee691ea154942daaea"/>
+
     <link rel="pingback" href="<?php bloginfo('pingback_url') ?>" />
 
     <!-- ICONS -->
