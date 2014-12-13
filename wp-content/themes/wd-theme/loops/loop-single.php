@@ -36,6 +36,16 @@
                                             <li><a href="http://pinterest.com/pin/create/button/?media=<?php echo urlencode(the_first_image()); ?>&url=<?php echo urlencode(get_permalink()); ?>" class="btn">Pin it</a></li>
                                         </ul>
                                     </div>
+                                    <?php
+                                        $includeFMCode = get_field('include_federated_media_content');
+                                        if ($includeFMCode == "yes") {
+                                    ?>
+                                    <div class="feature-adWell">
+                                        <!-- FM Content Well 650x300 Zone -->
+                                        <script type="text/javascript" src="http://static.fmpub.net/zone/16412"></script>
+                                        <!-- FM Content Well 650x300 Zone -->
+                                    </div>
+                                    <?php } ?>
                                 </div>
                             </div>
                             <div class="panel panel_bare panel_clip">
@@ -45,17 +55,6 @@
                                 </ol>
                             </div>
                         </div>
-
-                        <?php
-                            $includeFMCode = get_field('include_federated_media_content');
-                            if ($includeFMCode == "yes") {
-                        ?>
-                        <div class="adWell">
-                            <!-- FM Content Well 650x300 Zone -->
-                            <script type="text/javascript" src="http://static.fmpub.net/zone/16412"></script>
-                            <!-- FM Content Well 650x300 Zone -->
-                        </div>
-                        <?php } ?>
 
                         <div class="comments">
                             <?php comments_template(); ?>

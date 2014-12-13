@@ -337,7 +337,6 @@ img {
  Comment List
 ------------------------------------------------------------------------ */
 .comment {
-    border-bottom: 1px dotted #000000;
     margin-bottom: 30px;
 }
 
@@ -374,6 +373,25 @@ img {
     margin-bottom: 30px;
     line-height: 24px; /* match the height of the avatar to create vertical alignment */
 }
+
+/* kate's comment style */
+.comment_kate {
+    margin-left: 60px;
+}
+
+.comment_kate .comment-bd {
+    background: #ffffff;
+    color: #000000;
+}
+
+.comment_kate .comment-bd:after {
+    border-top-color: #ffffff;
+}
+
+.comment_kate .comment-bd a {
+    color: #000000;
+}
+
 
 /* ---------------------------------------------------------------------
  Comment Form
@@ -471,7 +489,7 @@ img {
 }
 
 .feature-bd {
-    margin-bottom: 40px;;
+    margin-bottom: 40px;
 }
 
 .feature-bd_condensed {
@@ -480,6 +498,10 @@ img {
 
 .feature-meta .icn {
     display: none;
+}
+
+.feature-adWell {
+    margin-top: 40px;
 }
 
 /* ---------------------------------------------------------------------
