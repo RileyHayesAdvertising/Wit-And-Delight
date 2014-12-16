@@ -38,14 +38,24 @@
                                     </div>
                                     <?php
                                         $includeFMCode = get_field('include_federated_media_content');
-                                        if ($includeFMCode == "yes") {
+                                        $includePostSpecificAds = get_field('post_specific_ads');
+                                        if ($includeFMCode == "yes" && !$includePostSpecificAds) {
                                     ?>
                                     <div class="feature-adWell">
                                         <!-- FM Content Well 650x300 Zone -->
                                         <script type="text/javascript" src="http://static.fmpub.net/zone/16412"></script>
                                         <!-- FM Content Well 650x300 Zone -->
                                     </div>
-                                    <?php } ?>
+                                    <?php
+                                        }
+                                        if ($includePostSpecificAds) {
+                                    ?>
+                                    <div class="feature-adWell feature-adWell_isCentered">
+                                        <?php the_field('post_specific_ads'); ?>
+                                    </div>
+                                    <?php
+                                        }
+                                    ?>
                                 </div>
                             </div>
                             <div class="panel panel_bare panel_clip">
