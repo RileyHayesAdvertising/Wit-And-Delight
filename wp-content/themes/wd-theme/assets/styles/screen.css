@@ -168,6 +168,7 @@ img {
 .logo {
     text-align: center;
     padding-top: 4px;
+    margin-bottom: 20px;
 }
 
 .logo a {
@@ -436,6 +437,39 @@ img {
 }
 
 /* ---------------------------------------------------------------------
+ Pane
+------------------------------------------------------------------------ */
+.pane {
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    padding: 16px 0;
+    margin-bottom: 8px;
+}
+
+.pane_inset {
+    padding: 16px;
+}
+
+/* ---------------------------------------------------------------------
+ Sidebar Plugins
+------------------------------------------------------------------------ */
+.popularPosts {
+    padding-top: 14px; /* matches the absurd instragram spacing from the plugin vendor */
+}
+
+.popularPosts li {
+    list-style: decimal;
+    font-size: 14px;
+    margin-left: 24px;
+    margin-bottom: 16px;
+    font-family: "Libre Baskerville", serif;
+}
+
+.instagramFeedSidebar #sb_instagram {
+    padding: 0 !important;
+}
+
+/* ---------------------------------------------------------------------
  Feature
 ------------------------------------------------------------------------ */
 .feature {
@@ -469,6 +503,10 @@ img {
 
 .feature-hd_condensed_sm {
     margin-bottom: 12px;
+}
+
+.feature-hd_isCentered {
+    text-align: center;
 }
 
 .feature-img {
