@@ -1,3 +1,11 @@
+.compat-attachment-fields {
+	color: #666;
+}
+
+.kgvid_meter {
+	text-indent: 0px;
+}
+
 .kgvid_meter, .meter_finished {
 	height: 14px;
 	width: 125px;
@@ -66,7 +74,7 @@
 	color: white;
 	font-size: 80%;
 	position:relative;
-	top: -2px;
+	top: -4px;
 }
 
 .kgvid_cancel_button {
@@ -111,12 +119,29 @@ div.kgvid_cancel_button input {
     font-size: 1pt;
 }
 
-.compat-item .field {
-	width: 85%;
+.kgvid_encoding_small_text {
+	text-indent: 0px;
+	display: block;
+	margin-left: -30px;
+}
+
+.media-frame .compat-item .field {
+	width: 90%;
 }
 
 .compat-item .field input {
 	width: auto;
+}
+
+.compat-item .kgvid_checkboxes_section ul li {
+	margin-bottom: 10pt;
+	line-height: 16pt;
+	padding-left: 30px;
+	text-indent: -30px;
+}
+
+.kgvid_format_meta {
+	text-indent: 0px;
 }
 
 #poststuff .nav-tab-wrapper.kgvid-tabs {
@@ -242,18 +267,17 @@ font-weight: normal;
 }
 
 .kgvid_tooltip {
-  color: #000000; outline: none;
-  cursor: help; text-decoration: none;
+  cursor: help;
+  text-decoration: none;
   position: relative;
 }
 
-.kgvid_tooltip img {
-  width:20px;
-  height:20px;
-  background-image:url("../../../../wp-includes/images/wpicons.png");
-  background-position: -520px 0px;
-  position:relative;
-  top:6px;
+.kgvid_tooltip:before {
+	content: '\f223';
+	font-family: dashicons;
+	font-size: 16pt;
+	vertical-align: middle;
+	margin-left: 5px;
 }
 
 .kgvid_tooltip span {
@@ -286,7 +310,7 @@ font-weight: normal;
   padding: 0.2em 0 0.6em 0;
 }
 
-.kgvid_tooltip_classic { padding: 0.8em 1em; background: #FFFFAA; border: 1px solid #FFAD33; }
+.kgvid_tooltip_classic { padding: 0.8em 1em; background: #ddd; border: 2px solid #999; }
 .custom { padding: 0.5em 0.8em 0.8em 2em; }
 * html a:hover { background: transparent; }
 
@@ -305,9 +329,7 @@ font-weight: normal;
 a.kgvid_delete-format {
 	color: #BC0B0B !important;
 	text-decoration: none;
-	margin-left: 15px;
 	display: block;
-	margin-bottom: -10px;
 }
 
 a.kgvid_delete-format:hover {
@@ -502,15 +524,14 @@ td.media-icon img {
 	padding: 0;
 }
 
-.kgvid-blue-box {
+.kgvid-donate-box {
 	width: 454px;
 	margin: 30px 0;
 	padding: 20px 20px 0 20px;
-	background-color: #F0F8FF;
 	border: 2px solid #ddd;
 }
 
-.kgvid-blue-box > * {
+.kgvid-donate-box > * {
 	margin-left: auto;
 	margin-right: auto;
 	display: block;
@@ -546,4 +567,21 @@ td.media-icon img {
 
 #jw_player_id_select {
 	margin-top: 5px;
+}
+
+#kgflashmediaplayer-table input {
+	width: auto;
+}
+
+.attachment-preview.type-video .thumbnail {
+	z-index: 0;
+}
+
+.compat-item .kgvid_encode_checkbox_button {
+	font-size: 80%;
+	padding: 0px 4px;
+	height: 24px;
+	line-height: 21px;
+	text-indent: 0;
+	margin-left: 5px;
 }
