@@ -1,76 +1,72 @@
         <div class="content">
             <div class="gridRow">
                 <div class="gridRow-col gridRow-col_size3of4 gridRow-col_push1of4" role="main">
-                    <div class="panel panel_condensed">
                     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-                        <div class="panel panel_inverse">
-                            <div class="box">
-                                <div class="feature feature_condensed">
-                                    <div class="feature-hd">
-                                        <h2 class="hdg hdg_1">
-                                            <span class="ribbon">
-                                                <span class="ribbon-bd">
-                                                    <span class="ribbon-bd-inner">
-                                                        <span class="date">
-                                                            <?php the_time('m/d/y'); ?>
-                                                        </span>
+                        <div class="box">
+                            <div class="feature feature_condensed">
+                                <div class="feature-hd">
+                                    <h2 class="hdg hdg_1">
+                                        <span class="ribbon">
+                                            <span class="ribbon-bd">
+                                                <span class="ribbon-bd-inner">
+                                                    <span class="date">
+                                                        <?php the_time('m/d/y'); ?>
                                                     </span>
                                                 </span>
-                                                <span class="ribbon-buddy">
-                                                    <?php the_title(); ?>
-                                                </span>
                                             </span>
-                                        </h2>
-                                    </div>
-                                    <div class="feature-bd">
-                                        <div class="user-content" data-author-intro="Post by <?php echo get_the_author_meta('first_name'); ?> <? echo get_the_author_meta('last_name') ?>">
-                                            <?php
-                                                the_content();
-                                            ?>
-                                        </div>
-                                    </div>
-                                    <div class="feature-meta">
-                                        <ul class="blocks blocks_3up">
-                                            <li><a href="http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>" class="btn" rel="external">Share on Facebook</a></li>
-                                            <li><a href="http://twitter.com/share?url=<?php the_permalink(); ?>" class="btn" rel="external">Tweet It</a></li>
-                                            <li><a href="http://pinterest.com/pin/create/button/?media=<?php echo urlencode(the_first_image()); ?>&url=<?php echo urlencode(get_permalink()); ?>" class="btn">Pin it</a></li>
-                                        </ul>
-                                    </div>
-                                    <?php
-                                        $includeFMCode = get_field('include_federated_media_content');
-                                        $includePostSpecificAds = get_field('post_specific_ads');
-                                        if ($includeFMCode == "yes" && !$includePostSpecificAds) {
-                                    ?>
-                                    <div class="feature-adWell">
-                                        <!-- FM Content Well 650x300 Zone -->
-                                        <script type="text/javascript" src="http://static.fmpub.net/zone/16412"></script>
-                                        <!-- FM Content Well 650x300 Zone -->
-                                    </div>
-                                    <?php
-                                        }
-                                        if ($includePostSpecificAds) {
-                                    ?>
-                                    <div class="feature-adWell feature-adWell_isCentered">
-                                        <?php the_field('post_specific_ads'); ?>
-                                    </div>
-                                    <?php
-                                        }
-                                    ?>
+                                            <span class="ribbon-buddy">
+                                                <?php the_title(); ?>
+                                            </span>
+                                        </span>
+                                    </h2>
                                 </div>
+                                <div class="feature-bd">
+                                    <div class="user-content" data-author-intro="Post by <?php echo get_the_author_meta('first_name'); ?> <? echo get_the_author_meta('last_name') ?>">
+                                        <?php
+                                            the_content();
+                                        ?>
+                                    </div>
+                                </div>
+                                <div class="feature-meta">
+                                    <ul class="blocks blocks_3up">
+                                        <li><a href="http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>" class="btn" rel="external">Share on Facebook</a></li>
+                                        <li><a href="http://twitter.com/share?url=<?php the_permalink(); ?>" class="btn" rel="external">Tweet It</a></li>
+                                        <li><a href="http://pinterest.com/pin/create/button/?media=<?php echo urlencode(the_first_image()); ?>&url=<?php echo urlencode(get_permalink()); ?>" class="btn">Pin it</a></li>
+                                    </ul>
+                                </div>
+                                <?php
+                                    $includeFMCode = get_field('include_federated_media_content');
+                                    $includePostSpecificAds = get_field('post_specific_ads');
+                                    if ($includeFMCode == "yes" && !$includePostSpecificAds) {
+                                ?>
+                                <div class="feature-adWell">
+                                    <!-- FM Content Well 650x300 Zone -->
+                                    <script type="text/javascript" src="http://static.fmpub.net/zone/16412"></script>
+                                    <!-- FM Content Well 650x300 Zone -->
+                                </div>
+                                <?php
+                                    }
+                                    if ($includePostSpecificAds) {
+                                ?>
+                                <div class="feature-adWell feature-adWell_isCentered">
+                                    <?php the_field('post_specific_ads'); ?>
+                                </div>
+                                <?php
+                                    }
+                                ?>
                             </div>
-                            <div class="panel panel_bare panel_clip">
-                                <ol class="pagination">
-                                    <li class="pagination-prev"><?php previous_post_link('%link','<i class="icn icn_prev"></i>Previous Post');  ?></li>
-                                    <li class="pagination-next"><?php next_post_link('%link','Next Post<i class="icn icn_next"></i>');  ?></li>
-                                </ol>
-                            </div>
+                        </div>
+                        <div class="panel panel_inverse">
+                            <ol class="pagination">
+                                <li class="pagination-prev"><?php previous_post_link('%link','<i class="icn icn_prev"></i>Previous Post');  ?></li>
+                                <li class="pagination-next"><?php next_post_link('%link','Next Post<i class="icn icn_next"></i>');  ?></li>
+                            </ol>
                         </div>
 
                         <div class="comments">
                             <?php comments_template(); ?>
                         </div>
                     <?php endwhile; endif; ?>
-                    </div>
                 </div>
                 <div class="gridRow-col gridRow-col_size1of4 gridRow-col_pull3of4" role="complementary">
                     <?php get_sidebar(); ?>
