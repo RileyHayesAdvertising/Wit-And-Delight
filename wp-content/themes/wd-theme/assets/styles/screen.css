@@ -112,7 +112,7 @@ textarea {
  Base Styles
 ------------------------------------------------------------------------ */
 body {
-    font: 400 14px/1.6 "Libre Baskerville", Georgia, serif;
+    font: 400 14px/1.7 "Libre Baskerville", Georgia, serif;
     color: #000000;
     background: #efedea;
 }
@@ -446,9 +446,11 @@ img {
 ------------------------------------------------------------------------ */
 .pane {
     border-top: 1px solid #000000;
-    border-bottom: 1px solid #000000;
     padding: 16px 0;
-    margin-bottom: 8px;
+}
+
+.pane + .pane:last-child {
+    border-bottom: 1px solid #000000;
 }
 
 .pane_inset {
@@ -468,10 +470,6 @@ img {
     margin-left: 24px;
     margin-bottom: 16px;
     font-family: "Libre Baskerville", serif;
-}
-
-.instagramFeedSidebar #sb_instagram {
-    padding: 0 !important;
 }
 
 /* ---------------------------------------------------------------------
@@ -500,6 +498,11 @@ img {
 .feature-hd_alt {
     margin-top: 4px;
     margin-bottom: 4px;
+}
+
+.feature-hd_altalt {
+    margin-top: 4px;
+    margin-bottom: 16px;
 }
 
 .feature-hd_condensed {
@@ -791,10 +794,8 @@ a:hover .icn { opacity: .2; }
  Headings
 ------------------------------------------------------------------------ */
 .hdg {
-    letter-spacing: 0;
     font-weight: 400;
-    text-transform: uppercase;
-    font-family: "proxima-nova", Helvetica, arial, sans-serif;
+    font-family: "Libre Baskerville", Georgia, serif;
 }
 
 .hdg_center {
@@ -805,18 +806,22 @@ a:hover .icn { opacity: .2; }
     display: block;
 }
 
-.mix-hdg_serif { font-family: "Libre Baskerville", serif; }
-.mix-hdg_notransform { text-transform: none; }
-.mix-hdg_sortOfspaced { letter-spacing: 2px; }
-.mix-hdg_spaced { letter-spacing: 4px; }
-.mix-hdg_heavy { font-weight: 800; }
-
 .hdg_0 { font-size: 26px; }
 .hdg_1 { font-size: 20px; }
 .hdg_2 { font-size: 18px; }
 .hdg_3 { font-size: 16px; }
 .hdg_4 { font-size: 12px; }
 .hdg_5 { font-size: 10px; }
+
+.mix-hdg_snowflake {
+    font-family: "proxima-nova", Helvetica, arial, sans-serif;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.mix-hdg_snowflake_loose { letter-spacing: 4px; }
+
 
 /* ---------------------------------------------------------------------
  Media Object

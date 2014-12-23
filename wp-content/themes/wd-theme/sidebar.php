@@ -1,16 +1,18 @@
 <div class="pane">
     <div class="feature feature_condensed">
         <div class="feature-bd feature-bd_inset feature-bd_isCentered">
-            <div class="hdg hdg_2 mix-hdg_serif mix-hdg_notransform">
-                A Website Dedicated to Designing a Life Well Lived.
+            <div class="hdg hdg_2">
+                <span class="hdg-split">A Website Dedicated</span>
+                <span class="hdg-split">to Designing a Life</span>
+                <span class="hdg-split">Well Lived.</span>
             </div>
         </div>
     </div>
 </div>
 <div class="pane">
     <div class="feature feature_condensed">
-        <div class="feature-hd feature-hd_alt feature-hd_isCentered">
-            <h2 class="hdg hdg_4 mix-hdg_heavy mix-hdg_sortOfspaced">
+        <div class="feature-hd feature-hd_altalt feature-hd_isCentered">
+            <h2 class="hdg hdg_4 mix-hdg_snowflake">
                 W&D on Instagram
             </h2>
         </div>
@@ -24,7 +26,7 @@
 <div class="pane pane_inset">
     <div class="feature feature_condensed">
         <div class="feature-hd feature-hd_alt feature-hd_isCentered">
-            <h2 class="hdg hdg_4 mix-hdg_heavy mix-hdg_sortOfspaced">
+            <h2 class="hdg hdg_4 mix-hdg_snowflake">
                 Popular Posts
             </h2>
         </div>

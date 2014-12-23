@@ -166,7 +166,7 @@ var WD = WD || {}; // Global Namespace object
             $el
                 .find('img')
                 .first()
-                .after('<br/><span class="hdg hdg_1">' + authorInfo + '</span>');
+                .after('<br/><span class="hdg hdg_1 mix-hdg_snowflake">' + authorInfo + '</span>');
         }
     };
 

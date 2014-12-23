@@ -9,17 +9,17 @@
                                     <div class="article">
                                         <div class="article-image">
                                             <a href="<?php echo the_permalink(); ?>">
-                                                <img src="<?php echo aq_resize(the_first_image(), '200'); ?>" alt="" />
+                                                <img src="<?php echo aq_resize(the_first_image(), '250'); ?>" alt="" />
                                             </a>
                                         </div>
                                         <div class="article-bd">
                                             <div class="article-bd-date">
-                                                <div class="hdg hdg_4 mix-hdg_spaced mix-hdg_heavy">
+                                                <div class="hdg hdg_4 mix-hdg_snowflake mix-hdg_snowflake_loose">
                                                     <?php the_time('m'); ?>/<?php the_time('d'); ?>/<?php the_time('y'); ?>
                                                 </div>
                                             </div>
                                             <div class="article-bd-label">
-                                                <h3 class="hdg hdg_0 mix-hdg_serif mix-hdg_notransform">
+                                                <h3 class="hdg hdg_0">
                                                     <a href="<?php echo the_permalink(); ?>">
                                                         <?php echo the_title(); ?>
                                                     </a>
@@ -46,7 +46,7 @@
                                     <div class="article">
                                         <div class="article-bd">
                                             <div class="article-bd-label">
-                                                <h3 class="hdg hdg_0 mix-hdg_serif mix-hdg_notransform">Sorry. no posts were found!</h3>
+                                                <h3 class="hdg hdg_0">Sorry. no posts were found!</h3>
                                             </div>
                                         </div>
                                     </div>

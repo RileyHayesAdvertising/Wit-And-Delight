@@ -63,13 +63,16 @@ Width: 36em and up
  Article Object
 ------------------------------------------------------------------------ */
 .article {
-    overflow: hidden;
+    display: table;
+    width: 100%;
 }
 
 .article-image {
-    float: left;
-    margin-right: 30px;
+    display: table-cell;
+    width: 250px;
+    padding-right: 30px;
     margin-bottom: 0; /* small size reset */
+    vertical-align: middle;
 }
 
 .article-element img {
@@ -77,5 +80,6 @@ Width: 36em and up
 }
 
 .article-bd {
-    overflow: hidden;
+    display: table-cell;
+    vertical-align: middle;
 }

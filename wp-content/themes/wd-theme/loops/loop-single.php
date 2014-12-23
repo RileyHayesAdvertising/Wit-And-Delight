@@ -5,7 +5,7 @@
                         <div class="box">
                             <div class="feature feature_condensed">
                                 <div class="feature-hd">
-                                    <h2 class="hdg hdg_1 mix-hdg_sortOfspaced mix-hdg_heavy">
+                                    <h2 class="hdg hdg_1 mix-hdg_snowflake">
                                         <span class="ribbon">
                                             <span class="ribbon-bd">
                                                 <span class="ribbon-bd-inner">
@@ -26,13 +26,6 @@
                                             the_content();
                                         ?>
                                     </div>
-                                </div>
-                                <div class="feature-meta">
-                                    <ul class="blocks blocks_3up">
-                                        <li><a href="http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>" class="btn" rel="external">Share on Facebook</a></li>
-                                        <li><a href="http://twitter.com/share?url=<?php the_permalink(); ?>" class="btn" rel="external">Tweet It</a></li>
-                                        <li><a href="http://pinterest.com/pin/create/button/?media=<?php echo urlencode(the_first_image()); ?>&url=<?php echo urlencode(get_permalink()); ?>" class="btn">Pin it</a></li>
-                                    </ul>
                                 </div>
                                 <?php
                                     $includeFMCode = get_field('include_federated_media_content');
