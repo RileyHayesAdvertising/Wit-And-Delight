@@ -15,7 +15,7 @@
     <?php if ( have_comments() ) : ?>
     <div class="feature">
         <div class="feature-hd">
-            <h1 class="hdg hdg_1">Comments (<?php comments_number('0','1','%'); ?>)</h1>
+            <h1 class="hdg hdg_2 mix-hdg_sortOfSpaced mix-hdg_heavy">Comments (<?php comments_number('0','1','%'); ?>)</h1>
         </div>
         <div class="feature-bd">
             <ol class="vList vList_comments">

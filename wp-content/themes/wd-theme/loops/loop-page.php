@@ -5,7 +5,7 @@
                         <div class="box">
                             <div class="feature feature_condensed">
                                 <div class="feature-hd isHidden">
-                                    <h2 class="hdg hdg_1"><?php the_title(); ?></h2>
+                                    <h2><?php the_title(); ?></h2>
                                 </div>
                                 <div class="feature-bd">
                                     <div class="user-content">

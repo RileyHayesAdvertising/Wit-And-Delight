@@ -5,7 +5,7 @@
                         <div class="box">
                             <div class="feature feature_condensed">
                                 <div class="feature-hd">
-                                    <h2 class="hdg hdg_1">
+                                    <h2 class="hdg hdg_1 mix-hdg_sortOfspaced mix-hdg_heavy">
                                         <span class="ribbon">
                                             <span class="ribbon-bd">
                                                 <span class="ribbon-bd-inner">

@@ -14,7 +14,7 @@
                                         </div>
                                         <div class="article-bd">
                                             <div class="article-bd-date">
-                                                <div class="hdg hdg_4 mix-hdg_spaced">
+                                                <div class="hdg hdg_4 mix-hdg_spaced mix-hdg_heavy">
                                                     <?php the_time('m'); ?>/<?php the_time('d'); ?>/<?php the_time('y'); ?>
                                                 </div>
                                             </div>
@@ -46,7 +46,7 @@
                                     <div class="article">
                                         <div class="article-bd">
                                             <div class="article-bd-label">
-                                                <h3 class="hdg hdg_0 mix-hdg_serif">Sorry. no posts were found!</h3>
+                                                <h3 class="hdg hdg_0 mix-hdg_serif mix-hdg_notransform">Sorry. no posts were found!</h3>
                                             </div>
                                         </div>
                                     </div>

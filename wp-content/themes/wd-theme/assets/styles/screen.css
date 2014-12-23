@@ -112,8 +112,7 @@ textarea {
  Base Styles
 ------------------------------------------------------------------------ */
 body {
-    font: 500 12px/1.6 "proxima-nova", Helvetica, Arial, sans-serif;
-    /* font-family: "Libre Baskerville", serif; */
+    font: 400 14px/1.6 "Libre Baskerville", Georgia, serif;
     color: #000000;
     background: #efedea;
 }
@@ -200,6 +199,7 @@ img {
     overflow: hidden;
     position: relative;
     text-align: center;
+    font-family: "proxima-nova", Helvetica, arial, sans-serif;
 }
 
 .nav_split > li {
@@ -348,6 +348,7 @@ img {
 ------------------------------------------------------------------------ */
 .comment {
     margin-bottom: 30px;
+    font-family: "proxima-nova", Helvetica, arial, sans-serif;
 }
 
 .comment-bd {
@@ -539,6 +540,14 @@ img {
     margin-bottom: 40px;
 }
 
+.feature-bd_isCentered {
+    text-align: center;
+}
+
+.feature-bd_inset {
+    margin: 20px 0;
+}
+
 .feature-bd_condensed {
     margin-bottom: 0;
 }
@@ -608,7 +617,7 @@ img {
 
 .teaser-meta {
     text-align: center;
-    font-weight: bold;
+    font-weight: 800;
     letter-spacing: 2px;
 }
 
@@ -782,9 +791,10 @@ a:hover .icn { opacity: .2; }
  Headings
 ------------------------------------------------------------------------ */
 .hdg {
-    letter-spacing: 2px;
-    font-weight: 800;
+    letter-spacing: 0;
+    font-weight: 400;
     text-transform: uppercase;
+    font-family: "proxima-nova", Helvetica, arial, sans-serif;
 }
 
 .hdg_center {
@@ -797,7 +807,9 @@ a:hover .icn { opacity: .2; }
 
 .mix-hdg_serif { font-family: "Libre Baskerville", serif; }
 .mix-hdg_notransform { text-transform: none; }
+.mix-hdg_sortOfspaced { letter-spacing: 2px; }
 .mix-hdg_spaced { letter-spacing: 4px; }
+.mix-hdg_heavy { font-weight: 800; }
 
 .hdg_0 { font-size: 26px; }
 .hdg_1 { font-size: 20px; }
@@ -843,12 +855,10 @@ a:hover .icn { opacity: .2; }
 }
 
 .article-bd-label {
-    margin-bottom: 16px;
+    margin-bottom: 20px;
 }
 
 .article-bd-content {
-    font-family: "Libre Baskerville", serif;
-    font-size: 14px;
     margin-bottom: 28px;
 }
 
@@ -905,6 +915,8 @@ in the comment form so I used the provided ID */
 ------------------------------------------------------------------------ */
 .pagination {
     overflow: hidden;
+    font-family: "proxima-nova", Helvetica, arial, sans-serif;
+    font-size: 12px;
 }
 
 .pagination-prev {
@@ -1006,50 +1018,38 @@ in the comment form so I used the provided ID */
 /* Paragraph Styles ---------------------------------------------------- */
 .user-content h1 {
     font-size: 20px;
-    font-weight: bold;
-    text-transform: uppercase;
+    font-weight: 400;
     margin: 0 0 12px 0;
-    letter-spacing: 2px;
 }
 
 .user-content h2 {
     font-size: 18px;
-    font-weight: bold;
-    text-transform: uppercase;
+    font-weight: 400;
     margin: 0 0 12px 0;
-    letter-spacing: 2px;
 }
 
 .user-content h3 {
     font-size: 16px;
-    font-weight: bold;
-    text-transform: uppercase;
+    font-weight: 400;
     margin: 0 0 12px 0;
-    letter-spacing: 2px;
 }
 
 .user-content h4 {
     font-size: 14px;
-    font-weight: bold;
-    text-transform: uppercase;
+    font-weight: 400;
     margin: 0 0 12px 0;
-    letter-spacing: 2px;
 }
 
 .user-content h5 {
     font-size: 12px;
-    font-weight: bold;
-    text-transform: uppercase;
+    font-weight: 400;
     margin: 0 0 12px 0;
-    letter-spacing: 2px;
 }
 
 .user-content h6 {
     font-size: 10px;
-    font-weight: bold;
-    text-transform: uppercase;
+    font-weight: 400;
     margin: 0 0 12px 0;
-    letter-spacing: 2px;
 }
 
 .user-content p {
@@ -1100,7 +1100,7 @@ in the comment form so I used the provided ID */
 
 .user-content strong,
 .user-content b {
-    font-weight: bold;
+    font-weight: 800;
 }
 
 .user-content abbr,
@@ -1203,7 +1203,7 @@ in the comment form so I used the provided ID */
 }
 
 .user-content dt {
-    font-weight: bold;
+    font-weight: 800;
 }
 
 .user-content li,
@@ -1277,7 +1277,7 @@ in the comment form so I used the provided ID */
 .user-content th {
     vertical-align: inherit;
     text-align: inherit;
-    font-weight: bold;
+    font-weight: 800;
     padding: 2px 4px;
     background-color: #666;
     color: #fff;
