@@ -58,3 +58,24 @@ Width: 36em and up
     width: 32.333333%;
     margin-left: 1%;
 }
+
+/* ---------------------------------------------------------------------
+ Article Object
+------------------------------------------------------------------------ */
+.article {
+    overflow: hidden;
+}
+
+.article-image {
+    float: left;
+    margin-right: 30px;
+    margin-bottom: 0; /* small size reset */
+}
+
+.article-element img {
+    display: block;
+}
+
+.article-bd {
+    overflow: hidden;
+}

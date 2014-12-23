@@ -228,10 +228,14 @@ function newgravatar ($avatar_defaults) {
  * Custom excerpt length
  */
 function my_excerpt_length($length) {
-    return 100; // whatever you want the length to be.
+    return 50; // whatever you want the length to be.
 }
 add_filter('excerpt_length', 'my_excerpt_length');
 
+function new_excerpt_more( $more ) {
+	return '';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
 
 
 /**

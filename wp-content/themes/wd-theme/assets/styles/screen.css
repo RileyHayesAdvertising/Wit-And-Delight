@@ -307,6 +307,10 @@ img {
     display: block;
 }
 
+.vlist_articles > * {
+    margin-bottom: 22px;
+}
+
 .vList_push {
     margin-left: 80px;
 }
@@ -791,6 +795,11 @@ a:hover .icn { opacity: .2; }
     display: block;
 }
 
+.mix-hdg_serif { font-family: "Libre Baskerville", serif; }
+.mix-hdg_notransform { text-transform: none; }
+.mix-hdg_spaced { letter-spacing: 4px; }
+
+.hdg_0 { font-size: 26px; }
 .hdg_1 { font-size: 20px; }
 .hdg_2 { font-size: 18px; }
 .hdg_3 { font-size: 16px; }
@@ -816,6 +825,33 @@ a:hover .icn { opacity: .2; }
 .media-bd {
     overflow: hidden;
 }
+
+/* ---------------------------------------------------------------------
+ Article Object - mostly media at larger breakpoints
+------------------------------------------------------------------------ */
+.article-image {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.article-bd {
+    text-align: center;
+}
+
+.article-bd-date {
+    margin-bottom: 24px;
+}
+
+.article-bd-label {
+    margin-bottom: 16px;
+}
+
+.article-bd-content {
+    font-family: "Libre Baskerville", serif;
+    font-size: 14px;
+    margin-bottom: 28px;
+}
+
 
 /* ---------------------------------------------------------------------
  Button

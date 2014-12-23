@@ -38,19 +38,10 @@
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/assets/styles/screen-md.css" media="screen and (min-width: 40em)"/>
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/assets/styles/screen-lg.css" media="screen and (min-width: 52em)"/>
 
-    <!--[if lte IE 9]>
-    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/assets/styles/ie9.css" media="screen"/>
-    <![endif]-->
-
     <!--[if lte IE 8]>
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/assets/styles/screen-sm.css" media="screen"/>
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/assets/styles/screen-md.css" media="screen"/>
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/assets/styles/screen-lg.css" media="screen"/>
-    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/assets/styles/ie8.css" media="screen"/>
-    <![endif]-->
-
-    <!--[if lte IE 7]>
-    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/assets/styles/ie7.css" media="screen"/>
     <![endif]-->
 
     <!-- SCRIPTS -->
@@ -59,8 +50,6 @@
         WD.THEMEURL = "<?php bloginfo('template_directory'); ?>/";
     </script>
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
-    <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/assets/scripts/jquery.cookie.js"></script>
-    <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/assets/scripts/handlebars.js"></script>
     <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/assets/scripts/global.js"></script>
 
     <!-- FONTS -->
@@ -108,19 +97,6 @@
                         <li><a href="<?php the_field('8tracks_link', 'options'); ?>" rel="external"><i class="icn icn_8tracks"></i>8tracks</a></li>
                         <li><a href="<?php the_field('rss_link', 'options'); ?>" rel="external"><i class="icn icn_rss"></i>RSS Feed</a></li>
                     </ul>
-                    <div class="js-view-toggle viewToggle">
-                        <div class="yinAndYang">
-                            <div class="yinAndYang-yin">
-                                <p>View as grid or scroll</p>
-                            </div>
-                            <div class="yinAndYang-yang">
-                                <ul class="hList hList_spread">
-                                    <li><a href="#" class="js-view-grid switcher switcher_grid">Grid</a></li>
-                                    <li><a href="#" class="js-view-scroll switcher switcher_scroll">Scroll</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
