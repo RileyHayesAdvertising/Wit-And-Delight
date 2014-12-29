@@ -27,7 +27,6 @@ var WD = WD || {}; // Global Namespace object
         APP.HasJS.init();
         APP.Carousel.init();
         APP.Toggle.init();
-        APP.AuthorInfo.init();
     });
 
     /* ---------------------------------------------------------------------
@@ -146,27 +145,6 @@ var WD = WD || {}; // Global Namespace object
             APP.$html
                 .addClass('js')
                 .removeClass('no-js');
-        }
-    };
-
-    /* ---------------------------------------------------------------------
-    AuthorInfo
-    Author: Anthony Ticknor
-
-    Find data-author-intro and move it into the user-content area after the
-    first image. If there is no first image, prepend it to the user content
-    ------------------------------------------------------------------------ */
-    APP.AuthorInfo = {
-        init: function() {
-
-            $el = $('.user-content[data-author-intro]');
-
-            authorInfo = $el.attr('data-author-intro');
-
-            $el
-                .find('img')
-                .first()
-                .after('<br/><span class="hdg hdg_1 mix-hdg_snowflake">' + authorInfo + '</span>');
         }
     };
 
