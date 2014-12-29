@@ -505,6 +505,12 @@ img {
     margin-bottom: 16px;
 }
 
+.feature-hd_altaltalt {
+    border-bottom: 1px solid #000000;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+}
+
 .feature-hd_condensed {
     margin-bottom: 17px;
 }
@@ -560,11 +566,21 @@ img {
 }
 
 .feature-adWell {
-    margin-top: 40px;
+
 }
 
 .feature-adWell_isCentered {
     text-align: center;
+}
+
+.feature-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.feature-author {
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 /* ---------------------------------------------------------------------
@@ -650,6 +666,10 @@ Box
 
 .box_push {
     margin-bottom: 12px;
+}
+
+.box + .box {
+    margin-top: 22px;
 }
 
 /* ---------------------------------------------------------------------
@@ -1005,7 +1025,7 @@ in the comment form so I used the provided ID */
  User Content
 ------------------------------------------------------------------------ */
 .user-content hr {
-    margin: 0 0 12px 0;
+    margin: 0 0 16px 0;
     background: #000000;
     color: #000000;
     height: 1px;
@@ -1024,57 +1044,61 @@ in the comment form so I used the provided ID */
 .user-content h1 {
     font-size: 20px;
     font-weight: 400;
-    margin: 0 0 12px 0;
+    margin: 0 0 16px 0;
 }
 
 .user-content h2 {
     font-size: 18px;
     font-weight: 400;
-    margin: 0 0 12px 0;
+    margin: 0 0 16px 0;
 }
 
 .user-content h3 {
     font-size: 16px;
     font-weight: 400;
-    margin: 0 0 12px 0;
+    margin: 0 0 16px 0;
 }
 
 .user-content h4 {
     font-size: 14px;
     font-weight: 400;
-    margin: 0 0 12px 0;
+    margin: 0 0 16px 0;
 }
 
 .user-content h5 {
     font-size: 12px;
     font-weight: 400;
-    margin: 0 0 12px 0;
+    margin: 0 0 16px 0;
 }
 
 .user-content h6 {
     font-size: 10px;
     font-weight: 400;
-    margin: 0 0 12px 0;
+    margin: 0 0 16px 0;
 }
 
 .user-content p {
-    margin: 0 0 12px 0;
+    margin: 0 0 16px 0;
+}
+
+.user-content img {
+    margin: 0 0 22px 0; /* add 6px more margin to images than the norm */
 }
 
 .user-content blockquote {
-    margin: 0 0 12px 0;
+    margin: 0 0 16px 0;
     padding: 12px;
     background: #eee;
     font-style: italic;
 }
 
 .user-content address {
-    margin: 0 0 12px 0;
+    margin: 0 0 16px 0;
     font-style: italic;
 }
 
 .user-content pre {
-    margin: 0 0 12px 0;
+    margin: 0 0 16px 0;
     font-family: "Lucida Console", Monaco, monospace;
 }
 
@@ -1194,17 +1218,17 @@ in the comment form so I used the provided ID */
 .user-content ol,
 .user-content dl {
     margin-top: 0;
-    margin-bottom: 12px;
+    margin-bottom: 16px;
 }
 
 .user-content ul {
     list-style-type: disc;
-    margin: 0 0 12px 0;
+    margin: 0 0 16px 0;
 }
 
 .user-content ol {
     list-style-type: decimal;
-    margin: 0 0 12px 0;
+    margin: 0 0 16px 0;
 }
 
 .user-content dt {
@@ -1247,7 +1271,7 @@ in the comment form so I used the provided ID */
 /* Table Styles -------------------------------------------------------- */
 
 .user-content table {
-    margin: 0 0 20px 0;
+    margin: 0 0 22px 0;
     width: 100% !important;
     border-spacing: 2px;
     border-collapse: separate;

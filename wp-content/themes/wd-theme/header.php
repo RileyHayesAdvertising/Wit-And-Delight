@@ -71,14 +71,16 @@
                     </h1>
                 </div>
                 <div class="gridRow-col gridRow-col_size1of4">
-                    <ul class="nav nav_split" role="navigation">
-                        <li<?php if (is_page(10654)) {?> class="isActive"<?php } ?>><a href="/about/">About</a></li>
-                        <li><a href="http://katearends.com/" rel="external">Studio</a></li>
-                        <li<?php if (is_page(11540)) {?> class="isActive"<?php } ?>><a href="/press/">Press</a></li>
-                        <li class="isLargeView"><a href="<?php the_field('pinterest_link', 'options'); ?>" rel="external">Pinterest</a></li>
-                        <li<?php if (is_page(12408)) {?> class="isActive"<?php } ?>><a href="http://shop.witanddelight.com/">Shop</a></li>
-                        <li class="isLargeView"><a href="<?php the_field('tumblr_link', 'options'); ?>" rel="external">Tumblr</a></li>
-                    </ul>
+                    <div role="navigation">
+                        <ul class="nav nav_split">
+                            <li<?php if (is_page(10654)) {?> class="isActive"<?php } ?>><a href="/about/">About</a></li>
+                            <li><a href="http://katearends.com/" rel="external">Studio</a></li>
+                            <li<?php if (is_page(11540)) {?> class="isActive"<?php } ?>><a href="/press/">Press</a></li>
+                            <li class="isLargeView"><a href="<?php the_field('pinterest_link', 'options'); ?>" rel="external">Pinterest</a></li>
+                            <li<?php if (is_page(12408)) {?> class="isActive"<?php } ?>><a href="http://shop.witanddelight.com/">Shop</a></li>
+                            <li class="isLargeView"><a href="<?php the_field('tumblr_link', 'options'); ?>" rel="external">Tumblr</a></li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="gridRow-col gridRow-col_size1of4 isLargeView">
                     <ul class="nav">

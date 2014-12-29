@@ -109,6 +109,18 @@ function the_first_image() {
 }
 
 /**
+ * Removes the first image in a post for single page
+ *
+ * @return the_content without the first image
+ */
+function remove_first_image ($content) {
+    if (!is_page() && !is_feed() && !is_feed() && !is_home()) {
+        $content = preg_replace("/<img[^>]+\>/i", "", $content, 1);
+    } return $content;
+}
+add_filter('the_content', 'remove_first_image');
+
+/**
  * Returns a list of tags
  *
  * @return html list of all tags
