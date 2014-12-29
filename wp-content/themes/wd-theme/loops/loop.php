@@ -13,9 +13,9 @@
                                             </a>
                                         </div>
                                         <div class="article-bd">
-                                            <div class="article-bd-date">
+                                            <div class="article-bd-meta">
                                                 <div class="hdg hdg_4 mix-hdg_snowflake mix-hdg_snowflake_loose">
-                                                    <?php the_time('m'); ?>/<?php the_time('d'); ?>/<?php the_time('y'); ?>
+                                                    <?php the_category(', '); ?>
                                                 </div>
                                             </div>
                                             <div class="article-bd-label">
