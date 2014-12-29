@@ -12,11 +12,11 @@
 
 <div class="panel panel_bare">
 
-    <?php if ( have_comments() ) : ?>
-    <div class="feature">
-        <div class="feature-hd">
-            <h1 class="hdg hdg_3 mix-hdg_snowflake">Comments (<?php comments_number('0','1','%'); ?>)</h1>
+    <div class="feature feature_condensed">
+        <div class="feature-hd feature-hd_altaltalt">
+            <h2 class="hdg hdg_3">Comments</h2>
         </div>
+        <?php if ( have_comments() ) : ?>
         <div class="feature-bd">
             <ol class="vList vList_comments">
                 <?php
@@ -24,8 +24,9 @@
                 ?>
             </ol>
         </div>
+        <?php endif; // end have_comments() ?>
     </div>
-    <?php endif; // end have_comments() ?>
+
 
     <div class="form-comment">
         <div class="form-comment-inner">
