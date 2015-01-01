@@ -1,9 +1,10 @@
         <div class="content">
             <div class="gridRow">
-                <div class="gridRow-col gridRow-col_size3of4" role="main">
+                <div class="gridRow-col gridRow-col_size3of4" id="js-loadMorePosts" role="main">
                     <h2 class="isHidden">Articles</h2>
                     <ol class="vlist vlist_articles">
                         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+                            <?php // when this is edited don't forget about the ajax plugin and it's markup / posts / etc ?>
                             <li>
                                 <div class="box">
                                     <div class="article">
@@ -54,7 +55,8 @@
                             </li>
                         <?php endif; ?>
                     </ol>
-                    <div class="panel panel_bare">
+                    <div class="panel panel_bare" id="js-loadMoreControls">
+                        <?php // these controls are for javascript failures only ?>
                         <ol class="pagination">
                             <li class="pagination-prev"><?php next_posts_link('<i class="icn icn_prev"></i>Older Posts');  ?></li>
                             <li class="pagination-next"><?php previous_posts_link('Newer Posts<i class="icn icn_next"></i>');  ?></li>
