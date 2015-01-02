@@ -1147,7 +1147,7 @@ in the comment form so I used the provided ID */
 
 .user-content a:focus,
 .user-content a:hover {
-    background: #d8bdbe;
+    color: #d8bdbe;
 }
 
 .user-content a:active {
