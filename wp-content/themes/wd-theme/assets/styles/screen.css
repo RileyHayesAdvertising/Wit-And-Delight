@@ -161,9 +161,12 @@ img {
  Masthead
 ------------------------------------------------------------------------ */
 .masthead {
-    padding-bottom: 30px;
+    padding-bottom: 40px;
 }
 
+/* ---------------------------------------------------------------------
+ Logo
+------------------------------------------------------------------------ */
 .logo {
     text-align: center;
     padding-top: 4px;
@@ -175,6 +178,9 @@ img {
     width: 180px;
 }
 
+/* ---------------------------------------------------------------------
+ masthead bits
+------------------------------------------------------------------------ */
 .quickSearch {
     margin-bottom: 16px;
 }
@@ -196,29 +202,44 @@ img {
  Main Navigation
 ------------------------------------------------------------------------ */
 .nav {
-    overflow: hidden;
-    position: relative;
     text-align: center;
-    font-family: "proxima-nova", Helvetica, arial, sans-serif;
 }
 
-.nav_split > li {
+.nav > li {
     display: inline-block;
 }
 
-.nav_split > li.isLargeView {
-    display: none;
-}
-
-.nav_split > li + li {
-    margin-left: 10%;
+.nav > li + li {
+    margin-left: 14px;
 }
 
 .nav > li > a {
+    font-family: "proxima-nova", Helvetica, arial, sans-serif;
     font-weight: 800;
-    font-size: 10px;
+    font-size: 12px;
     letter-spacing: 2px;
-    text-transform: uppercase;
+}
+
+.nav-item-subItems {
+    display: none;
+    position: absolute;
+    left: -80px;
+    top: 0;
+    width: 200px;
+    padding-top: 32px;
+}
+
+.nav-item_hasSubItems {
+    position: relative;
+}
+
+.nav-item_hasSubItems:hover .nav-item-subItems {
+    display: block;
+}
+
+.nav-item_hasSubItems > a {
+    position: relative;
+    z-index: 99999;
 }
 
 /* ---------------------------------------------------------------------
@@ -723,6 +744,8 @@ Box
 .icn_next { background-position: -177px 0 ; }
 .icn_down { background-position: -200px 0 ; }
 .icn_pin { background-position: -227px 0; }
+.icn_tumblr { background-position: -251px 0; }
+.icn_bloglovin { background-position: -275px 0; }
 
 a:hover .icn { opacity: .2; }
 

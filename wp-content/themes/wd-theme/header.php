@@ -62,40 +62,35 @@
 <body>
     <div class="wrapper wrapper_page">
         <div class="masthead" role="banner">
-            <div class="gridRow">
-                <div class="gridRow-col gridRow-col_size1of4">
-                    <h1 class="logo">
-                        <a href="<?php echo home_url(); ?>">
-                            <img src="<?php bloginfo('template_directory'); ?>/assets/images/logo.png" alt="Wit &amp; Delight" />
-                        </a>
-                    </h1>
-                </div>
-                <div class="gridRow-col gridRow-col_size1of4">
-                    <div role="navigation">
-                        <ul class="nav nav_split">
-                            <li<?php if (is_page(10654)) {?> class="isActive"<?php } ?>><a href="/about/">About</a></li>
-                            <li class="isLargeView"><a href="<?php the_field('pinterest_link', 'options'); ?>" rel="external">Pinterest</a></li>
-                            <li<?php if (is_page(12408)) {?> class="isActive"<?php } ?>><a href="http://shop.witanddelight.com/">Shop</a></li>
-                            <li class="isLargeView"><a href="<?php the_field('tumblr_link', 'options'); ?>" rel="external">Tumblr</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="gridRow-col gridRow-col_size1of4 isLargeView">
-                    <ul class="nav">
-                        <li<?php if (is_page(11541)) {?> class="isActive"<?php } ?>><a href="/copyright-disclosure/">Copyright &amp; Disclosure</a></li>
-                        <li><a href="<?php the_field('rss_link', 'options'); ?>" rel="external">Subscribe</a></li>
-                    </ul>
-                </div>
-                <div class="gridRow-col gridRow-col_size1of4 isLargeView">
-                    <?php get_search_form(); ?>
-                    <ul class="hList hList_social">
-                        <li><a href="/contact/"><i class="icn icn_email"></i>E-mail</a></li>
-                        <li><a href="<?php the_field('facebook_link', 'options'); ?>" rel="external"><i class="icn icn_facebook"></i>Facebook</a></li>
-                        <li><a href="<?php the_field('twitter_link', 'options'); ?>" rel="external"><i class="icn icn_twitter"></i>Twitter</a></li>
-                        <li><a href="<?php the_field('instagram_link', 'options'); ?>" rel="external"><i class="icn icn_instagram"></i>Instagram</a></li>
-                        <li><a href="<?php the_field('8tracks_link', 'options'); ?>" rel="external"><i class="icn icn_8tracks"></i>8tracks</a></li>
-                        <li><a href="<?php the_field('rss_link', 'options'); ?>" rel="external"><i class="icn icn_rss"></i>RSS Feed</a></li>
-                    </ul>
-                </div>
+            <div class="masthead-logo">
+                <h1 class="logo">
+                    <a href="<?php echo home_url(); ?>">
+                        <img src="<?php bloginfo('template_directory'); ?>/assets/images/logo.png" alt="Wit &amp; Delight" />
+                    </a>
+                </h1>
+            </div>
+            <div class="masthead-nav" role="navigation">
+                <ul class="nav">
+                    <!-- <li><a href="#">Sign Up</a></li> -->
+                    <li><a href="<?php the_field('rss_link', 'options'); ?>" rel="external">Subscribe</a></li>
+                    <li<?php if (is_page(10654)) {?> class="isActive"<?php } ?>><a href="/about/">About</a></li>
+                    <li class="nav-item_hasSubItems">
+                        <a href="#">Follow</a>
+                        <div class="nav-item-subItems">
+                            <ul class="hList hList_social">
+                                <li><a href="<?php the_field('pinterest_link', 'options'); ?>" rel="external"><i class="icn icn_pin"></i>Pinterest</a></li>
+                                <li><a href="<?php the_field('tumblr_link', 'options'); ?>" rel="external"><i class="icn icn_tumblr"></i>Tumblr</a></li>
+                                <li><a href="<?php the_field('instagram_link', 'options'); ?>" rel="external"><i class="icn icn_instagram"></i>Instagram</a></li>
+                                <li><a href="<?php the_field('facebook_link', 'options'); ?>" rel="external"><i class="icn icn_facebook"></i>Facebook</a></li>
+                                <li><a href="<?php the_field('twitter_link', 'options'); ?>" rel="external"><i class="icn icn_twitter"></i>Twitter</a></li>
+                                <li><a href="<?php the_field('bloglovin_link', 'options'); ?>" rel="external"><i class="icn icn_bloglovin"></i>Bloglovin</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li<?php if (is_page(12408)) {?> class="isActive"<?php } ?>><a href="http://shop.witanddelight.com/">Shop</a></li>
+                </ul>
+            </div>
+            <div class="masthead-search isLargeView">
+                <?php get_search_form(); ?>
             </div>
         </div>

@@ -18,18 +18,40 @@ Width: 48em and up
  Masthead
 ------------------------------------------------------------------------ */
 .masthead {
-    padding-bottom: 70px;
+    position: relative;
+    padding-bottom: 0;
+    height: 240px;
 }
 
+.masthead-logo {
+    position: absolute;
+    top: 80px;
+    left: 0;
+}
+
+.masthead-nav {
+
+}
+
+.masthead-search {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 262px;
+}
+
+/* ---------------------------------------------------------------------
+ Logo
+------------------------------------------------------------------------ */
 .logo {
-    padding-top: 0;
-    text-align: left;
+    padding-top: 0; /* reset */
+    text-align: left; /* reset */
+    margin-bottom: 0; /* reset */
 }
 
 .logo a {
     display: block;
-    width: 140px;
-    padding: 0 10px;
+    width: 200px;
 }
 
 /* ---------------------------------------------------------------------
@@ -103,22 +125,8 @@ Width: 48em and up
     text-align: left;
 }
 
-.nav > li {
-    margin-bottom: 8px;
-}
-
-.nav_split > li {
-    width: 50%;
-    float: left;
-    display: block;
-}
-
-.nav_split > li + li {
-    margin-left: 0;
-}
-
-.nav_split > li.isLargeView {
-    display: block;
+.nav > li + li {
+    margin-left: 24px;
 }
 
 /* ---------------------------------------------------------------------
