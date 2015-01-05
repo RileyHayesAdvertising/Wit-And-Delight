@@ -1,5 +1,20 @@
 <div class="pane">
     <div class="feature feature_condensed">
+        <div class="feature-bd feature-bd_condensed">
+            <h2 class="isHidden">Social Media</h2>
+            <ul class="hList hList_social">
+                <li><a href="<?php the_field('pinterest_link', 'options'); ?>" rel="external"><i class="icn icn_pin"></i>Pinterest</a></li>
+                <li><a href="<?php the_field('tumblr_link', 'options'); ?>" rel="external"><i class="icn icn_tumblr"></i>Tumblr</a></li>
+                <li><a href="<?php the_field('instagram_link', 'options'); ?>" rel="external"><i class="icn icn_instagram"></i>Instagram</a></li>
+                <li><a href="<?php the_field('facebook_link', 'options'); ?>" rel="external"><i class="icn icn_facebook"></i>Facebook</a></li>
+                <li><a href="<?php the_field('twitter_link', 'options'); ?>" rel="external"><i class="icn icn_twitter"></i>Twitter</a></li>
+                <li><a href="<?php the_field('bloglovin_link', 'options'); ?>" rel="external"><i class="icn icn_bloglovin"></i>Bloglovin</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="pane">
+    <div class="feature feature_condensed">
         <div class="feature-bd feature-bd_inset feature-bd_isCentered">
             <div class="hdg hdg_2">
                 <span class="hdg-split">A Website Dedicated</span>

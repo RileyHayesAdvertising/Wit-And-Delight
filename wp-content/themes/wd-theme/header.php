@@ -74,19 +74,6 @@
                     <!-- <li><a href="#">Sign Up</a></li> -->
                     <li><a href="<?php the_field('rss_link', 'options'); ?>" rel="external">Subscribe</a></li>
                     <li<?php if (is_page(10654)) {?> class="isActive"<?php } ?>><a href="/about/">About</a></li>
-                    <li class="nav-item_hasSubItems">
-                        <a href="#">Follow</a>
-                        <div class="nav-item-subItems">
-                            <ul class="hList hList_social">
-                                <li><a href="<?php the_field('pinterest_link', 'options'); ?>" rel="external"><i class="icn icn_pin"></i>Pinterest</a></li>
-                                <li><a href="<?php the_field('tumblr_link', 'options'); ?>" rel="external"><i class="icn icn_tumblr"></i>Tumblr</a></li>
-                                <li><a href="<?php the_field('instagram_link', 'options'); ?>" rel="external"><i class="icn icn_instagram"></i>Instagram</a></li>
-                                <li><a href="<?php the_field('facebook_link', 'options'); ?>" rel="external"><i class="icn icn_facebook"></i>Facebook</a></li>
-                                <li><a href="<?php the_field('twitter_link', 'options'); ?>" rel="external"><i class="icn icn_twitter"></i>Twitter</a></li>
-                                <li><a href="<?php the_field('bloglovin_link', 'options'); ?>" rel="external"><i class="icn icn_bloglovin"></i>Bloglovin</a></li>
-                            </ul>
-                        </div>
-                    </li>
                     <li<?php if (is_page(12408)) {?> class="isActive"<?php } ?>><a href="http://shop.witanddelight.com/">Shop</a></li>
                 </ul>
             </div>
