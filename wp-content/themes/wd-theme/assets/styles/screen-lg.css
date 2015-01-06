@@ -44,7 +44,7 @@ Width: 48em and up
     position: absolute;
     top: 0;
     right: 0;
-    width: 262px;
+    width: 23.917526%; /* matches the width of the side column (1of4) */
 }
 
 /* ---------------------------------------------------------------------
