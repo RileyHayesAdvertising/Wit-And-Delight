@@ -216,18 +216,9 @@ img {
 .nav > li > a {
     font-family: "proxima-nova", Helvetica, arial, sans-serif;
     font-weight: 800;
-    font-size: 12px;
+    font-size: 11px;
     letter-spacing: 2px;
     text-transform: uppercase;
-}
-
-.nav-item-subItems {
-    display: none;
-    position: absolute;
-    left: -80px;
-    top: 0;
-    width: 200px;
-    padding-top: 32px;
 }
 
 /* ---------------------------------------------------------------------
