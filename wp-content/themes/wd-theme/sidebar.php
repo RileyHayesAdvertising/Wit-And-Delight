@@ -3,12 +3,36 @@
         <div class="feature-bd feature-bd_condensed">
             <h2 class="isHidden">Social Media</h2>
             <ul class="hList hList_social">
-                <li><a href="<?php the_field('pinterest_link', 'options'); ?>" rel="external"><i class="icn icn_pin"></i>Pinterest</a></li>
-                <li><a href="<?php the_field('tumblr_link', 'options'); ?>" rel="external"><i class="icn icn_tumblr"></i>Tumblr</a></li>
-                <li><a href="<?php the_field('instagram_link', 'options'); ?>" rel="external"><i class="icn icn_instagram"></i>Instagram</a></li>
-                <li><a href="<?php the_field('facebook_link', 'options'); ?>" rel="external"><i class="icn icn_facebook"></i>Facebook</a></li>
-                <li><a href="<?php the_field('twitter_link', 'options'); ?>" rel="external"><i class="icn icn_twitter"></i>Twitter</a></li>
-                <li><a href="<?php the_field('bloglovin_link', 'options'); ?>" rel="external"><i class="icn icn_bloglovin"></i>Bloglovin</a></li>
+                <li>
+                    <a href="<?php the_field('pinterest_link', 'options'); ?>" rel="external">
+                        <img src="<?php bloginfo('template_directory'); ?>/assets/images/svg/pinterest.svg" alt="Link to Pinterest">
+                    </a>
+                </li>
+                <li>
+                    <a href="<?php the_field('tumblr_link', 'options'); ?>" rel="external">
+                        <img src="<?php bloginfo('template_directory'); ?>/assets/images/svg/tumblr.svg" alt="Link to Tumblr">
+                    </a>
+                </li>
+                <li>
+                    <a href="<?php the_field('instagram_link', 'options'); ?>" rel="external">
+                        <img src="<?php bloginfo('template_directory'); ?>/assets/images/svg/instagram.svg" alt="Link to Instagram">
+                    </a>
+                </li>
+                <li>
+                    <a href="<?php the_field('facebook_link', 'options'); ?>" rel="external">
+                        <img src="<?php bloginfo('template_directory'); ?>/assets/images/svg/facebook.svg" alt="Link to Facebook">
+                    </a>
+                </li>
+                <li>
+                    <a href="<?php the_field('twitter_link', 'options'); ?>" rel="external">
+                        <img src="<?php bloginfo('template_directory'); ?>/assets/images/svg/twitter.svg" alt="Link to Facebook">
+                    </a>
+                </li>
+                <li>
+                    <a href="<?php the_field('bloglovin_link', 'options'); ?>" rel="external">
+                        <img src="<?php bloginfo('template_directory'); ?>/assets/images/svg/bloglovin.svg" alt="Link to Bloglovin">
+                    </a>
+                </li>
             </ul>
         </div>
     </div>

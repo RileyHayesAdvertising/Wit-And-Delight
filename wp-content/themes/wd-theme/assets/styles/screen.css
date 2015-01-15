@@ -56,10 +56,6 @@ table {
     border-spacing: 0;
 }
 
-:focus {
-    outline: 0;
-}
-
 /* Always show a vertical scrollbar, even when there is no scrolling */
 html {
     overflow-y: scroll;
@@ -322,6 +318,10 @@ img {
     text-shadow: none;
     color: transparent;
     background: none;
+}
+
+.hList_social img {
+    width: 28px;
 }
 
 .hList_spread > * + *{
@@ -1005,6 +1005,7 @@ in the comment form so I used the provided ID */
 #comment-submit {
     width: 115px;
     height: 27px;
+
     padding: 0;
     margin: 0;
     border: 0;
@@ -1014,6 +1015,7 @@ in the comment form so I used the provided ID */
     text-indent: -9999px;
     cursor: pointer;
     background: url(../images/btn-lets-hear-it.png) no-repeat 0 0;
+    background-size: 100%;
 }
 
 /* ---------------------------------------------------------------------
