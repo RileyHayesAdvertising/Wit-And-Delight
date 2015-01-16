@@ -413,11 +413,11 @@ img {
     line-height: 24px; /* match the height of the avatar to create vertical alignment */
 }
 
-/* kate's comment style */
-.comment_kate {
-    margin-left: 60px;
+.vlist_comments_item_indented {
+    margin-left: 60px; /* super gross way to create indented comments */
 }
 
+/* kate's comment style */
 .comment_kate .comment-bd {
     background: #ffffff;
     color: #000000;

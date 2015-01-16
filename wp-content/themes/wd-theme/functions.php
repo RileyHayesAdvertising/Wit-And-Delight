@@ -193,8 +193,8 @@ function remove_dimensions( $html ) {
 function mytheme_comment($comment, $args, $depth) {
     $GLOBALS['comment'] = $comment;
 ?>
-    <li>
-        <div class="comment <?php if($comment->user_id == 2) { echo 'comment_kate'; } ?>">
+    <li class="<?php if( '0' != $comment->comment_parent ){ echo 'vlist_comments_item_indented'; } ?>">
+        <div class="comment <?php if($comment->user_id == 2) { echo 'comment_kate '; } ?>">
             <div class="comment-bd">
                 <?php comment_text(); ?>
             </div>

@@ -20,7 +20,7 @@
         <div class="feature-bd">
             <ol class="vList vList_comments">
                 <?php
-                    wp_list_comments('type=comment&callback=mytheme_comment&avatar_size=60&per_page=99999');
+                    wp_list_comments('type=comment&callback=mytheme_comment&avatar_size=60&per_page=99999&max_depth=1');
                 ?>
             </ol>
         </div>
