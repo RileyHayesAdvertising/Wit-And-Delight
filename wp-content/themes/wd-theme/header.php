@@ -81,4 +81,18 @@
             <div class="masthead-search isLargeView">
                 <?php get_search_form(); ?>
             </div>
+            <div class="masthead-subnav">
+                <h2 class="isHidden">Popular Categories</h2>
+                <ul class="categoryNav">
+                    <li><a href="http://witanddelight.com/category/design/">Design</a></li>
+                    <li><a href="http://witanddelight.com/category/home/">Home</a></li>
+                    <li><a href="http://witanddelight.com/category/life/">Life</a></li>
+                    <li><a href="http://witanddelight.com/category/beauty/">Beauty</a></li>
+                </ul>
+                <div class="disclosure">
+                    <div class="disclosure-contact"><a href="mailto:<?php the_field('email_address', 'options'); ?>">Contact: <?php the_field('email_address', 'options'); ?></a></div>
+                    <div class="disclosure-link"><a href="/copyright-disclosure/">Disclosure</a></div>
+                    <div class="disclosure-legal"><a href="/copyright-disclosure/">Copyright Wit &amp; Delight LLC</a></div>
+                </div>
+            </div>
         </div>

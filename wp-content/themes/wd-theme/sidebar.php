@@ -62,6 +62,22 @@
         </div>
     </div>
 </div>
+<div class="pane">
+    <div class="feature feature_condensed">
+        <div class="feature-hd feature-hd_altalt feature-hd_isCentered">
+            <h2 class="hdg hdg_4 mix-hdg_snowflake">
+                Shop Our Picks
+            </h2>
+        </div>
+        <div class="feature-bd feature-bd_condensed">
+            <div class="nmrktFeedSidebar">
+                <?php /* ------------------------ CODE FROM NMRKT ------------------------  */ ?>
+                <iframe id="nmrktWidget" class="nmrkt-widget" src="https://market.nmrkt.com/publisher/featured-item-box-new?publisher=13&items=3&background=efedea&border=0" width="320" scrolling="no" frameborder="0"></iframe>
+                <?php /* ---------------------- END CODE FROM NMRKT ----------------------  */ ?>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="pane pane_inset">
     <div class="feature feature_condensed">
         <div class="feature-hd feature-hd_alt feature-hd_isCentered">

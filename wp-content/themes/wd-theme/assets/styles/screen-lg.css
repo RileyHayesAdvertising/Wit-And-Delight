@@ -47,6 +47,71 @@ Width: 48em and up
     width: 23.917526%; /* matches the width of the side column (1of4) */
 }
 
+.masthead-subnav {
+    display: block;
+    width: 1400px;
+    position: absolute;
+    bottom: -10px;
+    left: 17px;
+    -ms-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    -ms-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    z-index: 99999999;
+
+    font-family: "proxima-nova", Helvetica, arial, sans-serif;
+    font-weight: 800;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* ---------------------------------------------------------------------
+ Category Nav
+------------------------------------------------------------------------ */
+.categoryNav {
+    display: inline-block;
+}
+
+.categoryNav > li {
+    display: inline-block;
+}
+
+.categoryNav > li +li:before {
+    content: "/ ";
+}
+
+.categoryNav > li a {
+    display: inline-block;
+    padding: 0 14px;
+}
+
+/* ---------------------------------------------------------------------
+ Disclosure
+------------------------------------------------------------------------ */
+.disclosure {
+    display: inline-block;
+    padding-left: 100px;
+}
+
+.disclosure-contact {
+    display: inline-block;
+}
+
+.disclosure-link {
+    display: inline-block;
+    padding-left: 24px;
+}
+
+.disclosure-legal {
+    display: inline-block;
+    padding-left: 24px;
+}
+
 /* ---------------------------------------------------------------------
  Logo
 ------------------------------------------------------------------------ */
@@ -73,6 +138,7 @@ Width: 48em and up
 ------------------------------------------------------------------------ */
 .gridRow {
     position: relative;
+    padding-left: 40px; /* create space for vertical nav */
 }
 
 .gridRow:after {
