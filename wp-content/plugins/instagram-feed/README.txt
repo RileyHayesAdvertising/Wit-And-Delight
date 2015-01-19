@@ -3,7 +3,7 @@ Contributors: smashballoon
 Tags: Instagram, Instagram feed, Instagram photos, Instagram plugin, Instagram stream, Custom Instagram Feed, responsive Instagram, mobile Instagram, Instagram posts, Instagram wall, Instagram account
 Requires at least: 3.0
 Tested up to: 4.1
-Stable tag: 1.3.1
+Stable tag: 1.3.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -62,6 +62,7 @@ For simple step-by-step directions on how to set up the Instagram Feed plugin pl
 * **height** - The height of your feed. Any number - Example: `[instagram-feed height=250]`
 * **heightunit** - The unit of the height. 'px' or '%' - Example: `[instagram-feed heightunit=px]`
 * **background** - The background color of the feed. Any hex color code - Example: `[instagram-feed background=#ffff00]`
+* **class** - Add a CSS class to the feed container - Example: `[instagram-feed class=feedOne]`
 *
 * **Photo Options**
 * **sortby** - Sort the posts by Newest to Oldest (none) or Random (random) - Example: `[instagram-feed sortby=random]`
@@ -69,6 +70,7 @@ For simple step-by-step directions on how to set up the Instagram Feed plugin pl
 * **cols** - The number of columns in your feed. 1 - 10 - Example: `[instagram-feed cols=5]`
 * **imagepadding** - The spacing around your photos - Example: `[instagram-feed imagepadding=10]`
 * **imagepaddingunit** - The unit of the padding. 'px' or '%' - Example: `[instagram-feed imagepaddingunit=px]`
+* **disablemobile** - Disable the mobile layout. 'true' or 'false' - Example: `[instagram-feed disablemobile=true]`
 *
 * **Header Options**
 * **showheader** - Whether to show the feed Header. 'true' or 'false' - Example: `[instagram-feed showheader=false]`
@@ -102,7 +104,7 @@ Yep. You can just separate the IDs by commas, either in the User ID(s) field on 
 
 We've made it super easy. Simply click on the big blue button on the Instagram Feed Settings page and log into your Instagram account. The plugin will then retrieve and display both your Access Token and User ID from Instagram.
 
-You can also display photos from other peoples Instagram accounts. To find their Instagram User ID you can use [this tool](http://jelled.com/instagram/lookup-user-id).
+You can also display photos from other peoples Instagram accounts. To find their Instagram User ID you can use [this tool](http://www.otzberg.net/iguserid/).
 
 = Are there any security issues with using an Access Token on my site? =
 
@@ -114,7 +116,7 @@ There are a few common reasons for this:
 
 * Your Instagram account may be set to private. Instagram doesn't allow photos from private Instagram accounts to be displayed publicly.
 * Your Access Token may not be valid. Try clicking on the blue Instagram login button on the plugin's Settings page again and copy and paste the Instagram token it gives you into the plugin's Access Token field.
-* Your User ID may not be valid. Be sure you're not using your Instagram username instead of your User ID. You can find your Instagram User ID by using [this tool](http://jelled.com/instagram/lookup-user-id).
+* Your User ID may not be valid. Be sure you're not using your Instagram username instead of your User ID. You can find your Instagram User ID by using [this tool](http://www.otzberg.net/iguserid/).
 * Your website may contain a JavaScript error which is preventing JavaScript from running. The plugin uses JavaScript to load the Instagram photos into your page and so needs JavaScript to be running in order to work. You would need to remove any existing JavaScript errors on your website for the plugin to be able to load in your feed.
 
 If you're still having an issue displaying your feed then please open a ticket in the [Support forum](http://wordpress.org/support/plugin/instagram-feed 'Instagram Feed Support Forum') with a link to the page where you're trying to display the Instagram feed and, if possible, a link to your Instagram account.
@@ -138,6 +140,7 @@ The below options are available on the Instagram Feed Settings page but can also
 * **height** - The height of your feed. Any number - Example: `[instagram-feed height=250]`
 * **heightunit** - The unit of the height. 'px' or '%' - Example: `[instagram-feed heightunit=px]`
 * **background** - The background color of the feed. Any hex color code - Example: `[instagram-feed background=#ffff00]`
+* **class** - Add a CSS class to the feed container - Example: `[instagram-feed class=feedOne]`
 *
 * **Photo Options**
 * **sortby** - Sort the posts by Newest to Oldest (none) or Random (random) - Example: `[instagram-feed sortby=random]`
@@ -145,6 +148,7 @@ The below options are available on the Instagram Feed Settings page but can also
 * **cols** - The number of columns in your feed. 1 - 10 - Example: `[instagram-feed cols=5]`
 * **imagepadding** - The spacing around your photos - Example: `[instagram-feed imagepadding=10]`
 * **imagepaddingunit** - The unit of the padding. 'px' or '%' - Example: `[instagram-feed imagepaddingunit=px]`
+* **disablemobile** - Disable the mobile layout. 'true' or 'false' - Example: `[instagram-feed disablemobile=true]`
 *
 * **Header Options**
 * **showheader** - Whether to show the feed Header. 'true' or 'false' - Example: `[instagram-feed showheader=false]`
@@ -175,6 +179,16 @@ For more shortcode options, check out the [Pro version](http://smashballoon.com/
 7. The Instagram Feed plugin Settings pages
 
 == Changelog ==
+= 1.3.2 =
+* New: Added an option to disable the mobile layout
+* New: Added an setting which allows you to use the plugin with an Ajax powered theme
+* New: Added a 'class' shortcode option which allows you to add a CSS to class to each individual feed: `[instagram-feed class=feedOne]`
+* New: Added a Support tab which contains System Info to help with troubleshooting
+* New: Added friendly error messages which display only to WordPress admins
+* New: Added validation to the User ID field to prevent usernames being entered instead of IDs
+* Tweak: Made the Access Token field slightly wider to prevent tokens being copy and pasted incorrectly
+* Fix: Fixed a JavaScript bug which caused the feed not to load photos correctly in IE8
+
 = 1.3.1 =
 * Fix: Fixed an issue with the Instagram icon not appearing in the 'Follow on Instagram' button or in the header
 * Fix: Addressed a few CSS issues which were causing some minor formatting issues on certain themes
