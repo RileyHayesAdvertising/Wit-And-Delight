@@ -88,6 +88,8 @@
                     <li><a href="http://witanddelight.com/category/home/">Home</a></li>
                     <li><a href="http://witanddelight.com/category/life/">Life</a></li>
                     <li><a href="http://witanddelight.com/category/beauty/">Beauty</a></li>
+                    <li><a href="http://witanddelight.com/category/fashion/">Fashion</a></li>
+                    <li><a href="http://witanddelight.com/category/oddities/">Oddities</a></li>
                 </ul>
                 <div class="disclosure">
                     <div class="disclosure-contact"><a href="mailto:<?php the_field('email_address', 'options'); ?>">Contact: <?php the_field('email_address', 'options'); ?></a></div>
