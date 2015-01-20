@@ -596,6 +596,10 @@ img, iframe {
     margin: 20px 0;
 }
 
+.feature-bd_inset_lopsided {
+    margin: 20px 0 10px 0;
+}
+
 .feature-bd_condensed {
     margin-bottom: 0;
 }

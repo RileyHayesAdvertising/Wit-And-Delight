@@ -39,12 +39,16 @@
 </div>
 <div class="pane">
     <div class="feature feature_condensed">
-        <div class="feature-bd feature-bd_inset feature-bd_isCentered">
+        <div class="feature-bd feature-bd_inset feature-bd_inset_lopsided feature-bd_isCentered">
             <div class="hdg hdg_2">
                 <span class="hdg-split">A Website Dedicated</span>
                 <span class="hdg-split">to Designing a Life</span>
                 <span class="hdg-split">Well Lived.</span>
             </div>
+            <br/>
+            <a href="/about/">
+                <img src="<?php bloginfo('template_directory'); ?>/assets/images/more.png" alt="Read More" />
+            </a>
         </div>
     </div>
 </div>
