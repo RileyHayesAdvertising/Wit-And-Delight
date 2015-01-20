@@ -2,7 +2,7 @@
             <div class="gridRow">
                 <div class="gridRow-col gridRow-col_size3of4" role="main">
                     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-                        <div class="box">
+                        <div class="box mix-box_withRequiredHeight">
                             <div class="feature feature_condensed">
                                 <div class="feature-hd isHidden">
                                     <h2><?php the_title(); ?></h2>

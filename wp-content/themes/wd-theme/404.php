@@ -3,7 +3,7 @@
 <div class="content">
     <div class="gridRow">
         <div class="gridRow-col gridRow-col_size3of4" role="main">
-            <div class="box">
+            <div class="box mix-box_withRequiredHeight">
                 <div class="feature feature_condensed">
                     <div class="feature-hd">
                         <h1 class="hdg hdg_1">The page you are trying to reach cannot be found</h1>
