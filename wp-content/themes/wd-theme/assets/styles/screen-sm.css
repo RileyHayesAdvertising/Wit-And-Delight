@@ -11,11 +11,15 @@ Width: 24em and up
  Navigation
 ------------------------------------------------------------------------ */
 .nav > li + li {
-    margin-left: 10%;
+    margin-left: 4%;
 }
 
 .nav > li > a {
     font-size: 12px;
+}
+
+.nav li.nav-item_requiresWidescreen {
+    display: inline-block;
 }
 
 /* ---------------------------------------------------------------------

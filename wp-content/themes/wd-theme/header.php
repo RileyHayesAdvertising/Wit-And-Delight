@@ -71,11 +71,11 @@
             </div>
             <div class="masthead-nav" role="navigation">
                 <ul class="nav">
-                    <!-- <li><a href="#">Sign Up</a></li> -->
+                    <li><a href="<?php the_field('mailchimp_signup_link', 'options'); ?>" rel="external">Sign Up</a></li>
                     <li><a href="<?php the_field('rss_link', 'options'); ?>" rel="external">Subscribe</a></li>
                     <li<?php if (is_page(10654)) {?> class="isActive"<?php } ?>><a href="/about/">About</a></li>
                     <li<?php if (is_page(12408)) {?> class="isActive"<?php } ?>><a href="http://shop.witanddelight.com/">Shop</a></li>
-                    <li><a href="http://katearends.com/">Studio</a></li>
+                    <li class="nav-item_requiresWidescreen"><a href="http://katearends.com/">Studio</a></li>
                 </ul>
             </div>
             <div class="masthead-search isLargeView">

@@ -221,6 +221,10 @@ img, iframe {
     text-transform: uppercase;
 }
 
+.nav li.nav-item_requiresWidescreen {
+    display: none;
+}
+
 /* ---------------------------------------------------------------------
  Wrapper
 ------------------------------------------------------------------------ */
