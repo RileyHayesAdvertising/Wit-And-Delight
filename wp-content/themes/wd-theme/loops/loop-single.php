@@ -18,7 +18,9 @@
                                     </h2>
                                 </div>
                                 <div class="feature-author">
-                                    Posted <?php the_time('m'); ?>/<?php the_time('d'); ?>/<?php the_time('y'); ?> by <?php echo get_the_author_meta('first_name'); ?> <? echo get_the_author_meta('last_name') ?>
+                                    <div class="user-content">
+                                        Posted <?php the_time('m'); ?>/<?php the_time('d'); ?>/<?php the_time('y'); ?> by <?php echo get_the_author_meta('first_name'); ?> <? echo get_the_author_meta('last_name') ?>
+                                    </div>
                                 </div>
                                 <div class="feature-bd">
                                     <div class="user-content">

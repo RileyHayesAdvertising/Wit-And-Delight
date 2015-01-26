@@ -108,7 +108,7 @@ textarea {
  Base Styles
 ------------------------------------------------------------------------ */
 body {
-    font: 400 14px/1.7 "Libre Baskerville", Georgia, serif;
+    font: 400 14px/1.7 "proxima-nova", Helvetica, arial, sans-serif;
     color: #000000;
     background: #efedea;
 }
@@ -214,7 +214,6 @@ img, iframe {
 }
 
 .nav > li > a {
-    font-family: "proxima-nova", Helvetica, arial, sans-serif;
     font-weight: 800;
     font-size: 11px;
     letter-spacing: 2px;
@@ -390,6 +389,7 @@ img, iframe {
 .comment-bd {
     background: #000000;
     color: #ffffff;
+    letter-spacing: 1px; /* matches user-content letter-spacing */
     padding: 20px;
     position: relative;
     margin-bottom: 60px; /* margin-bottom 30px + the size of the border that draw's the comment arrow */
@@ -505,7 +505,6 @@ img, iframe {
     font-size: 14px;
     margin-left: 24px;
     margin-bottom: 16px;
-    font-family: "Libre Baskerville", serif;
 }
 
 /* ---------------------------------------------------------------------
@@ -884,8 +883,9 @@ a:hover .icn { opacity: .2; }
  Headings
 ------------------------------------------------------------------------ */
 .hdg {
-    font-weight: 400;
-    font-family: "Libre Baskerville", Georgia, serif;
+    font-family: "MillerDisplay Light", Georgia, serif;
+    font-style: normal;
+    font-weight: normal;
 }
 
 .hdg_center {
@@ -1130,6 +1130,10 @@ in the comment form so I used the provided ID */
 /* ---------------------------------------------------------------------
  User Content
 ------------------------------------------------------------------------ */
+.user-content {
+    letter-spacing: 1px;
+}
+
 .user-content hr {
     margin: 0 0 16px 0;
     background: #000000;
