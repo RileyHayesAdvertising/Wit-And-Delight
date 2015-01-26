@@ -2,7 +2,7 @@
             <div class="gridRow">
                 <div class="gridRow-col gridRow-col_size3of4" role="main">
                     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-                        <div class="box mix-box_withRequiredHeight">
+                        <div class="box">
                             <div class="feature feature_condensed">
                                 <div class="feature-hd feature-hd_isCentered">
                                     <div class="hdg hdg_4 mix-hdg_snowflake mix-hdg_snowflake_loose">
