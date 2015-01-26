@@ -14,7 +14,7 @@
 
     <div class="feature feature_condensed">
         <div class="feature-hd feature-hd_altaltalt">
-            <h2 class="hdg hdg_3">Comments &nbsp;/&nbsp; <?php echo getPostLikeLink( get_the_ID() ); ?></h2>
+            <h2 class="hdg hdg_3">Comments (<?php comments_number('0','1','%'); ?>) &nbsp;/&nbsp; <?php echo getPostLikeLink( get_the_ID() ); ?></h2>
         </div>
         <?php if ( have_comments() ) : ?>
         <div class="feature-bd">
