@@ -389,7 +389,6 @@ img, iframe {
 .comment-bd {
     background: #000000;
     color: #ffffff;
-    letter-spacing: 1px; /* matches user-content letter-spacing */
     padding: 20px;
     position: relative;
     margin-bottom: 60px; /* margin-bottom 30px + the size of the border that draw's the comment arrow */
@@ -886,6 +885,7 @@ a:hover .icn { opacity: .2; }
     font-family: "MillerDisplay Light", Georgia, serif;
     font-style: normal;
     font-weight: normal;
+    line-height: 1.5;
 }
 
 .hdg_center {
@@ -896,12 +896,12 @@ a:hover .icn { opacity: .2; }
     display: block;
 }
 
-.hdg_0 { font-size: 26px; }
-.hdg_1 { font-size: 20px; }
-.hdg_2 { font-size: 18px; }
-.hdg_3 { font-size: 16px; }
-.hdg_4 { font-size: 12px; }
-.hdg_5 { font-size: 10px; }
+.hdg_0 { font-size: 30px; }
+.hdg_1 { font-size: 24px; }
+.hdg_2 { font-size: 20px; }
+.hdg_3 { font-size: 18px; }
+.hdg_4 { font-size: 14px; }
+.hdg_5 { font-size: 12px; }
 
 .mix-hdg_snowflake {
     font-family: "proxima-nova", Helvetica, arial, sans-serif;
@@ -1130,10 +1130,6 @@ in the comment form so I used the provided ID */
 /* ---------------------------------------------------------------------
  User Content
 ------------------------------------------------------------------------ */
-.user-content {
-    letter-spacing: 1px;
-}
-
 .user-content hr {
     margin: 0 0 16px 0;
     background: #000000;
