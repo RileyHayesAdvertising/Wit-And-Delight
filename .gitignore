@@ -32,6 +32,8 @@ content/uploads/
 content/cache/
 content/wp-cache-config.php
 
-
-
+# WordPress Core #
+##################
+wordpress/
+index.php
 
