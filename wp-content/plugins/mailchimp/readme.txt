@@ -1,9 +1,9 @@
 === MailChimp List Subscribe Form ===
-Contributors: crowdfavorite
+Contributors: mailchimp
 Tags: mailchimp, email, newsletter, signup, marketing, plugin, widget
 Requires at least: 2.8
-Tested up to: 4.0
-Stable tag: 1.4.2
+Tested up to: 4.4.2
+Stable tag: 1.4.4
 
 == Description ==
 
@@ -168,6 +168,13 @@ Fixes major bug with "Settings" link on Plugins screen.
 Added support for multiple interest groups, field formatting based on type and date picker.
 
 == Changelog ==
+
+= 1.4.4 =
+* Stop using deprecated widget constructor
+
+= 1.4.3 =
+* Fix issue with improperly escaped text fields
+* Fix issue with malformed update profile link
 
 = 1.4.1 =
 * Update styles to be compatible with upcoming 3.8 wp-admin changes

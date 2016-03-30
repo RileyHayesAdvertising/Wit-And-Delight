@@ -10,7 +10,7 @@
                                     <div class="article">
                                         <div class="article-image">
                                             <a href="<?php echo the_permalink(); ?>">
-                                                <img src="<?php echo aq_resize(the_first_image(), '250'); ?>" alt="" />
+                                                <img src="<?php echo aq_resize(the_first_image(), '500'); ?>" alt="" />
                                             </a>
                                         </div>
                                         <div class="article-bd">

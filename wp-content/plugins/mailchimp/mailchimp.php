@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: MailChimp
-Plugin URI: http://www.mailchimp.com/plugins/mailchimp-wordpress-plugin/
+Plugin URI: https://connect.mailchimp.com/integrations/wordpress-list-subscribe-form/
 Description: The MailChimp plugin allows you to quickly and easily add a signup form for your MailChimp list.
-Version: 1.4.2
-Author: MailChimp and Crowd Favorite
-Author URI: http://mailchimp.com/api/
+Version: 1.4.4
+Author: MailChimp
+Author URI: http://mailchimp.com/
 */
 /*  Copyright 2008-2012  MailChimp.com  (email : api@mailchimp.com)
 
@@ -25,7 +25,7 @@ Author URI: http://mailchimp.com/api/
 */
 
 // Version constant for easy CSS refreshes
-define('MCSF_VER', '1.4.2');
+define('MCSF_VER', '1.4.4');
 
 // What's our permission (capability) threshold
 define('MCSF_CAP_THRESHOLD', 'manage_options');
@@ -347,6 +347,7 @@ function mailchimpSF_request_handler() {
 	}
 }
 add_action('init', 'mailchimpSF_request_handler');
+
 
 function mailchimpSF_auth_nonce_key($salt = null) {
 	if (is_null($salt)) {
@@ -1256,7 +1257,7 @@ function mailchimpSF_signup_submit() {
 	foreach($mv as $var) {
 		$opt = 'mc_mv_'.$var['tag'];
 
-		$opt_val = isset($_POST[$opt]) ? $_POST[$opt] : '';
+		$opt_val = isset($_POST[$opt]) ? stripslashes($_POST[$opt]) : '';
 
 		if (is_array($opt_val) && isset($opt_val['area'])) {
 			// This filters out all 'falsey' elements
@@ -1414,7 +1415,7 @@ function mailchimpSF_signup_submit() {
 							$uid = $account['user_id'];
 							$username = preg_replace('/\s+/', '-', $account['username']);
 							$eid = base64_encode($email);
-							$msg .= ' ' . sprintf(__('<a href="%s">Click here to update your profile.</a>', 'mailchimp_i18n'), "http://$username.$dc.list-manage.com/subscribe/send-email?u=$uid&id=$listId&e=$eid");
+							$msg .= ' ' . sprintf(__('<a href="%s">Click here to update your profile.</a>', 'mailchimp_i18n'), "http://$dc.list-manage.com/subscribe/send-email?u=$uid&id=$listId&e=$eid");
 						}
 
 						$errs[] = $msg;

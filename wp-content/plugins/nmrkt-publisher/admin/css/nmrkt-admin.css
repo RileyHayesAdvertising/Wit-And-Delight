@@ -1,0 +1,17 @@
+/**
+ * NMRKT CSS
+ */
+
+.button-primary.red{
+	background:#cd2d2d;
+	border-color:#aa1a1a;
+	-webkit-box-shadow: inset 0 1px 0 #cd2d2d,0 1px 0 rgba(0,0,0,.15);
+	box-shadow: inset 0 1px 0 #cd2d2d,0 1px 0 rgba(0,0,0,.15);
+}
+
+.button-primary.red:hover{
+	background:#d82b2b;
+	border-color:#aa1a1a;
+	-webkit-box-shadow: inset 0 1px 0 #cd2d2d,0 1px 0 rgba(0,0,0,.15);
+	box-shadow: inset 0 1px 0 #cd2d2d,0 1px 0 rgba(0,0,0,.15);
+}
