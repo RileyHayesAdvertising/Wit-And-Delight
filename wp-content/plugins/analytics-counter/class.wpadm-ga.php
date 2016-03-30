@@ -354,6 +354,9 @@ class WPAdm_GA
     }
     
     public static function generateGACodeOnSite() {
+        if (is_user_logged_in()) {
+            return;
+        }
         $token = WPAdm_GA_Options::getGAAccessToken();
         if (empty($token)) {
             $code = get_option('wpadm_ga_manual_tracking_code');
