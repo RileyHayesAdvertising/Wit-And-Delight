@@ -41,6 +41,20 @@ function include_scripts_and_styles() {
 add_action('wp_enqueue_scripts', 'include_scripts_and_styles');
 
 /* ====================================================================================================
+ Register Menus
+==================================================================================================== */
+function register_wd_menus() {
+  register_nav_menus(
+    array(
+      'masthead-menu' => __('Masthead Navigation'),
+      'sidebar-categories-menu' => __('Sidebar Categories'),
+      'footer-menu' => __('Footer Navigation')
+    )
+  );
+}
+add_action('init', 'register_wd_menus');
+
+/* ====================================================================================================
  Customize Admin Panel
 ==================================================================================================== */
 function hide_admin_pages(){
