@@ -13,6 +13,7 @@
    Proxima Nova / Sans Serif
    - "proxima-nova", Helvetica, arial, sans-serif;
    - 400 Regular
+   - 600 Semi Bold
    - 800 Extrabold
 
    Miller / Serif
@@ -224,6 +225,26 @@ a:focus {
 /* ---------------------------------------------------------------------
  Navigation
 ------------------------------------------------------------------------ */
+.nav {
+    display: none;
+}
+
+@media screen and (min-width: 53em) {
+    .nav {
+        display: block;
+        padding: 12px 0;
+        color: #ffffff;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-size: 11px;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .nav a {
+        color: #ffffff;
+    }
+}
 
 /* ---------------------------------------------------------------------
  Footer
@@ -323,7 +344,13 @@ a:focus {
 /* ---------------------------------------------------------------------
  Horizontal Lists
 ------------------------------------------------------------------------ */
+.hList > * {
+    display: inline-block;
+}
 
+.hList > * + * {
+    margin-left: 12px;
+}
 
 /* ---------------------------------------------------------------------
  Vertical Lists
@@ -346,6 +373,9 @@ a:focus {
 .comment {
     margin-bottom: 30px;
     font-family: "proxima-nova", Helvetica, arial, sans-serif;
+    max-width: 480px;
+    overflow-wrap: break-word;
+       word-wrap: break-word;
 }
 
 .comment-bd {
@@ -396,22 +426,13 @@ a:focus {
     color: #000000;
 }
 
-@media screen and (min-width: 30em) {
-    .comment {
-        width: 80%;
-    }
-}
-
-@media screen and (min-width: 40em) {
-    .comment {
-        width: 60%;
-    }
-}
-
 /* ---------------------------------------------------------------------
  Crate
 ------------------------------------------------------------------------ */
 .crate {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
     background: #000000;
     padding: 20px;
     max-width: 480px;

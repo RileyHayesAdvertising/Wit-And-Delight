@@ -27,7 +27,25 @@
         <div class="tier tier_dark">
             <div class="wrapper">
                 <div class="nav" role="navigation">
-                    Category Nav Goes Here
+                    <?php
+                        $nav_args = array(
+                            'menu' => '',
+                            'menu_class' => 'hList',
+                            'menu_id' => '',
+                            'container' => '',
+                            'container_class' => '',
+                            'container_id' => '',
+                            'before' => '',
+                            'after' => '',
+                            'link_before' => '',
+                            'link_after' => '',
+                            'echo' => true,
+                            'depth' => 0,
+                            'theme_location' => 'masthead-menu',
+                        );
+
+                        wp_nav_menu($nav_args);
+                    ?>
                 </div>
             </div>
         </div>
