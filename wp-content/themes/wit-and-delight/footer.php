@@ -4,7 +4,7 @@
                 <div class="footer" role="contentinfo">
                     <div class="footer-brand">
                         <a href="<?php echo home_url(); ?>">
-                            Wit &amp; Delight
+                            <?php echo file_get_contents(get_template_directory() . '/assets/images/logo-stacked.svg'); ?>
                         </a>
                     </div>
                     <div class="footer-social">
