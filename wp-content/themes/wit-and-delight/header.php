@@ -13,9 +13,6 @@
         <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-md.png">
         <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon-sm.png">
 
-        <!-- WP HEAD GENERATED -->
-        <?php wp_head(); ?>
-
         <!-- FONTS -->
         <script type="text/javascript" src="//use.typekit.net/ytk1rdh.js"></script>
         <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
