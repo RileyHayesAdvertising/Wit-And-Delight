@@ -1,0 +1,1037 @@
+/* ---------------------------------------------------------------------
+   Notes
+
+   Color Palette
+   ======================
+   Black    - #000000
+   Midnight - #201d1d
+   Grey     - #eeedeb
+   Rose     - #d8bdbe
+
+   Font Stacks
+   ======================
+   Proxima Nova / Sans Serif
+   - "proxima-nova", Helvetica, arial, sans-serif;
+   - 400 Regular
+   - 800 Extrabold
+
+   Miller / Serif
+   - "MillerDisplay Light", Georgia, serif;
+
+   Major Breakpoints
+   ======================
+   30em - 480px
+   40em - 640px
+   53em - 848px
+   61em - 976px
+
+---------------------------------------------------------------------- */
+
+/* ---------------------------------------------------------------------
+   Font Embeds
+---------------------------------------------------------------------- */
+@font-face {
+    font-family: "like_font";
+    src: url("../fonts/like_font/like_font.eot");
+    src: url("../fonts/like_font/like_font.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/like_font/like_font.woff") format("woff"),
+        url("../fonts/like_font/like_font.ttf") format("truetype"),
+        url("../fonts/like_font/like_font.svg#like_font") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    @font-face {
+        font-family: "like_font";
+        src: url("../fonts/like_font/like_font.svg#like_font") format("svg");
+    }
+}
+
+/* ---------------------------------------------------------------------
+   Base Reset (Thanks Eric Meyer)
+---------------------------------------------------------------------- */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font-weight: inherit;
+    font-style: inherit;
+    font-family: inherit;
+    vertical-align: baseline;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+img, audio, canvas, video, picture, iframe, embed {
+    max-width: 100% !important; /* media should never overflows it's container */
+}
+
+/* ---------------------------------------------------------------------
+   HTML5 Elements
+---------------------------------------------------------------------- */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, main {
+    display: block;
+}
+
+audio, canvas, video, progress, picture {
+    display: inline-block;
+}
+
+template {
+    display: none;
+}
+
+/* ---------------------------------------------------------------------
+   Form Elements
+---------------------------------------------------------------------- */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+}
+
+input[type="search"] {
+    -webkit-appearance: none;
+    -webkit-box-sizing: content-box;
+       -moz-box-sizing: content-box;
+            box-sizing: content-box;
+}
+
+textarea {
+    overflow: auto;
+    vertical-align: top;
+    resize: vertical;
+}
+
+::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+::-webkit-input-placeholder {
+   color: rgba(0,0,0,.3);
+}
+
+:-moz-placeholder {
+   color: rgba(0,0,0,.3);
+}
+
+/* ---------------------------------------------------------------------
+   Element Defaults
+---------------------------------------------------------------------- */
+body {
+    background-color: #ffffff; /* the footer background color */
+    font-family: "proxima-nova", Helvetica, arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+    font-style: normal;
+    font-weight: 400;
+    color: #000000;
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-transition: color .12s linear, background .12s linear;
+       -moz-transition: color .12s linear, background .12s linear;
+        -ms-transition: color .12s linear, background .12s linear;
+         -o-transition: color .12s linear, background .12s linear;
+            transition: color .12s linear, background .12s linear;
+}
+
+a:hover,
+a:focus {
+    color: #d8bdbe;
+    text-decoration: none;
+}
+
+/* ---------------------------------------------------------------------
+   Utility Classes
+---------------------------------------------------------------------- */
+.isVisuallyHidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.blockImage {
+    display: block;
+}
+
+@media screen and (max-width: 53em) {
+    .isWidescreenOnly {
+        display: none;
+    }
+}
+
+/* ---------------------------------------------------------------------
+ Masthead
+------------------------------------------------------------------------ */
+
+/* ---------------------------------------------------------------------
+ Logo
+------------------------------------------------------------------------ */
+
+/* ---------------------------------------------------------------------
+ Navigation
+------------------------------------------------------------------------ */
+
+/* ---------------------------------------------------------------------
+ Footer
+------------------------------------------------------------------------ */
+
+/* ---------------------------------------------------------------------
+ Tier
+------------------------------------------------------------------------ */
+.tier {
+    background-color: transparent; /* always transparent unless extended */
+}
+
+/* always clear a tier in case there is uncleared content that is floated */
+.tier:before,
+.tier:after {
+    content: " ";
+    display: table;
+}
+
+.tier:after {
+    clear: both;
+}
+
+/* tier extensions apply background */
+.tier_white {
+    background-color: #ffffff;
+}
+
+.tier_grey {
+    background-color: #eeedeb;
+}
+
+.tier_dark {
+    background-color: #201d1d;
+}
+
+/* ---------------------------------------------------------------------
+ Wrapper
+------------------------------------------------------------------------ */
+.wrapper {
+    max-width: 1280px;
+    min-width: 280px;
+    margin: 0 auto; /* center wrapper on the screen */
+    padding: 0 10px; /* don't let wrapper contents touch the edge of the screen */
+}
+
+.wrapper--noPad {
+    padding: 0 !important; /* push the wrapper edge to edge */
+}
+
+@media screen and (min-width: 40em) {
+    .wrapper {
+        padding: 0 20px;
+    }
+}
+
+@media screen and (min-width: 53em) {
+    .wrapper {
+        padding: 0 30px;
+    }
+}
+
+/* ---------------------------------------------------------------------
+ Pods
+------------------------------------------------------------------------ */
+.pods {
+    margin: -20px 0 0 -20px;
+    margin-bottom: 20px;
+    font-size: 0;
+}
+
+.pods > * {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;
+    padding: 20px 0 0 20px;
+    font-size: 13px;
+    width: 100%;
+    text-align: center;
+}
+
+@media screen and (min-width: 30em) {
+    .pods > * {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 53em) {
+    .pods > * {
+        width: 33.333333%;
+        margin-bottom: 0;
+    }
+}
+
+/* ---------------------------------------------------------------------
+ Horizontal Lists
+------------------------------------------------------------------------ */
+
+
+/* ---------------------------------------------------------------------
+ Vertical Lists
+------------------------------------------------------------------------ */
+.vList {
+    display: block;
+}
+
+.vlist > * {
+    margin-bottom: 22px;
+}
+
+.vlist-item_indented {
+    margin-left: 60px; /* super gross way to create indented comments */
+}
+
+/* ---------------------------------------------------------------------
+ Comment List
+------------------------------------------------------------------------ */
+.comment {
+    margin-bottom: 30px;
+    font-family: "proxima-nova", Helvetica, arial, sans-serif;
+}
+
+.comment-bd {
+    background: #000000;
+    color: #ffffff;
+    padding: 20px;
+    position: relative;
+    margin-bottom: 60px; /* margin-bottom 30px + the size of the border that draw's the comment arrow */
+}
+
+.comment-bd:after {
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    border-top: 30px solid #000000; /* match the color of the comment-bd to draw the arrow */
+    border-right: 30px solid transparent;
+}
+
+/* comment user-content styles */
+.comment-bd a {
+    color: #ffffff;
+}
+
+.comment-bd > * + * {
+    margin-top: 12px;
+}
+
+.comment-meta {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-bottom: 30px;
+    line-height: 24px; /* match the height of the avatar to create vertical alignment */
+}
+
+/* kate's comment style */
+.comment_kate .comment-bd {
+    background: #ffffff;
+    color: #000000;
+}
+
+.comment_kate .comment-bd:after {
+    border-top-color: #ffffff;
+}
+
+.comment_kate .comment-bd a {
+    color: #000000;
+}
+
+@media screen and (min-width: 30em) {
+    .comment {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 40em) {
+    .comment {
+        width: 60%;
+    }
+}
+
+/* ---------------------------------------------------------------------
+ Crate
+------------------------------------------------------------------------ */
+.crate {
+    background: #000000;
+    padding: 20px;
+    max-width: 480px;
+}
+
+/* ---------------------------------------------------------------------
+Grid
+------------------------------------------------------------------------ */
+@media screen and (min-width: 53em) {
+    .grid:before,
+    .grid:after {
+        content: " ";
+        display: table;
+    }
+
+    .grid:after {
+        clear: both;
+    }
+
+    .grid-col {
+        -webkit-box-sizing: border-box;
+           -moz-box-sizing: border-box;
+                box-sizing: border-box;
+        float: left;
+        position: relative;
+    }
+
+    .grid-col_main {
+        width: 75%;
+        padding-right: 20px;
+    }
+
+    .grid-col_aside {
+        width: 25%;
+    }
+}
+
+/* ---------------------------------------------------------------------
+Box
+------------------------------------------------------------------------ */
+.box {
+    background: #ffffff;
+    padding: 25px;
+}
+
+.box_tight {
+    padding: 20px 0;
+}
+
+/* ---------------------------------------------------------------------
+ Icons
+------------------------------------------------------------------------ */
+
+
+/* ---------------------------------------------------------------------
+ Form Styles
+------------------------------------------------------------------------ */
+.input {
+    background: #ffffff;
+    border: 0;
+    margin: 0;
+    padding: 6px 6px;
+    font-weight: 800;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    width: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+.input_alt {
+    width: 96%;
+    padding: 2%;
+    margin-bottom: 12px;
+    text-transform: none;
+}
+
+.input_textarea {
+    line-height: 1.8;
+    margin-bottom: 0;
+    text-transform: none;
+}
+
+
+@media screen and (min-width: 53em) {
+    .input_name {
+        float: left;
+        width: 34%;
+        padding: 2%;
+    }
+
+    .input_url {
+        float: right;
+        width: 54%;
+        padding: 2%;
+    }
+
+    .input_email {
+        float: left;
+        width: 56%;
+        padding: 2%;
+        margin-right: 12px;
+    }
+}
+
+@media (min-width: 61em) {
+    .input_email {
+        width: 63%;
+    }
+}
+
+.input_alt::-webkit-input-placeholder {
+   color: rgba(0,0,0,.6);
+}
+
+.input_alt:-moz-placeholder {
+   color: rgba(0,0,0,.6);
+}
+
+/* ---------------------------------------------------------------------
+ Pointer - styles for the comment form textarea
+------------------------------------------------------------------------ */
+.pointer {
+    position: relative;
+    margin-bottom: 50px; /* margin-bottom 20px + the size of the border that draw's the comment arrow */
+}
+
+.pointer:after {
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    border-top: 30px solid #ffffff; /* match the color of the comment-bd to draw the arrow */
+    border-right: 30px solid transparent;
+}
+
+/* ---------------------------------------------------------------------
+ Headings
+------------------------------------------------------------------------ */
+.hdg {
+    font-family: "MillerDisplay Light", Georgia, serif;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1.5;
+}
+
+.hdg_xxl {
+    font-size: 30px;
+    line-height: 1.3;
+}
+
+.hdg_xl {
+    font-size: 24px;
+    line-height: 1.3;
+}
+
+.hdg_lg {
+    font-size: 20px;
+}
+
+.hdg_md {
+    font-size: 18px;
+}
+
+.hdg_sm {
+    font-size: 14px;
+}
+
+.hdg_xs {
+    font-size: 12px;
+}
+
+.hdg_snowflake {
+    font-family: "proxima-nova", Helvetica, arial, sans-serif;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* ---------------------------------------------------------------------
+ Media Object
+------------------------------------------------------------------------ */
+.media {
+    overflow: hidden;
+}
+
+.media-element {
+    float: left;
+    margin-right: 16px;
+}
+
+.media-element img {
+    display: block;
+}
+
+.media-bd {
+    overflow: hidden;
+}
+
+/* ---------------------------------------------------------------------
+ Comment Button
+------------------------------------------------------------------------ */
+#commentForm-submit {
+    width: 115px;
+    height: 27px;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    -webkit-border-radius: 0;
+       -moz-border-radius: 0;
+            border-radius: 0;
+    text-indent: -9999px;
+    cursor: pointer;
+    background: url("../images/btn-lets-hear-it.png") no-repeat 0 0;
+    background-size: 100%;
+}
+
+/* ---------------------------------------------------------------------
+ User Content
+------------------------------------------------------------------------ */
+.user-content hr {
+    margin: 0 0 16px 0;
+    background: #000000;
+    color: #000000;
+    height: 1px;
+    border: none;
+    line-height: 1px;
+    font-size: 1px;
+}
+
+.user-content img {
+    max-width: 100% !important;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Paragraph Styles ---------------------------------------------------- */
+.user-content h1 {
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0 0 16px 0;
+}
+
+.user-content h2 {
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0 0 16px 0;
+}
+
+.user-content h3 {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0 0 16px 0;
+}
+
+.user-content h4 {
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0 0 16px 0;
+}
+
+.user-content h5 {
+    font-size: 12px;
+    font-weight: 400;
+    margin: 0 0 16px 0;
+}
+
+.user-content h6 {
+    font-size: 10px;
+    font-weight: 400;
+    margin: 0 0 16px 0;
+}
+
+.user-content p {
+    margin: 0 0 16px 0;
+}
+
+.user-content img {
+    margin: 0 0 22px 0; /* add 6px more margin to images than the norm */
+}
+
+.user-content blockquote {
+    margin: 0 0 16px 0;
+    padding: 12px;
+    background: #eee;
+    font-style: italic;
+}
+
+.user-content address {
+    margin: 0 0 16px 0;
+    font-style: italic;
+}
+
+.user-content pre {
+    margin: 0 0 16px 0;
+    font-family: "Lucida Console", Monaco, monospace;
+}
+
+/* Text Styles --------------------------------------------------------- */
+
+.user-content a {
+    text-decoration: underline;
+}
+
+.user-content a:link {
+}
+
+.user-content a:visited {
+}
+
+.user-content a:focus,
+.user-content a:hover {
+    color: #d8bdbe;
+}
+
+.user-content a:active {
+}
+
+.user-content em,
+.user-content i {
+    font-style: italic;
+}
+
+.user-content strong,
+.user-content b {
+    font-weight: 800;
+}
+
+.user-content abbr,
+.user-content acronym {
+    border-bottom: dotted 1px;
+}
+
+.user-content sub {
+    vertical-align: sub;
+    font-size: smaller;
+}
+
+.user-content sup {
+    vertical-align: super;
+    font-size: smaller;
+}
+
+.user-content u,
+.user-content ins {
+    text-decoration: underline;
+}
+
+.user-content s,
+.user-content strike,
+.user-content del {
+    text-decoration: line-through;
+}
+
+.user-content big {
+    font-size: larger;
+}
+
+.user-content small {
+    font-size: smaller;
+}
+
+.user-content q {
+    font-style: italic;
+}
+
+.user-content q::before {
+    content: open-quote;
+}
+
+.user-content q::after  {
+    content: close-quote;
+}
+
+.user-content q:lang(en) {
+    quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+.user-content samp,
+.user-content tt,
+.user-content code,
+.user-content kbd {
+    font-family: "Lucida Console", Monaco, monospace;
+}
+
+.user-content var {
+    font-style: italic;
+}
+
+.user-content cite {
+    font-style: italic;
+}
+
+.user-content dfn {
+    font-style: italic;
+}
+
+.user-content ins {
+    text-decoration: underline;
+}
+
+.user-content blink {
+    text-decoration: blink;
+}
+
+.user-content bdo {
+}
+
+/* List Styles --------------------------------------------------------- */
+
+.user-content ul,
+.user-content ol,
+.user-content dl {
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.user-content ul {
+    list-style-type: disc;
+    margin: 0 0 16px 0;
+}
+
+.user-content ol {
+    list-style-type: decimal;
+    margin: 0 0 16px 0;
+}
+
+.user-content dt {
+    font-weight: 800;
+}
+
+.user-content li,
+.user-content dd {
+    margin: 0 0 0 24px;
+}
+
+/* nested lists have no top/bottom margins */
+.user-content ul ul,
+.user-content ul ol,
+.user-content ul dl,
+.user-content ol ul,
+.user-content ol ol,
+.user-content ol dl,
+.user-content dl ul,
+.user-content dl ol,
+.user-content dl dl {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* 2 deep unordered lists use a circle */
+.user-content ol ul,
+.user-content ul ul {
+    list-style-type: circle;
+}
+
+/* 3 deep (or more) unordered lists use a square */
+.user-content ol ol ul,
+.user-content ol ul ul,
+.user-content ul ol ul,
+.user-content ul ul ul {
+    list-style-type: square;
+}
+
+/* Table Styles -------------------------------------------------------- */
+
+.user-content table {
+    margin: 0 0 22px 0;
+    width: 100% !important;
+    border-spacing: 2px;
+    border-collapse: separate;
+}
+
+.user-content caption {
+    font-size: smaller;
+}
+
+.user-content tr {
+    vertical-align: middle;
+}
+
+.user-content tbody {
+    vertical-align: middle;
+}
+
+.user-content thead {
+    vertical-align: middle;
+}
+
+.user-content tfoot {
+    vertical-align: middle;
+}
+
+.user-content td {
+    vertical-align: inherit;
+    text-align: inherit;
+    padding: 2px 4px;
+}
+
+.user-content th {
+    vertical-align: inherit;
+    text-align: inherit;
+    font-weight: 800;
+    padding: 2px 4px;
+    background-color: #666;
+    color: #fff;
+}
+
+.user-content tr.even td {
+    background-color: #ccc;
+}
+
+/* ---------------------------------------------------------------------
+ Responsive Video Player
+------------------------------------------------------------------------ */
+.videoPlayer {
+    position: relative;
+    padding-bottom: 56.25%; /* for 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.videoPlayer iframe,
+.videoPlayer object,
+.videoPlayer embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.user-content .videoPlayer {
+    margin-bottom: 16px;
+}
+
+/* ---------------------------------------------------------------------
+ POST LIKE STYLES
+------------------------------------------------------------------------ */
+[data-icon]:before { content: attr(data-icon); }
+
+[data-icon]:before,
+.icon-gear:before,
+.icon-like:before,
+.icon-unlike:before {
+  display: inline-block;
+  font-family: "like_font";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+.icon-like:before { content: "\f105"; }
+.icon-unlike:before { content: "\f106"; }
+.icon-gear:before {
+	content: "\f104";
+	-webkit-animation: spin 2s infinite linear;
+	-moz-animation: spin 2s infinite linear;
+	-o-animation: spin 2s infinite linear;
+	animation: spin 2s infinite linear;
+}
+
+@-moz-keyframes spin {
+  0% { -moz-transform: rotate(0deg); }
+  100% { -moz-transform: rotate(359deg); }
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(359deg); }
+}
+
+@-o-keyframes spin {
+  0% { -o-transform: rotate(0deg); }
+  100% { -o-transform: rotate(359deg); }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+a.jm-post-like {
+	font-weight: normal;
+	display: inline-block;
+	width: auto;
+	-moz-transition: all 0.3s ease-out 0.2s;
+	-webkit-transition: all 0.3s ease-out 0.2s;
+	-o-transition: all 0.3s ease-out 0.2s;
+}
+
+a.jm-post-like.liked { color: #da1b1b; }
+
+a.jm-post-like:hover,
+a.jm-post-like:active,
+a.jm-post-like:focus,
+a.liked:hover,
+a.liked:active,
+a.liked:focus {
+	color: #000;
+}
+
+
+
