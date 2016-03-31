@@ -1,6 +1,6 @@
 <div class="archive">
     <div class="archive-hd">
-        <h2>Posts</h2>
+        <h2 class="isVisuallyHidden">Posts</h2>
     </div>
     <div class="archive-bd">
         <ol class="vlist">

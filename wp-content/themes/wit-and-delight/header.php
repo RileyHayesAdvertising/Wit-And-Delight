@@ -54,7 +54,7 @@
                 <div class="masthead" role="banner">
                     <h1 class="logo">
                         <a href="<?php echo home_url(); ?>">
-                            Wit &amp; Delight
+                            <?php echo file_get_contents(get_template_directory() . '/assets/images/logo.svg'); ?>
                         </a>
                     </h1>
                 </div>
