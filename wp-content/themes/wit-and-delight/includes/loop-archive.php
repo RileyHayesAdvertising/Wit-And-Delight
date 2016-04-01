@@ -48,12 +48,7 @@
             <?php endif; ?>
         </ol> <!-- // END .vlist -->
     </div>
-    <!--
     <div class="archive-ft">
-        <ol>
-            <li><?php next_posts_link('Older Posts');  ?></li>
-            <li><?php previous_posts_link('Newer Posts');  ?></li>
-        </ol>
+        <!-- AJAX LOAD GOES HERE -->
     </div>
-    -->
 </div> <!-- // END .archive -->
