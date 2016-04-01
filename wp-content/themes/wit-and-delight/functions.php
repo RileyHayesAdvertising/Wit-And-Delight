@@ -174,14 +174,14 @@ function newgravatar ($avatar_defaults) {
    Excerpts
 ==================================================================================================== */
 /* custom length */
-function my_excerpt_length($length) {
-    return 46; // whatever you want the length to be.
+function wd_excerpt_length($length) {
+    return 20; // whatever you want the length to be.
 }
-add_filter('excerpt_length', 'my_excerpt_length');
+add_filter('excerpt_length', 'wd_excerpt_length');
 
 /* custom read more */
 function new_excerpt_more( $more ) {
-	return ' ... <a href="'. get_permalink( get_the_ID() ) . '">Read More</a>';
+	return ' ...';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
 
