@@ -14,32 +14,32 @@
                         <div class="footer-social-bd">
                             <ul class="hList hList_social">
                                 <li>
-                                    <a href="#">
+                                    <a href="mailto:<?php the_field('email_address', 'options'); ?>">
                                         <i class="icn icn_social"><?php echo file_get_contents(get_template_directory() . '/assets/images/icn-envelope.svg'); ?></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="<?php the_field('instagram_link', 'options'); ?>" target="_blank">
                                         <i class="icn icn_social"><?php echo file_get_contents(get_template_directory() . '/assets/images/icn-instagram.svg'); ?></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="<?php the_field('tumblr_link', 'options'); ?>" target="_blank">
                                         <i class="icn icn_social"><?php echo file_get_contents(get_template_directory() . '/assets/images/icn-tumblr.svg'); ?></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="<?php the_field('twitter_link', 'options'); ?>" target="_blank">
                                         <i class="icn icn_social"><?php echo file_get_contents(get_template_directory() . '/assets/images/icn-twitter.svg'); ?></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="<?php the_field('pinterest_link', 'options'); ?>" target="_blank">
                                         <i class="icn icn_social"><?php echo file_get_contents(get_template_directory() . '/assets/images/icn-pinterest.svg'); ?></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="<?php the_field('rss_link', 'options'); ?>" target="_blank">
                                         <i class="icn icn_social"><?php echo file_get_contents(get_template_directory() . '/assets/images/icn-rss.svg'); ?></i>
                                     </a>
                                 </li>
