@@ -574,22 +574,22 @@ a:focus {
    Blurb
 ------------------------------------------------------------------------ */
 .blurb-label {
-    margin-bottom: 24px;
+    margin-bottom: 20px;
 }
 
 .blurb-hd {
-    margin-bottom: 12px;
+    margin-bottom: 8px;
 }
 
 .blurb-bd {
     max-width: 400px;
-    margin: 0 auto 32px auto;
+    margin: 0 auto 42px auto;
 }
 
 @media screen and (min-width: 40em) {
     .blurb-bd {
         max-width: none; /* small screen reset */
-        margin: 0 0 32px 0; /* small screen reset */
+        margin: 0 0 42px 0; /* small screen reset */
     }
 }
 
