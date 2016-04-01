@@ -169,11 +169,7 @@ a {
     text-decoration: none;
     cursor: pointer;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
-    -webkit-transition: color .12s linear, background .12s linear;
-       -moz-transition: color .12s linear, background .12s linear;
-        -ms-transition: color .12s linear, background .12s linear;
-         -o-transition: color .12s linear, background .12s linear;
-            transition: color .12s linear, background .12s linear;
+    transition: color .12s linear, background .12s linear;
 }
 
 a:hover,
@@ -282,11 +278,47 @@ a:focus {
    Footer
 ------------------------------------------------------------------------ */
 .footer {
+    position: relative;
     padding: 20px 0;
 }
 
 .footer-brand {
     display: none;
+}
+
+.footer-social {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.footer-social-hd {
+    display: none;
+}
+
+.footer-nav {
+    margin-bottom: 6px;
+    font-family: "proxima-nova", Helvetica, arial, sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    font-style: normal;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.footer-legal {
+    font-family: "MillerDisplay Light", Georgia, serif;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: italic;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+@media screen and (min-width: 40em) {
+    .footer-nav {
+        margin-bottom: 2px;
+    }
 }
 
 @media screen and (min-width: 60em) {
@@ -297,6 +329,45 @@ a:focus {
     .footer-brand {
         display: block;
         width: 200px; /* constrain the logo */
+        margin-bottom: 18px;
+    }
+
+    .footer-social {
+        text-align: left; /* small screen reset */
+        margin-bottom: 0; /* small screen reset */
+    }
+
+    .footer-social-hd {
+        display: inline-block;
+        vertical-align: middle;
+        margin-top: 5px; /* get the hd and bd better vertically aligned */
+        padding-right: 40px;
+        font-family: "MillerDisplay Light", Georgia, serif;
+        font-size: 14px;
+        line-height: 1;
+        font-weight: normal;
+        font-style: italic;
+    }
+
+    .footer-social-bd {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .footer-nav {
+        margin-bottom: 0; /* small screen reset */
+        position: absolute;
+        top: 57px; /* magic number */
+        right: 0;
+        font-size: 16px;
+        text-align: right;
+    }
+
+    .footer-legal {
+        position: absolute;
+        top: 90px; /* footer-nav magic number + footer-nav height + mimicked margin (matches footer-nav initial margin) */
+        right: 0;
+        text-align: right;
     }
 }
 
@@ -400,6 +471,10 @@ a:focus {
 
 .hList > * + * {
     margin-left: 12px;
+}
+
+.hList_social > * + * {
+    margin-left: 20px;
 }
 
 /* ---------------------------------------------------------------------
@@ -571,7 +646,7 @@ a:focus {
 
     .teaser-bd {
         display: table-cell;
-        width: calc(50% - 30px);
+        width: 50%;
         padding-left: 30px;
         vertical-align: middle;
     }
@@ -611,7 +686,26 @@ a:focus {
 /* ---------------------------------------------------------------------
    Icons
 ------------------------------------------------------------------------ */
+.icn {
+    display: inline-block;
+    border: 0;
+    overflow: hidden;
+    vertical-align: middle;
+}
 
+.icn_social {
+    width: 18px;
+    height: 18px;
+}
+
+.icn_social path {
+    transition: fill .12s linear;
+}
+
+.icn_social:hover path,
+.icn_social:focus path {
+    fill: #d8bdbe;
+}
 
 /* ---------------------------------------------------------------------
    Form Styles
@@ -627,10 +721,8 @@ a:focus {
     text-transform: uppercase;
     width: 100%;
     -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
+       -moz-appearance: none;
+            appearance: none;
     border-radius: 0;
 }
 
@@ -778,9 +870,7 @@ a:focus {
     padding: 0;
     margin: 0;
     border: 0;
-    -webkit-border-radius: 0;
-       -moz-border-radius: 0;
-            border-radius: 0;
+    border-radius: 0;
     text-indent: -9999px;
     cursor: pointer;
     background: url("../images/btn-lets-hear-it.png") no-repeat 0 0;
@@ -1110,72 +1200,72 @@ a:focus {
 /* ---------------------------------------------------------------------
    POST LIKE STYLES
 ------------------------------------------------------------------------ */
-[data-icon]:before { content: attr(data-icon); }
+[data-icon]:before {
+    content: attr(data-icon);
+}
 
 [data-icon]:before,
 .icon-gear:before,
 .icon-like:before,
 .icon-unlike:before {
-  display: inline-block;
-  font-family: "like_font";
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  line-height: 1;
-  text-decoration: inherit;
-  text-rendering: optimizeLegibility;
-  text-transform: none;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
+    display: inline-block;
+    font-family: "like_font";
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-decoration: inherit;
+    text-rendering: optimizeLegibility;
+    text-transform: none;
+    -moz-osx-font-smoothing: grayscale;
+     -webkit-font-smoothing: antialiased;
+             font-smoothing: antialiased;
 }
 
-.icon-like:before { content: "\f105"; }
-.icon-unlike:before { content: "\f106"; }
+.icon-like:before {
+    content: "\f105";
+}
+
+.icon-unlike:before {
+    content: "\f106";
+}
+
 .icon-gear:before {
-	content: "\f104";
-	-webkit-animation: spin 2s infinite linear;
-	-moz-animation: spin 2s infinite linear;
-	-o-animation: spin 2s infinite linear;
-	animation: spin 2s infinite linear;
-}
-
-@-moz-keyframes spin {
-  0% { -moz-transform: rotate(0deg); }
-  100% { -moz-transform: rotate(359deg); }
+    content: "\f104";
+    -webkit-animation: spin 2s infinite linear;
+            animation: spin 2s infinite linear;
 }
 
 @-webkit-keyframes spin {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(359deg); }
-}
-
-@-o-keyframes spin {
-  0% { -o-transform: rotate(0deg); }
-  100% { -o-transform: rotate(359deg); }
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+    }
 }
 
 @keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(359deg);
-    transform: rotate(359deg);
-  }
+    0% {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+                transform: rotate(359deg);
+    }
 }
 
 a.jm-post-like {
-	font-weight: normal;
-	display: inline-block;
-	width: auto;
-	-moz-transition: all 0.3s ease-out 0.2s;
-	-webkit-transition: all 0.3s ease-out 0.2s;
-	-o-transition: all 0.3s ease-out 0.2s;
+    font-weight: normal;
+    display: inline-block;
+    width: auto;
+    transition: all 0.3s ease-out 0.2s;
 }
 
-a.jm-post-like.liked { color: #da1b1b; }
+a.jm-post-like.liked {
+    color: #da1b1b;
+}
 
 a.jm-post-like:hover,
 a.jm-post-like:active,
@@ -1183,7 +1273,7 @@ a.jm-post-like:focus,
 a.liked:hover,
 a.liked:active,
 a.liked:focus {
-	color: #000;
+    color: #000;
 }
 
 

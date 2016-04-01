@@ -8,23 +8,64 @@
                         </a>
                     </div>
                     <div class="footer-social">
-                        <ul>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Instagram</a></li>
-                            <li><a href="#">Tumblr</a></li>
-                            <li><a href="#">Twitter</a></li>
-                            <li><a href="#">Pinterest</a></li>
-                            <li><a href="#">RSS Feed</a></li>
-                        </ul>
+                        <div class="footer-social-hd">
+                            <h2>Keep In Touch</h2>
+                        </div>
+                        <div class="footer-social-bd">
+                            <ul class="hList hList_social">
+                                <li>
+                                    <a href="#">
+                                        <i class="icn icn_social"><?php echo file_get_contents(get_template_directory() . '/assets/images/icn-envelope.svg'); ?></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="icn icn_social"><?php echo file_get_contents(get_template_directory() . '/assets/images/icn-instagram.svg'); ?></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="icn icn_social"><?php echo file_get_contents(get_template_directory() . '/assets/images/icn-tumblr.svg'); ?></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="icn icn_social"><?php echo file_get_contents(get_template_directory() . '/assets/images/icn-twitter.svg'); ?></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="icn icn_social"><?php echo file_get_contents(get_template_directory() . '/assets/images/icn-pinterest.svg'); ?></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="icn icn_social"><?php echo file_get_contents(get_template_directory() . '/assets/images/icn-rss.svg'); ?></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="footer-nav">
-                        <ul>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Contact Us</a></li>
-                            <li><a href="#">Submissions</a></li>
-                            <li><a href="#">Legal</a></li>
-                            <li><a href="#">Press</a></li>
-                        </ul>
+                        <?php
+                            $subnav_args = array(
+                                'menu' => '',
+                                'menu_class' => 'hList',
+                                'menu_id' => '',
+                                'container' => '',
+                                'container_class' => '',
+                                'container_id' => '',
+                                'before' => '',
+                                'after' => '',
+                                'link_before' => '',
+                                'link_after' => '',
+                                'echo' => true,
+                                'depth' => 0,
+                                'theme_location' => 'footer-menu',
+                            );
+
+                            wp_nav_menu($subnav_args);
+                        ?>
                     </div>
                     <div class="footer-legal">
                         <small>Copyright Wit &amp; Delight LLC</small>
