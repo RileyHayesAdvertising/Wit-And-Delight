@@ -16,6 +16,7 @@
         <!-- FONTS -->
         <script type="text/javascript" src="//use.typekit.net/ytk1rdh.js"></script>
         <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+        <link href="//cloud.webtype.com/css/2eed833e-5790-485c-92a0-8e9a3e4d9721.css" rel="stylesheet" type="text/css" />
 
         <!-- WP HEAD GENERATED -->
         <?php wp_head(); ?>
