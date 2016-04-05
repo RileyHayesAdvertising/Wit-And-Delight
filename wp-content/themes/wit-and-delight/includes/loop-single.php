@@ -6,13 +6,13 @@
             <div class="box">
                 <div class="post">
                     <div class="post-label">
-                        <?php the_category(', '); ?>
+                        <span class="caption"><?php the_category(', '); ?></span>
                     </div>
                     <div class="post-media">
                         <img src="<?php echo the_first_image(); ?>" alt="" />
                     </div>
                     <div class="post-hd">
-                        <h2><?php the_title(); ?></h2>
+                        <h2 class="hdg hdg_xxl"><?php the_title(); ?></h2>
                     </div>
                     <div class="post-meta">
                         Posted <?php the_time('m'); ?>/<?php the_time('d'); ?>/<?php the_time('y'); ?> by <?php echo get_the_author_meta('first_name'); ?> <? echo get_the_author_meta('last_name') ?>

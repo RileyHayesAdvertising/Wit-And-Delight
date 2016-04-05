@@ -1,6 +1,6 @@
 <div class="comments">
     <div class="comments-hd">
-        <h2>Comments (<?php comments_number('0','1','%'); ?>) &nbsp;/&nbsp; <?php echo getPostLikeLink(get_the_ID()); ?></h2>
+        <h2 class="hdg hdg_md">Comments (<?php comments_number('0','1','%'); ?>) &nbsp;/&nbsp; <?php echo getPostLikeLink(get_the_ID()); ?></h2>
     </div>
     <?php if (have_comments()) : ?>
     <div class="comments-bd">
