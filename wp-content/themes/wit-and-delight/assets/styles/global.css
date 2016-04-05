@@ -429,6 +429,96 @@ a:focus {
 }
 
 /* ---------------------------------------------------------------------
+   Grid
+------------------------------------------------------------------------ */
+@media screen and (min-width: 60em) {
+    .grid:before,
+    .grid:after {
+        content: " ";
+        display: table;
+    }
+
+    .grid:after {
+        clear: both;
+    }
+
+    .grid-col {
+        -webkit-box-sizing: border-box;
+           -moz-box-sizing: border-box;
+                box-sizing: border-box;
+        float: left;
+        position: relative;
+    }
+
+    .grid-col_main {
+        width: 75%;
+        padding-right: 20px;
+    }
+
+    .grid-col_aside {
+        width: 25%;
+    }
+}
+
+/* ---------------------------------------------------------------------
+   Page
+------------------------------------------------------------------------ */
+.page {
+    margin-bottom: 40px;
+}
+
+/* ---------------------------------------------------------------------
+   Archive
+------------------------------------------------------------------------ */
+.archive {
+    margin-bottom: 40px;
+}
+
+/* ---------------------------------------------------------------------
+   Box
+------------------------------------------------------------------------ */
+.box {
+    background: #ffffff;
+    padding: 25px;
+}
+
+.box_tight {
+    padding: 20px 0;
+}
+
+/* ---------------------------------------------------------------------
+   Crate
+------------------------------------------------------------------------ */
+.crate {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    background: #000000;
+    padding: 20px;
+    max-width: 480px;
+}
+
+/* ---------------------------------------------------------------------
+   Media Object
+------------------------------------------------------------------------ */
+.media {
+    overflow: hidden;
+}
+
+.media-element {
+    float: left;
+    margin-right: 16px;
+}
+
+.media-element img {
+    display: block;
+}
+
+.media-bd {
+    overflow: hidden;
+}
+
+/* ---------------------------------------------------------------------
    Pods
 ------------------------------------------------------------------------ */
 .pods {
@@ -460,6 +550,83 @@ a:focus {
         width: 33.333333%;
         margin-bottom: 0;
     }
+}
+
+/* ---------------------------------------------------------------------
+   Teaser
+------------------------------------------------------------------------ */
+.teaser-media {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.teaser-bd {
+    text-align: center;
+}
+
+@media screen and (min-width: 40em) {
+    .teaser {
+        display: table;
+        table-layout: fixed;
+        width: 100%;
+    }
+
+    .teaser-media {
+        display: table-cell;
+        width: 50%;
+        margin-bottom: 0; /* small size reset */
+        vertical-align: middle;
+    }
+
+    .teaser-media > img {
+        display: block;
+    }
+
+    .teaser-bd {
+        display: table-cell;
+        width: 50%;
+        padding-left: 30px;
+        vertical-align: middle;
+    }
+}
+
+/* ---------------------------------------------------------------------
+   Blurb
+------------------------------------------------------------------------ */
+.blurb_centered {
+    text-align: center;
+}
+
+.blurb-label {
+    margin-bottom: 20px;
+}
+
+.blurb-hd {
+    margin-bottom: 8px;
+}
+
+.blurb-hd_push {
+    margin-bottom: 24px;
+}
+
+.blurb-bd {
+    max-width: 400px;
+    margin: 0 auto 42px auto;
+}
+
+@media screen and (min-width: 40em) {
+    .blurb-bd {
+        max-width: none; /* small screen reset */
+        margin: 0 0 42px 0; /* small screen reset */
+    }
+}
+
+/* ---------------------------------------------------------------------
+   Section
+------------------------------------------------------------------------ */
+.section-hd {
+    padding: 30px 0;
+    text-align: center;
 }
 
 /* ---------------------------------------------------------------------
@@ -552,150 +719,56 @@ a:focus {
 }
 
 /* ---------------------------------------------------------------------
-   Crate
+   Headings
 ------------------------------------------------------------------------ */
-.crate {
-    -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-            box-sizing: border-box;
-    background: #000000;
-    padding: 20px;
-    max-width: 480px;
+.hdg {
+    font-family: "MillerDisplay Light", Georgia, serif;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1.5;
+}
+
+.hdg_xxl {
+    font-size: 30px;
+    line-height: 1.3;
+}
+
+.hdg_xl {
+    font-size: 24px;
+    line-height: 1.3;
+}
+
+.hdg_lg {
+    font-size: 20px;
+}
+
+.hdg_md {
+    font-size: 18px;
+}
+
+.hdg_sm {
+    font-size: 14px;
+}
+
+.hdg_xs {
+    font-size: 12px;
 }
 
 /* ---------------------------------------------------------------------
-   Grid
+   Caption
 ------------------------------------------------------------------------ */
-@media screen and (min-width: 60em) {
-    .grid:before,
-    .grid:after {
-        content: " ";
-        display: table;
-    }
-
-    .grid:after {
-        clear: both;
-    }
-
-    .grid-col {
-        -webkit-box-sizing: border-box;
-           -moz-box-sizing: border-box;
-                box-sizing: border-box;
-        float: left;
-        position: relative;
-    }
-
-    .grid-col_main {
-        width: 75%;
-        padding-right: 20px;
-    }
-
-    .grid-col_aside {
-        width: 25%;
-    }
+.caption {
+    font-family: "proxima-nova", Helvetica, arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 800;
+    font-style: normal;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
-/* ---------------------------------------------------------------------
-   Page
------------------------------------------------------------------------- */
-.page {
-    margin-bottom: 40px;
-}
-
-/* ---------------------------------------------------------------------
-   Archive
------------------------------------------------------------------------- */
-.archive {
-    margin-bottom: 40px;
-}
-
-/* ---------------------------------------------------------------------
-   Box
------------------------------------------------------------------------- */
-.box {
-    background: #ffffff;
-    padding: 25px;
-}
-
-.box_tight {
-    padding: 20px 0;
-}
-
-/* ---------------------------------------------------------------------
-   Teaser
------------------------------------------------------------------------- */
-.teaser-media {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.teaser-bd {
-    text-align: center;
-}
-
-@media screen and (min-width: 40em) {
-    .teaser {
-        display: table;
-        table-layout: fixed;
-        width: 100%;
-    }
-
-    .teaser-media {
-        display: table-cell;
-        width: 50%;
-        margin-bottom: 0; /* small size reset */
-        vertical-align: middle;
-    }
-
-    .teaser-media > img {
-        display: block;
-    }
-
-    .teaser-bd {
-        display: table-cell;
-        width: 50%;
-        padding-left: 30px;
-        vertical-align: middle;
-    }
-}
-
-/* ---------------------------------------------------------------------
-   Blurb
------------------------------------------------------------------------- */
-.blurb_centered {
-    text-align: center;
-}
-
-.blurb-label {
-    margin-bottom: 20px;
-}
-
-.blurb-hd {
-    margin-bottom: 8px;
-}
-
-.blurb-hd_push {
-    margin-bottom: 24px;
-}
-
-.blurb-bd {
-    max-width: 400px;
-    margin: 0 auto 42px auto;
-}
-
-@media screen and (min-width: 40em) {
-    .blurb-bd {
-        max-width: none; /* small screen reset */
-        margin: 0 0 42px 0; /* small screen reset */
-    }
-}
-
-/* ---------------------------------------------------------------------
-   Section
------------------------------------------------------------------------- */
-.section-hd {
-    padding: 30px 0;
-    text-align: center;
+.caption_tight {
+    letter-spacing: 1px;
 }
 
 /* ---------------------------------------------------------------------
@@ -805,79 +878,6 @@ a:focus {
     left: 0;
     border-top: 30px solid #ffffff; /* match the color of the comment-bd to draw the arrow */
     border-right: 30px solid transparent;
-}
-
-/* ---------------------------------------------------------------------
-   Headings
------------------------------------------------------------------------- */
-.hdg {
-    font-family: "MillerDisplay Light", Georgia, serif;
-    font-style: normal;
-    font-weight: normal;
-    line-height: 1.5;
-}
-
-.hdg_xxl {
-    font-size: 30px;
-    line-height: 1.3;
-}
-
-.hdg_xl {
-    font-size: 24px;
-    line-height: 1.3;
-}
-
-.hdg_lg {
-    font-size: 20px;
-}
-
-.hdg_md {
-    font-size: 18px;
-}
-
-.hdg_sm {
-    font-size: 14px;
-}
-
-.hdg_xs {
-    font-size: 12px;
-}
-
-/* ---------------------------------------------------------------------
-   Caption
------------------------------------------------------------------------- */
-.caption {
-    font-family: "proxima-nova", Helvetica, arial, sans-serif;
-    font-size: 14px;
-    line-height: 1.5;
-    font-weight: 800;
-    font-style: normal;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
-
-.caption_tight {
-    letter-spacing: 1px;
-}
-
-/* ---------------------------------------------------------------------
-   Media Object
------------------------------------------------------------------------- */
-.media {
-    overflow: hidden;
-}
-
-.media-element {
-    float: left;
-    margin-right: 16px;
-}
-
-.media-element img {
-    display: block;
-}
-
-.media-bd {
-    overflow: hidden;
 }
 
 /* ---------------------------------------------------------------------
