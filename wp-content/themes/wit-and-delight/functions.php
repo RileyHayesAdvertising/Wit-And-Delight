@@ -188,7 +188,7 @@ add_filter('excerpt_more', 'new_excerpt_more');
 /* ====================================================================================================
    Social Followers Count Rounding
 ==================================================================================================== */
-function round_follower_counts($total) {
+function round_follower_count($total) {
     if ($total > 1000000) {
         return round($total / 1000000, 1) . 'M';
     } else if ( $total > 1000 ) {
@@ -196,6 +196,29 @@ function round_follower_counts($total) {
     }
 
     return $total;
+}
+
+/* ====================================================================================================
+   Get instagram stuff
+==================================================================================================== */
+function get_latest_instagram_image() {
+    $access_token = "592289533.97584da.efdf828c22c74b8bbbcaea3166050cb8";
+    $user_id = "11823250";
+    $api_url = "https://api.instagram.com/v1/users/" . $user_id . "/media/recent/?access_token=" . $access_token . "&count=1";
+
+    $data = wp_remote_get($api_url);
+    $data = json_decode($data['body'])->data[0];
+
+    $image_url = $data->images->standard_resolution->url;
+    $insta_link = $data->link;
+    $image_caption = "View the latest Wit & Delight Photo on Instagram";
+
+    $html = "<a href='" . $insta_link . "' target='_blank'>";
+    $html .= "<img src='" . $image_url . "' alt='" . $image_caption . "' />";
+    $html .= "</a>";
+
+    return $html;
+
 }
 
 /* ====================================================================================================

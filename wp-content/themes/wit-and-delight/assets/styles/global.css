@@ -272,6 +272,10 @@ a:focus {
     .sidebar {
         display: block;
     }
+
+    .sidebar-section {
+        padding-bottom: 20px;
+    }
 }
 
 /* ---------------------------------------------------------------------
@@ -511,6 +515,21 @@ a:focus {
     background: #000000;
     padding: 20px;
     max-width: 480px;
+}
+
+/* ---------------------------------------------------------------------
+   Stack - matches pill border(s)
+------------------------------------------------------------------------ */
+.stack {
+    border: 2px solid #ffffff;
+}
+
+.stack-item + .stack-item {
+    border-top: 2px solid #ffffff;
+}
+
+.stack-item_hasList > ul > li + li {
+    border-top: 2px solid #ffffff;
 }
 
 /* ---------------------------------------------------------------------
@@ -843,7 +862,7 @@ a:focus {
 }
 
 /* ---------------------------------------------------------------------
-   Form Styles
+   Input Styles
 ------------------------------------------------------------------------ */
 .input {
     background: #ffffff;
@@ -868,12 +887,26 @@ a:focus {
     text-transform: none;
 }
 
+.input_violator {
+    height: 100%;
+    line-height: 16px;
+    background: transparent;
+    font-family: "MillerDisplay Light", Georgia, serif;
+    font-weight: normal;
+    font-style: italic;
+    font-size: 14px;
+    letter-spacing: normal;
+    text-transform: none;
+    -webkit-box-sizing: border-box !important;
+       -moz-box-sizing: border-box !important;
+            box-sizing: border-box !important;
+}
+
 .input_textarea {
     line-height: 1.8;
     margin-bottom: 0;
     text-transform: none;
 }
-
 
 @media screen and (min-width: 60em) {
     .input_name {
@@ -908,6 +941,74 @@ a:focus {
 
 .input_alt:-moz-placeholder {
    color: rgba(0,0,0,.6);
+}
+
+.input_violator::-webkit-input-placeholder {
+   color: #000000;
+   text-align: center;
+}
+
+.input_violator:-moz-placeholder {
+   color: #000000;
+   text-align: center;
+}
+
+/* ---------------------------------------------------------------------
+   Btn
+------------------------------------------------------------------------ */
+.btn {
+    display: block;
+    width: 100%;
+    height: 28px;
+    line-height: 16px;
+    padding: 6px;
+    margin: 0;
+    border: 0;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    background: transparent;
+    color: #000000;
+    cursor: pointer;
+    font-family: "proxima-nova", Helvetica, arial, sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+    font-style: normal;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.btn:hover,
+.btn:active,
+.btn:focus {
+    color: #000000;
+}
+
+/* ---------------------------------------------------------------------
+   Pill
+------------------------------------------------------------------------ */
+.pill:before,
+.pill:after {
+    content: " ";
+    display: table;
+}
+
+.pill:after {
+    clear: both;
+}
+
+.pill-section {
+    overflow: visible;
+    float: left;
+    width: 50%;
+    border: 2px solid #ffffff;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+.pill-section_fill {
+    background-color: #ffffff;
 }
 
 /* ---------------------------------------------------------------------
