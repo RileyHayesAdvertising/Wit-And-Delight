@@ -24,6 +24,7 @@
    30em - 480px
    40em - 640px
    60em - 960px
+   70em - 1120px
 
 ---------------------------------------------------------------------- */
 
@@ -455,8 +456,18 @@ a:focus {
     }
 
     .grid-col_main {
-        width: 75%;
+        width: 68%;
         padding-right: 20px;
+    }
+
+    .grid-col_aside {
+        width: 32%;
+    }
+}
+
+@media screen and (min-width: 72em) {
+    .grid-col_main {
+        width: 75%;
     }
 
     .grid-col_aside {
@@ -524,12 +535,24 @@ a:focus {
     border: 2px solid #ffffff;
 }
 
+.stack-item {
+    padding: 6px 20px;
+}
+
 .stack-item + .stack-item {
     border-top: 2px solid #ffffff;
 }
 
-.stack-item_hasList > ul > li + li {
-    border-top: 2px solid #ffffff;
+.stack-item_isOffset {
+    padding-top: 12px;
+}
+
+.stack-item_isCentered {
+    text-align: center;
+}
+
+.stack-item_hasList {
+    padding: 0 0; /* remove padding */
 }
 
 /* ---------------------------------------------------------------------
@@ -698,6 +721,10 @@ a:focus {
 /* ---------------------------------------------------------------------
    Horizontal Lists
 ------------------------------------------------------------------------ */
+.hList_isCentered {
+    display: inline-block;
+}
+
 .hList > * {
     display: inline-block;
 }
@@ -856,9 +883,46 @@ a:focus {
     transition: fill .12s linear;
 }
 
-.icn_social:hover path,
-.icn_social:focus path {
+a:hover .icn_social path,
+a:focus .icn_social path {
     fill: #d8bdbe;
+}
+
+/* ---------------------------------------------------------------------
+   Dot
+------------------------------------------------------------------------ */
+.dot {
+    display: block;
+    width: 45px;
+}
+
+.dot-image {
+    display: block;
+    width: 17px;
+    height: 17px;
+    padding: 14px;
+    margin-bottom: 8px;
+    border: 0;
+    border-radius: 50%;
+    background-color: #000000;
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+.dot-image path {
+    fill: #ffffff;
+}
+
+.dot-label {
+    display: block;
+    font-family: "proxima-nova", Helvetica, arial, sans-serif;
+    font-size: 10px;
+    line-height: 1;
+    font-weight: 800;
+    font-style: normal;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
 }
 
 /* ---------------------------------------------------------------------

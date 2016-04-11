@@ -5,29 +5,33 @@
     </div>
     <div class="sidebar-section">
         <div class="stack">
-            <div class="stack-item">
-                <h2>Keep in Touch</h2>
+            <div class="stack-item stack-item_isCentered">
+                <h2 class="hdg hdg_lg">Keep in Touch</h2>
             </div>
-            <div class="stack-item">
-                <ul>
+            <div class="stack-item stack-item_isCentered stack-item_isOffset">
+                <ul class="hList hList_isCentered">
                     <li>
-                        <a href="<?php the_field('instagram_link', 'options'); ?>">
-                            Instagram <?php echo round_follower_count(get_scp_counter('instagram')); ?>
+                        <a class="dot" href="<?php the_field('instagram_link', 'options'); ?>" target="_blank">
+                            <span class="dot-image"><?php echo file_get_contents(get_template_directory() . '/assets/images/icn-instagram.svg'); ?></span>
+                            <span class="dot-label"><?php echo round_follower_count(get_scp_counter('instagram')); ?></span>
                         </a>
                     </li>
                     <li>
-                        <a href="<?php the_field('tumblr_link', 'options'); ?>">
-                            Tumblr <?php echo round_follower_count(get_scp_counter('tumblr')); ?>
+                        <a class="dot" href="<?php the_field('tumblr_link', 'options'); ?>" target="_blank">
+                            <span class="dot-image"><?php echo file_get_contents(get_template_directory() . '/assets/images/icn-tumblr.svg'); ?></span>
+                            <span class="dot-label"><?php echo round_follower_count(get_scp_counter('tumblr')); ?></span>
                         </a>
                     </li>
                     <li>
-                        <a href="<?php the_field('twitter_link', 'options'); ?>">
-                            Twitter <?php echo round_follower_count(get_scp_counter('twitter')); ?>
+                        <a class="dot" href="<?php the_field('twitter_link', 'options'); ?>" target="_blank">
+                            <span class="dot-image"><?php echo file_get_contents(get_template_directory() . '/assets/images/icn-twitter.svg'); ?></span>
+                            <span class="dot-label"><?php echo round_follower_count(get_scp_counter('twitter')); ?></span>
                         </a>
                     </li>
                     <li>
-                        <a href="<?php the_field('pinterest_link', 'options'); ?>">
-                            Pinterest <?php echo round_follower_count(get_scp_counter('pinterest')); ?>
+                        <a class="dot" href="<?php the_field('pinterest_link', 'options'); ?>" target="_blank">
+                            <span class="dot-image"><?php echo file_get_contents(get_template_directory() . '/assets/images/icn-pinterest.svg'); ?></span>
+                            <span class="dot-label"><?php echo round_follower_count(get_scp_counter('pinterest')); ?></span>
                         </a>
                     </li>
                 </ul>
@@ -54,7 +58,7 @@
     <div class="sidebar-section">
         <div class="stack">
             <div class="stack-item">
-                <h2>You might also like</h2>
+                <h2 class="caption">You might also like...</h2>
             </div>
             <div class="stack-item stack-item_hasList">
                 <?php
@@ -82,8 +86,8 @@
     <div class="sidebar-section">
         <?php echo get_latest_instagram_image(); ?>
         <div class="stack">
-            <div class="stack-item">
-                <h2>Daily Snapshot</h2>
+            <div class="stack-item stack-item_isCentered">
+                <h2 class="caption">Daily Snapshot</h2>
             </div>
         </div>
     </div>
