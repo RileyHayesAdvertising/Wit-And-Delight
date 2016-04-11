@@ -24,7 +24,8 @@
    30em - 480px
    40em - 640px
    60em - 960px
-   70em - 1120px
+   72em - 1152px
+   80em - 1240px
 
 ---------------------------------------------------------------------- */
 
@@ -268,7 +269,7 @@ a:focus {
     display: none;
 }
 
-/* media query matches grid media query */
+/* media query matches grid starter media query */
 @media screen and (min-width: 60em) {
     .sidebar {
         display: block;
@@ -472,6 +473,16 @@ a:focus {
 
     .grid-col_aside {
         width: 25%;
+    }
+}
+
+@media screen and (min-width: 80em) {
+    .grid-col_main {
+        width: 76%;
+    }
+
+    .grid-col_aside {
+        width: 24%;
     }
 }
 
@@ -716,6 +727,26 @@ a:focus {
     margin-bottom: 30px;
     padding-bottom: 20px;
     border-bottom: 1px solid #000000;
+}
+
+/* ---------------------------------------------------------------------
+   Waypoint
+------------------------------------------------------------------------ */
+.waypoint > * {
+    font-family: "MillerDisplay Light", Georgia, serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1.5;
+}
+
+.waypoint > * + * {
+    border-top: 2px solid #ffffff; /* matches .stack */
+}
+
+.waypoint > * a {
+    display: block;
+    padding: 6px 20px; /* matches .stack */
 }
 
 /* ---------------------------------------------------------------------

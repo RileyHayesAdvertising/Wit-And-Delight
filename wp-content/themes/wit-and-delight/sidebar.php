@@ -64,7 +64,7 @@
                 <?php
                     $sidebar_nav_args = array(
                         'menu' => '',
-                        'menu_class' => '',
+                        'menu_class' => 'waypoint',
                         'menu_id' => '',
                         'container' => '',
                         'container_class' => '',
