@@ -13,7 +13,9 @@
         <?php endif; ?>
     </div>
     <?php endwhile; endif; ?>
+    <?php if(get_field('shopstyle_list_id')): ?>
     <div class="page-ft">
-        <?php echo get_shopstyle_products(); ?>
+        <?php echo get_shopstyle_products(get_field('shopstyle_list_id')); ?>
     </div>
+    <?php endif; ?>
 </div> <!-- // END .page -->

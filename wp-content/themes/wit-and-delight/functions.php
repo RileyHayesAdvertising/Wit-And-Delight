@@ -221,12 +221,13 @@ function get_latest_instagram_image() {
 }
 
 /* ====================================================================================================
-   Get shopstyle lists
+   Get shopstyle product - must supply list ID
 ==================================================================================================== */
-function get_shopstyle_products() {
+function get_shopstyle_products($id) {
     $api_key = 'uid7025-33221705-58';
-    $list_id = '46359992';
-    $api_url = 'http://api.shopstyle.com/api/v2/lists/' . $list_id . '/items?pid=' . $api_key;
+    $list_id = $id;
+    $limit = '48';
+    $api_url = 'http://api.shopstyle.com/api/v2/lists/' . $list_id . '/items?pid=' . $api_key . '&limit=' . $limit;
 
     $data = wp_remote_get($api_url);
     $products =json_decode($data['body'])->favorites;
