@@ -493,6 +493,10 @@ a:focus {
     margin-bottom: 40px;
 }
 
+.page-bd_push {
+    padding-bottom: 20px;
+}
+
 /* ---------------------------------------------------------------------
    Archive
 ------------------------------------------------------------------------ */
@@ -1176,6 +1180,10 @@ a:focus .icn_social path {
 /* ---------------------------------------------------------------------
    User Content
 ------------------------------------------------------------------------ */
+.user-content > *:last-child {
+    margin-bottom: 0 !important; /* remove margin from the last item */
+}
+
 .user-content hr {
     margin: 0 0 20px 0;
     background: #000000;
