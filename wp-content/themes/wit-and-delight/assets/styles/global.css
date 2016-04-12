@@ -621,6 +621,40 @@ a:focus {
 }
 
 /* ---------------------------------------------------------------------
+   Product
+------------------------------------------------------------------------ */
+.product-media {
+    height: 140px;
+    margin-bottom: 30px;
+}
+
+.product-media > img {
+    max-height: 140px;
+}
+
+.product-hd {
+    margin-bottom: 6px;
+    font-family: "MillerDisplay Light", Georgia, serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1.5;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.product-bd {
+    font-family: "proxima-nova", Helvetica, arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 800;
+    font-style: normal;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* ---------------------------------------------------------------------
    Teaser
 ------------------------------------------------------------------------ */
 .teaser-media {

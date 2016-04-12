@@ -114,7 +114,7 @@ function the_first_image() {
 /* used in conjunction with the_first_image to avoid duplicates */
 function remove_first_image ($content) {
     if (!is_page() && !is_feed() && !is_feed() && !is_home()) {
-        $content = preg_replace("/<img[^>]+\>/i", "", $content, 1);
+        $content = preg_replace('/<img[^>]+\>/i', '', $content, 1);
     } return $content;
 }
 add_filter('the_content', 'remove_first_image');
@@ -125,7 +125,7 @@ add_filter( 'image_send_to_editor', 'remove_dimensions', 10 );
 add_filter( 'the_content', 'remove_dimensions', 10 );
 
 function remove_dimensions( $html ) {
-   $html = preg_replace( '/(width|height)="\d*"\s/', "", $html );
+   $html = preg_replace( '/(width|height)="\d*"\s/', '', $html );
    return $html;
 }
 
@@ -202,23 +202,60 @@ function round_follower_count($total) {
    Get instagram stuff
 ==================================================================================================== */
 function get_latest_instagram_image() {
-    $access_token = "592289533.97584da.efdf828c22c74b8bbbcaea3166050cb8";
-    $user_id = "11823250";
-    $api_url = "https://api.instagram.com/v1/users/" . $user_id . "/media/recent/?access_token=" . $access_token . "&count=1";
+    $access_token = '592289533.97584da.efdf828c22c74b8bbbcaea3166050cb8';
+    $user_id = '11823250';
+    $api_url = 'https://api.instagram.com/v1/users/' . $user_id . '/media/recent/?access_token=' . $access_token . '&count=1';
 
     $data = wp_remote_get($api_url);
     $data = json_decode($data['body'])->data[0];
 
     $image_url = $data->images->standard_resolution->url;
     $insta_link = $data->link;
-    $image_caption = "View the latest Wit & Delight Photo on Instagram";
+    $image_caption = 'View the latest Wit & Delight Photo on Instagram';
 
-    $html = "<a href='" . $insta_link . "' target='_blank'>";
-    $html .= "<img src='" . $image_url . "' alt='" . $image_caption . "' />";
-    $html .= "</a>";
+    $html = '<a href="' . $insta_link . '" target="_blank">';
+    $html .= '<img src="' . $image_url . '" alt="' . $image_caption . '" />';
+    $html .= '</a>';
 
     return $html;
+}
 
+/* ====================================================================================================
+   Get shopstyle lists
+==================================================================================================== */
+function get_shopstyle_products() {
+    $api_key = 'uid7025-33221705-58';
+    $list_id = '46359992';
+    $api_url = 'http://api.shopstyle.com/api/v2/lists/' . $list_id . '/items?pid=' . $api_key;
+
+    $data = wp_remote_get($api_url);
+    $products =json_decode($data['body'])->favorites;
+
+    $html = '<ul class="pods">';
+
+    foreach($products as $product) {
+        $html .= '<li>';
+        $html .= '<a href="' . $product->product->clickUrl . '" target="_blank">';
+        $html .= '<div class="box">';
+        $html .= '<div class="product">';
+        $html .= '<div class="product-media">';
+        $html .= '<img src="' . $product->product->image->sizes->XLarge->url . '" alt="' . $product->product->name . '" />';
+        $html .= '</div>';
+        $html .= '<div class="product-hd">';
+        $html .= $product->product->name;
+        $html .= '</div>';
+        $html .= '<div class="product-bd">';
+        $html .= $product->product->priceLabel;
+        $html .= '</div>';
+        $html .= '</div>';
+        $html .= '</div>';
+        $html .= '</a>';
+        $html .= '</li>';
+    }
+
+    $html .= '</ul>';
+
+    return $html;
 }
 
 /* ====================================================================================================
