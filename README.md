@@ -133,6 +133,17 @@ RewriteRule . /witanddelight.com/index.php [L]
 1. Modify `.htaccess` to run locally.
 
    * Update the `RewriteBase` and `RewriteRule` to point to the proper location in your dev environment
+
+1. Create an `index.php` file
+
+   `touch index.php`
+
+1. Open `index.php` and add the following code
+
+   ```
+define('WP_USE_THEMES', true);
+require( dirname( __FILE__ ) . '/wordpress/wp-blog-header.php' );
+```
    
 1. Visit your dev environment in the browser and verify the site is working
 
