@@ -531,6 +531,13 @@ a:focus {
     padding: 20px 0;
 }
 
+.box_cta {
+    padding: 15px 0;
+    border-top: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    background-color: transparent;
+}
+
 /* ---------------------------------------------------------------------
    Crate
 ------------------------------------------------------------------------ */
@@ -725,6 +732,23 @@ a:focus {
         max-width: none; /* small screen reset */
         margin: 0 0 42px 0; /* small screen reset */
     }
+}
+
+/* ---------------------------------------------------------------------
+   CTA
+------------------------------------------------------------------------ */
+.cta {
+    max-width: 280px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.cta-embellishment {
+    margin-bottom: 18px;
+}
+
+.cta-hd {
+    margin-bottom: 10px;
 }
 
 /* ---------------------------------------------------------------------
