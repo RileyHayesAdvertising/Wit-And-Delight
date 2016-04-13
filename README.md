@@ -65,7 +65,8 @@ Wit & Delight is the personal website of Kate Arends.
 
 1. Open `wp-config.php` and add the following code
 
-   ```<?php
+   ```
+<?php
 
 define('DB_NAME', 'database');
 define('DB_USER', 'foo');
@@ -101,7 +102,8 @@ if ( !defined('ABSPATH') )
 	define('ABSPATH', dirname(__FILE__) . '/');
 
 require_once(ABSPATH . 'wp-settings.php');
-   ```
+?>
+```
 
 1. Modify `wp-config.php` to run locally.
 
@@ -115,7 +117,8 @@ require_once(ABSPATH . 'wp-settings.php');
 
 1. 1. Open `.htaccess` and add the following code
 
-   ```# BEGIN WordPress
+   ```
+# BEGIN WordPress
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteBase /witanddelight.com/
@@ -125,10 +128,22 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /witanddelight.com/index.php [L]
 </IfModule>
 # END WordPress
-   ```
+```
+
 1. Modify `.htaccess` to run locally.
 
    * Update the `RewriteBase` and `RewriteRule` to point to the proper location in your dev environment
+
+1. Create an `index.php` file
+
+   `touch index.php`
+
+1. Open `index.php` and add the following code
+
+   ```
+define('WP_USE_THEMES', true);
+require( dirname( __FILE__ ) . '/wordpress/wp-blog-header.php' );
+```
    
 1. Visit your dev environment in the browser and verify the site is working
 
