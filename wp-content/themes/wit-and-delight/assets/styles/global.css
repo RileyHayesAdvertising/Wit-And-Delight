@@ -218,6 +218,12 @@ a:focus {
     }
 }
 
+@media screen and (min-width: 60em) {
+    .masthead {
+        padding: 82px 0 40px 0; /* padding top is 40px + height of the sticky nav */
+    }
+}
+
 /* ---------------------------------------------------------------------
    Logo
 ------------------------------------------------------------------------ */
@@ -406,6 +412,15 @@ a:focus {
 
 .tier_dark {
     background-color: #201d1d;
+}
+
+/* sticky-ness! */
+.tier_isSticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999999;
 }
 
 /* ---------------------------------------------------------------------

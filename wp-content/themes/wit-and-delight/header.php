@@ -22,7 +22,7 @@
         <?php wp_head(); ?>
     </head>
     <body>
-        <div class="tier tier_dark">
+        <div class="tier tier_dark tier_isSticky">
             <div class="wrapper">
                 <div class="nav" role="navigation">
                     <?php
