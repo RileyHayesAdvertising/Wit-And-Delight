@@ -1,9 +1,9 @@
 <div class="archive">
     <div class="archive-hd">
-        <h2 class="isVisuallyHidden">Posts</h2>
+        <h2 class="isVisuallyHidden">Recent Posts</h2>
     </div>
     <div class="archive-bd">
-        <ol class="vlist">
+        <ol class="vlist" id="js-loadMoreTarget">
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
                 <li>
                     <div class="box">
@@ -36,7 +36,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div> <!-- // END .box -->
+                    </div>
                 </li>
                 <?php if (($wp_query->current_post + 1) == 5) : ?>
                 <li>
@@ -92,6 +92,6 @@
         </ol> <!-- // END .vlist -->
     </div>
     <div class="archive-ft">
-        <!-- AJAX LOAD GOES HERE -->
+        <button id="js-loadMoreTrigger">Load More</button>
     </div>
 </div> <!-- // END .archive -->
