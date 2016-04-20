@@ -3,7 +3,7 @@
         <h2 class="isVisuallyHidden">Recent Posts</h2>
     </div>
     <div class="archive-bd">
-        <ol class="vlist" id="js-loadMoreTarget">
+        <ol class="vlist">
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
                 <li>
                     <div class="box">
@@ -92,6 +92,6 @@
         </ol> <!-- // END .vlist -->
     </div>
     <div class="archive-ft">
-        <button id="js-loadMoreTrigger">Load More</button>
+        <button>Load More</button>
     </div>
 </div> <!-- // END .archive -->

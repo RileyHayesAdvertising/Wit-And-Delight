@@ -42,8 +42,7 @@ function include_scripts_and_styles() {
         'wd-script',
         'WPVARS',
         array(
-            'siteurl' => get_bloginfo('url'),
-            'posts_per_page' => get_option('posts_per_page')
+            'siteurl' => get_bloginfo('url')
         )
     );
 }
