@@ -42,7 +42,8 @@ function include_scripts_and_styles() {
         'wd-script',
         'WPVARS',
         array(
-            'siteurl' => get_bloginfo('url')
+            'siteurl' => get_bloginfo('url'),
+            'ajaxURL' => admin_url('admin-ajax.php')
         )
     );
 }
@@ -266,6 +267,116 @@ function get_shopstyle_products($id) {
 
     return $html;
 }
+
+/* ====================================================================================================
+ Load More Posts
+==================================================================================================== */
+add_action('wp_ajax_load_more_posts', 'load_more_posts');
+add_action( 'wp_ajax_nopriv_load_more_posts', 'load_more_posts' );
+function load_more_posts() {
+    if (!wp_verify_nonce($_GET['nonce'], "load_more_posts")) {
+        die();
+    } else {
+        if(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
+
+            // Determine if by pop or category
+            $postsPerPage = 12;
+            $offset = $_GET['page'] ? $_GET['page'] * $postsPerPage : 0;
+            $ids = array();
+
+            // Determine if it's a category
+            if($_GET['category'] && $_GET['category'] == 'popular') {
+                // Figure out this garbage
+                ob_start();
+                    wpp_get_mostpopular("range=weekly");
+                echo json_encode(array('html' => ob_get_clean()));
+                exit;
+                $ids = ob_get_clean();
+                preg_match('/{id}(.*){id}/i', $ids, $matches);
+                $ids = array_filter(explode(',', $matches[1]));
+
+            } else {
+                $category = $_GET['category'] === 'recent' || $_GET['category'] === 'popular' ? '' : get_cat_ID($_GET['category']);
+
+                // Get Posts
+                $posts = new WP_Query(array(
+                    'posts_per_page'   => $postsPerPage,
+                    'offset'           => $offset,
+                    'cat'              => $category,
+                    'orderby'          => 'date',
+                    'order'            => 'DESC',
+                    'post_type'        => 'post',
+                    'post_status'      => 'publish',
+                    'suppress_filters' => true,
+                    'post__in'         => $ids
+                ));
+                
+                $debug = array(
+                    'category' => $_GET['category'],
+                    'category id' => $category,
+                    'offset' => $offset,
+                    'page' => $_GET['page'],
+                    'ids' => $ids
+                );
+
+                // The Loop
+                if ($posts->have_posts()) {
+                    ob_start();
+                    while ($posts->have_posts()) {
+                        $posts->the_post();
+                        get_template_part( 'includes/loop', 'archive-single' );
+                    }
+                    echo json_encode(array('html' => ob_get_clean(), 'debug' => $debug));
+                } else {
+                    echo json_encode(array('html' => '', 'debug' => $debug));
+                }
+
+
+
+            }
+
+        }
+    }
+    die();
+}
+
+/*
+ * Builds custom HTML
+ *
+ * @param   array   $mostpopular
+ * @param   array   $instance
+ * @return  string
+ */
+function wpp_get_ids($mostpopular, $instance) {
+    // $output = '{id}';
+    $ids = array();
+
+    // loop the array of popular posts objects
+    foreach($mostpopular as $popular) {
+        // $output .= $popular->id . ',';
+        $ids[] = $popular->id;
+    }
+
+    // Get Posts
+    $posts = new WP_Query(array(
+        'post_type'        => 'post',
+        'post_status'      => 'publish',
+        'post__in'         => $ids
+    ));
+
+
+    // The Loop
+    if ($posts->have_posts()) {
+        ob_start();
+        while ($posts->have_posts()) {
+            $posts->the_post();
+            get_template_part( 'includes/loop', 'archive-single' );
+        }
+        return ob_get_clean();
+    }
+}
+
+add_filter( 'wpp_custom_html', 'wpp_get_ids', 10, 2 );
 
 /* ====================================================================================================
  Include Classes

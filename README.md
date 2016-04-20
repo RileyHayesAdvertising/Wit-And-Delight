@@ -41,7 +41,7 @@ Wit & Delight is the personal website of Kate Arends.
 
 1. Switch to the wordpress directory
 
-    `cd path/to/dev/thegiftbackproject.com/wordpress/`
+    `cd path/to/dev/witanddelight.com/wordpress/`
 
 1. Fetch the wordpress tags
     
@@ -57,7 +57,7 @@ Wit & Delight is the personal website of Kate Arends.
     
 1. Return to the working directory
 
-    `cd path/to/dev/thegiftbackproject.com/`
+    `cd path/to/dev/witanddelight.com/`
 
 1. Create a `wp-config.php` file
 

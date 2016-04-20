@@ -3,41 +3,14 @@
         <h2 class="isVisuallyHidden">Recent Posts</h2>
     </div>
     <div class="archive-bd">
-        <ol class="vlist">
+        <ol class="arvchive-filters">
+            <li class="filter" data-filter="recent" data-nonce="<?= wp_create_nonce("load_more_posts"); ?>">Recent</li>
+            <li class="filter" data-filter="popular" data-nonce="<?= wp_create_nonce("load_more_posts"); ?>">Popular</li>
+            <li class="filter" data-filter="fashion" data-nonce="<?= wp_create_nonce("load_more_posts"); ?>">Fashion</li>
+        </ol>
+        <ol class="vlist" id="posts">
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-                <li>
-                    <div class="box">
-                        <div class="teaser">
-                            <div class="teaser-media">
-                                <a href="<?php echo the_permalink(); ?>">
-                                    <img src="<?php echo the_first_image(); ?>" alt="" />
-                                </a>
-                            </div>
-                            <div class="teaser-bd">
-                                <div class="blurb">
-                                    <div class="blurb-label">
-                                        <span class="caption"><?php the_category(', '); ?></span>
-                                    </div>
-                                    <div class="blurb-hd">
-                                        <h3 class="hdg hdg_xxl">
-                                            <a href="<?php echo the_permalink(); ?>"><?php echo the_title(); ?></a>
-                                        </h3>
-                                    </div>
-                                    <div class="blurb-bd">
-                                        <div class="user-content">
-                                            <?php echo the_excerpt(); ?>
-                                        </div>
-                                    </div>
-                                    <div class="blurb-ft">
-                                        <span class="caption">
-                                            <a href="<?php echo the_permalink(); ?>">Read More &gt;</a>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
+                    <?php get_template_part( 'includes/loop', 'archive-single' ); ?>
                 <?php if (($wp_query->current_post + 1) == 5) : ?>
                 <li>
                     <div class="box box_cta">
@@ -92,6 +65,6 @@
         </ol> <!-- // END .vlist -->
     </div>
     <div class="archive-ft">
-        <button>Load More</button>
+        <button id="loadMore" data-nonce="<?= wp_create_nonce("load_more_posts"); ?>">Load More</button>
     </div>
 </div> <!-- // END .archive -->
