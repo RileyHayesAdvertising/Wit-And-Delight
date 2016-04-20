@@ -279,22 +279,16 @@ function load_more_posts() {
     } else {
         if(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
 
-            // Determine if by pop or category
+            // Set up pagination
             $postsPerPage = 12;
             $offset = $_GET['page'] ? $_GET['page'] * $postsPerPage : 0;
-            $ids = array();
 
             // Determine if it's a category
             if($_GET['category'] && $_GET['category'] == 'popular') {
-                // Figure out this garbage
+                // Capture WordPress Popular Posts plugin data
                 ob_start();
-                    wpp_get_mostpopular("range=weekly");
-                echo json_encode(array('html' => ob_get_clean()));
-                exit;
-                $ids = ob_get_clean();
-                preg_match('/{id}(.*){id}/i', $ids, $matches);
-                $ids = array_filter(explode(',', $matches[1]));
-
+                wpp_get_mostpopular();
+                echo json_encode(array('html' => ob_get_clean(), 'results' => true));
             } else {
                 $category = $_GET['category'] === 'recent' || $_GET['category'] === 'popular' ? '' : get_cat_ID($_GET['category']);
 
@@ -310,14 +304,6 @@ function load_more_posts() {
                     'suppress_filters' => true,
                     'post__in'         => $ids
                 ));
-                
-                $debug = array(
-                    'category' => $_GET['category'],
-                    'category id' => $category,
-                    'offset' => $offset,
-                    'page' => $_GET['page'],
-                    'ids' => $ids
-                );
 
                 // The Loop
                 if ($posts->have_posts()) {
@@ -326,44 +312,39 @@ function load_more_posts() {
                         $posts->the_post();
                         get_template_part( 'includes/loop', 'archive-single' );
                     }
-                    echo json_encode(array('html' => ob_get_clean(), 'debug' => $debug));
+                    echo json_encode(array('html' => ob_get_clean(), 'results' => true));
                 } else {
-                    echo json_encode(array('html' => '', 'debug' => $debug));
+                    echo json_encode(array('html' => '', 'results' => false));
                 }
-
-
-
             }
-
         }
     }
     die();
 }
 
 /*
- * Builds custom HTML
+ * Builds custom HTML - workaround for not being able
+ * to use wpp data straight from the plugin
  *
  * @param   array   $mostpopular
  * @param   array   $instance
  * @return  string
  */
-function wpp_get_ids($mostpopular, $instance) {
-    // $output = '{id}';
+function wpp_get_ids($popular, $instance) {
     $ids = array();
 
     // loop the array of popular posts objects
-    foreach($mostpopular as $popular) {
-        // $output .= $popular->id . ',';
-        $ids[] = $popular->id;
+    foreach($popular as $p) {
+        $ids[] = $p->id;
     }
 
     // Get Posts
     $posts = new WP_Query(array(
         'post_type'        => 'post',
         'post_status'      => 'publish',
-        'post__in'         => $ids
+        'post__in'         => $ids,
+        'orderby'          => 'post__in'
     ));
-
 
     // The Loop
     if ($posts->have_posts()) {

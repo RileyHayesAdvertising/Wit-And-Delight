@@ -38,7 +38,7 @@ var WD = WD || {}; // Global Namespace object
     APP.LoadMorePosts = {
         $triggers: null,
         init: function() {
-            var $triggers = $('#loadMore, .filter');
+            var $triggers = $('#loadMore, [data-filter]');
 
             // make sure there are triggers
             if (!$triggers.length) {
@@ -47,7 +47,7 @@ var WD = WD || {}; // Global Namespace object
 
             this.$triggers = $triggers;
             this.page = 1;
-            this.category = null;
+            this.category = $('#loadMore').data('category');
             this.bindEvents();
         },
 
@@ -65,11 +65,9 @@ var WD = WD || {}; // Global Namespace object
                 }
 
                 // If filter, go to first page
-                if($this.hasClass('filter')) {
-                    console.log('marking filter');
+                if($this.data('filter')) {
                     self.page = 0;
                     self.category = $this.data('filter');
-                    // self.category =  self.category == 'recent' ? null : this.category;
                 }
                 
                 self.request(nonce);
@@ -101,20 +99,21 @@ var WD = WD || {}; // Global Namespace object
                 },
                 success: function(data) {
                     // load the html
-                    if(data.html) {
+                    if(data.html && data.results) {
                         if(self.page === 0) {
-                            $('#posts').html(data.html)
+                            $('#posts').html(data.html);
                         } else {
                             $(data.html).appendTo('#posts');
                             $loadButton.html($loadButtonHTML);
-                            $loadButton.removeClass('btn--isDisabled');
                         }
 
+                        $loadButton.removeClass('btn--isDisabled');
+                        self.category == 'popular' ? $loadButton.hide() : $loadButton.show();
                         self.page++;
-                    } else {
-                        // Missing
-                    }
-
+                    } else if(!data.results && self.page === 0) {
+                        $loadButton.hide();
+                        $('#posts').html('<li><div class="box"><h3 class="hdg hdg_xxl">Sorry, no posts were found!</h3></div></li>');
+                    } 
                 },
                 error: function() {
                     $loadButton.html('There was an error loading more posts.');

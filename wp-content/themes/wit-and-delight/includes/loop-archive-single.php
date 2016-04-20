@@ -1,4 +1,3 @@
-<? global $post; ?>
 <li>
     <div class="box">
         <div class="teaser">

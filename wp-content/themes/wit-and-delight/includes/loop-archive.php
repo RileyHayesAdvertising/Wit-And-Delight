@@ -1,13 +1,17 @@
+<? $nonce = wp_create_nonce("load_more_posts"); ?>
+
 <div class="archive">
     <div class="archive-hd">
         <h2 class="isVisuallyHidden">Recent Posts</h2>
     </div>
     <div class="archive-bd">
+        <? if(is_front_page()) : ?>
         <ol class="arvchive-filters">
-            <li class="filter" data-filter="recent" data-nonce="<?= wp_create_nonce("load_more_posts"); ?>">Recent</li>
-            <li class="filter" data-filter="popular" data-nonce="<?= wp_create_nonce("load_more_posts"); ?>">Popular</li>
-            <li class="filter" data-filter="fashion" data-nonce="<?= wp_create_nonce("load_more_posts"); ?>">Fashion</li>
+            <li data-filter="recent" data-nonce="<?= $nonce; ?>">Recent</li>
+            <li data-filter="popular" data-nonce="<?= $nonce; ?>">Popular</li>
+            <li data-filter="Editor's Picks" data-nonce="<?= $nonce; ?>">Editor's Picks</li>
         </ol>
+        <? endif; ?>
         <ol class="vlist" id="posts">
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
                     <?php get_template_part( 'includes/loop', 'archive-single' ); ?>
@@ -58,13 +62,13 @@
             <?php else: ?>
                 <li>
                     <div class="box">
-                        <h3 class="hdg hdg_xxl">Sorry. no posts were found!</h3>
+                        <h3 class="hdg hdg_xxl">Sorry, no posts were found!</h3>
                     </div>
                 </li>
             <?php endif; ?>
         </ol> <!-- // END .vlist -->
     </div>
     <div class="archive-ft">
-        <button id="loadMore" data-nonce="<?= wp_create_nonce("load_more_posts"); ?>">Load More</button>
+        <button id="loadMore" data-nonce="<?= $nonce; ?>" data-category="<?= get_category(get_query_var('cat'))->name; ?>">Load More</button>
     </div>
 </div> <!-- // END .archive -->
