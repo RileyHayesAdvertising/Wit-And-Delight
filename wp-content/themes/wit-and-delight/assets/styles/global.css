@@ -522,6 +522,10 @@ a:focus {
     margin-bottom: 40px;
 }
 
+.archive-filters {
+    margin-bottom: 20px;
+}
+
 .archive-bd {
     margin-bottom: 22px;
 }
@@ -1154,17 +1158,29 @@ a:focus .icn_social path {
     color: #000000;
     cursor: pointer;
     font-family: "proxima-nova", Helvetica, arial, sans-serif;
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 800;
     font-style: normal;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     text-transform: uppercase;
+    text-align: center;
 }
 
 .btn:hover,
 .btn:active,
 .btn:focus {
     color: #000000;
+}
+
+.btn_isWhite {
+    background-color: #ffffff;
+}
+
+@media screen and (min-width: 40em) {
+    .btn {
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
 }
 
 /* ---------------------------------------------------------------------
@@ -1192,6 +1208,62 @@ a:focus .icn_social path {
 
 .pill-section_fill {
     background-color: #ffffff;
+}
+
+/* ---------------------------------------------------------------------
+   Matrix
+------------------------------------------------------------------------ */
+.matrix:before,
+.matrix:after {
+    content: " ";
+    display: table;
+}
+
+.matrix:after {
+    clear: both;
+}
+
+.matrix {
+    border: 2px solid #ffffff;
+}
+
+.matrix-item {
+    float: left;
+    width: 30%;
+    border-right: 2px solid #ffffff;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+.matrix-item:last-child {
+    width: 40%;
+    border-right: none;
+}
+
+.matrix-item_label {
+    display: none;
+}
+
+@media screen and (min-width: 40em) {
+    .matrix-item,
+    .matrix-item:last-child {
+        width: 28%;
+    }
+
+    .matrix-item_label {
+        display: block;
+        width: 16%;
+        line-height: 28px;
+        font-family: "MillerDisplay Light", Georgia, serif;
+        font-weight: normal;
+        font-style: italic;
+        font-size: 14px;
+        letter-spacing: normal;
+        text-transform: none;
+        text-align: center;
+    }
+
 }
 
 /* ---------------------------------------------------------------------

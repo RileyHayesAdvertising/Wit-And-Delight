@@ -2,16 +2,27 @@
 
 <div class="archive">
     <div class="archive-hd">
-        <h2 class="isVisuallyHidden">Recent Posts</h2>
+        <h2 class="isVisuallyHidden">Posts</h2>
     </div>
+    <? if(is_front_page()) : ?>
+    <div class="archive-filters">
+        <div class="matrix">
+            <div class="matrix-item matrix-item_label">
+                Filter By
+            </div>
+            <div class="matrix-item">
+                <span class="btn btn_isWhite" data-filter="recent" data-nonce="<?= $nonce; ?>">Recent</span>
+            </div>
+            <div class="matrix-item">
+                <span class="btn" data-filter="popular" data-nonce="<?= $nonce; ?>">Popular</span>
+            </div>
+            <div class="matrix-item">
+                <span class="btn" data-filter="Editor's Picks" data-nonce="<?= $nonce; ?>">Editor's Picks</span>
+            </div>
+        </div>
+    </div>
+    <? endif; ?>
     <div class="archive-bd">
-        <? if(is_front_page()) : ?>
-        <ol class="arvchive-filters">
-            <li data-filter="recent" data-nonce="<?= $nonce; ?>">Recent</li>
-            <li data-filter="popular" data-nonce="<?= $nonce; ?>">Popular</li>
-            <li data-filter="Editor's Picks" data-nonce="<?= $nonce; ?>">Editor's Picks</li>
-        </ol>
-        <? endif; ?>
         <ol class="vlist" id="posts">
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
                     <?php get_template_part( 'includes/loop', 'archive-single' ); ?>

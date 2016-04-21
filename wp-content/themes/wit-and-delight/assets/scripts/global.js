@@ -37,30 +37,33 @@ var WD = WD || {}; // Global Namespace object
     ------------------------------------------------------------------------ */
     APP.LoadMorePosts = {
         $triggers: null,
+        page: null,
+        category: null,
+
         init: function() {
             var $triggers = $('#loadMore, [data-filter]');
+            var category = $('#loadMore').data('category');
 
-            // make sure there are triggers
             if (!$triggers.length) {
                 return;
             }
 
             this.$triggers = $triggers;
+            this.category = category;
             this.page = 1;
-            this.category = $('#loadMore').data('category');
+
             this.bindEvents();
         },
 
         bindEvents: function() {
             var self = this;
 
-            // on click
             this.$triggers.on('click', function(e) {
                 var $this = $(this);
                 var nonce = $this.attr('data-nonce');
 
+                // don't allow rapid clicking
                 if ($this.hasClass('btn--isDisabled')) {
-                    // don't allow rapid clicking
                     return;
                 }
 
@@ -68,8 +71,10 @@ var WD = WD || {}; // Global Namespace object
                 if($this.data('filter')) {
                     self.page = 0;
                     self.category = $this.data('filter');
+                    self.$triggers.removeClass('btn_isWhite');
+                    $this.addClass('btn_isWhite');
                 }
-                
+
                 self.request(nonce);
 
                 e.preventDefault();
@@ -93,7 +98,6 @@ var WD = WD || {}; // Global Namespace object
                 },
                 beforeSend:function(){
                     if(self.page !== 0) {
-                        $loadButton.html('<span class="loader loader--light">...</span>');
                         $loadButton.addClass('btn--isDisabled');
                     }
                 },
@@ -113,7 +117,7 @@ var WD = WD || {}; // Global Namespace object
                     } else if(!data.results && self.page === 0) {
                         $loadButton.hide();
                         $('#posts').html('<li><div class="box"><h3 class="hdg hdg_xxl">Sorry, no posts were found!</h3></div></li>');
-                    } 
+                    }
                 },
                 error: function() {
                     $loadButton.html('There was an error loading more posts.');
