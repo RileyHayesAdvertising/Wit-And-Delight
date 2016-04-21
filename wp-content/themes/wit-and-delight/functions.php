@@ -111,10 +111,12 @@ add_action('admin_init', 'rkv_imagealign_setup', 10);
 function the_first_image() {
     global $post;
     $first_img = '';
-    $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
-    $first_img = $matches [1][0];
+    $output = preg_match('/(wp-image-[0-9]{1,})/i', $post->post_content, $matches);
+    $first_img = $matches[1];
 
-    return $first_img;
+    $first_img_id = str_replace('wp-image-','',$first_img);
+    $first_img_src = wp_get_attachment_image_src($first_img_id, 'medium');
+    return $first_img_src[0];
 }
 
 /* Remove the first image in a post for single page */
