@@ -115,7 +115,13 @@ function the_first_image() {
     $first_img = $matches[1];
 
     $first_img_id = str_replace('wp-image-','',$first_img);
-    $first_img_src = wp_get_attachment_image_src($first_img_id, 'medium');
+
+    if (is_single()) {
+        $first_img_src = wp_get_attachment_image_src($first_img_id, 'large');
+    } else {
+        $first_img_src = wp_get_attachment_image_src($first_img_id, 'medium');
+    }
+
     return $first_img_src[0];
 }
 
