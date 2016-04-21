@@ -287,7 +287,7 @@ function load_more_posts() {
             if($_GET['category'] && $_GET['category'] == 'popular') {
                 // Capture WordPress Popular Posts plugin data
                 ob_start();
-                wpp_get_mostpopular();
+                wpp_get_mostpopular('range="monthly"&limit=13');
                 echo json_encode(array('html' => ob_get_clean(), 'results' => true));
             } else {
                 $category = $_GET['category'] === 'recent' || $_GET['category'] === 'popular' ? '' : get_cat_ID($_GET['category']);
