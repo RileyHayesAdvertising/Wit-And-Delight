@@ -101,7 +101,8 @@ var WD = WD || {}; // Global Namespace object
                         $loadButton.addClass('loadMore-isDisabled');
                         $loadButton.html('<span class="loader"></span>');
                     } else {
-                        //$('#posts').html('<div class="loader">...</div>');
+                        $('#posts').html('<li><span class="panel"><span class="loader">...</span></span></li>');
+                        $loadButton.hide();
                     }
                 },
                 success: function(data) {
