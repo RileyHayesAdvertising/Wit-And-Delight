@@ -106,6 +106,7 @@ var WD = WD || {}; // Global Namespace object
                     }
                 },
                 success: function(data) {
+                    console.log(data);
                     // load the html
                     if(data.html && data.results) {
                         if(self.page === 0) {
@@ -122,7 +123,10 @@ var WD = WD || {}; // Global Namespace object
                         self.page++;
                     } else if(!data.results && self.page === 0) {
                         $loadButton.hide();
-                        $('#posts').html('<li><div class="box"><h3 class="hdg hdg_xxl">Sorry, no posts were found!</h3></div></li>');
+                        $('#posts').html('<li><div class="box"><h3 class="hdg hdg_lg">Sorry, no posts were found!</h3></div></li>');
+                    } else {
+                        $loadButton.hide();
+                        $('<li><div class="box box_isCentered"><h3 class="hdg hdg_lg">Sorry, there are no additional posts!</h3></li>').appendTo('#posts');
                     }
                 },
                 error: function() {
