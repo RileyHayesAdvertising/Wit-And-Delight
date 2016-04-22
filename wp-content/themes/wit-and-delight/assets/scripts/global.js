@@ -39,17 +39,18 @@ var WD = WD || {}; // Global Namespace object
         $triggers: null,
         page: null,
         category: null,
-
+        search: null,
         init: function() {
             var $triggers = $('#loadMore, [data-filter]');
-            var category = $('#loadMore').data('category');
+            var $loadMore = $('#loadMore');
 
             if (!$triggers.length) {
                 return;
             }
 
+            this.category = $loadMore.data('category') ? $loadMore.data('category') : null;
+            this.search = $loadMore.data('search') ? $loadMore.data('search') : null;
             this.$triggers = $triggers;
-            this.category = category;
             this.page = 1;
 
             this.bindEvents();
@@ -95,6 +96,7 @@ var WD = WD || {}; // Global Namespace object
                     nonce: nonce,
                     category: self.category,
                     page: self.page,
+                    search: self.search
                 },
                 beforeSend:function(){
                     if(self.page !== 0) {

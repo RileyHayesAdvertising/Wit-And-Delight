@@ -1,4 +1,5 @@
-<? $nonce = wp_create_nonce("load_more_posts"); ?>
+<? $nonce = wp_create_nonce("load_more_posts"); 
+$category = get_category(get_query_var('cat'))->name; ?>
 
 <div class="archive">
     <div class="archive-hd">
@@ -80,6 +81,6 @@
         </ol> <!-- // END .vlist -->
     </div>
     <div class="archive-ft">
-        <button class="loadMore" id="loadMore" data-nonce="<?= $nonce; ?>" data-category="<?= get_category(get_query_var('cat'))->name; ?>">Keep it Comin'</button>
+        <button class="loadMore" id="loadMore" data-nonce="<?= $nonce; ?>" <?= $category ? 'data-category="' . $category .'"' : ''; ?> <?= get_search_query() ? 'data-search="' . get_search_query() . '"' : ''; ?>>Keep it Comin'</button>
     </div>
 </div> <!-- // END .archive -->

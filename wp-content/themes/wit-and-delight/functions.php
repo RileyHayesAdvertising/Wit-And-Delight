@@ -308,7 +308,8 @@ function load_more_posts() {
                     'post_type'        => 'post',
                     'post_status'      => 'publish',
                     'suppress_filters' => true,
-                    'post__in'         => $ids
+                    'post__in'         => $ids,
+                    's'                => $_GET['search'] ? $_GET['search'] : null
                 ));
 
                 // The Loop
@@ -316,7 +317,7 @@ function load_more_posts() {
                     ob_start();
                     while ($posts->have_posts()) {
                         $posts->the_post();
-                        get_template_part( 'includes/loop', 'archive-single' );
+                        get_template_part('includes/loop', 'archive-single');
                     }
                     echo json_encode(array('html' => ob_get_clean(), 'results' => true));
                 } else {
