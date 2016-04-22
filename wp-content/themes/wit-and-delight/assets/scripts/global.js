@@ -63,7 +63,7 @@ var WD = WD || {}; // Global Namespace object
                 var nonce = $this.attr('data-nonce');
 
                 // don't allow rapid clicking
-                if ($this.hasClass('btn--isDisabled')) {
+                if ($this.hasClass('loadMore-isDisabled')) {
                     return;
                 }
 
@@ -98,7 +98,10 @@ var WD = WD || {}; // Global Namespace object
                 },
                 beforeSend:function(){
                     if(self.page !== 0) {
-                        $loadButton.addClass('btn--isDisabled');
+                        $loadButton.addClass('loadMore-isDisabled');
+                        $loadButton.html('<span class="loader"></span>');
+                    } else {
+                        //$('#posts').html('<div class="loader">...</div>');
                     }
                 },
                 success: function(data) {
@@ -111,7 +114,9 @@ var WD = WD || {}; // Global Namespace object
                             $loadButton.html($loadButtonHTML);
                         }
 
-                        $loadButton.removeClass('btn--isDisabled');
+                        $loadButton.removeClass('loadMore-isDisabled');
+                        $loadButton.html('Keep it Comin\'');
+
                         self.category == 'popular' ? $loadButton.hide() : $loadButton.show();
                         self.page++;
                     } else if(!data.results && self.page === 0) {

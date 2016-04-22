@@ -1184,6 +1184,43 @@ a:focus .icn_social path {
 }
 
 /* ---------------------------------------------------------------------
+   Load More
+------------------------------------------------------------------------ */
+.loadMore {
+    display: block;
+    width: 100%;
+    height: 60px;
+    line-height: 50px;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    background: #ffffff;
+    color: #000000;
+    cursor: pointer;
+    font-family: "MillerDisplay Light", Georgia, serif;
+    font-size: 22px;
+    font-weight: normal;
+    font-style: italic;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.loadMore:hover,
+.loadMore:active,
+.loadMore:focus {
+    color: #000000;
+}
+
+.loadMore-isDisabled {
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+/* ---------------------------------------------------------------------
    Pill
 ------------------------------------------------------------------------ */
 .pill:before,
@@ -1703,5 +1740,74 @@ a.liked:focus {
     color: #000;
 }
 
+/* ---------------------------------------------------------------------
+   Loader
+---------------------------------------------------------------------- */
+.loader,
+.loader:before,
+.loader:after {
+    background: rgba(0, 0, 0, 0.2);
+    -webkit-animation: loader 1s infinite ease-in-out;
+    animation: loader 1s infinite ease-in-out;
+    width: 3px;
+    height: 10px;
+}
+
+.loader:before,
+.loader:after {
+    position: absolute;
+    top: 0;
+    content: '';
+}
+
+.loader:before {
+    left: -6px;
+    -webkit-animation-delay: -0.32s;
+            animation-delay: -0.32s;
+}
+
+.loader {
+    text-indent: -999999px;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    font-size: 16px;
+    font-size: 1rem;
+    -webkit-transform: translateZ(0);
+        -ms-transform: translateZ(0);
+            transform: translateZ(0);
+    -webkit-animation-delay: -0.16s;
+            animation-delay: -0.16s;
+}
+
+.loader:after {
+    left: 6px;
+}
+
+@-webkit-keyframes loader {
+    0%,
+    80%,
+    100% {
+        box-shadow: 0 0 rgba(0, 0, 0, 0.2);
+        height: 10px;
+    }
+    40% {
+        box-shadow: 0 -5px rgba(0, 0, 0, 0.2);
+        height: 16px;
+    }
+}
+
+@keyframes loader {
+    0%,
+    80%,
+    100% {
+        box-shadow: 0 0 rgba(0, 0, 0, 0.2);
+        height: 10px;
+    }
+    40% {
+        box-shadow: 0 -5px rgba(0, 0, 0, 0.2);
+        height: 16px;
+    }
+}
 
 
