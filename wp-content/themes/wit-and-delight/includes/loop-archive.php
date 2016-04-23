@@ -1,4 +1,4 @@
-<? $nonce = wp_create_nonce("load_more_posts"); 
+<? $nonce = wp_create_nonce("load_more_posts");
 $category = get_category(get_query_var('cat'))->name; ?>
 
 <div class="archive">
