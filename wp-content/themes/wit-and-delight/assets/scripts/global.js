@@ -13,6 +13,7 @@ var WD = WD || {}; // Global Namespace object
 
         APP.HasJS.init();
         APP.LoadMorePosts.init();
+        APP.Carousel.init();
     });
 
     /* ---------------------------------------------------------------------
@@ -135,6 +136,108 @@ var WD = WD || {}; // Global Namespace object
                     $loadButton.html('There was an error loading more posts.');
                 }
             });
+        }
+    };
+
+    /* ---------------------------------------------------------------------
+    Carousel
+    Author: Anthony Ticknor
+
+    Create a carousel and rotate it. Rotation pauses on hover
+    of each slide.
+    ------------------------------------------------------------------------ */
+    APP.Carousel = {
+        $carousel: undefined,
+        $slides: undefined,
+        slideWrapperClass: '.carousel-stage-slide',
+        nextSlideTriggerClass: '.js-next-slide',
+        prevSlideTriggerClass: '.js-prev-slide',
+        numSlides: undefined,
+        numSlidesFromZero: undefined, // needed for 0 based counting
+        currentSlide: 0,
+        currentlyStopped: false,
+        _rotationSpeed: 3000,
+        _transitionSpeed: 200,
+
+        init: function() {
+            var $carousel = $('#js-carousel');
+
+            if (!$carousel.length) {
+                return;
+            }
+
+            this.$carousel = $carousel;
+            this.$slides = this.$carousel.find(this.slideWrapperClass);
+            this.numSlides = this.$slides.length;
+            this.numSlidesFromZero = this.numSlides - 1;
+
+            if (this.numSlides == 0) {
+                return;
+            }
+
+            this.bindEvents();
+            this.play();
+        },
+
+        bindEvents: function() {
+            var self = this;
+
+            this.$carousel.on('click', this.nextSlideTriggerClass, function(e) {
+                e.preventDefault();
+                self.currentlyStopped = true;
+                self.pause();
+                self.nextSlide();
+            });
+
+            this.$carousel.on('click', this.prevSlideTriggerClass, function(e) {
+                e.preventDefault();
+                self.currentlyStopped = true;
+                self.pause();
+                self.prevSlide();
+            });
+
+            this.$carousel.on('mouseenter', this.slideWrapperClass, function() {
+                self.pause();
+            });
+
+            this.$carousel.on('mouseleave', this.slideWrapperClass, function() {
+                if (self.currentlyStopped == false) {
+                    self.play();
+                }
+            });
+        },
+
+        play: function() {
+            var self = this;
+
+            this.rotate = window.setInterval(function() {
+                self.nextSlide();
+            }, self._rotationSpeed);
+        },
+
+        pause: function() {
+            var self = this;
+            clearInterval(self.rotate);
+        },
+
+        nextSlide: function() {
+            this.$slides.hide();
+            if (this.currentSlide == this.numSlidesFromZero) {
+                this.currentSlide = 0;
+            } else {
+                this.currentSlide = this.currentSlide + 1;
+            }
+            this.$slides.eq(this.currentSlide).fadeIn(this._transitionSpeed);
+        },
+
+        prevSlide: function() {
+            this.$slides.hide();
+            if (this.currentSlide == 0) {
+                this.currentSlide = this.numSlidesFromZero;
+            } else {
+                this.currentSlide = this.currentSlide - 1;
+            }
+            this.$slides.eq(this.currentSlide).fadeIn(this._transitionSpeed);
         }
     };
 

@@ -204,6 +204,12 @@ a:focus {
     }
 }
 
+@media screen and (max-width: 30em) {
+    .isHiddenOnSmallScreens {
+        display: none;
+    }
+}
+
 /* ---------------------------------------------------------------------
    Masthead
 ------------------------------------------------------------------------ */
@@ -436,7 +442,7 @@ a:focus {
     padding: 0 10px; /* don't let wrapper contents touch the edge of the screen */
 }
 
-.wrapper--noPad {
+.wrapper_noPad {
     padding: 0 !important; /* push the wrapper edge to edge */
 }
 
@@ -516,6 +522,73 @@ a:focus {
 }
 
 /* ---------------------------------------------------------------------
+   Carousel
+------------------------------------------------------------------------ */
+.carousel {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.carousel-stage-slide {
+    display: none;
+}
+
+.carousel-stage-slide:first-child {
+    display: block;
+}
+
+.carousel-controls {
+    display: none;
+}
+
+.js .carousel-controls {
+    display: block;
+    position: absolute;
+    top: calc(50% - 26px); /* the outer height of the control buttons */
+    left: 0;
+    right: 0;
+}
+
+.js .carousel-controls-prev,
+.js .carousel-controls-next {
+    display: block;
+    line-height: 1;
+    padding: 2px 6px 4px 6px;
+    margin: 0;
+    border: 0;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    background: #eeedeb;
+    color: #000000;
+    cursor: pointer;
+    font-family: "Helvetica", Helvetica, Arial, sans-serif;
+    font-size: 27px;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.js .carousel-controls-prev {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.js .carousel-controls-next {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+@media screen and (min-width: 40em) {
+    .js .carousel-controls-prev,
+    .js .carousel-controls-next {
+        padding: 4px 10px 6px 10px;
+        font-size: 37px;
+    }
+}
+
+/* ---------------------------------------------------------------------
    Archive
 ------------------------------------------------------------------------ */
 .archive {
@@ -523,7 +596,12 @@ a:focus {
 }
 
 .archive-filters {
+    display: none;
     margin-bottom: 20px;
+}
+
+.js .archive-filters {
+    display: block;
 }
 
 .archive-bd {
@@ -531,7 +609,12 @@ a:focus {
 }
 
 .archive-ft {
+    display: none;
     text-align: center;
+}
+
+.js .archive-ft {
+    display: block;
 }
 
 /* ---------------------------------------------------------------------
@@ -570,6 +653,40 @@ a:focus {
 
 .box_isCentered {
     text-align: center;
+}
+
+/* ---------------------------------------------------------------------
+   Card
+------------------------------------------------------------------------ */
+.card {
+    position: relative;
+}
+
+.card-bd {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 5px 0;
+    background-color: rgba(255,255,255,0.75);
+    text-align: center;
+}
+
+.card-bd a:hover,
+.card-bd a:focus {
+    color: #000000;
+}
+
+@media screen and (min-width: 40em) {
+    .card-bd {
+        padding: 10px 0;
+    }
+}
+
+@media screen and (min-width: 60em) {
+    .card-bd {
+        padding: 20px 0;
+    }
 }
 
 /* ---------------------------------------------------------------------
@@ -974,6 +1091,34 @@ a:focus {
     font-size: 12px;
 }
 
+.hdg_flex {
+    font-size: 14px;
+}
+
+@media screen and (min-width: 30em) {
+    .hdg_flex {
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 40em) {
+    .hdg_flex {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 50em) {
+    .hdg_flex {
+        font-size: 24px;
+    }
+}
+
+@media screen and (min-width: 60em) {
+    .hdg_flex {
+        font-size: 30px;
+    }
+}
+
 /* ---------------------------------------------------------------------
    Caption
 ------------------------------------------------------------------------ */
@@ -989,6 +1134,16 @@ a:focus {
 
 .caption_tight {
     letter-spacing: 1px;
+}
+
+.caption_flex {
+    font-size: 12px;
+}
+
+@media screen and (min-width: 50em) {
+    .caption_flex {
+        font-size: 14px;
+    }
 }
 
 /* ---------------------------------------------------------------------

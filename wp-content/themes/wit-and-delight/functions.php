@@ -30,7 +30,7 @@ function include_scripts_and_styles() {
         'screen and (min-width: 1em)'
     );
 
-    wp_enqueue_script(
+   wp_enqueue_script(
         'wd-script',
         get_template_directory_uri() . '/assets/scripts/global.js',
         array('jquery'),
