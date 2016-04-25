@@ -6,7 +6,7 @@
             <div class="box">
                 <div class="post">
                     <div class="post-label">
-                        <span class="caption"><?php exclude_post_categories('196',', '); ?></span>
+                        <span class="caption"><?php exclude_post_categories('206',', '); ?></span>
                     </div>
                     <div class="post-media">
                         <img src="<?php echo the_first_image(); ?>" alt="" />

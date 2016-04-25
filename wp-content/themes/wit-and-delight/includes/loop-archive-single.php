@@ -9,7 +9,7 @@
             <div class="teaser-bd">
                 <div class="blurb">
                     <div class="blurb-label">
-                        <span class="caption"><?php exclude_post_categories('196',', '); ?></span>
+                        <span class="caption"><?php exclude_post_categories('206',', '); ?></span>
                     </div>
                     <div class="blurb-hd">
                         <h3 class="hdg hdg_xxl">
