@@ -80,7 +80,10 @@ $category = get_category(get_query_var('cat'))->name; ?>
             <?php endif; ?>
         </ol> <!-- // END .vlist -->
     </div>
+    <?php if (have_posts()) : ?>
     <div class="archive-ft">
         <button class="loadMore" id="loadMore" data-nonce="<?= $nonce; ?>" <?= $category ? 'data-category="' . $category .'"' : ''; ?> <?= get_search_query() ? 'data-search="' . get_search_query() . '"' : ''; ?>>Keep it Comin'</button>
     </div>
+    <?php endif; ?>
+
 </div> <!-- // END .archive -->
