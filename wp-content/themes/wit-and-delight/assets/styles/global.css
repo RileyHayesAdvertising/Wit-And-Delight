@@ -948,7 +948,7 @@ a:focus {
 .waypoint > * {
     font-family: "MillerDisplay Light", Georgia, serif;
     font-size: 16px;
-    font-style: normal;
+    font-style: italic;
     font-weight: normal;
     line-height: 1.5;
 }
@@ -960,6 +960,29 @@ a:focus {
 .waypoint > * a {
     display: block;
     padding: 6px 20px; /* matches .stack */
+}
+
+.waypoint > * a:hover,
+.waypoint > * a:focus {
+    color: inherit;
+}
+
+.waypoint > * a > img {
+    display: inline-block !important; /* override plugin */
+    height: 36px !important; /* override plugin */
+    width: 36px !important; /* override plugin */
+}
+
+.waypoint > * a > .menu-image-title {
+    display: inline-block !important; /* override plugin */
+    vertical-align: middle !important; /* override plugin */
+    padding-left: 14px !important; /* override plugin */
+}
+
+.menu-item a.menu-image-title-after.menu-image-not-hovered img,
+.menu-item a.menu-image-hovered.menu-image-title-after
+.menu-image-hover-wrapper {
+    padding-right: 0 !important; /* override plugin */
 }
 
 /* ---------------------------------------------------------------------
