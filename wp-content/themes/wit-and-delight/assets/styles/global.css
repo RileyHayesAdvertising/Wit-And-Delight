@@ -541,6 +541,10 @@ a:focus {
     display: none;
 }
 
+.carousel-controls_alwaysHidden {
+    display: none !important; /* for when only one slide exists */
+}
+
 .js .carousel-controls {
     display: block;
     position: absolute;
