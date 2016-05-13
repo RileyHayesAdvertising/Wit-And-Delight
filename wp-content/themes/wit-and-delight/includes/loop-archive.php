@@ -18,7 +18,7 @@ $category = get_category(get_query_var('cat'))->name; ?>
                 <span class="btn" data-filter="popular" data-nonce="<?= $nonce; ?>">Popular</span>
             </div>
             <div class="matrix-item">
-                <span class="btn" data-filter="Editor's Picks" data-nonce="<?= $nonce; ?>">Editor's Picks</span>
+                <span class="btn" data-filter="Editor's Picks" data-nonce="<?= $nonce; ?>">Kate's Picks</span>
             </div>
         </div>
     </div>
