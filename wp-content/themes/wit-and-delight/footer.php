@@ -29,6 +29,11 @@
                                     </a>
                                 </li>
                                 <li>
+                                    <a href="<?php the_field('facebook_link', 'options'); ?>" target="_blank">
+                                        <i class="icn icn_social"><?php echo file_get_contents(get_template_directory() . '/assets/images/icn-facebook.svg'); ?></i>
+                                    </a>
+                                </li>
+                                <li>
                                     <a href="<?php the_field('twitter_link', 'options'); ?>" target="_blank">
                                         <i class="icn icn_social"><?php echo file_get_contents(get_template_directory() . '/assets/images/icn-twitter.svg'); ?></i>
                                     </a>
