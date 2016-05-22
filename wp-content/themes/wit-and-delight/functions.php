@@ -107,32 +107,27 @@ add_action('admin_init', 'rkv_imagealign_setup', 10);
 /* ====================================================================================================
    Images
 ==================================================================================================== */
-/* find the first image in a post and return it */
-function the_first_image() {
-    global $post;
-    $first_img = '';
-    $output = preg_match('/(wp-image-[0-9]{1,})/i', $post->post_content, $matches);
+/* find the first image in a post and return it by post ID */
+function the_first_image($id, $size) {
+
+    $post_content = get_post_field('post_content', $id);
+    $output = preg_match('/(wp-image-[0-9]{1,})/i', $post_content, $matches);
     $first_img = $matches[1];
-
     $first_img_id = str_replace('wp-image-','',$first_img);
-
-    if (is_single()) {
-        $first_img_src = wp_get_attachment_image_src($first_img_id, 'large');
-    } else {
-        $first_img_src = wp_get_attachment_image_src($first_img_id, 'medium');
-    }
+    $first_img_src = wp_get_attachment_image_src($first_img_id, $size);
 
     return $first_img_src[0];
+
 }
 
 /* Remove the first image in a post for single page */
 /* used in conjunction with the_first_image to avoid duplicates */
-function remove_first_image ($content) {
+function content_without_first_image ($content) {
     if (!is_page() && !is_feed() && !is_feed() && !is_home()) {
         $content = preg_replace('/<img[^>]+\>/i', '', $content, 1);
-    } return $content;
+    }
+    return $content;
 }
-add_filter('the_content', 'remove_first_image');
 
 /* Removes width and height from images */
 add_filter( 'post_thumbnail_html', 'remove_dimensions', 10 );

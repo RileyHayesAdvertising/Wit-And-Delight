@@ -9,7 +9,7 @@
                         <span class="caption"><?php exclude_post_categories('206',', '); ?></span>
                     </div>
                     <div class="post-media">
-                        <img src="<?php echo the_first_image(); ?>" alt="" />
+                        <img src="<?php echo the_first_image(get_the_id(), 'large'); ?>" alt="" />
                     </div>
                     <div class="post-hd">
                         <h2 class="hdg hdg_xxl"><?php the_title(); ?></h2>
@@ -19,7 +19,11 @@
                     </div>
                     <div class="post-bd">
                         <div class="user-content">
-                            <?php the_content(); ?>
+                            <?php
+                                $content = get_the_content();
+                                $content = content_without_first_image($content);
+                                echo $content;
+                            ?>
                         </div>
                     </div>
                 </div>
