@@ -6,7 +6,7 @@
    Black    - #000000
    Midnight - #201d1d
    Grey     - #eeedeb
-   Rose     - #d8bdbe
+   Gold     - #fdc58f
 
    Font Stacks
    ======================
@@ -176,7 +176,7 @@ a {
 
 a:hover,
 a:focus {
-    color: #d8bdbe;
+    color: #fdc58f;
     text-decoration: none;
 }
 
@@ -1194,7 +1194,7 @@ a:focus {
 
 a:hover .icn_social path,
 a:focus .icn_social path {
-    fill: #d8bdbe;
+    fill: #fdc58f;
 }
 
 /* ---------------------------------------------------------------------
@@ -1631,7 +1631,7 @@ a:focus .icn_social path {
 
 .user-content a:focus,
 .user-content a:hover {
-    color: #d8bdbe;
+    color: #fdc58f;
 }
 
 .user-content a:active {
