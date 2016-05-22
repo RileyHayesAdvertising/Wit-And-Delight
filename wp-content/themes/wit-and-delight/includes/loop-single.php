@@ -43,6 +43,44 @@
             </div>
             <?php } ?>
         </div>
+        <div class="single-related">
+            <div class="related">
+                <div class="related-hd">
+                    <h2 class="hdg hdg_md">You Might Also Like</h2>
+                </div>
+                <div class="related-bd">
+                    <?php
+                        $related = get_posts(
+                            array(
+                                'category__in' => wp_get_post_categories($post->ID),
+                                'category__not_in' => '206',
+                                'numberposts' => 3,
+                                'post__not_in' => array($post->ID)
+                            )
+                        );
+
+                        if ($related) {
+                            echo '<ul class="pods">';
+                            foreach( $related as $related_post ) {
+                                echo '<li>';
+                                echo '<a href="' . get_permalink($related_post->ID) . '">';
+                                echo '<div class="box">';
+                                echo '<div>';
+                                echo '<img src="' . the_first_image($related_post->ID, 'medium') .'" alt="" />';
+                                echo '</div>';
+                                echo '<div>';
+                                echo '<h3>' . get_the_title($related_post->ID) . '</h3>';
+                                echo '</div>';
+                                echo '</div>';
+                                echo '<a>';
+                                echo '</li>';
+                            }
+                            echo '</ul>';
+                        }
+                    ?>
+                </div>
+            </div>
+        </div>
         <div class="single-ft">
             <?php comments_template(); ?>
         </div>
