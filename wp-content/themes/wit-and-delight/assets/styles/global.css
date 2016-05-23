@@ -296,7 +296,7 @@ a:focus {
     margin-bottom: 6px;
     font-family: "proxima-nova", Helvetica, arial, sans-serif;
     font-size: 14px;
-    font-weight: 800;
+    font-weight: 600;
     font-style: normal;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -812,7 +812,7 @@ a:focus {
     font-family: "proxima-nova", Helvetica, arial, sans-serif;
     font-size: 14px;
     line-height: 1.5;
-    font-weight: 800;
+    font-weight: 600;
     font-style: normal;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -982,11 +982,14 @@ a:focus {
    Waypoint
 ------------------------------------------------------------------------ */
 .waypoint > * {
-    font-family: "MillerDisplay Light", Georgia, serif;
-    font-size: 16px;
-    font-style: italic;
+    font-family: "proxima-nova", Helvetica, arial, sans-serif;
+    font-size: 14px;
+    font-style: normal;
     font-weight: normal;
     line-height: 1.5;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 .waypoint > * + * {
@@ -995,7 +998,7 @@ a:focus {
 
 .waypoint > * a {
     display: block;
-    padding: 6px 20px; /* matches .stack */
+    padding: 6px 14px; /* matches .stack */
 }
 
 .waypoint > * a:hover,
@@ -1013,6 +1016,7 @@ a:focus {
     display: inline-block !important; /* override plugin */
     vertical-align: middle !important; /* override plugin */
     padding-left: 14px !important; /* override plugin */
+    padding-top: 2px !important; /* override plugin */
 }
 
 .menu-item a.menu-image-title-after.menu-image-not-hovered img,
@@ -1095,7 +1099,7 @@ a:focus {
 .comment-meta {
     letter-spacing: 2px;
     text-transform: uppercase;
-    font-weight: 800;
+    font-weight: 600;
     margin-bottom: 30px;
     line-height: 24px; /* match the height of the avatar to create vertical alignment */
 }
@@ -1185,7 +1189,7 @@ a:focus {
     font-family: "proxima-nova", Helvetica, arial, sans-serif;
     font-size: 14px;
     line-height: 1.5;
-    font-weight: 800;
+    font-weight: 600;
     font-style: normal;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -1271,7 +1275,7 @@ a:focus .dot-image {
     font-family: "proxima-nova", Helvetica, arial, sans-serif;
     font-size: 10px;
     line-height: 1;
-    font-weight: 800;
+    font-weight: 600;
     font-style: normal;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -1286,7 +1290,7 @@ a:focus .dot-image {
     border: 0;
     margin: 0;
     padding: 6px 6px;
-    font-weight: 800;
+    font-weight: 600;
     font-size: 10px;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -1390,7 +1394,7 @@ a:focus .dot-image {
     cursor: pointer;
     font-family: "proxima-nova", Helvetica, arial, sans-serif;
     font-size: 10px;
-    font-weight: 800;
+    font-weight: 600;
     font-style: normal;
     letter-spacing: 1px;
     text-transform: uppercase;

@@ -6,7 +6,7 @@
     <div class="sidebar-section">
         <div class="stack stack_violator">
             <div class="stack-item stack-item_isCentered">
-                <h2 class="hdg hdg_lg">Keep in Touch</h2>
+                <h2 class="caption">Keep in Touch</h2>
             </div>
             <div class="stack-item stack-item_isCentered stack-item_isOffset">
                 <ul class="hList hList_isCentered">
@@ -47,7 +47,7 @@
             </div>
             <div class="pill">
                 <div class="pill-section">
-                    <input class="input input_violator" type="text" name="EMAIL" id="mce-EMAIL" value="" placeholder="Email..." />
+                    <input class="input input_violator" type="text" name="EMAIL" id="mce-EMAIL" value="" placeholder="Enter Email" />
                 </div>
                 <div class="pill-section pill-section_fill">
                     <button class="btn" type="submit" name="subscribe" id="mc-embedded-subscribe">Subscribe</button>
@@ -85,7 +85,7 @@
         <?php echo get_latest_instagram_image(); ?>
         <div class="stack">
             <div class="stack-item stack-item_isCentered">
-                <h2 class="caption">Daily Snapshot</h2>
+                <h2 class="caption">Find Us On Instagram</h2>
             </div>
         </div>
     </div>
