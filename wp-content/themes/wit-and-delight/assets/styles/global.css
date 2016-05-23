@@ -700,6 +700,10 @@ a:focus {
     border: 2px solid #ffffff;
 }
 
+.stack_violator {
+    border-width: 2px 0; /* override stack */
+}
+
 .stack-item {
     padding: 6px 20px;
 }

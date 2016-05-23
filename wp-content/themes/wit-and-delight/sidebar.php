@@ -4,7 +4,7 @@
         <?php get_search_form(); ?>
     </div>
     <div class="sidebar-section">
-        <div class="stack">
+        <div class="stack stack_violator">
             <div class="stack-item stack-item_isCentered">
                 <h2 class="hdg hdg_lg">Keep in Touch</h2>
             </div>
@@ -57,10 +57,8 @@
     </div>
     <div class="sidebar-section">
         <div class="stack">
-            <div class="stack-item">
-                <h2 class="caption">You might also like...</h2>
-            </div>
             <div class="stack-item stack-item_hasList">
+                <h2 class="isVisuallyHidden">Browse posts by category</h2>
                 <?php
                     $sidebar_nav_args = array(
                         'menu' => '',
