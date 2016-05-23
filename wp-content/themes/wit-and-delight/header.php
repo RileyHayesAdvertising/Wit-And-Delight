@@ -22,40 +22,23 @@
         <?php wp_head(); ?>
     </head>
     <body>
-        <div class="tier tier_dark tier_isSticky">
-            <div class="wrapper">
-                <div class="nav" role="navigation">
-                    <?php
-                        $nav_args = array(
-                            'menu' => '',
-                            'menu_class' => 'hList',
-                            'menu_id' => '',
-                            'container' => '',
-                            'container_class' => '',
-                            'container_id' => '',
-                            'before' => '',
-                            'after' => '',
-                            'link_before' => '',
-                            'link_after' => '',
-                            'echo' => true,
-                            'depth' => 0,
-                            'theme_location' => 'masthead-menu',
-                        );
+        <div class="tier tier_grey tier_push">
+            <div class="tier tier_dark">
+                <div class="wrapper">
+                    <div class="masthead" role="banner">
+                        <div class="masthead-brand">
+                            <h1 class="logo">
+                                <a href="<?php echo home_url(); ?>">
+                                    <?php echo file_get_contents(get_template_directory() . '/assets/images/logo.svg'); ?>
+                                </a>
+                            </h1>
+                        </div>
+                        <div class="masthead-nav" role="navigation">
 
-                        wp_nav_menu($nav_args);
-                    ?>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="tier tier_grey">
-            <div class="wrapper">
-                <div class="masthead" role="banner">
-                    <h1 class="logo">
-                        <a href="<?php echo home_url(); ?>">
-                            <?php echo file_get_contents(get_template_directory() . '/assets/images/logo.svg'); ?>
-                        </a>
-                    </h1>
-                </div>
-            </div>
-        </div>
+
 

@@ -214,25 +214,23 @@ a:focus {
    Masthead
 ------------------------------------------------------------------------ */
 .masthead {
-    padding: 30px 0;
+    padding: 20px 0;
     text-align: center;
 }
 
 @media screen and (min-width: 40em) {
     .masthead {
-        padding: 40px 0;
-    }
-}
-
-@media screen and (min-width: 60em) {
-    .masthead {
-        padding: 82px 0 40px 0; /* padding top is 40px + height of the sticky nav */
+        padding: 30px 0;
     }
 }
 
 /* ---------------------------------------------------------------------
    Logo
 ------------------------------------------------------------------------ */
+.logo path {
+    fill: #ffffff !important;
+}
+
 .logo {
     display: inline-block;
     width: 240px;
@@ -430,6 +428,10 @@ a:focus {
     left: 0;
     right: 0;
     z-index: 9999999;
+}
+
+.tier_push {
+    padding-bottom: 20px;
 }
 
 /* ---------------------------------------------------------------------
