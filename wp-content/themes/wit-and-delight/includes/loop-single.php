@@ -21,6 +21,7 @@
                         <div class="user-content">
                             <?php
                                 $content = get_the_content();
+                                $content = apply_filters('the_content', $content);
                                 $content = content_without_first_image($content);
                                 echo $content;
                             ?>
