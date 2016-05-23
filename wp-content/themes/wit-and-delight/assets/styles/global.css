@@ -1250,6 +1250,12 @@ a:focus .icn_social path {
     background-color: #000000;
     overflow: hidden;
     vertical-align: middle;
+    transition: background .12s linear;
+}
+
+a:hover .dot-image,
+a:focus .dot-image {
+    background-color: #fdc58f;
 }
 
 .dot-image path {
