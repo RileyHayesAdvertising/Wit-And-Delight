@@ -267,7 +267,7 @@ a:focus {
     }
 
     .sidebar-section {
-        padding-bottom: 20px;
+        padding-bottom: 30px;
     }
 }
 
@@ -409,7 +409,7 @@ a:focus {
 }
 
 .tier_push {
-    padding-bottom: 20px;
+    padding-bottom: 30px;
 }
 
 /* ---------------------------------------------------------------------
@@ -462,7 +462,7 @@ a:focus {
 
     .grid-col_main {
         width: 68%;
-        padding-right: 20px;
+        padding-right: 30px;
     }
 
     .grid-col_aside {
@@ -506,7 +506,7 @@ a:focus {
 ------------------------------------------------------------------------ */
 .carousel {
     position: relative;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .carousel-stage-slide {
@@ -581,7 +581,7 @@ a:focus {
 
 .archive-filters {
     display: none;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .js .archive-filters {
@@ -589,7 +589,7 @@ a:focus {
 }
 
 .archive-bd {
-    margin-bottom: 22px;
+    margin-bottom: 32px;
 }
 
 .archive-ft {
@@ -1048,7 +1048,7 @@ a:focus {
 }
 
 .vlist > *:not(:last-child) {
-    margin-bottom: 22px;
+    margin-bottom: 32px;
 }
 
 .vlist-item_indented {
