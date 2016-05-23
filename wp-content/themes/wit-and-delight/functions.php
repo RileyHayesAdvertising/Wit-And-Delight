@@ -55,7 +55,6 @@ add_action('wp_enqueue_scripts', 'include_scripts_and_styles');
 function register_wd_menus() {
   register_nav_menus(
     array(
-      'masthead-menu' => __('Masthead Navigation'),
       'sidebar-categories-menu' => __('Sidebar Categories'),
       'footer-menu' => __('Footer Navigation')
     )
