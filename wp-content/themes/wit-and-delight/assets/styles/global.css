@@ -214,13 +214,13 @@ a:focus {
    Masthead
 ------------------------------------------------------------------------ */
 .masthead {
-    padding: 20px 0;
+    padding: 20px 0 15px 0;
     text-align: center;
 }
 
 @media screen and (min-width: 40em) {
     .masthead {
-        padding: 30px 0;
+        padding: 30px 0 25px 0;
     }
 }
 
@@ -996,7 +996,7 @@ a:focus {
 
 .waypoint > * a:hover,
 .waypoint > * a:focus {
-    color: inherit;
+    color: #fdc58f;
 }
 
 .waypoint > * a > img {
@@ -1385,12 +1385,13 @@ a:focus .icn_social path {
     letter-spacing: 1px;
     text-transform: uppercase;
     text-align: center;
+    transition: color .12s linear, background .12s linear;
 }
 
 .btn:hover,
 .btn:active,
 .btn:focus {
-    color: #000000;
+    color: #fdc58f;
 }
 
 .btn_isWhite {
