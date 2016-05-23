@@ -60,16 +60,18 @@
                         );
 
                         if ($related) {
-                            echo '<ul class="pods">';
+                            echo '<ul class="pods pods_violator">';
                             foreach( $related as $related_post ) {
                                 echo '<li>';
                                 echo '<a href="' . get_permalink($related_post->ID) . '">';
-                                echo '<div class="box">';
-                                echo '<div>';
+                                echo '<div class="box box_violator">';
+                                echo '<div class="clip">';
+                                echo '<div class="clip-media">';
                                 echo '<img src="' . the_first_image($related_post->ID, 'medium') .'" alt="" />';
                                 echo '</div>';
-                                echo '<div>';
-                                echo '<h3>' . get_the_title($related_post->ID) . '</h3>';
+                                echo '<div class="clip-hd">';
+                                echo '<h3 class="caption caption_tight caption_sm">' . get_the_title($related_post->ID) . '</h3>';
+                                echo '</div>';
                                 echo '</div>';
                                 echo '</div>';
                                 echo '<a>';
