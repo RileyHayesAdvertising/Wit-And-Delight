@@ -654,33 +654,6 @@ a:focus {
     position: relative;
 }
 
-.card-bd {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 5px 0;
-    background-color: rgba(255,255,255,0.75);
-    text-align: center;
-}
-
-.card-bd a:hover,
-.card-bd a:focus {
-    color: #000000;
-}
-
-@media screen and (min-width: 40em) {
-    .card-bd {
-        padding: 10px 0;
-    }
-}
-
-@media screen and (min-width: 60em) {
-    .card-bd {
-        padding: 20px 0;
-    }
-}
-
 /* ---------------------------------------------------------------------
    Crate
 ------------------------------------------------------------------------ */

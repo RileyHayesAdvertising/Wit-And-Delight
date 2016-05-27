@@ -11,12 +11,8 @@
                 <div class="carousel-stage-slide">
                     <div class="card">
                         <div class="card-media">
-                            <img class="blockImage" src="<?php the_sub_field('slide_image'); ?>" alt="<?php the_sub_field('slide_title'); ?>">
-                        </div>
-                        <div class="card-bd">
                             <a href="<?php the_sub_field('slide_link'); ?>">
-                                <h3 class="hdg hdg_flex"><?php the_sub_field('slide_title'); ?></h3>
-                                <span class="caption caption_flex isHiddenOnSmallScreens">Read More</span>
+                                <img class="blockImage" src="<?php the_sub_field('slide_image'); ?>" alt="">
                             </a>
                         </div>
                     </div>
