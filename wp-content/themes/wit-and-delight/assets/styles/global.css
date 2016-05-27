@@ -13,7 +13,6 @@
    Proxima Nova / Sans Serif
    - "proxima-nova", Helvetica, arial, sans-serif;
    - 400 Regular
-   - 600 Semi Bold
    - 800 Extrabold
 
    Miller / Serif
@@ -296,7 +295,7 @@ a:focus {
     margin-bottom: 6px;
     font-family: "proxima-nova", Helvetica, arial, sans-serif;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 800;
     font-style: normal;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -785,7 +784,7 @@ a:focus {
     font-family: "proxima-nova", Helvetica, arial, sans-serif;
     font-size: 14px;
     line-height: 1.5;
-    font-weight: 600;
+    font-weight: 800;
     font-style: normal;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -960,7 +959,7 @@ a:focus {
     font-style: normal;
     font-weight: normal;
     line-height: 1.5;
-    font-weight: 600;
+    font-weight: 800;
     letter-spacing: 1px;
     text-transform: uppercase;
 }
@@ -1072,7 +1071,7 @@ a:focus {
 .comment-meta {
     letter-spacing: 2px;
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 800;
     margin-bottom: 30px;
     line-height: 24px; /* match the height of the avatar to create vertical alignment */
 }
@@ -1162,7 +1161,7 @@ a:focus {
     font-family: "proxima-nova", Helvetica, arial, sans-serif;
     font-size: 14px;
     line-height: 1.5;
-    font-weight: 600;
+    font-weight: 800;
     font-style: normal;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -1248,7 +1247,7 @@ a:focus .dot-image {
     font-family: "proxima-nova", Helvetica, arial, sans-serif;
     font-size: 10px;
     line-height: 1;
-    font-weight: 600;
+    font-weight: 800;
     font-style: normal;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -1263,7 +1262,7 @@ a:focus .dot-image {
     border: 0;
     margin: 0;
     padding: 6px 6px;
-    font-weight: 600;
+    font-weight: 800;
     font-size: 10px;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -1367,7 +1366,7 @@ a:focus .dot-image {
     cursor: pointer;
     font-family: "proxima-nova", Helvetica, arial, sans-serif;
     font-size: 10px;
-    font-weight: 600;
+    font-weight: 800;
     font-style: normal;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -1398,21 +1397,22 @@ a:focus .dot-image {
 .loadMore {
     display: block;
     width: 100%;
-    height: 60px;
-    line-height: 50px;
-    padding: 0;
+    min-height: 40px;
+    padding: 10px 0;
     margin: 0;
     border: 0;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
             box-sizing: border-box;
-    background: #ffffff;
+    background: transparent;
     color: #000000;
     cursor: pointer;
-    font-family: "MillerDisplay Light", Georgia, serif;
-    font-size: 22px;
-    font-weight: normal;
-    font-style: italic;
+    font-family: "proxima-nova", Helvetica, arial, sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    font-style: normal;
     letter-spacing: 2px;
     text-transform: uppercase;
     text-align: center;

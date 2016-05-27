@@ -82,7 +82,7 @@ $category = get_category(get_query_var('cat'))->name; ?>
     </div>
     <?php if (have_posts()) : ?>
     <div class="archive-ft">
-        <button class="loadMore" id="loadMore" data-nonce="<?= $nonce; ?>" <?= $category ? 'data-category="' . $category .'"' : ''; ?> <?= get_search_query() ? 'data-search="' . get_search_query() . '"' : ''; ?>>Keep it Comin'</button>
+        <button class="loadMore" id="loadMore" data-nonce="<?= $nonce; ?>" <?= $category ? 'data-category="' . $category .'"' : ''; ?> <?= get_search_query() ? 'data-search="' . get_search_query() . '"' : ''; ?>>Load More</button>
     </div>
     <?php endif; ?>
 
