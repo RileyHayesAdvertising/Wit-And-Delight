@@ -50,6 +50,27 @@ function include_scripts_and_styles() {
 add_action('wp_enqueue_scripts', 'include_scripts_and_styles');
 
 /* ====================================================================================================
+ Add Styles to the visual editor
+ ========================================================================== */
+
+/**
+ * Registers an editor stylesheet for the theme.
+ */
+function wpdocs_theme_add_editor_styles() {
+    add_editor_style(get_template_directory_uri() . '/assets/styles/user-content.css');
+    add_editor_style('//cloud.webtype.com/css/2eed833e-5790-485c-92a0-8e9a3e4d9721.css');
+}
+add_action('admin_init', 'wpdocs_theme_add_editor_styles');
+/**
+ * Add typekit kit.
+ */
+add_filter("mce_external_plugins", "tomjn_mce_external_plugins");
+function tomjn_mce_external_plugins($plugin_array){
+	$plugin_array['typekit']  =  get_template_directory_uri().'/assets/scripts/typekit.js';
+    return $plugin_array;
+}
+
+/* ====================================================================================================
  Register Menus
 ==================================================================================================== */
 function register_wd_menus() {

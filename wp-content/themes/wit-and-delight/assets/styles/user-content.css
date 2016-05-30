@@ -1,0 +1,512 @@
+/* ---------------------------------------------------------------------
+   User Content
+------------------------------------------------------------------------ */
+#tinymce.wp-editor {
+    font-family: "proxima-nova", Helvetica, arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+    font-style: normal;
+    font-weight: 400;
+    color: #000000;
+}
+
+.user-content > *:last-child,
+body#tinymce.wp-editor > *:last-child {
+    margin-bottom: 0 !important; /* remove margin from the last item */
+}
+
+.user-content hr,
+body#tinymce.wp-editor hr {
+    margin: 0 0 20px 0;
+    background: #000000;
+    color: #000000;
+    height: 1px;
+    border: none;
+    line-height: 1px;
+    font-size: 1px;
+}
+
+.user-content img,
+body#tinymce.wp-editor img {
+    max-width: 100% !important;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 24px;
+}
+
+/* Paragraph Styles ---------------------------------------------------- */
+.user-content h1,
+.user-content h2,
+.user-content h3,
+body#tinymce.wp-editor h1,
+body#tinymce.wp-editor h2,
+body#tinymce.wp-editor h3 {
+    font-family: "MillerDisplay Light", Georgia, serif;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1.5;
+}
+
+.user-content h1,
+body#tinymce.wp-editor h1 {
+    font-size: 30px;
+    line-height: 1.3;
+    margin: 0 0 20px 0;
+}
+
+.user-content h2,
+body#tinymce.wp-editor h2 {
+    font-size: 24px;
+    line-height: 1.3;
+    margin: 0 0 20px 0;
+}
+
+.user-content h3,
+body#tinymce.wp-editor h3 {
+    font-size: 20px;
+    margin: 0 0 20px 0;
+}
+
+.user-content h4,
+.user-content h5,
+.user-content h6,
+body#tinymce.wp-editor h4,
+body#tinymce.wp-editor h5,
+body#tinymce.wp-editor h6 {
+    margin: 0 0 20px 0;
+    font-family: "proxima-nova", Helvetica, arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 800;
+    font-style: normal;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.user-content p,
+body#tinymce.wp-editor p {
+    margin: 0 0 20px 0;
+}
+
+.user-content blockquote,
+body#tinymce.wp-editor blockquote {
+    margin: 0 0 20px 0;
+    padding: 18px;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    background: transparent;
+    font-family: "MillerDisplay Light", Georgia, serif;
+    font-size: 20px;
+    font-style: normal;
+}
+
+.user-content blockquote > *:last-child,
+body#tinymce.wp-editor blockquote > *:last-child {
+    margin-bottom: 0 !important;
+}
+
+.user-content address,
+body#tinymce.wp-editor address {
+    margin: 0 0 20px 0;
+    font-style: italic;
+}
+
+.user-content pre,
+body#tinymce.wp-editor pre {
+    margin: 0 0 20px 0;
+    padding: 10px;
+    color: #eeedeb;
+    background-color: #444444;
+    font-family: "Lucida Console", Monaco, monospace;
+}
+
+/* Text Styles --------------------------------------------------------- */
+
+.user-content a,
+body#tinymce.wp-editor a {
+    color: #000000;
+    text-decoration: underline;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    transition: color .12s linear, background .12s linear;
+}
+
+.user-content a:link,
+body#tinymce.wp-editor a:link {
+
+}
+
+.user-content a:visited,
+body#tinymce.wp-editor a:visited {
+
+}
+
+.user-content a:focus,
+.user-content a:hover,
+body#tinymce.wp-editor a:focus,
+body#tinymce.wp-editor a:hover {
+    color: #fdc58f;
+}
+
+.user-content a:active,
+body#tinymce.wp-editor a:active {
+
+}
+
+.user-content em,
+.user-content i,
+body#tinymce.wp-editor em,
+body#tinymce.wp-editor i {
+    font-style: italic;
+}
+
+.user-content strong,
+.user-content b,
+body#tinymce.wp-editor strong,
+body#tinymce.wp-editor b {
+    font-weight: 800;
+}
+
+.user-content abbr,
+.user-content acronym,
+body#tinymce.wp-editor abbr,
+body#tinymce.wp-editor acronym {
+    border-bottom: dotted 1px;
+}
+
+.user-content sub,
+body#tinymce.wp-editor sub {
+    vertical-align: sub;
+    font-size: smaller;
+}
+
+.user-content sup,
+body#tinymce.wp-editor sup {
+    vertical-align: super;
+    font-size: smaller;
+}
+
+.user-content u,
+.user-content ins
+body#tinymce.wp-editor u,
+body#tinymce.wp-editor ins {
+    text-decoration: underline;
+}
+
+.user-content s,
+.user-content strike,
+.user-content del,
+body#tinymce.wp-editor s,
+body#tinymce.wp-editor strike,
+body#tinymce.wp-editor del {
+    text-decoration: line-through;
+}
+
+.user-content big,
+body#tinymce.wp-editor big {
+    font-size: larger;
+}
+
+.user-content small,
+body#tinymce.wp-editor small {
+    font-size: smaller;
+}
+
+.user-content q,
+body#tinymce.wp-editor q {
+    font-style: italic;
+}
+
+.user-content q::before,
+body#tinymce.wp-editor q::before {
+    content: open-quote;
+}
+
+.user-content q::after,
+body#tinymce.wp-editor q::after {
+    content: close-quote;
+}
+
+.user-content q:lang(en),
+body#tinymce.wp-editor q:lang(en) {
+    quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+.user-content samp,
+.user-content tt,
+.user-content code,
+.user-content kbd,
+body#tinymce.wp-editor samp,
+body#tinymce.wp-editor tt,
+body#tinymce.wp-editor code,
+body#tinymce.wp-editor kbd {
+    font-family: "Lucida Console", Monaco, monospace;
+    color: #eeedeb;
+    background-color: #444444;
+}
+
+.user-content var,
+body#tinymce.wp-editor var {
+    font-style: italic;
+}
+
+.user-content cite,
+body#tinymce.wp-editor cite {
+    font-style: italic;
+}
+
+.user-content dfn,
+body#tinymce.wp-editor dfn {
+    font-style: italic;
+}
+
+.user-content ins,
+body#tinymce.wp-editor ins {
+    text-decoration: underline;
+}
+
+.user-content blink,
+body#tinymce.wp-editor blink {
+    text-decoration: blink;
+}
+
+.user-content bdo,
+body#tinymce.wp-editor bdo {
+
+}
+
+/* List Styles --------------------------------------------------------- */
+
+.user-content ul,
+.user-content ol,
+.user-content dl,
+body#tinymce.wp-editor ul,
+body#tinymce.wp-editor ol,
+body#tinymce.wp-editor dl {
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding: 0;
+}
+
+.user-content ul,
+body#tinymce.wp-editor ul {
+    list-style-type: disc;
+    margin: 0 0 20px 0;
+}
+
+.user-content ol,
+body#tinymce.wp-editor ol {
+    list-style-type: decimal;
+    margin: 0 0 20px 0;
+}
+
+.user-content dt,
+body#tinymce.wp-editor dt {
+    font-weight: 800;
+}
+
+.user-content li,
+.user-content dd,
+body#tinymce.wp-editor li,
+body#tinymce.wp-editor dd {
+    margin: 0 0 0 24px;
+}
+
+/* nested lists have no top/bottom margins */
+.user-content ul ul,
+.user-content ul ol,
+.user-content ul dl,
+.user-content ol ul,
+.user-content ol ol,
+.user-content ol dl,
+.user-content dl ul,
+.user-content dl ol,
+.user-content dl dl
+body#tinymce.wp-editor ul ul,
+body#tinymce.wp-editor ul ol,
+body#tinymce.wp-editor ul dl,
+body#tinymce.wp-editor ol ul,
+body#tinymce.wp-editor ol ol,
+body#tinymce.wp-editor ol dl,
+body#tinymce.wp-editor dl ul,
+body#tinymce.wp-editor dl ol,
+body#tinymce.wp-editor dl dl {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* 2 deep unordered lists use a circle */
+.user-content ol ul,
+.user-content ul ul,
+body#tinymce.wp-editor ol ul,
+body#tinymce.wp-editor ul ul {
+    list-style-type: circle;
+}
+
+/* 3 deep (or more) unordered lists use a square */
+.user-content ol ol ul,
+.user-content ol ul ul,
+.user-content ul ol ul,
+.user-content ul ul ul,
+body#tinymce.wp-editor ol ol ul,
+body#tinymce.wp-editor ol ul ul,
+body#tinymce.wp-editor ul ol ul,
+body#tinymce.wp-editor ul ul ul {
+    list-style-type: square;
+}
+
+/* Table Styles -------------------------------------------------------- */
+
+.user-content table,
+body#tinymce.wp-editor table {
+    margin: 0 0 24px 0;
+    width: 100% !important;
+    border-spacing: 2px;
+    border-collapse: separate;
+    border: none;
+}
+
+.user-content caption,
+body#tinymce.wp-editor caption {
+    font-size: smaller;
+}
+
+.user-content tr,
+body#tinymce.wp-editor tr {
+    vertical-align: middle;
+}
+
+.user-content tbody,
+body#tinymce.wp-editor tbody {
+    vertical-align: middle;
+}
+
+.user-content thead,
+body#tinymce.wp-editor thead {
+    vertical-align: middle;
+}
+
+.user-content tfoot,
+body#tinymce.wp-editor tfoot {
+    vertical-align: middle;
+}
+
+.user-content td,
+body#tinymce.wp-editor td {
+    vertical-align: inherit;
+    text-align: inherit;
+    padding: 2px 4px;
+    border: none;
+}
+
+.user-content th,
+body#tinymce.wp-editor th {
+    vertical-align: inherit;
+    text-align: inherit;
+    font-weight: 800;
+    padding: 2px 4px;
+    background-color: #666;
+    color: #fff;
+    border: none;
+}
+
+.user-content tr.even td,
+body#tinymce.wp-editor tr.even td {
+    background-color: #ccc;
+}
+
+/* =WordPress Core
+-------------------------------------------------------------- */
+.user-content .alignnone,
+body#tinymce.wp-editor .alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.user-content .aligncenter,
+.user-content div.aligncenter,
+body#tinymce.wp-editor .aligncenter,
+body#tinymce.wp-editor div.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+
+.user-content .alignright,
+body#tinymce.wp-editor .alignright {
+    float:right;
+    margin: 5px 0 20px 20px;
+}
+
+.user-content .alignleft,
+body#tinymce.wp-editor .alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+.user-content a img.alignright,
+body#tinymce.wp-editor a img.alignright {
+    float: right;
+    margin: 5px 0 20px 20px;
+}
+
+.user-content a img.alignnone,
+body#tinymce.wp-editor a img.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.user-content a img.alignleft,
+body#tinymce.wp-editor a img.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+.user-content a img.aligncenter,
+body#tinymce.wp-editor a img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.user-content .wp-caption,
+body#tinymce.wp-editor .wp-caption {
+    background: transparent;
+    border: none;
+    max-width: 96%; /* Image does not overflow the content area */
+    padding: 5px 3px 10px;
+    text-align: left;
+}
+
+.user-content .wp-caption.alignnone,
+body#tinymce.wp-editor .wp-caption.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.user-content .wp-caption.alignleft,
+body#tinymce.wp-editor .wp-caption.alignleft {
+    margin: 5px 20px 20px 0;
+}
+
+.user-content .wp-caption.alignright,
+body#tinymce.wp-editor .wp-caption.alignright {
+    margin: 5px 0 20px 20px;
+}
+
+.user-content .wp-caption img,
+body#tinymce.wp-editor .wp-caption img {
+    border: 0 none;
+    height: auto;
+    margin: 0;
+    max-width: 98.5%;
+    padding: 0;
+    width: auto;
+}
+
+.user-content .wp-caption p.wp-caption-text,
+body#tinymce.wp-editor .wp-caption p.wp-caption-text {
+    font-family: "MillerDisplay Light", Georgia, serif;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: normal;
+    line-height: 17px;
+    margin: 0;
+    padding: 0 4px 5px;
+}
