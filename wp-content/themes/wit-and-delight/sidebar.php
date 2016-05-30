@@ -85,7 +85,9 @@
         <?php echo get_latest_instagram_image(); ?>
         <div class="stack">
             <div class="stack-item stack-item_isCentered">
-                <h2 class="caption">Find Us On Instagram</h2>
+                <h2 class="caption">
+                    <a href="<?php the_field('instagram_link', 'options'); ?>">Find Us On Instagram</a>
+                </h2>
             </div>
         </div>
     </div>
