@@ -148,11 +148,11 @@ function the_first_image($id, $size) {
 
 }
 
-/* Remove the first image in a post for single page */
+/* Remove the first image or attachment div (used if the image has a cpation) in a post */
 /* used in conjunction with the_first_image to avoid duplicates */
 function content_without_first_image ($content) {
     if (!is_page() && !is_feed() && !is_feed() && !is_home()) {
-        $content = preg_replace('/<img[^>]+\>/i', '', $content, 1);
+        $content = preg_replace('/<img[^>]+\>|<div id="attachment_[0-9]{1,}"[^>]+>(.*)<\/div>/i', '', $content, 1);
     }
     return $content;
 }
