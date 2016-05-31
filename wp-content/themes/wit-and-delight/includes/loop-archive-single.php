@@ -3,7 +3,13 @@
         <div class="teaser">
             <div class="teaser-media">
                 <a href="<?php echo the_permalink(); ?>">
-                    <?php echo the_teaser_image(get_the_id(), 'medium', true); ?>
+                    <?php
+                        if (has_post_thumbnail()) {
+                            the_post_thumbnail('medium');
+                        } else {
+                            echo the_teaser_image(get_the_id(), 'medium');
+                        }
+                    ?>
                 </a>
             </div>
             <div class="teaser-bd">

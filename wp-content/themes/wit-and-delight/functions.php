@@ -189,7 +189,7 @@ function the_teaser_image($id, $size) {
 
 }
 
-/* Remove the first image or attachment div (used if the image has a cpation) in a post */
+/* Remove the first image or attachment div (used if the image has a caption) in a post */
 /* used in conjunction with the_first_image to avoid duplicates */
 function content_without_first_image ($content) {
     if (!is_page() && !is_feed() && !is_feed() && !is_home()) {
@@ -206,6 +206,18 @@ add_filter( 'the_content', 'remove_dimensions', 10 );
 function remove_dimensions( $html ) {
    $html = preg_replace( '/(width|height)="\d*"\s/', '', $html );
    return $html;
+}
+
+/* gets the thumbnail caption */
+function the_post_thumbnail_caption() {
+  global $post;
+
+  $thumbnail_id    = get_post_thumbnail_id($post->ID);
+  $thumbnail_image = get_posts(array('p' => $thumbnail_id, 'post_type' => 'attachment'));
+
+  if ($thumbnail_image && isset($thumbnail_image[0])) {
+    echo '<p class="wp-caption-text">'.$thumbnail_image[0]->post_excerpt.'</p>';
+  }
 }
 
 /* ====================================================================================================

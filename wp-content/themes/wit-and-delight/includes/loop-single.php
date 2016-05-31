@@ -10,7 +10,16 @@
                     </div>
                     <div class="post-media">
                         <div class="user-content">
-                            <?php print_r(the_first_image(get_the_id(), 'large')); ?>
+                            <?php
+                                if (has_post_thumbnail()) {
+                                    echo '<div class="wp-caption">';
+                                    the_post_thumbnail('large');
+                                    the_post_thumbnail_caption();
+                                    echo '</div>';
+                                } else {
+                                    echo the_first_image(get_the_id(), 'large');
+                                }
+                            ?>
                         </div>
                     </div>
                     <div class="post-hd">
@@ -22,10 +31,14 @@
                     <div class="post-bd">
                         <div class="user-content">
                             <?php
-                                $content = get_the_content();
-                                $content = apply_filters('the_content', $content);
-                                $content = content_without_first_image($content);
-                                echo $content;
+                                if (has_post_thumbnail()) {
+                                    the_content();
+                                } else {
+                                    $content = get_the_content();
+                                    $content = apply_filters('the_content', $content);
+                                    $content = content_without_first_image($content);
+                                    echo $content;
+                                }
                             ?>
                         </div>
                     </div>
@@ -70,7 +83,7 @@
                                 echo '<div class="box box_violator">';
                                 echo '<div class="clip">';
                                 echo '<div class="clip-media">';
-                                echo the_first_image($related_post->ID, 'medium');
+                                echo the_teaser_image($related_post->ID, 'medium');
                                 echo '</div>';
                                 echo '<div class="clip-hd">';
                                 echo '<h3 class="caption caption_tight caption_sm">' . get_the_title($related_post->ID) . '</h3>';
