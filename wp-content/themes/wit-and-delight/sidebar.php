@@ -3,8 +3,17 @@
         <h2 class="isVisuallyHidden">Search</h2>
         <?php get_search_form(); ?>
     </div>
+    <div class="sidebar-section sidebar-section_isCentered">
+        <h2 class="hdg hdg_xl">
+            A Website Dedicated<br/>to Designing a Life<br/>Well Lived.
+        </h2>
+        <br/>
+        <a href="<?php echo get_page_uri(10654) ?>">
+            <img src="<?php echo get_template_directory_uri() . '/assets/images/more.png' ?>" alt="Learn More" />
+        </a>
+    </div>
     <div class="sidebar-section">
-        <div class="stack stack_violator">
+        <div class="stack">
             <div class="stack-item stack-item_isCentered">
                 <h2 class="caption">Keep in Touch</h2>
             </div>

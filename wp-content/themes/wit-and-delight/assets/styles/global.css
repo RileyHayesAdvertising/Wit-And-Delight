@@ -259,6 +259,10 @@ a:focus {
     display: none;
 }
 
+.sidebar-section_isCentered {
+    text-align: center;
+}
+
 /* media query matches grid starter media query */
 @media screen and (min-width: 60em) {
     .sidebar {
