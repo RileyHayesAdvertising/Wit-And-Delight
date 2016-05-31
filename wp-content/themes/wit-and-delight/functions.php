@@ -137,6 +137,7 @@ add_action('admin_init', 'rkv_imagealign_setup', 10);
 ==================================================================================================== */
 /* find the first image (and maybe the caption too) in a post and return it by post ID */
 function the_first_image($id, $size) {
+
     $regex = '/(attachment_[0-9]{1,}|wp-image-[0-9]{1,})/i';
 
     $post_content = get_post_field('post_content', $id);
@@ -162,6 +163,27 @@ function the_first_image($id, $size) {
         $html = $matches[0];
 
     }
+
+    return $html;
+
+}
+
+/* find the first image (and maybe the caption too) in a post and return it by post ID */
+function the_teaser_image($id, $size) {
+
+    $regex = '/(wp-image-[0-9]{1,})/i';
+
+    $post_content = get_post_field('post_content', $id);
+    $post_content_with_filters = apply_filters('the_content', $post_content);
+
+    $output = preg_match($regex, $post_content_with_filters, $matches);
+
+    $attachment = $matches[1];
+
+    $attachment_id = str_replace('wp-image-', '', $attachment);
+    $attachment_src = wp_get_attachment_image_src($attachment_id, $size);
+
+    $html = '<img src="' . $attachment_src[0] . '" alt="" />';
 
     return $html;
 

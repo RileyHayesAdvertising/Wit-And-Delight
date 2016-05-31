@@ -3,7 +3,7 @@
         <div class="teaser">
             <div class="teaser-media">
                 <a href="<?php echo the_permalink(); ?>">
-                    <img src="<?php echo the_first_image(get_the_id(), 'medium'); ?>" alt="" />
+                    <?php echo the_teaser_image(get_the_id(), 'medium', true); ?>
                 </a>
             </div>
             <div class="teaser-bd">
