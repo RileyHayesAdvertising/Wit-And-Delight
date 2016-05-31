@@ -9,7 +9,9 @@
                         <span class="caption"><?php exclude_post_categories('206',', '); ?></span>
                     </div>
                     <div class="post-media">
-                        <img src="<?php echo the_first_image(get_the_id(), 'large'); ?>" alt="" />
+                        <div class="user-content">
+                            <?php print_r(the_first_image(get_the_id(), 'large')); ?>
+                        </div>
                     </div>
                     <div class="post-hd">
                         <h2 class="hdg hdg_xxl"><?php the_title(); ?></h2>
@@ -68,7 +70,7 @@
                                 echo '<div class="box box_violator">';
                                 echo '<div class="clip">';
                                 echo '<div class="clip-media">';
-                                echo '<img src="' . the_first_image($related_post->ID, 'medium') .'" alt="" />';
+                                echo the_first_image($related_post->ID, 'medium');
                                 echo '</div>';
                                 echo '<div class="clip-hd">';
                                 echo '<h3 class="caption caption_tight caption_sm">' . get_the_title($related_post->ID) . '</h3>';
