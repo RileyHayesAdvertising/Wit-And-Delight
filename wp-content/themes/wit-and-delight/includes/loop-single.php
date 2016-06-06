@@ -16,7 +16,7 @@
                                     echo get_field('video_embed_code');
                                     echo '</div>';
                                 } else if (has_post_thumbnail()) {
-                                    echo addPinterestIconToImage('<img class="alignnone size-full" src="' . the_post_thumbnail('large') . '">');
+                                    echo addPinterestIconToImage('<img class="alignnone size-full" src="' . wp_get_attachment_url(get_post_thumbnail_id(get_the_id(), 'large')) . '">');
                                 } else {
                                     echo addPinterestIconToImage(the_first_image(get_the_id(), 'large'));
                                 }
