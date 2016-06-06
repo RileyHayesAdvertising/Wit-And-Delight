@@ -802,6 +802,15 @@ a:focus {
     margin-bottom: 30px;
 }
 
+.teaser-media > a {
+    position: relative;
+    display: inline-block;
+}
+
+.teaser-media > a:hover .pin {
+    opacity: 1;
+}
+
 .teaser-bd {
     text-align: center;
 }
@@ -1581,6 +1590,20 @@ a:focus .dot-image {
 
 .user-content .videoPlayer {
     margin-bottom: 20px;
+}
+
+/* ---------------------------------------------------------------------
+   pin grapphic placement
+   - requires positioning context from containter
+   - requires hover based on container
+------------------------------------------------------------------------ */
+.pin {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity .12s linear;
 }
 
 /* ---------------------------------------------------------------------
