@@ -100,4 +100,20 @@
             </div>
         </div>
     </div>
+    <?php if (count(get_field('sidebar_widget','options')) > 1) : ?>
+        <?php while(has_sub_field('sidebar_widget','options')): ?>
+         <div class="sidebar-section">
+            <div class="stack">
+                <div class="stack-item stack-item_isCentered">
+                    <h2 class="caption"><?php the_sub_field('sidebar_widget_title'); ?></h2>
+                </div>
+                <div class="stack-item">
+                    <div class="user-content">
+                        <?php the_sub_field('sidebar_widget_content'); ?>
+                    </div>
+                </div>
+            </div>
+         </div>
+        <?php endwhile; ?>
+    <?php endif;?>
 </div>
