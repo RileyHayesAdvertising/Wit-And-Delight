@@ -11,7 +11,11 @@
                     <div class="post-media">
                         <div class="user-content">
                             <?php
-                                if (has_post_thumbnail()) {
+                                if (get_field('video_embed_code')) {
+                                    echo '<div class="videoPlayer">';
+                                    echo get_field('video_embed_code');
+                                    echo '</div>';
+                                } else if (has_post_thumbnail()) {
                                     echo '<div class="wp-caption">';
                                     addPinterestIconToImage(get_post_thumbnail('large'));
                                     the_post_thumbnail_caption();
@@ -31,7 +35,7 @@
                     <div class="post-bd">
                         <div class="user-content">
                             <?php
-                                if (has_post_thumbnail()) {
+                                if (has_post_thumbnail() || get_field('video_embed_code')) {
                                     parseForPinterestImages(get_content());
                                 } else {
                                     $content = get_the_content();
