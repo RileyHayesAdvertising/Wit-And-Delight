@@ -1597,6 +1597,15 @@ a:focus .dot-image {
     opacity: 1;
 }
 
+.pinterestPin > a {
+    position: relative;
+    display: inline-block;
+}
+
+.pinterestPin > a:hover .pin {
+    opacity: 1;
+}
+
 .pin {
     position: absolute;
     top: 14px;

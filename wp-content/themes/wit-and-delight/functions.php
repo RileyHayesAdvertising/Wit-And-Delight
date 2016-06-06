@@ -470,3 +470,4 @@ function exclude_post_categories($excl='', $spacer=' ') {
  Include Classes
 ==================================================================================================== */
 require_once('classes/post-like.php');
+require_once('classes/pinterest.php');
