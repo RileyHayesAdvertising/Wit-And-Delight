@@ -12,10 +12,7 @@
                         <div class="user-content">
                             <?php
                                 if (has_post_thumbnail()) {
-                                    echo '<div class="wp-caption">';
-                                    addPinterestIconToImage(get_post_thumbnail('large'));
-                                    the_post_thumbnail_caption();
-                                    echo '</div>';
+                                    echo addPinterestIconToImage('<img src="' . the_post_thumbnail('large') . '">');
                                 } else {
                                     echo addPinterestIconToImage(the_first_image(get_the_id(), 'large'));
                                 }
@@ -32,7 +29,7 @@
                         <div class="user-content">
                             <?php
                                 if (has_post_thumbnail()) {
-                                    parseForPinterestImages(get_content());
+                                    echo parseForPinterestImages(get_the_content());
                                 } else {
                                     $content = get_the_content();
                                     $content = apply_filters('the_content', $content);
