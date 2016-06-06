@@ -293,7 +293,7 @@ function round_follower_count($total) {
    Get instagram stuff
 ==================================================================================================== */
 function get_latest_instagram_image() {
-    $access_token = '592289533.97584da.efdf828c22c74b8bbbcaea3166050cb8';
+    $access_token = '11823250.3a81a9f.a94db933d6bb4ad59c19062805c9fc9a';
     $user_id = '11823250';
     $api_url = 'https://api.instagram.com/v1/users/' . $user_id . '/media/recent/?access_token=' . $access_token . '&count=1';
 
