@@ -3,8 +3,6 @@
         <div class="teaser">
             <div class="teaser-media">
                 <?php
-                    $post_thumbnail = '';
-
                     if (has_post_thumbnail()) {
                         $post_thumbnail = get_the_post_thumbnail(get_the_id(), 'medium');
                         $pinterest_thumbnail = wp_get_attachment_url(get_post_thumbnail_id(get_the_id(), 'thumbnail'));;
@@ -13,17 +11,8 @@
                         $pinterest_thumbnail = $post_thumbnail;
                     }
 
-                    $pinterest_url = urlencode(get_the_permalink());
-                    $pinterest_image = urlencode($pinterest_thumbnail);
-                    $pinterest_description = urlencode(get_the_title());
+                    echo addPinterestIconToImage($pinterest_thumbnail);
                 ?>
-
-                <a href="//pinterest.com/pin/create/link/?url=<?php echo $pinterest_url; ?>&media=<?php echo $pinterest_image; ?>&description=<?php echo $pinterest_description; ?>">
-                    <span class="pin"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/pin-it.png" alt="Pin It" /></span>
-                    <?php
-                        echo $post_thumbnail;
-                    ?>
-                </a>
             </div>
             <div class="teaser-bd">
                 <div class="blurb">
