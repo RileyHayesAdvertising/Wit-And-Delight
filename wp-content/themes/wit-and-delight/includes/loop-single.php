@@ -11,8 +11,12 @@
                     <div class="post-media">
                         <div class="user-content">
                             <?php
-                                if (has_post_thumbnail()) {
-                                    echo addPinterestIconToImage('<img src="' . the_post_thumbnail('large') . '">');
+                                if (get_field('video_embed_code')) {
+                                    echo '<div class="videoPlayer">';
+                                    echo get_field('video_embed_code');
+                                    echo '</div>';
+                                } else if (has_post_thumbnail()) {
+                                    echo addPinterestIconToImage('<img class="alignnone size-full" src="' . the_post_thumbnail('large') . '">');
                                 } else {
                                     echo addPinterestIconToImage(the_first_image(get_the_id(), 'large'));
                                 }
@@ -28,7 +32,7 @@
                     <div class="post-bd">
                         <div class="user-content">
                             <?php
-                                if (has_post_thumbnail()) {
+                                if (has_post_thumbnail() || get_field('video_embed_code')) {
                                     echo parseForPinterestImages(get_the_content());
                                 } else {
                                     $content = get_the_content();

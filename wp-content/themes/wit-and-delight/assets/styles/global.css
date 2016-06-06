@@ -1588,15 +1588,6 @@ a:focus .dot-image {
    - requires positioning context from containter
    - requires hover based on container
 ------------------------------------------------------------------------ */
-.teaser-media > a {
-    position: relative;
-    display: inline-block;
-}
-
-.teaser-media > a:hover .pin {
-    opacity: 1;
-}
-
 .pinterestPin > a {
     position: relative;
     display: inline-block;

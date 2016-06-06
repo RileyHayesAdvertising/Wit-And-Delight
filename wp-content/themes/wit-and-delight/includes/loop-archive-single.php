@@ -6,7 +6,7 @@
                     if (has_post_thumbnail()) {
                         $post_thumbnail = get_the_post_thumbnail(get_the_id(), 'medium');
                         $pinterest_thumbnail = wp_get_attachment_url(get_post_thumbnail_id(get_the_id(), 'thumbnail'));
-                        echo addPinterestIconToImage('<img src="' . $pinterest_thumbnail . '">');
+                        echo addPinterestIconToImage('<img class="alignnone size-full" src="' . $pinterest_thumbnail . '">');
                     } else {
                         $post_thumbnail = the_teaser_image(get_the_id(), 'medium');
                         $pinterest_thumbnail = $post_thumbnail;
