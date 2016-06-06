@@ -168,7 +168,7 @@ function the_first_image($id, $size) {
 
 }
 
-/* find the first image (and maybe the caption too) in a post and return it by post ID */
+/* find the first image in a post and return it by post ID */
 function the_teaser_image($id, $size) {
 
     $regex = '/(wp-image-[0-9]{1,})/i';

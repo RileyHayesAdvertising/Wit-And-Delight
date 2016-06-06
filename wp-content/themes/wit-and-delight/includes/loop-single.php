@@ -83,7 +83,11 @@
                                 echo '<div class="box box_violator">';
                                 echo '<div class="clip">';
                                 echo '<div class="clip-media">';
-                                echo the_teaser_image($related_post->ID, 'medium');
+                                if (has_post_thumbnail($related_post->ID)) {
+                                    echo get_the_post_thumbnail($related_post->ID, 'medium');
+                                } else {
+                                    echo the_teaser_image($related_post->ID, 'medium');
+                                }
                                 echo '</div>';
                                 echo '<div class="clip-hd">';
                                 echo '<h3 class="caption caption_tight caption_sm">' . get_the_title($related_post->ID) . '</h3>';
