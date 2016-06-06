@@ -1,6 +1,7 @@
 /* ---------------------------------------------------------------------
    User Content
 ------------------------------------------------------------------------ */
+.user-content,
 #tinymce.wp-editor {
     font-family: "proxima-nova", Helvetica, arial, sans-serif;
     font-size: 14px;

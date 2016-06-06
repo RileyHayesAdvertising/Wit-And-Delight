@@ -802,15 +802,6 @@ a:focus {
     margin-bottom: 30px;
 }
 
-.teaser-media > a {
-    position: relative;
-    display: inline-block;
-}
-
-.teaser-media > a:hover .pin {
-    opacity: 1;
-}
-
 .teaser-bd {
     text-align: center;
 }
@@ -1597,6 +1588,15 @@ a:focus .dot-image {
    - requires positioning context from containter
    - requires hover based on container
 ------------------------------------------------------------------------ */
+.teaser-media > a {
+    position: relative;
+    display: inline-block;
+}
+
+.teaser-media > a:hover .pin {
+    opacity: 1;
+}
+
 .pin {
     position: absolute;
     top: 14px;
