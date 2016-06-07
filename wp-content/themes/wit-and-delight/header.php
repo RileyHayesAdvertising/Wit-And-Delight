@@ -27,7 +27,7 @@
                 <div class="wrapper">
                     <div class="masthead" role="banner">
                         <div class="masthead-brand">
-                            <h1 class="logo">
+                            <h1 class="logo logo-onTop">
                                 <a href="<?php echo home_url(); ?>">
                                     <?php echo file_get_contents(get_template_directory() . '/assets/images/logo.svg'); ?>
                                 </a>

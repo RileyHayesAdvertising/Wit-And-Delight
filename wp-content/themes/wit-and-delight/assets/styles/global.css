@@ -336,6 +336,11 @@ a:focus {
     width: 240px;
 }
 
+.logo-onTop {
+    position: relative;
+    z-index: 99999;
+}
+
 @media screen and (min-width: 30em) {
     .logo {
         width: 320px;
