@@ -4,9 +4,38 @@
         <h2 class="isVisuallyHidden"><?php the_title(); ?></h2>
     </div>
     <div class="page-bd">
-        <div class="box">
-            <div class="user-content">
-                <?php the_content(); ?>
+        <div class="box box_inset">
+            <div class="pageSections">
+            <?php while(has_sub_field('page_sections')): ?>
+            <?php
+                $section_layout  = get_sub_field('page_section_layout');
+                $section_title   = get_sub_field('page_section_title');
+                $section_image   = get_sub_field('page_section_image');
+                $section_content = get_sub_field('page_section_content');
+                $section_anchor    = strtolower(urlencode($section_title));
+            ?>
+                <div class="pageSections-slice">
+                    <div class="main">
+                        <?php if ($section_title) : ?>
+                        <div class="main-hd">
+                            <h3 class="caption" id="<?php echo $section_anchor ?>"><?php echo $section_title; ?></h3>
+                        </div>
+                        <?php endif; ?>
+                        <div class="main-bd">
+                            <?php if ($section_layout != "textOnly") : ?>
+                            <div class="main-bd-media">
+                                <img data-pin-nopin="true" src="<?php echo $section_image; ?>" alt="" />
+                            </div>
+                            <?php endif; ?>
+                            <div class="main-bd-content">
+                                <div class="user-content">
+                                    <?php echo $section_content; ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <?php endwhile; ?>
             </div>
         </div>
     </div>
@@ -14,8 +43,8 @@
     <?php if(get_field('press')): ?>
     <div class="page-ft">
         <div class="section">
-            <div class="section-hd">
-                <h2 class="hdg hdg_lg">Press</h2>
+            <div class="section-hd section-hd_empty">
+                <h2 class="isVisuallyHidden">Press</h2>
             </div>
             <div class="section-bd">
                 <ul class="pods">
