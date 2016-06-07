@@ -3,24 +3,28 @@
     <div class="page-hd">
         <h2 class="isVisuallyHidden"><?php the_title(); ?></h2>
     </div>
-    <?php if ($post->post_content !== "") :?>
-    <div class="page-bd page-bd_push">
-        <div class="box">
-            <div class="user-content">
-                <?php the_content(); ?>
-            </div>
-        </div>
-    </div>
-    <?php endif; ?>
     <?php endwhile; endif; ?>
-    <?php if(get_field('shopstyle_list_id')): ?>
-    <div class="page-ft">
-        <div class="section">
-            <div class="section-bd">
-                <h2 class="isVisuallyHidden">Shop these picks!</h2>
-                <?php echo get_shopstyle_products(get_field('shopstyle_list_id')); ?>
+    <div class="page-bd">
+        <div class="pageSections">
+        <?php while(has_sub_field('shop_sections')): ?>
+        <?php
+            $section_title   = get_sub_field('shop_section_title');
+            $section_shop_id = get_sub_field('shop_section_list_id');
+            $section_anchor  = sanitize_title($section_title);
+        ?>
+            <div class="pageSections-slice">
+                <div class="main">
+                    <?php if ($section_title) : ?>
+                    <div class="main-hd">
+                        <h3 class="caption" id="<?php echo $section_anchor ?>"><?php echo $section_title; ?></h3>
+                    </div>
+                    <?php endif; ?>
+                    <div class="main-bd">
+                        <?php echo get_shopstyle_products($section_shop_id); ?>
+                    </div>
+                </div>
             </div>
+        <?php endwhile; ?>
         </div>
     </div>
-    <?php endif; ?>
 </div> <!-- // END .page -->
