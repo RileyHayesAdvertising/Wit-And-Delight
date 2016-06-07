@@ -317,7 +317,7 @@ function get_latest_instagram_image() {
 function get_shopstyle_products($id) {
     $api_key = 'uid7025-33221705-58';
     $list_id = $id;
-    $limit = '48';
+    $limit = '24';
     $api_url = 'http://api.shopstyle.com/api/v2/lists/' . $list_id . '/items?pid=' . $api_key . '&limit=' . $limit;
 
     $data = wp_remote_get($api_url);
