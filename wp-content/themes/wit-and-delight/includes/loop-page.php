@@ -12,7 +12,16 @@
                 $section_title   = get_sub_field('page_section_title');
                 $section_image   = get_sub_field('page_section_image');
                 $section_content = get_sub_field('page_section_content');
-                $section_anchor    = strtolower(urlencode($section_title));
+                $section_anchor  = sanitize_title($section_title);
+                $image_class     = '';
+                
+                if ($section_layout == "imageRight") {
+                    $image_class = "main-bd-media_flexRight";
+                }
+                
+                if ($section_layout == "imageLeft") {
+                    $image_class = "main-bd-media_flexLeft";
+                }
             ?>
                 <div class="pageSections-slice">
                     <div class="main">
@@ -23,15 +32,17 @@
                         <?php endif; ?>
                         <div class="main-bd">
                             <?php if ($section_layout != "textOnly") : ?>
-                            <div class="main-bd-media">
+                            <div class="main-bd-media <?php echo $image_class; ?>">
                                 <img data-pin-nopin="true" src="<?php echo $section_image; ?>" alt="" />
                             </div>
                             <?php endif; ?>
+                            <?php if ($section_layout != "imageOnly") : ?>
                             <div class="main-bd-content">
                                 <div class="user-content">
                                     <?php echo $section_content; ?>
                                 </div>
                             </div>
+                            <?php endif; ?>
                         </div>
                     </div>
                 </div>

@@ -331,7 +331,7 @@ function get_shopstyle_products($id) {
         $html .= '<div class="box">';
         $html .= '<div class="product">';
         $html .= '<div class="product-media">';
-        $html .= '<img src="' . $product->product->image->sizes->XLarge->url . '" alt="' . $product->product->name . '" />';
+        $html .= '<img data-pin-nopin="true" src="' . $product->product->image->sizes->XLarge->url . '" alt="' . $product->product->name . '" />';
         $html .= '</div>';
         $html .= '<div class="product-hd">';
         $html .= $product->product->name;
