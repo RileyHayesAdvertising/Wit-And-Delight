@@ -466,6 +466,29 @@ function exclude_post_categories($excl='', $spacer=' ') {
   }
 }
 
+
+/* ====================================================================================================
+ Get Nav Sections
+    uses page slug to get page sections acf options
+==================================================================================================== */
+function getPageSections($slug) {
+    $output = array();
+    $slug = strtolower($slug);
+
+    $page = get_page_by_path($slug);
+    $acfParent = $slug == 'shop' ? 'shop_sections' : 'page_sections';
+    $acfTitle  = $slug == 'shop' ? 'shop_section_title' : 'page_section_title';
+
+    if($page) {
+        $field = get_fields($page->ID);
+        foreach(get_field($acfParent, $page->ID) as $t) {
+           $output[] = $t[$acfTitle];
+        }
+    }
+
+    return $output;
+}
+
 /* ====================================================================================================
  Include Classes
 ==================================================================================================== */

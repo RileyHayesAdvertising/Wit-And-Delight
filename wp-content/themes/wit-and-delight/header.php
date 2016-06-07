@@ -37,18 +37,30 @@
                             <ul class="nav">
                                 <li>
                                     <a href="">About</a>
+                                    <?php foreach (getPageSections('about') as $item) {
+                                        echo "$item <br />";
+                                    }?>
                                 </li>
                                 <li>
                                     <a href="">Studio</a>
+                                    <?php foreach (getPageSections('studio') as $item) {
+                                        echo "$item <br />";
+                                    }?>
                                 </li>
                                 <li class="nav-item-home">
                                     <a href="">Home</a>
                                 </li>
                                 <li>
                                     <a href="">Shop</a>
+                                    <?php foreach (getPageSections('shop') as $item) {
+                                        echo "$item <br />";
+                                    }?>
                                 </li>
                                 <li>
                                     <a href="">Products</a>
+                                    <?php foreach (getPageSections('products') as $item) {
+                                        echo "$item <br />";
+                                    }?>
                                 </li>
                             </ul>
                         </div>
