@@ -5,7 +5,9 @@
     </div>
     <div class="sidebar-section sidebar-section_isCentered">
         <h2 class="hdg hdg_xl">
-            A Website Dedicated<br/>to Designing a Life<br/>Well Lived.
+            <a href="<?php echo get_page_uri(10654) ?>">
+                A Website Dedicated<br/>to Designing a Life<br/>Well Lived.
+            </a>
         </h2>
         <br/>
         <a href="<?php echo get_page_uri(10654) ?>">
