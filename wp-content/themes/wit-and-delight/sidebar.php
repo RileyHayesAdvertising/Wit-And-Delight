@@ -102,18 +102,72 @@
     </div>
     <?php if (count(get_field('sidebar_widget','options')) > 1) : ?>
         <?php while(has_sub_field('sidebar_widget','options')): ?>
+        <?php
+            $widget_style   = get_sub_field('sidebar_widget_style');
+            $widget_title   = get_sub_field('sidebar_widget_title');
+            $widget_image   = get_sub_field('sidebar_widget_image');
+            $widget_content = get_sub_field('sidebar_widget_content');
+            $widget_link    = get_sub_field('sidebar_widget_link');
+        ?>
+
+        <?php if ($widget_style == 'image') : ?>
+        <div class="sidebar-section">
+            <?php if ($widget_link) { ?><a href="<?php echo $widget_link; ?>"><?php } ?>
+                <img data-pin-nopin="true" src="<?php echo $widget_image; ?>" alt="" />
+            <?php if ($widget_link) { ?></a><?php } ?>
+            <div class="stack">
+                <div class="stack-item stack-item_isCentered">
+                    <h2 class="caption">
+                        <?php if ($widget_link) { ?><a href="<?php echo $widget_link; ?>"><?php } ?>
+                            <?php echo $widget_title; ?>
+                         <?php if ($widget_link) { ?></a><?php } ?>
+                    </h2>
+                </div>
+            </div>
+        </div>
+        <?php endif; ?>
+
+        <?php if ($widget_style == 'content') : ?>
          <div class="sidebar-section">
             <div class="stack">
                 <div class="stack-item stack-item_isCentered">
-                    <h2 class="caption"><?php the_sub_field('sidebar_widget_title'); ?></h2>
+                    <h2 class="caption">
+                        <?php if ($widget_link) { ?><a href="<?php echo $widget_link; ?>"><?php } ?>
+                            <?php echo $widget_title; ?>
+                         <?php if ($widget_link) { ?></a><?php } ?>
+                    </h2>
                 </div>
                 <div class="stack-item">
                     <div class="user-content">
-                        <?php the_sub_field('sidebar_widget_content'); ?>
+                        <?php echo $widget_content; ?>
                     </div>
                 </div>
             </div>
          </div>
+         <?php endif; ?>
+
+        <?php if ($widget_style == 'all') : ?>
+        <div class="sidebar-section">
+            <?php if ($widget_link) { ?><a href="<?php echo $widget_link; ?>"><?php } ?>
+                <img data-pin-nopin="true" src="<?php echo $widget_image; ?>" alt="" />
+            <?php if ($widget_link) { ?></a><?php } ?>
+            <div class="stack">
+                <div class="stack-item stack-item_isCentered">
+                    <h2 class="caption">
+                        <?php if ($widget_link) { ?><a href="<?php echo $widget_link; ?>"><?php } ?>
+                            <?php echo $widget_title; ?>
+                         <?php if ($widget_link) { ?></a><?php } ?>
+                    </h2>
+                </div>
+                <div class="stack-item">
+                    <div class="user-content">
+                        <?php echo $widget_content; ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <?php endif; ?>
+
         <?php endwhile; ?>
     <?php endif;?>
 </div>
