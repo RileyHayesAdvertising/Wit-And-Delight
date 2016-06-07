@@ -34,7 +34,23 @@
                             </h1>
                         </div>
                         <div class="masthead-nav" role="navigation">
-
+                            <ul class="nav">
+                                <li>
+                                    <a href="">About</a>
+                                </li>
+                                <li>
+                                    <a href="">Studio</a>
+                                </li>
+                                <li class="nav-item-home">
+                                    <a href="">Home</a>
+                                </li>
+                                <li>
+                                    <a href="">Shop</a>
+                                </li>
+                                <li>
+                                    <a href="">Products</a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
