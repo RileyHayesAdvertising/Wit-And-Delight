@@ -80,7 +80,7 @@
 			
 			
 			// add functionality back in
-			tinyMCE.execCommand("mceAddControl", false, id);
+			tinyMCE.execCommand("mceAddEditor", false, id);
 			
 			
 			// events - load
