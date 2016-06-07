@@ -38,7 +38,7 @@
                                 <li class="nav-item">
                                     <a href="<?php echo get_home_url(null, '/about/'); ?>">About</a>
                                     <div class="subnav">
-                                        <ul>
+                                        <ul class="subnav-list">
                                         <?php foreach (getPageSections('about') as $item) {
                                             echo '<li>';
                                             echo '<a href="' . get_home_url(null, '/about#') . sanitize_title($item) . '">';
@@ -52,7 +52,7 @@
                                 <li class="nav-item">
                                     <a href="<?php echo get_home_url(null, '/studio/'); ?>">Studio</a>
                                     <div class="subnav">
-                                        <ul>
+                                        <ul class="subnav-list">
                                         <?php foreach (getPageSections('studio') as $item) {
                                             echo '<li>';
                                             echo '<a href="' . get_home_url(null, '/studio#') . sanitize_title($item) . '">';
@@ -69,7 +69,7 @@
                                 <li class="nav-item">
                                     <a href="<?php echo get_home_url(null, '/shop/'); ?>">Shop</a>
                                     <div class="subnav">
-                                        <ul>
+                                        <ul class="subnav-list">
                                         <?php foreach (getPageSections('shop') as $item) {
                                             echo '<li>';
                                             echo '<a href="' . get_home_url(null, '/shop#') . sanitize_title($item) . '">';
@@ -83,7 +83,7 @@
                                 <li class="nav-item">
                                     <a href="<?php echo get_home_url(null, '/products/'); ?>">Products</a>
                                     <div class="subnav">
-                                        <ul>
+                                        <ul class="subnav-list">
                                         <?php foreach (getPageSections('products') as $item) {
                                             echo '<li>';
                                             echo '<a href="' . get_home_url(null, '/products#') . sanitize_title($item) . '">';

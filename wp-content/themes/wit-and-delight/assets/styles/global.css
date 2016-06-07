@@ -270,7 +270,7 @@ a:focus {
     justify-content: space-between;
 }
 
-.nav a {
+.nav-item a {
     font-family: "proxima-nova", Helvetica, arial, sans-serif;
     font-size: 12px;
     line-height: 1.5;
@@ -285,14 +285,18 @@ a:focus {
     display: none;
 }
 
-.nav a:hover,
-.nav a:focus {
+.nav-item a:hover,
+.nav-item a:focus {
     color: #fdc58f;
     text-decoration: none;
 }
 
+.subnav {
+    display: none;
+}
+
 @media screen and (min-width: 40em) {
-    .nav a {
+    .nav-item a {
         font-size: 13px;
     }
 }
@@ -303,7 +307,7 @@ a:focus {
         -ms-flex-pack: distribute;
         justify-content: space-around;
     }
-
+    
     .nav-item-home {
         display: list-item;
         width: 440px; /* hold space of the logo */
@@ -311,6 +315,45 @@ a:focus {
 
     .nav-item-home a {
         display: none;
+    }
+    
+    .nav-item {
+        position: relative;
+    }
+    
+    .subnav {
+        position: absolute;
+        top: 20px;
+        left: 0;
+        width: 220px;
+        border-top: 20px solid transparent; /* extra space to create pointer */
+        text-align: left;
+        z-index: 9999999999999;
+        box-shadow: 0px 0px 1px rgba(0,0,0,.5);
+    }
+    
+    .subnav:before {
+        content: " ";
+        position: absolute;
+        left: 0;
+        top: -10px;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid #ffffff;
+    }
+    
+    .subnav-list {
+        padding: 15px 20px;
+        background-color: #ffffff;
+    }
+    
+    .subnav a {
+        color: #000000;
+    }
+    
+    .nav-item:hover .subnav,
+    .nav-item:focus .subnav {
+        display: block;
     }
 }
 
