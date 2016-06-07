@@ -80,5 +80,6 @@
         </div>
 
         <?php wp_footer(); ?>
+        <script src="//assets.pinterest.com/js/pinit.js" type="text/javascript" async defer data-pin-hover="true"></script>
     </body>
 </html>

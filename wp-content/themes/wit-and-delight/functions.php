@@ -183,7 +183,7 @@ function the_teaser_image($id, $size) {
     $attachment_id = str_replace('wp-image-', '', $attachment);
     $attachment_src = wp_get_attachment_image_src($attachment_id, $size);
 
-    $html = '<img src="' . $attachment_src[0] . '" alt="" />';
+    $html = $attachment_src[0];
 
     return $html;
 
@@ -305,7 +305,7 @@ function get_latest_instagram_image() {
     $image_caption = 'View the latest Wit & Delight Photo on Instagram';
 
     $html = '<a href="' . $insta_link . '" target="_blank">';
-    $html .= '<img src="' . $image_url . '" alt="' . $image_caption . '" />';
+    $html .= '<img  data-pin-nopin="true" src="' . $image_url . '" alt="' . $image_caption . '" />';
     $html .= '</a>';
 
     return $html;
@@ -470,4 +470,3 @@ function exclude_post_categories($excl='', $spacer=' ') {
  Include Classes
 ==================================================================================================== */
 require_once('classes/post-like.php');
-require_once('classes/pinterest.php');

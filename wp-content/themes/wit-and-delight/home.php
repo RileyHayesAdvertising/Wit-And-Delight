@@ -12,7 +12,7 @@
                     <div class="card">
                         <div class="card-media">
                             <a href="<?php the_sub_field('slide_link'); ?>">
-                                <img class="blockImage" src="<?php the_sub_field('slide_image'); ?>" alt="">
+                                <img data-pin-nopin="true" class="blockImage" src="<?php the_sub_field('slide_image'); ?>" alt="">
                             </a>
                         </div>
                     </div>

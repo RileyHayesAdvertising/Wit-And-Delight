@@ -420,7 +420,7 @@ body#tinymce.wp-editor tr.even td {
 -------------------------------------------------------------- */
 .user-content .alignnone,
 body#tinymce.wp-editor .alignnone {
-    margin: 5px 20px 20px 0;
+    margin: 0px 20px 20px 0;
 }
 
 .user-content .aligncenter,
@@ -428,36 +428,36 @@ body#tinymce.wp-editor .alignnone {
 body#tinymce.wp-editor .aligncenter,
 body#tinymce.wp-editor div.aligncenter {
     display: block;
-    margin: 5px auto 5px auto;
+    margin: 0px auto 20px auto;
 }
 
 .user-content .alignright,
 body#tinymce.wp-editor .alignright {
     float:right;
-    margin: 5px 0 20px 20px;
+    margin: 0px 0 20px 20px;
 }
 
 .user-content .alignleft,
 body#tinymce.wp-editor .alignleft {
     float: left;
-    margin: 5px 20px 20px 0;
+    margin: 0px 20px 20px 0;
 }
 
 .user-content a img.alignright,
 body#tinymce.wp-editor a img.alignright {
     float: right;
-    margin: 5px 0 20px 20px;
+    margin: 0px 0 20px 20px;
 }
 
 .user-content a img.alignnone,
 body#tinymce.wp-editor a img.alignnone {
-    margin: 5px 20px 20px 0;
+    margin: 0px 20px 20px 0;
 }
 
 .user-content a img.alignleft,
 body#tinymce.wp-editor a img.alignleft {
     float: left;
-    margin: 5px 20px 20px 0;
+    margin: 0px 20px 20px 0;
 }
 
 .user-content a img.aligncenter,

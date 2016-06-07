@@ -4,14 +4,17 @@
             <div class="teaser-media">
                 <?php
                     if (has_post_thumbnail()) {
-                        $post_thumbnail = get_the_post_thumbnail(get_the_id(), 'medium');
-                        $pinterest_thumbnail = wp_get_attachment_url(get_post_thumbnail_id(get_the_id(), 'medium'));
-                        echo addPinterestIconToImage('<img class="alignnone size-full" src="' . $pinterest_thumbnail . '">');
+                        $image_id = get_post_thumbnail_id();
+                        $image_url = wp_get_attachment_image_src($image_id, 'medium', true);
+                        $post_thumbnail = $image_url[0];
                     } else {
                         $post_thumbnail = the_teaser_image(get_the_id(), 'medium');
-                        $pinterest_thumbnail = $post_thumbnail;
-                        echo addPinterestIconToImage($pinterest_thumbnail);
                     }
+
+                    $url = get_the_permalink();
+                    $desc = get_the_title();
+
+                    echo '<img src="' . $post_thumbnail . '" data-pin-url="' . $url .'" data-pin-description="' . $desc .'">';
                 ?>
             </div>
             <div class="teaser-bd">
@@ -21,17 +24,17 @@
                     </div>
                     <div class="blurb-hd">
                         <h3 class="hdg hdg_xxl">
-                            <a href="<?php echo the_permalink(); ?>"><?php echo the_title(); ?></a>
+                            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                         </h3>
                     </div>
                     <div class="blurb-bd">
                         <div class="user-content">
-                            <?php echo the_excerpt(); ?>
+                            <?php the_excerpt(); ?>
                         </div>
                     </div>
                     <div class="blurb-ft">
                         <span class="caption">
-                            <a href="<?php echo the_permalink(); ?>">Read More &gt;</a>
+                            <a href="<?php the_permalink(); ?>">Read More &gt;</a>
                         </span>
                     </div>
                 </div>

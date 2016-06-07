@@ -9,19 +9,20 @@
                         <span class="caption"><?php exclude_post_categories('206',', '); ?></span>
                     </div>
                     <div class="post-media">
-                        <div class="user-content">
-                            <?php
-                                if (get_field('video_embed_code')) {
-                                    echo '<div class="videoPlayer">';
-                                    echo get_field('video_embed_code');
-                                    echo '</div>';
-                                } else if (has_post_thumbnail()) {
-                                    echo addPinterestIconToImage('<img class="alignnone size-full" src="' . wp_get_attachment_url(get_post_thumbnail_id(get_the_id(), 'large')) . '">');
-                                } else {
-                                    echo addPinterestIconToImage(the_first_image(get_the_id(), 'large'));
-                                }
-                            ?>
-                        </div>
+                        <?php
+                            $url = get_the_permalink();
+                            $desc = get_the_title();
+
+                            if (get_field('video_embed_code')) {
+                                echo '<div class="videoPlayer">' . get_field('video_embed_code') . '</div>';
+                            } else if (has_post_thumbnail()) {
+                                $post_thumbnail = wp_get_attachment_url(get_post_thumbnail_id(get_the_id(), 'large'));
+                                echo '<img src="' . $post_thumbnail . '" data-pin-url="' . $url .'" data-pin-description="' . $desc .'">';
+                            } else {
+                                $post_thumbnail = the_teaser_image(get_the_id(), 'large');
+                                echo '<img src="' . $post_thumbnail . '" data-pin-url="' . $url .'" data-pin-description="' . $desc .'">';
+                            }
+                        ?>
                     </div>
                     <div class="post-hd">
                         <h2 class="hdg hdg_xxl"><?php the_title(); ?></h2>
@@ -32,13 +33,13 @@
                     <div class="post-bd">
                         <div class="user-content">
                             <?php
+                                $content = get_the_content();
+                                $content = apply_filters('the_content', $content);
+
                                 if (has_post_thumbnail() || get_field('video_embed_code')) {
-                                    echo parseForPinterestImages(get_the_content());
+                                    echo $content;
                                 } else {
-                                    $content = get_the_content();
-                                    $content = apply_filters('the_content', $content);
-                                    $content = content_without_first_image($content);
-                                    echo parseForPinterestImages($content);
+                                    echo content_without_first_image($content);
                                 }
                             ?>
                         </div>
@@ -85,9 +86,13 @@
                                 echo '<div class="clip">';
                                 echo '<div class="clip-media">';
                                 if (has_post_thumbnail($related_post->ID)) {
-                                    echo get_the_post_thumbnail($related_post->ID, 'medium');
+                                    $image_id = get_post_thumbnail_id($related_post->ID);
+                                    $image_url = wp_get_attachment_image_src($image_id, 'medium', true);
+                                    $post_thumbnail = $image_url[0];
+                                    echo '<img data-pin-nopin="true" src="' . $post_thumbnail . '" />';
                                 } else {
-                                    echo the_teaser_image($related_post->ID, 'medium');
+                                    $post_thumbnail = the_teaser_image($related_post->ID, 'medium');
+                                    echo '<img data-pin-nopin="true" src="' . $post_thumbnail . '" />';
                                 }
                                 echo '</div>';
                                 echo '<div class="clip-hd">';

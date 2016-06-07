@@ -1584,29 +1584,6 @@ a:focus .dot-image {
 }
 
 /* ---------------------------------------------------------------------
-   pin grapphic placement
-   - requires positioning context from containter
-   - requires hover based on container
------------------------------------------------------------------------- */
-.pinterestPin > a {
-    position: relative;
-    display: inline-block;
-}
-
-.pinterestPin > a:hover .pin {
-    opacity: 1;
-}
-
-.pin {
-    position: absolute;
-    top: 14px;
-    left: 14px;
-    z-index: 9999;
-    opacity: 0;
-    transition: opacity .12s linear;
-}
-
-/* ---------------------------------------------------------------------
    POST LIKE STYLES
 ------------------------------------------------------------------------ */
 [data-icon]:before {
@@ -1753,6 +1730,31 @@ a.liked:focus {
         box-shadow: 0 -5px rgba(0, 0, 0, 0.2);
         height: 16px;
     }
+}
+
+/* ---------------------------------------------------------------------
+   Modify WordPress Sillyness
+------------------------------------------------------------------------ */
+[id^=attachment] {
+    max-width: 100%;
+}
+
+/* ---------------------------------------------------------------------
+   Override pinterest button image
+------------------------------------------------------------------------ */
+[class^=PIN_][class$=_save] {
+    width: 56px !important;
+    height: 56px !important;
+    padding: 0 !important;
+    font-size: 0 !important;
+    line-height: 0 !important;
+    background-color: transparent !important;
+    background-image: url("../images/pin-it.png") !important;
+    background-repeat: no-repeat !important;
+    background-position: top left !important;
+    background-size: 56px 56px !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
 }
 
 /* ---------------------------------------------------------------------
