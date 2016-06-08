@@ -14,11 +14,11 @@
                 $section_content = get_sub_field('page_section_content');
                 $section_anchor  = sanitize_title($section_title);
                 $image_class     = '';
-                
+
                 if ($section_layout == "imageRight") {
                     $image_class = "main-bd-media_flexRight";
                 }
-                
+
                 if ($section_layout == "imageLeft") {
                     $image_class = "main-bd-media_flexLeft";
                 }
@@ -53,7 +53,7 @@
     <?php endwhile; endif; ?>
     <?php if(get_field('press')): ?>
     <div class="page-ft">
-        <div class="section">
+        <div class="section" id="press">
             <div class="section-hd section-hd_empty">
                 <h2 class="isVisuallyHidden">Press</h2>
             </div>

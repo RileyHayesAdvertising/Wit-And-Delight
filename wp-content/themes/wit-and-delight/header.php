@@ -50,6 +50,9 @@
                                             echo '</a>';
                                             echo '</li>';
                                         }?>
+                                        <li>
+                                            <a href="<?php echo get_home_url(null, '/about#press') ?>">Press</a>
+                                        </li>
                                         </ul>
                                     </div>
                                 </li>
