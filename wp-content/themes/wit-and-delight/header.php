@@ -80,7 +80,7 @@
                                         </ul>
                                     </div>
                                 </li>
-                                <li class="nav-item">
+                                <li class="nav-item nav-item_last">
                                     <a href="<?php echo get_home_url(null, '/products/'); ?>">Products</a>
                                     <div class="subnav">
                                         <ul class="subnav-list">
