@@ -307,7 +307,7 @@ a:focus {
         -ms-flex-pack: distribute;
         justify-content: space-around;
     }
-    
+
     .nav-item-home {
         display: list-item;
         width: 280px; /* hold space of the logo */
@@ -316,11 +316,11 @@ a:focus {
     .nav-item-home a {
         display: none;
     }
-    
+
     .nav-item {
         position: relative;
     }
-    
+
     .subnav {
         position: absolute;
         top: 20px;
@@ -330,7 +330,7 @@ a:focus {
         text-align: left;
         z-index: 9999999999999;
     }
-    
+
     .subnav:before {
         content: " ";
         position: absolute;
@@ -340,27 +340,27 @@ a:focus {
         border-right: 10px solid transparent;
         border-bottom: 10px solid #ffffff;
     }
-    
+
     .nav-item_last .subnav {
         left: auto;
         right: 0;
     }
-    
+
     .nav-item_last .subnav:before {
         left: auto;
         right: 0;
     }
-    
+
     .subnav-list {
         padding: 15px 20px;
         background-color: #ffffff;
         box-shadow: 0px 0px 1px rgba(0,0,0,.5);
     }
-    
+
     .subnav a {
         color: #000000;
     }
-    
+
     .nav-item:hover .subnav,
     .nav-item:focus .subnav {
         display: block;
@@ -387,12 +387,12 @@ a:focus {
     .nav-item-home {
         width: 500px;
     }
-    
+
     .nav-item_last .subnav {
         left: 0;
         right: auto;
     }
-    
+
     .nav-item_last .subnav:before {
         left: 0;
         right: auto;
@@ -862,18 +862,6 @@ a:focus {
 }
 
 /* ---------------------------------------------------------------------
-   Crate
------------------------------------------------------------------------- */
-.crate {
-    -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-            box-sizing: border-box;
-    background: #000000;
-    padding: 20px;
-    max-width: 480px;
-}
-
-/* ---------------------------------------------------------------------
    Stack - matches pill border(s)
 ------------------------------------------------------------------------ */
 .stack {
@@ -1176,13 +1164,13 @@ a:focus {
     .main-bd-media {
         text-align: left;
     }
-    
+
     .main-bd-media_flexLeft {
         float: left;
         max-width: 50%;
         margin-right: 20px;
     }
-    
+
     .main-bd-media_flexRight {
         float: right;
         max-width: 50%;
@@ -1299,65 +1287,6 @@ a:focus {
 
 .vlist-item_indented {
     margin-left: 60px; /* super gross way to create indented comments */
-}
-
-/* ---------------------------------------------------------------------
-   Comment List
------------------------------------------------------------------------- */
-.comment {
-    margin-bottom: 30px;
-    font-family: "proxima-nova", Helvetica, arial, sans-serif;
-    max-width: 480px;
-    overflow-wrap: break-word;
-       word-wrap: break-word;
-}
-
-.comment-bd {
-    background: #000000;
-    color: #ffffff;
-    padding: 20px;
-    position: relative;
-    margin-bottom: 60px; /* margin-bottom 30px + the size of the border that draw's the comment arrow */
-}
-
-.comment-bd:after {
-    content: '';
-    position: absolute;
-    bottom: -30px;
-    left: 0;
-    border-top: 30px solid #000000; /* match the color of the comment-bd to draw the arrow */
-    border-right: 30px solid transparent;
-}
-
-/* comment user-content styles */
-.comment-bd a {
-    color: #ffffff;
-}
-
-.comment-bd > * + * {
-    margin-top: 12px;
-}
-
-.comment-meta {
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    font-weight: 800;
-    margin-bottom: 30px;
-    line-height: 24px; /* match the height of the avatar to create vertical alignment */
-}
-
-/* kate's comment style */
-.comment_kate .comment-bd {
-    background: #ffffff;
-    color: #000000;
-}
-
-.comment_kate .comment-bd:after {
-    border-top-color: #ffffff;
-}
-
-.comment_kate .comment-bd a {
-    color: #000000;
 }
 
 /* ---------------------------------------------------------------------
@@ -2021,6 +1950,140 @@ a.liked:focus {
     background-size: 56px 56px !important;
     box-shadow: none !important;
     border-radius: 0 !important;
+}
+
+/* ---------------------------------------------------------------------
+   Commments Page Using WordPress generated Markup
+------------------------------------------------------------------------ */
+.comment-respond {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    background: #000000;
+    padding: 20px;
+    max-width: 480px;
+    margin-bottom: 30px;
+}
+
+.comment-respond a {
+    color: #ffffff;
+}
+
+.comments-ft .comment-respond {
+    margin-bottom: 0;
+}
+
+.comment-reply-title {
+    margin-bottom: 16px;
+}
+
+.comment {
+    max-width: 480px;
+}
+
+.comment-body {
+    position: relative;
+    padding: 20px;
+    margin-bottom: 130px; /* hold space for the meta */
+    background-color: #ffffff;
+    color: #000000;
+    word-wrap: break-word;
+}
+
+.comment-body:after {
+    content: " ";
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    border-top: 30px solid #ffffff;
+    border-right: 30px solid transparent;
+
+}
+
+.comment-meta {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -110px;
+    color: #000000;
+}
+
+.comment-meta .says,
+.comment-meta .edit-link {
+    display: none;
+}
+
+.comment-metadata {
+    position: absolute;
+    left: 75px;
+    bottom: 25px;
+}
+
+.comment-metadata > a {
+    cursor: text;
+}
+
+.comment-metadata > a:hover,
+.comment-metadata > a:focus {
+    color: #000000;
+}
+
+.comment-author b {
+    position: absolute;
+    top: 0;
+    left: 75px;
+    font-family: "proxima-nova", Helvetica, arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 800;
+    font-style: normal;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.reply {
+    position: absolute;
+    bottom: -105px;
+    left: 75px;
+}
+
+.reply a {
+    text-decoration: underline;
+}
+
+/* override the first level comments */
+.comment.depth-1 > .comment-body {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.comment.depth-1 > .comment-body:after {
+    border-top-color: #000000;
+}
+
+.comment.depth-1 > .comment-body .comment-content a {
+    color: #ffffff;
+}
+
+/* override the admin comments */
+.comment.comment-author-admin > .comment-body {
+    background-color: #fdc58f;
+    color: #000000;
+}
+
+.comment.comment-author-admin > .comment-body:after {
+    border-top-color: #fdc58f;
+}
+
+/* indent comments */
+.children {
+    margin-left: 30px;
+}
+
+@media screen and (min-width: 30em) {
+    .children {
+        margin-left: 40px;
+    }
 }
 
 /* ---------------------------------------------------------------------

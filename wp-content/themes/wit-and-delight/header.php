@@ -18,6 +18,10 @@
         <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
         <link href="//cloud.webtype.com/css/2eed833e-5790-485c-92a0-8e9a3e4d9721.css" rel="stylesheet" type="text/css" />
 
+        <?php
+            // Required for nested reply function that moves reply inline with JS
+            if (is_singular()) wp_enqueue_script('comment-reply');
+        ?>
         <!-- WP HEAD GENERATED -->
         <?php wp_head(); ?>
     </head>

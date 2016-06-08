@@ -223,29 +223,6 @@ function the_post_thumbnail_caption() {
 /* ====================================================================================================
    Comments
 ==================================================================================================== */
-/* comments markup */
-function mytheme_comment($comment, $args, $depth) {
-    $GLOBALS['comment'] = $comment;
-?>
-    <li class="<?php if( '0' != $comment->comment_parent ){ echo 'vlist-item_indented'; } ?>">
-        <div class="comment <?php if($comment->user_id == 2) { echo 'comment_kate '; } ?>">
-            <div class="comment-bd">
-                <?php comment_text(); ?>
-            </div>
-            <div class="comment-meta">
-                <div class="media">
-                    <div class="media-element">
-                        <?php if($comment->comment_author_url != "") { ?><a href="<?php comment_author_url(); ?>" rel="external"><?php } ?><?php if ($args['avatar_size'] != 0) echo get_avatar( $comment, $args['avatar_size'] ); ?><?php if($comment->comment_author_url != "") { ?></a><?php } ?>
-                    </div>
-                    <div class="media-bd">
-                        <?php printf( __('%s'), get_comment_date('M d Y')); ?> | <?php if($comment->comment_author_url != "") { ?><a href="<?php comment_author_url(); ?>" rel="external"><?php } ?><?php printf(__('%s'), get_comment_author()); ?><?php if($comment->comment_author_url != "") { ?></a><?php } ?>
-                    </div>
-                </div>
-            </div>
-        </div>
-<?php
-}
-
 /* Outputs Textarea first in the comment form markup */
 function add_textarea() {
     echo '<label for="comment-copy" class="isVisuallyHidden">' . _x( 'Comment', 'noun' ) . '</label><div class="pointer"><textarea class="input input_alt input_textarea" id="comment-copy" name="comment" cols="45" rows="8" aria-required="true" placeholder="ENTER MESSAGE HERE:"></textarea></div>';
