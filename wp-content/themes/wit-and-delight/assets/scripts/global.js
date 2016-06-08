@@ -120,7 +120,7 @@ var WD = WD || {}; // Global Namespace object
                         }
 
                         $loadButton.removeClass('loadMore-isDisabled');
-                        $loadButton.html('Load More\'');
+                        $loadButton.html('Load More');
 
                         self.category == 'popular' ? $loadButton.hide() : $loadButton.show();
                         self.page++;
