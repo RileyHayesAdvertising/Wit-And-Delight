@@ -1124,19 +1124,25 @@ a:focus {
 
 .main-bd-media {
     margin-bottom: 20px;
+    text-align: center;
 }
 
-.main-bd-media_flexLeft {
-    float: left;
-    max-width: 50%;
-    margin-right: 20px;
-}
-
-.main-bd-media_flexRight {
-    float: right;
-    max-width: 50%;
-    margin-bottom: 20px;
-    margin-left: 20px;
+@media screen and (min-width: 40em) {
+    .main-bd-media {
+        text-align: left;
+    }
+    
+    .main-bd-media_flexLeft {
+        float: left;
+        max-width: 50%;
+        margin-right: 20px;
+    }
+    
+    .main-bd-media_flexRight {
+        float: right;
+        max-width: 50%;
+        margin-left: 20px;
+    }
 }
 
 /* ---------------------------------------------------------------------
