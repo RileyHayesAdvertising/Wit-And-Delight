@@ -6,7 +6,7 @@
    Black    - #000000
    Midnight - #201d1d
    Grey     - #eeedeb
-   Gold     - #fdc58f
+   Gold     - #d8bdbe
 
    Font Stacks
    ======================
@@ -176,7 +176,7 @@ a {
 
 a:hover,
 a:focus {
-    color: #fdc58f;
+    color: #d8bdbe;
     text-decoration: none;
 }
 
@@ -287,7 +287,7 @@ a:focus {
 
 .nav-item a:hover,
 .nav-item a:focus {
-    color: #fdc58f;
+    color: #d8bdbe;
     text-decoration: none;
 }
 
@@ -1233,7 +1233,7 @@ a:focus {
 
 .waypoint > * a:hover,
 .waypoint > * a:focus {
-    color: #fdc58f;
+    color: #d8bdbe;
 }
 
 .waypoint > * a > img {
@@ -1407,7 +1407,7 @@ a:focus {
 
 a:hover .icn_social path,
 a:focus .icn_social path {
-    fill: #fdc58f;
+    fill: #d8bdbe;
 }
 
 /* ---------------------------------------------------------------------
@@ -1434,7 +1434,7 @@ a:focus .icn_social path {
 
 a:hover .dot-image,
 a:focus .dot-image {
-    background-color: #fdc58f;
+    background-color: #d8bdbe;
 }
 
 .dot-image path {
@@ -1576,7 +1576,7 @@ a:focus .dot-image {
 .btn:hover,
 .btn:active,
 .btn:focus {
-    color: #fdc58f;
+    color: #d8bdbe;
 }
 
 .btn_isWhite {
@@ -1600,8 +1600,8 @@ a:focus .dot-image {
     padding: 10px 0;
     margin: 0;
     border: 0;
-    border-top: 1px solid;
-    border-bottom: 1px solid;
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
             box-sizing: border-box;
@@ -1620,7 +1620,7 @@ a:focus .dot-image {
 .loadMore:hover,
 .loadMore:active,
 .loadMore:focus {
-    color: #000000;
+    color: #d8bdbe;
 }
 
 .loadMore-isDisabled {
@@ -2067,12 +2067,12 @@ a.liked:focus {
 
 /* override the admin comments */
 .comment.comment-author-admin > .comment-body {
-    background-color: #fdc58f;
+    background-color: #d8bdbe;
     color: #000000;
 }
 
 .comment.comment-author-admin > .comment-body:after {
-    border-top-color: #fdc58f;
+    border-top-color: #d8bdbe;
 }
 
 /* indent comments */
