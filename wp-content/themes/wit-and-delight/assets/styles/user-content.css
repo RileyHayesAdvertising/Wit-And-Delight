@@ -494,6 +494,7 @@ body#tinymce.wp-editor .wp-caption p.wp-caption-text {
     line-height: 17px;
     margin: 0;
     padding: 10px 0 0 0;
+    color: #bbbbbb;
 }
 
 .user-content .wp-caption > p,
