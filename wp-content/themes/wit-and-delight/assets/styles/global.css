@@ -1053,21 +1053,15 @@ a:focus {
 }
 
 .clip-media {
-    margin-bottom: 20px;
+    margin-bottom: 12px;
+}
+
+.clip-hd {
+    margin-bottom: 6px;
 }
 
 .clip-media > img {
     display: inline-block;
-}
-
-@media screen and (min-width: 30em) {
-    .clip {
-        text-align: left;
-    }
-
-    .clip-media {
-        margin-bottom: 12px;
-    }
 }
 
 /* ---------------------------------------------------------------------

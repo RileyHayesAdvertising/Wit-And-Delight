@@ -64,7 +64,7 @@
         <div class="single-related">
             <div class="related">
                 <div class="related-hd">
-                    <h2 class="hdg hdg_md">You Might Also Like</h2>
+                    <h2 class="hdg hdg_md">You Might Also Like &hellip;</h2>
                 </div>
                 <div class="related-bd">
                     <?php
@@ -96,7 +96,10 @@
                                 }
                                 echo '</div>';
                                 echo '<div class="clip-hd">';
-                                echo '<h3 class="caption caption_tight caption_sm">' . get_the_title($related_post->ID) . '</h3>';
+                                echo '<h3 class="hdg hdg_sm">' . get_the_title($related_post->ID) . '</h3>';
+                                echo '</div>';
+                                echo '<div class="clip-cta">';
+                                echo '<span class="caption caption_tight caption_sm">Read More &gt;</span>';
                                 echo '</div>';
                                 echo '</div>';
                                 echo '</div>';
