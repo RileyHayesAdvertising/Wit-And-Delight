@@ -101,6 +101,10 @@ img, audio, canvas, video, picture, iframe, embed {
     max-width: 100% !important; /* media should never overflows it's container */
 }
 
+:focus {
+    outline: none;
+}
+
 /* ---------------------------------------------------------------------
    HTML5 Elements
 ---------------------------------------------------------------------- */
