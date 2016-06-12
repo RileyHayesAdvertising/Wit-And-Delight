@@ -498,7 +498,7 @@ a:focus {
 
 .footer-legal {
     font-family: "MillerDisplay Light", Georgia, serif;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: normal;
     font-style: italic;
     text-transform: uppercase;
@@ -549,7 +549,6 @@ a:focus {
         position: absolute;
         top: 57px; /* magic number */
         right: 0;
-        font-size: 16px;
         text-align: right;
     }
 
