@@ -107,7 +107,7 @@
         <?php
             $widget_style   = get_sub_field('sidebar_widget_style');
             $widget_title   = get_sub_field('sidebar_widget_title');
-            $widget_image   = get_sub_field('sidebar_widget_image');
+            $widget_image   = image_downsize(get_sub_field('sidebar_widget_image'), 'medium')[0];
             $widget_content = get_sub_field('sidebar_widget_content');
             $widget_link    = get_sub_field('sidebar_widget_link');
         ?>
