@@ -3,19 +3,19 @@
         <h2 class="isVisuallyHidden">Search</h2>
         <?php get_search_form(); ?>
     </div>
-    <div class="sidebar-section sidebar-section_isCentered">
-        <h2 class="hdg hdg_xl">
-            <a href="<?php echo get_page_uri(10654) ?>">
-                A Website Dedicated<br/>to Designing a Life<br/>Well Lived.
-            </a>
-        </h2>
-        <br/>
-        <a href="<?php echo get_page_uri(10654) ?>">
-            <img src="<?php echo get_template_directory_uri() . '/assets/images/more.png' ?>" alt="Learn More" />
-        </a>
-    </div>
     <div class="sidebar-section">
         <div class="stack">
+            <div class="stack-item stack-item_inset stack-item_isCentered">
+                <h2 class="hdg hdg_xl">
+                    <a href="<?php echo get_page_uri(10654) ?>">
+                        A Website Dedicated<br/>to Designing a Life<br/>Well Lived.
+                    </a>
+                </h2>
+                <br/>
+                <a href="<?php echo get_page_uri(10654) ?>">
+                    <img src="<?php echo get_template_directory_uri() . '/assets/images/more.png' ?>" alt="Learn More" />
+                </a>
+            </div>
             <div class="stack-item stack-item_isCentered">
                 <h2 class="caption">Keep in Touch</h2>
             </div>
@@ -93,8 +93,10 @@
         </div>
     </div>
     <div class="sidebar-section">
-        <?php echo get_latest_instagram_image(); ?>
         <div class="stack">
+            <div class="stack-item stack-item_isMedia">
+                <?php echo get_latest_instagram_image(); ?>
+            </div>
             <div class="stack-item stack-item_isCentered">
                 <h2 class="caption">
                     <a href="<?php the_field('instagram_link', 'options'); ?>">Find Us On Instagram</a>
@@ -114,10 +116,12 @@
 
         <?php if ($widget_style == 'image') : ?>
         <div class="sidebar-section">
-            <?php if ($widget_link) { ?><a href="<?php echo $widget_link; ?>"><?php } ?>
-                <img data-pin-nopin="true" src="<?php echo $widget_image; ?>" alt="" />
-            <?php if ($widget_link) { ?></a><?php } ?>
             <div class="stack">
+                <div class="stack-item stack-item_isMedia">
+                    <?php if ($widget_link) { ?><a href="<?php echo $widget_link; ?>"><?php } ?>
+                        <img data-pin-nopin="true" src="<?php echo $widget_image; ?>" alt="" />
+                    <?php if ($widget_link) { ?></a><?php } ?>
+                </div>
                 <div class="stack-item stack-item_isCentered">
                     <h2 class="caption">
                         <?php if ($widget_link) { ?><a href="<?php echo $widget_link; ?>"><?php } ?>
@@ -150,10 +154,12 @@
 
         <?php if ($widget_style == 'all') : ?>
         <div class="sidebar-section">
-            <?php if ($widget_link) { ?><a href="<?php echo $widget_link; ?>"><?php } ?>
-                <img data-pin-nopin="true" src="<?php echo $widget_image; ?>" alt="" />
-            <?php if ($widget_link) { ?></a><?php } ?>
             <div class="stack">
+                <div class="stack-item stack-item_isMedia">
+                    <?php if ($widget_link) { ?><a href="<?php echo $widget_link; ?>"><?php } ?>
+                        <img data-pin-nopin="true" src="<?php echo $widget_image; ?>" alt="" />
+                    <?php if ($widget_link) { ?></a><?php } ?>
+                </div>
                 <div class="stack-item stack-item_isCentered">
                     <h2 class="caption">
                         <?php if ($widget_link) { ?><a href="<?php echo $widget_link; ?>"><?php } ?>

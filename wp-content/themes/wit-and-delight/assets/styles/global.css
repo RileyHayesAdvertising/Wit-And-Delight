@@ -857,6 +857,11 @@ a:focus {
     padding: 6px 20px;
 }
 
+.stack-item_inset {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
 .stack-item + .stack-item {
     border-top: 2px solid #ffffff;
 }
@@ -867,6 +872,14 @@ a:focus {
 
 .stack-item_isCentered {
     text-align: center;
+}
+
+.stack-item_isMedia {
+    padding: 0;
+}
+
+.stack-item_isMedia img {
+    display: block;
 }
 
 .stack-item_hasList {
