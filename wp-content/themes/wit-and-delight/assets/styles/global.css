@@ -1924,8 +1924,8 @@ a.liked:focus {
    Override pinterest button image
 ------------------------------------------------------------------------ */
 [class^=PIN_][class$=_save] {
-    width: 56px !important;
-    height: 56px !important;
+    width: 62px !important;
+    height: 28px !important;
     padding: 0 !important;
     font-size: 0 !important;
     line-height: 0 !important;
@@ -1933,7 +1933,7 @@ a.liked:focus {
     background-image: url("../images/pin-it.png") !important;
     background-repeat: no-repeat !important;
     background-position: top left !important;
-    background-size: 56px 56px !important;
+    background-size: 62px 28px !important;
     box-shadow: none !important;
     border-radius: 0 !important;
 }
