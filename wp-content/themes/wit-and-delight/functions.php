@@ -259,6 +259,8 @@ add_filter('excerpt_more', 'new_excerpt_more');
 function round_follower_count($total) {
     if ($total > 1000000) {
         return round($total / 1000000, 1) . 'M';
+    } else if ( $total > 100000 ) {
+        return round($total / 1000, 0) . 'k';
     } else if ( $total > 1000 ) {
         return round($total / 1000, 1) . 'k';
     }

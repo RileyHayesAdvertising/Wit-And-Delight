@@ -19,7 +19,7 @@
             <div class="stack-item stack-item_isCentered">
                 <h2 class="caption">Keep in Touch</h2>
             </div>
-            <div class="stack-item stack-item_isCentered stack-item_isOffset">
+            <div class="stack-item stack-item_isCentered stack-item_isOffset stack-item_isWide">
                 <ul class="hList hList_isCentered">
                     <li>
                         <a class="dot" href="<?php the_field('instagram_link', 'options'); ?>" target="_blank">
@@ -43,6 +43,12 @@
                         <a class="dot" href="<?php the_field('pinterest_link', 'options'); ?>" target="_blank">
                             <span class="dot-image"><?php echo file_get_contents(get_template_directory() . '/assets/images/icn-pinterest.svg'); ?></span>
                             <span class="dot-label"><?php echo round_follower_count(get_scp_counter('pinterest')); ?></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dot" href="<?php the_field('facebook_link', 'options'); ?>" target="_blank">
+                            <span class="dot-image"><?php echo file_get_contents(get_template_directory() . '/assets/images/icn-facebook.svg'); ?></span>
+                            <span class="dot-label"><?php echo round_follower_count(get_scp_counter('facebook')); ?></span>
                         </a>
                     </li>
                 </ul>

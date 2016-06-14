@@ -870,6 +870,11 @@ a:focus {
     padding-top: 12px;
 }
 
+.stack-item_isWide {
+    padding-left: 0;
+    padding-right: 0;
+}
+
 .stack-item_isCentered {
     text-align: center;
 }
@@ -1246,6 +1251,10 @@ a:focus {
 /* ---------------------------------------------------------------------
    Horizontal Lists
 ------------------------------------------------------------------------ */
+.hlist {
+    font-size: 0;
+}
+
 .hList_isCentered {
     display: inline-block;
 }
@@ -1392,14 +1401,14 @@ a:focus .icn_social path {
 ------------------------------------------------------------------------ */
 .dot {
     display: block;
-    width: 45px;
+    width: 35px;
 }
 
 .dot-image {
     display: block;
-    width: 17px;
-    height: 17px;
-    padding: 14px;
+    width: 15px;
+    height: 15px;
+    padding: 10px;
     margin-bottom: 8px;
     border: 0;
     border-radius: 50%;
