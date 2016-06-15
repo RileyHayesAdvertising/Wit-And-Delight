@@ -243,7 +243,7 @@ function newgravatar ($avatar_defaults) {
 ==================================================================================================== */
 /* custom length */
 function wd_excerpt_length($length) {
-    return 20; // whatever you want the length to be.
+    return 56; // whatever you want the length to be.
 }
 add_filter('excerpt_length', 'wd_excerpt_length');
 
