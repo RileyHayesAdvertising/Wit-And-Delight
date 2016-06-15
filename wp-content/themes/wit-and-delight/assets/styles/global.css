@@ -1006,7 +1006,8 @@ a:focus {
 
     .teaser-media {
         display: table-cell;
-        width: 45%;
+        width: 300px;
+        padding-right: 25px;
         margin-bottom: 0; /* small size reset */
         vertical-align: middle;
     }
@@ -1017,8 +1018,6 @@ a:focus {
 
     .teaser-bd {
         display: table-cell;
-        width: 55%;
-        padding-left: 30px;
         vertical-align: middle;
     }
 }
