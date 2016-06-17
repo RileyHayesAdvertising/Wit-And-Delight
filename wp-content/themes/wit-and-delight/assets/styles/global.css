@@ -710,7 +710,7 @@ a:focus {
 }
 
 .js .carousel-controls {
-    display: block;
+    display: none;
     position: absolute;
     top: calc(50% - 26px); /* the outer height of the control buttons */
     left: 0;
