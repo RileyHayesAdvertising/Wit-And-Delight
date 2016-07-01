@@ -600,7 +600,7 @@ a:focus {
    Wrapper
 ------------------------------------------------------------------------ */
 .wrapper {
-    max-width: 1140px;
+    max-width: 720px;
     min-width: 280px;
     margin: 0 auto; /* center wrapper on the screen */
     padding: 0 10px; /* don't let wrapper contents touch the edge of the screen */
@@ -612,13 +612,13 @@ a:focus {
 
 @media screen and (min-width: 40em) {
     .wrapper {
-        padding: 0 20px;
+        padding: 0 30px;
     }
 }
 
 @media screen and (min-width: 60em) {
     .wrapper {
-        padding: 0 30px;
+        max-width: 1040px;
     }
 }
 
@@ -645,33 +645,14 @@ a:focus {
     }
 
     .grid-col_main {
-        width: 68%;
+        width: calc(100% - 286px);
         padding-right: 30px;
     }
 
     .grid-col_aside {
-        width: 32%;
-    }
-}
-
-@media screen and (min-width: 72em) {
-    .grid-col_main {
-        width: 75%;
+        width: 286px;
     }
 
-    .grid-col_aside {
-        width: 25%;
-    }
-}
-
-@media screen and (min-width: 80em) {
-    .grid-col_main {
-        width: 76%;
-    }
-
-    .grid-col_aside {
-        width: 24%;
-    }
 }
 
 /* ---------------------------------------------------------------------
