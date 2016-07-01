@@ -1267,7 +1267,13 @@ a:focus {
 }
 
 .hList_social > * + * {
-    margin-left: 20px;
+    margin-left: 15px;
+}
+
+@media screen and (min-width: 50em) {
+    .hList_social > * + * {
+        margin-left: 20px;
+    }
 }
 
 /* ---------------------------------------------------------------------
