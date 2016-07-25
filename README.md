@@ -148,3 +148,12 @@ require( dirname( __FILE__ ) . '/wordpress/wp-blog-header.php' );
 1. Visit your dev environment in the browser and verify the site is working
 
 If additional questions arise during setup please contact <tticknor@rileyhayes.com>
+
+## Deployment
+
+Deployments are currently done via SFTP to WPEngine as it's the only means of server access. Additionally, most of WordPress itself is handled by WPEngine so you only need to upload the following part of the project.
+
+1. Changes to the theme
+2. Changes to the plugins
+
+**Note:** Before copying files on to the server, pull down any files you plan to copy and check them for changes that might have occurred on production (like plugin updates) and merge them into the repo. Then move files to prod.
