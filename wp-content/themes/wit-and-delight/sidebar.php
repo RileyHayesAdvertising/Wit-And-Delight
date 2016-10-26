@@ -7,12 +7,12 @@
         <div class="stack">
             <div class="stack-item stack-item_inset stack-item_isCentered">
                 <h2 class="hdg hdg_xl">
-                    <a href="<?php echo get_page_uri(10654) ?>">
+                    <a href="<?php echo home_url() . '/' . get_page_uri(10654) ?>">
                         A Website Dedicated<br/>to Designing a Life<br/>Well Lived.
                     </a>
                 </h2>
                 <br/>
-                <a href="<?php echo get_page_uri(10654) ?>">
+                <a href="<?php echo home_url() . '/' . get_page_uri(10654) ?>">
                     <img src="<?php echo get_template_directory_uri() . '/assets/images/more.png' ?>" alt="Learn More" />
                 </a>
             </div>

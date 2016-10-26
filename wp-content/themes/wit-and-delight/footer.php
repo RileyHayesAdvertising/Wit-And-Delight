@@ -44,6 +44,11 @@
                                     </a>
                                 </li>
                                 <li>
+                                    <a href="<?php the_field('snapchat_link', 'options'); ?>">
+                                        <i class="icn icn_social"><?php echo file_get_contents(get_template_directory() . '/assets/images/icn-snapchat.svg'); ?></i>
+                                    </a>
+                                </li>
+                                <li>
                                     <a href="<?php the_field('rss_link', 'options'); ?>" target="_blank">
                                         <i class="icn icn_social"><?php echo file_get_contents(get_template_directory() . '/assets/images/icn-rss.svg'); ?></i>
                                     </a>
