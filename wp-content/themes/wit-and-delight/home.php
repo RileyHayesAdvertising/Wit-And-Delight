@@ -12,7 +12,12 @@
                     <div class="card">
                         <div class="card-media">
                             <a href="<?php the_sub_field('slide_link'); ?>">
-                                <img data-pin-nopin="true" class="blockImage" src="<?php the_sub_field('slide_image'); ?>" alt="">
+                                <?php
+                                    $image_id = get_sub_field('slide_image');
+                                    $image_url = wp_get_attachment_image_src($image_id, 'large', true);
+                                    $carousel_image_src = $image_url[0];
+                                ?>
+                                <img data-pin-nopin="true" class="blockImage" src="<?php echo $carousel_image_src; ?>" alt="">
                             </a>
                         </div>
                     </div>

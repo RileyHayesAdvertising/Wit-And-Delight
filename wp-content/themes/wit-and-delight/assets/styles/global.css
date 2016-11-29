@@ -618,7 +618,7 @@ a:focus {
 
 @media screen and (min-width: 60em) {
     .wrapper {
-        max-width: 1040px;
+        max-width: 1024px;
     }
 }
 
