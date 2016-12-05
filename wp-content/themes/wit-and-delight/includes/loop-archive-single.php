@@ -27,6 +27,13 @@
                             <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                         </h3>
                     </div>
+                    <?php if (get_field('post_attribution')): ?>
+                    <div class="blurb-meta">
+                        <div class="user-content">
+                            <?php the_field('post_attribution'); ?>
+                        </div>
+                    </div>
+                    <?php endif; ?>
                     <div class="blurb-bd">
                         <div class="user-content">
                             <?php the_excerpt(); ?>

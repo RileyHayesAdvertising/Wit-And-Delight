@@ -30,6 +30,13 @@
                     <div class="post-meta">
                         Posted <?php the_time('m'); ?>/<?php the_time('d'); ?>/<?php the_time('y'); ?> by <?php echo get_the_author_meta('first_name'); ?> <? echo get_the_author_meta('last_name') ?>
                     </div>
+                    <?php if (get_field('post_attribution')): ?>
+                    <div class="post-attribution">
+                        <div class="user-content">
+                            <?php the_field('post_attribution'); ?>
+                        </div>
+                    </div>
+                    <?php endif; ?>
                     <div class="post-bd">
                         <div class="user-content">
                             <?php

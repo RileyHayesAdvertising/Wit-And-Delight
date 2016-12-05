@@ -1022,6 +1022,11 @@ a:focus {
     margin-bottom: 24px;
 }
 
+.blurb-meta {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
 .blurb-bd {
     max-width: 400px;
     margin: 0 auto 42px auto;
@@ -1091,6 +1096,10 @@ a:focus {
 .post-meta {
     margin-bottom: 20px;
     text-align: center;
+}
+
+.post-attribution {
+    margin-bottom: 20px;
 }
 
 /* ---------------------------------------------------------------------
